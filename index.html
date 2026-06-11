@@ -200,8 +200,11 @@ document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
 
 fetch("data.json").then(r => r.json()).then(d => {
   linhas = d.linhas;
+  // gerado vem em UTC ("...Z"); mostrar em hora local pt-PT
   document.getElementById("gerado").textContent =
-    "actualizado " + d.gerado.replace("T", " ");
+    "actualizado " + new Date(d.gerado).toLocaleString("pt-PT",
+      { day: "2-digit", month: "2-digit", year: "numeric",
+        hour: "2-digit", minute: "2-digit" });
   popularFiltros();
   ranking();
   render();
