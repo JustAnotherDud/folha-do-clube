@@ -23,6 +23,9 @@ CLUBE = "nozes"
 ALCUNHAS = {"100300630": "Zé", "135219743": "Xeira"}
 # segmentos com bug no Strava a excluir (id numérico do URL /segments/<id>)
 IGNORAR = {
+    "30832045",  # bugado
+    "38123078",  # bugado
+    "8843490",  # bugado
     # "12345678",  # exemplo — nome do segmento e porquê
 }
 BASE = "https://www.strava.com"
