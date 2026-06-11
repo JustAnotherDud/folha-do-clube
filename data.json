@@ -1,8 +1,7 @@
 {
- "gerado": "2026-06-11T22:05",
+ "gerado": "2026-06-11T21:14Z",
  "linhas": [
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Almeida Garret",
@@ -11,10 +10,10 @@
    "dist_km": 0.21,
    "elev_m": 17,
    "tempo": "43s",
-   "data": "2025-07-18"
+   "data": "2025-07-18",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Uphill",
@@ -23,10 +22,10 @@
    "dist_km": 0.51,
    "elev_m": 21,
    "tempo": "2:01",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Rua da Boavista",
@@ -35,10 +34,10 @@
    "dist_km": 0.11,
    "elev_m": 7,
    "tempo": "20s",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta do Comboio da Mina",
@@ -47,10 +46,10 @@
    "dist_km": 0.31,
    "elev_m": 4,
    "tempo": "52s",
-   "data": "2025-05-17"
+   "data": "2025-05-17",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Ciclovia 400m",
@@ -59,10 +58,10 @@
    "dist_km": 0.42,
    "elev_m": 3,
    "tempo": "1:17",
-   "data": "2025-05-17"
+   "data": "2025-05-17",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Rua do Cartaxo",
@@ -71,10 +70,10 @@
    "dist_km": 0.1,
    "elev_m": 11,
    "tempo": "17s",
-   "data": "2025-05-17"
+   "data": "2025-05-17",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Escola Agricola",
@@ -83,10 +82,10 @@
    "dist_km": 0.39,
    "elev_m": 2,
    "tempo": "1:06",
-   "data": "2025-05-14"
+   "data": "2025-05-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida CUF",
@@ -95,10 +94,10 @@
    "dist_km": 0.47,
    "elev_m": 27,
    "tempo": "1:43",
-   "data": "2025-05-14"
+   "data": "2025-05-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta do Barreiro",
@@ -107,10 +106,10 @@
    "dist_km": 0.28,
    "elev_m": 3,
    "tempo": "1:04",
-   "data": "2025-05-13"
+   "data": "2025-05-13",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida do Santarém Hotel",
@@ -119,10 +118,10 @@
    "dist_km": 1.0,
    "elev_m": 63,
    "tempo": "3:03",
-   "data": "2024-10-05"
+   "data": "2024-10-05",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Encosta da Filigueira",
@@ -131,10 +130,10 @@
    "dist_km": 0.62,
    "elev_m": 31,
    "tempo": "2:58",
-   "data": "2024-10-04"
+   "data": "2024-10-04",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida Centro de Saúde",
@@ -143,10 +142,10 @@
    "dist_km": 0.6,
    "elev_m": 25,
    "tempo": "1:54",
-   "data": "2024-09-25"
+   "data": "2024-09-25",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Encosta dos Covões",
@@ -155,10 +154,10 @@
    "dist_km": 0.32,
    "elev_m": 15,
    "tempo": "1:34",
-   "data": "2024-09-23"
+   "data": "2024-09-23",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Topo",
@@ -167,10 +166,10 @@
    "dist_km": 0.56,
    "elev_m": 15,
    "tempo": "2:26",
-   "data": "2026-05-21"
+   "data": "2026-05-21",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Casal Novo -> Cancinos",
@@ -179,10 +178,10 @@
    "dist_km": 3.49,
    "elev_m": 231,
    "tempo": "14:23",
-   "data": "2025-09-14"
+   "data": "2025-09-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Pista Agrária 400m",
@@ -191,10 +190,10 @@
    "dist_km": 0.41,
    "elev_m": 3,
    "tempo": "1:12",
-   "data": "2025-08-16"
+   "data": "2025-08-16",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Rotunda Bombeiros ->  Rotunda do Salineiro",
@@ -203,10 +202,10 @@
    "dist_km": 1.41,
    "elev_m": 5,
    "tempo": "5:23",
-   "data": "2025-07-27"
+   "data": "2025-07-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Subida Centro de Saude",
@@ -215,10 +214,10 @@
    "dist_km": 0.35,
    "elev_m": 22,
    "tempo": "1:15",
-   "data": "2025-06-01"
+   "data": "2025-06-01",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Encosta Manuel Sequeira Nobre",
@@ -227,10 +226,10 @@
    "dist_km": 0.46,
    "elev_m": 26,
    "tempo": "2:14",
-   "data": "2025-05-13"
+   "data": "2025-05-13",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Encosta das Charnecas",
@@ -239,10 +238,10 @@
    "dist_km": 0.25,
    "elev_m": 23,
    "tempo": "1:20",
-   "data": "2025-05-13"
+   "data": "2025-05-13",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 6,
    "tipo": "Walk",
    "segmento": "Rua Rafael Bordalo Pinheiro Climb",
@@ -251,10 +250,10 @@
    "dist_km": 0.79,
    "elev_m": 57,
    "tempo": "9:13",
-   "data": "2025-03-11"
+   "data": "2025-03-11",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Rua da Vacaria",
@@ -263,10 +262,10 @@
    "dist_km": 0.47,
    "elev_m": 21,
    "tempo": "2:40",
-   "data": "2025-02-25"
+   "data": "2025-02-25",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Subida da Calhariz - Moçarria",
@@ -275,10 +274,10 @@
    "dist_km": 1.19,
    "elev_m": 78,
    "tempo": "6:58",
-   "data": "2025-02-25"
+   "data": "2025-02-25",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "UP PRÉ-MONTE GORDO",
@@ -287,10 +286,10 @@
    "dist_km": 0.19,
    "elev_m": 32,
    "tempo": "58s",
-   "data": "2025-01-01"
+   "data": "2025-01-01",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Descida Escola Prática",
@@ -299,10 +298,10 @@
    "dist_km": 0.7,
    "elev_m": 53,
    "tempo": "2:12",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Subida curta N114",
@@ -311,10 +310,10 @@
    "dist_km": 0.31,
    "elev_m": 16,
    "tempo": "1:06",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Rua Guilherme de Azevedo S-N",
@@ -323,10 +322,10 @@
    "dist_km": 0.24,
    "elev_m": 5,
    "tempo": "43s",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Tribunal - PSP",
@@ -335,10 +334,10 @@
    "dist_km": 0.3,
    "elev_m": 3,
    "tempo": "51s",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "R. Gago Coutinho e Sacadura Cabral S-N (até Jardim da República)",
@@ -347,10 +346,10 @@
    "dist_km": 0.42,
    "elev_m": 4,
    "tempo": "1:16",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Pista do Liceu 2",
@@ -359,10 +358,10 @@
    "dist_km": 0.46,
    "elev_m": 1,
    "tempo": "1:24",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Aristides de Sousa Mendes",
@@ -371,10 +370,10 @@
    "dist_km": 0.54,
    "elev_m": 9,
    "tempo": "1:34",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 8,
    "tipo": "Run",
    "segmento": "Rampa Estrada Militar",
@@ -383,10 +382,10 @@
    "dist_km": 0.45,
    "elev_m": 36,
    "tempo": "1:57",
-   "data": "2024-10-20"
+   "data": "2024-10-20",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 6,
    "tipo": "Run",
    "segmento": "Subida Estrada Militar",
@@ -395,10 +394,10 @@
    "dist_km": 0.59,
    "elev_m": 45,
    "tempo": "2:33",
-   "data": "2024-10-20"
+   "data": "2024-10-20",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Carreiro das piscinas",
@@ -407,10 +406,10 @@
    "dist_km": 0.18,
    "elev_m": 18,
    "tempo": "1:30",
-   "data": "2024-10-05"
+   "data": "2024-10-05",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Reta Porta do Sol S-N",
@@ -419,10 +418,10 @@
    "dist_km": 0.23,
    "elev_m": 8,
    "tempo": "36s",
-   "data": "2024-09-19"
+   "data": "2024-09-19",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 9,
    "tipo": "Ride",
    "segmento": "Caminho junto da Nutrileite ◄NM►®",
@@ -431,10 +430,10 @@
    "dist_km": 1.23,
    "elev_m": 32,
    "tempo": "3:34",
-   "data": "2024-09-18"
+   "data": "2024-09-18",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Rampa Águas Férreas",
@@ -443,10 +442,10 @@
    "dist_km": 0.5,
    "elev_m": 30,
    "tempo": "2:02",
-   "data": "2024-09-17"
+   "data": "2024-09-17",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 9,
    "tipo": "Run",
    "segmento": "Volta ao Liceu (passando pela extremidades do Jardim de S, Bento)",
@@ -455,10 +454,10 @@
    "dist_km": 0.61,
    "elev_m": 1,
    "tempo": "2:01",
-   "data": "2024-09-15"
+   "data": "2024-09-15",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Pista 300m Rio Maior",
@@ -467,10 +466,10 @@
    "dist_km": 0.28,
    "elev_m": 0,
    "tempo": "47s",
-   "data": "2024-08-12"
+   "data": "2024-08-12",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Reta do Poeta Ruy Belo",
@@ -479,10 +478,10 @@
    "dist_km": 0.31,
    "elev_m": 2,
    "tempo": "55s",
-   "data": "2024-08-08"
+   "data": "2024-08-08",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Rua da Escola",
@@ -491,10 +490,10 @@
    "dist_km": 0.25,
    "elev_m": 9,
    "tempo": "57s",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Trav das Piteiras",
@@ -503,10 +502,10 @@
    "dist_km": 0.19,
    "elev_m": 7,
    "tempo": "48s",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Pinhais",
@@ -515,10 +514,10 @@
    "dist_km": 0.4,
    "elev_m": 15,
    "tempo": "1:57",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Volta ao 0",
@@ -527,10 +526,10 @@
    "dist_km": 1.95,
    "elev_m": 15,
    "tempo": "8:57",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Subida ao VG Jose Morto",
@@ -539,10 +538,10 @@
    "dist_km": 0.92,
    "elev_m": 41,
    "tempo": "4:23",
-   "data": "2024-07-13"
+   "data": "2024-07-13",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Reta da Av. 13 de Julho",
@@ -551,10 +550,10 @@
    "dist_km": 0.4,
    "elev_m": 6,
    "tempo": "1:18",
-   "data": "2024-07-11"
+   "data": "2024-07-11",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Zé",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Campo de tiro - Arruda dos Pisões",
@@ -563,10 +562,10 @@
    "dist_km": 1.2,
    "elev_m": 7,
    "tempo": "4:41",
-   "data": "2024-06-20"
+   "data": "2024-06-20",
+   "atleta": "Zé"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta da Quinta",
@@ -575,10 +574,10 @@
    "dist_km": 0.46,
    "elev_m": 11,
    "tempo": "1:32",
-   "data": "2026-06-07"
+   "data": "2026-06-07",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Trigosas - jardim",
@@ -587,10 +586,10 @@
    "dist_km": 2.28,
    "elev_m": 13,
    "tempo": "8:23",
-   "data": "2026-06-06"
+   "data": "2026-06-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Right Internal Loop",
@@ -599,10 +598,10 @@
    "dist_km": 0.88,
    "elev_m": 12,
    "tempo": "3:07",
-   "data": "2026-06-06"
+   "data": "2026-06-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Por baixo de S. Marcos",
@@ -611,10 +610,10 @@
    "dist_km": 0.53,
    "elev_m": 16,
    "tempo": "1:51",
-   "data": "2026-06-04"
+   "data": "2026-06-04",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Direita de Massamá Climb",
@@ -623,10 +622,10 @@
    "dist_km": 0.78,
    "elev_m": 51,
    "tempo": "3:12",
-   "data": "2026-06-02"
+   "data": "2026-06-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua José Alfredo Da Costa Azevedo 21 Climb",
@@ -635,10 +634,10 @@
    "dist_km": 0.98,
    "elev_m": 54,
    "tempo": "4:19",
-   "data": "2026-05-27"
+   "data": "2026-05-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av. Dom João II (up)",
@@ -647,10 +646,10 @@
    "dist_km": 0.41,
    "elev_m": 11,
    "tempo": "1:27",
-   "data": "2026-05-27"
+   "data": "2026-05-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista Celestino Graça Inverso",
@@ -659,10 +658,10 @@
    "dist_km": 0.4,
    "elev_m": 2,
    "tempo": "1:01",
-   "data": "2026-05-23"
+   "data": "2026-05-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta de serie 650 mts",
@@ -671,10 +670,10 @@
    "dist_km": 0.64,
    "elev_m": 4,
    "tempo": "1:54",
-   "data": "2026-05-21"
+   "data": "2026-05-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta de serie TAGUS PARK",
@@ -683,10 +682,10 @@
    "dist_km": 0.77,
    "elev_m": 4,
    "tempo": "2:12",
-   "data": "2026-05-20"
+   "data": "2026-05-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series 3M Tagus IDA",
@@ -695,10 +694,10 @@
    "dist_km": 0.69,
    "elev_m": 4,
    "tempo": "1:57",
-   "data": "2026-05-20"
+   "data": "2026-05-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series 10M sobe e desce TAGUS",
@@ -707,10 +706,10 @@
    "dist_km": 2.64,
    "elev_m": 10,
    "tempo": "9:30",
-   "data": "2026-05-13"
+   "data": "2026-05-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta de serie 950 mts",
@@ -719,10 +718,10 @@
    "dist_km": 0.94,
    "elev_m": 9,
    "tempo": "3:22",
-   "data": "2026-05-13"
+   "data": "2026-05-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "EM1348 Ponte - Pinheiros",
@@ -731,10 +730,10 @@
    "dist_km": 4.93,
    "elev_m": 4,
    "tempo": "18:02",
-   "data": "2026-05-02"
+   "data": "2026-05-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Roque's Loop",
@@ -743,10 +742,10 @@
    "dist_km": 0.98,
    "elev_m": 4,
    "tempo": "3:10",
-   "data": "2026-05-01"
+   "data": "2026-05-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Pista 1",
@@ -755,10 +754,10 @@
    "dist_km": 0.59,
    "elev_m": 30,
    "tempo": "2:10",
-   "data": "2026-04-29"
+   "data": "2026-04-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida dos Campeões Tagus 2022 1K",
@@ -767,10 +766,10 @@
    "dist_km": 1.0,
    "elev_m": 32,
    "tempo": "3:25",
-   "data": "2026-04-29"
+   "data": "2026-04-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "650m - Séries à campeão",
@@ -779,10 +778,10 @@
    "dist_km": 0.63,
    "elev_m": 11,
    "tempo": "1:58",
-   "data": "2026-04-23"
+   "data": "2026-04-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta 400m fugir da estrebaria até topo das séries",
@@ -791,10 +790,10 @@
    "dist_km": 0.76,
    "elev_m": 11,
    "tempo": "2:29",
-   "data": "2026-04-23"
+   "data": "2026-04-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta de serie 850mts",
@@ -803,10 +802,10 @@
    "dist_km": 0.84,
    "elev_m": 10,
    "tempo": "2:56",
-   "data": "2026-04-22"
+   "data": "2026-04-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Sprint Café S. Pedro",
@@ -815,10 +814,10 @@
    "dist_km": 0.51,
    "elev_m": 4,
    "tempo": "1:33",
-   "data": "2026-03-29"
+   "data": "2026-03-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida Feira de Santana",
@@ -827,10 +826,10 @@
    "dist_km": 0.95,
    "elev_m": 44,
    "tempo": "2:47",
-   "data": "2026-03-15"
+   "data": "2026-03-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Via In curta",
@@ -839,10 +838,10 @@
    "dist_km": 0.27,
    "elev_m": 15,
    "tempo": "59s",
-   "data": "2026-02-28"
+   "data": "2026-02-28",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Via In",
@@ -851,10 +850,10 @@
    "dist_km": 0.45,
    "elev_m": 20,
    "tempo": "1:43",
-   "data": "2026-02-28"
+   "data": "2026-02-28",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Ponte Café S. Pedro",
@@ -863,10 +862,10 @@
    "dist_km": 0.18,
    "elev_m": 3,
    "tempo": "29s",
-   "data": "2026-02-15"
+   "data": "2026-02-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Politécnico #2",
@@ -875,10 +874,10 @@
    "dist_km": 1.04,
    "elev_m": 27,
    "tempo": "3:02",
-   "data": "2026-02-14"
+   "data": "2026-02-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Senhora da Saude.",
@@ -887,10 +886,10 @@
    "dist_km": 0.77,
    "elev_m": 40,
    "tempo": "3:29",
-   "data": "2026-01-31"
+   "data": "2026-01-31",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Teófilo de Braga",
@@ -899,10 +898,10 @@
    "dist_km": 0.79,
    "elev_m": 10,
    "tempo": "2:29",
-   "data": "2026-01-24"
+   "data": "2026-01-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Retas de 500mt",
@@ -911,10 +910,10 @@
    "dist_km": 0.5,
    "elev_m": 6,
    "tempo": "1:31",
-   "data": "2026-01-19"
+   "data": "2026-01-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Mercadona track",
@@ -923,10 +922,10 @@
    "dist_km": 1.09,
    "elev_m": 12,
    "tempo": "4:00",
-   "data": "2026-01-08"
+   "data": "2026-01-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Mercadona downhill",
@@ -935,10 +934,10 @@
    "dist_km": 0.29,
    "elev_m": 9,
    "tempo": "57s",
-   "data": "2026-01-06"
+   "data": "2026-01-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Oeiras Golf - Fábrica da Pólvora",
@@ -947,10 +946,10 @@
    "dist_km": 2.34,
    "elev_m": 92,
    "tempo": "8:32",
-   "data": "2026-01-05"
+   "data": "2026-01-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Carreira de Tiro",
@@ -959,10 +958,10 @@
    "dist_km": 0.91,
    "elev_m": 6,
    "tempo": "2:57",
-   "data": "2026-01-03"
+   "data": "2026-01-03",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Carreira de Tiro (S-N)",
@@ -971,10 +970,10 @@
    "dist_km": 0.9,
    "elev_m": 5,
    "tempo": "2:56",
-   "data": "2026-01-03"
+   "data": "2026-01-03",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Pista 2",
@@ -983,10 +982,10 @@
    "dist_km": 0.54,
    "elev_m": 28,
    "tempo": "2:03",
-   "data": "2025-12-31"
+   "data": "2025-12-31",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "PSP - SCAL",
@@ -995,10 +994,10 @@
    "dist_km": 0.38,
    "elev_m": 2,
    "tempo": "1:02",
-   "data": "2025-12-26"
+   "data": "2025-12-26",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Estação / S. Bento",
@@ -1007,10 +1006,10 @@
    "dist_km": 1.83,
    "elev_m": 85,
    "tempo": "7:43",
-   "data": "2025-12-24"
+   "data": "2025-12-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "3 Voltas Oeiras Golf",
@@ -1019,10 +1018,10 @@
    "dist_km": 5.21,
    "elev_m": 32,
    "tempo": "20:47",
-   "data": "2025-12-11"
+   "data": "2025-12-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Estrada da Estação",
@@ -1031,10 +1030,10 @@
    "dist_km": 1.09,
    "elev_m": 66,
    "tempo": "4:06",
-   "data": "2025-12-08"
+   "data": "2025-12-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida E.Lerclerc",
@@ -1043,10 +1042,10 @@
    "dist_km": 0.2,
    "elev_m": 10,
    "tempo": "33s",
-   "data": "2025-12-06"
+   "data": "2025-12-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista do Complexo",
@@ -1055,10 +1054,10 @@
    "dist_km": 0.62,
    "elev_m": 2,
    "tempo": "1:58",
-   "data": "2025-12-06"
+   "data": "2025-12-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Caminho das Oficinas a Vapor (Norte - Sul)",
@@ -1067,10 +1066,10 @@
    "dist_km": 0.24,
    "elev_m": 1,
    "tempo": "35s",
-   "data": "2025-11-29"
+   "data": "2025-11-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Recta das séries",
@@ -1079,10 +1078,10 @@
    "dist_km": 0.32,
    "elev_m": 8,
    "tempo": "49s",
-   "data": "2025-11-27"
+   "data": "2025-11-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Os 100m da academia",
@@ -1091,10 +1090,10 @@
    "dist_km": 0.11,
    "elev_m": 2,
    "tempo": "13s",
-   "data": "2025-11-25"
+   "data": "2025-11-25",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Caminho da Central Diesel (Sul - Norte)",
@@ -1103,10 +1102,10 @@
    "dist_km": 0.28,
    "elev_m": 9,
    "tempo": "44s",
-   "data": "2025-11-20"
+   "data": "2025-11-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "#Cabanas - Subida",
@@ -1115,10 +1114,10 @@
    "dist_km": 0.88,
    "elev_m": 40,
    "tempo": "3:09",
-   "data": "2025-11-19"
+   "data": "2025-11-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av. Casal de Cabanas",
@@ -1127,10 +1126,10 @@
    "dist_km": 1.06,
    "elev_m": 52,
    "tempo": "3:59",
-   "data": "2025-11-18"
+   "data": "2025-11-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "SEF - Novartis",
@@ -1139,10 +1138,10 @@
    "dist_km": 0.63,
    "elev_m": 41,
    "tempo": "2:09",
-   "data": "2025-11-11"
+   "data": "2025-11-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Novartis Tagus",
@@ -1151,10 +1150,10 @@
    "dist_km": 0.67,
    "elev_m": 37,
    "tempo": "2:18",
-   "data": "2025-11-11"
+   "data": "2025-11-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Calçada da Junqueira curta",
@@ -1163,10 +1162,10 @@
    "dist_km": 0.18,
    "elev_m": 2,
    "tempo": "28s",
-   "data": "2025-11-08"
+   "data": "2025-11-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Três de Santa Clara",
@@ -1175,10 +1174,10 @@
    "dist_km": 0.32,
    "elev_m": 28,
    "tempo": "1:06",
-   "data": "2025-11-08"
+   "data": "2025-11-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Estrada Militar",
@@ -1187,10 +1186,10 @@
    "dist_km": 0.45,
    "elev_m": 36,
    "tempo": "1:46",
-   "data": "2025-11-08"
+   "data": "2025-11-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Estrada Militar",
@@ -1199,10 +1198,10 @@
    "dist_km": 0.59,
    "elev_m": 45,
    "tempo": "2:13",
-   "data": "2025-11-08"
+   "data": "2025-11-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Estrada Octávio Pato completa UP",
@@ -1211,10 +1210,10 @@
    "dist_km": 0.65,
    "elev_m": 6,
    "tempo": "2:05",
-   "data": "2025-11-06"
+   "data": "2025-11-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Catolica Climb",
@@ -1223,10 +1222,10 @@
    "dist_km": 0.48,
    "elev_m": 13,
    "tempo": "1:33",
-   "data": "2025-11-06"
+   "data": "2025-11-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Catolica Climb 2.0",
@@ -1235,10 +1234,10 @@
    "dist_km": 0.87,
    "elev_m": 11,
    "tempo": "2:52",
-   "data": "2025-11-06"
+   "data": "2025-11-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta ao Vazio do Golf and Residence",
@@ -1247,10 +1246,10 @@
    "dist_km": 1.85,
    "elev_m": 41,
    "tempo": "6:32",
-   "data": "2025-11-04"
+   "data": "2025-11-04",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Dona Maria Inês Schaller Dias Climb",
@@ -1259,10 +1258,10 @@
    "dist_km": 0.67,
    "elev_m": 76,
    "tempo": "3:07",
-   "data": "2025-11-01"
+   "data": "2025-11-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Calçada de Santa Clara",
@@ -1271,10 +1270,10 @@
    "dist_km": 0.74,
    "elev_m": 79,
    "tempo": "3:34",
-   "data": "2025-11-01"
+   "data": "2025-11-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Recta Univ Católica Up",
@@ -1283,10 +1282,10 @@
    "dist_km": 0.3,
    "elev_m": 6,
    "tempo": "47s",
-   "data": "2025-10-30"
+   "data": "2025-10-30",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta Campo de Golfe (Rua Carreira de Tiro / Av. Casal Cabanas)",
@@ -1295,10 +1294,10 @@
    "dist_km": 1.7,
    "elev_m": 31,
    "tempo": "6:18",
-   "data": "2025-10-28"
+   "data": "2025-10-28",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Golf descida",
@@ -1307,10 +1306,10 @@
    "dist_km": 1.2,
    "elev_m": 27,
    "tempo": "3:32",
-   "data": "2025-10-23"
+   "data": "2025-10-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Caminho das Oficinas a Vapor (Sul - Norte)",
@@ -1319,10 +1318,10 @@
    "dist_km": 0.23,
    "elev_m": 1,
    "tempo": "42s",
-   "data": "2025-10-22"
+   "data": "2025-10-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta no Oeiras Golf",
@@ -1331,10 +1330,10 @@
    "dist_km": 1.75,
    "elev_m": 33,
    "tempo": "6:02",
-   "data": "2025-10-21"
+   "data": "2025-10-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Rebenta",
@@ -1343,10 +1342,10 @@
    "dist_km": 0.43,
    "elev_m": 38,
    "tempo": "1:29",
-   "data": "2025-10-20"
+   "data": "2025-10-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida da Estrada da Estação",
@@ -1355,10 +1354,10 @@
    "dist_km": 1.11,
    "elev_m": 48,
    "tempo": "3:36",
-   "data": "2025-10-19"
+   "data": "2025-10-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Estrada da Estação",
@@ -1367,10 +1366,10 @@
    "dist_km": 1.26,
    "elev_m": 67,
    "tempo": "4:19",
-   "data": "2025-10-19"
+   "data": "2025-10-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida da Adelaide Felix",
@@ -1379,10 +1378,10 @@
    "dist_km": 0.2,
    "elev_m": 9,
    "tempo": "32s",
-   "data": "2025-10-18"
+   "data": "2025-10-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "R. Gago Coutinho e Sacadura Cabral S-N (até Jardim da República)",
@@ -1391,10 +1390,10 @@
    "dist_km": 0.42,
    "elev_m": 4,
    "tempo": "1:08",
-   "data": "2025-10-18"
+   "data": "2025-10-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua cidade d' Agen",
@@ -1403,10 +1402,10 @@
    "dist_km": 1.02,
    "elev_m": 6,
    "tempo": "3:17",
-   "data": "2025-10-18"
+   "data": "2025-10-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua da Fab. Pólvora Barcarena I",
@@ -1415,10 +1414,10 @@
    "dist_km": 1.15,
    "elev_m": 23,
    "tempo": "3:44",
-   "data": "2025-10-16"
+   "data": "2025-10-16",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua da Fab. Pólvora Barcarena II",
@@ -1427,10 +1426,10 @@
    "dist_km": 1.01,
    "elev_m": 23,
    "tempo": "3:14",
-   "data": "2025-10-16"
+   "data": "2025-10-16",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "BCP -> Novartis",
@@ -1439,10 +1438,10 @@
    "dist_km": 0.95,
    "elev_m": 34,
    "tempo": "3:12",
-   "data": "2025-10-15"
+   "data": "2025-10-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Mais uma volta",
@@ -1451,10 +1450,10 @@
    "dist_km": 1.13,
    "elev_m": 23,
    "tempo": "3:37",
-   "data": "2025-10-15"
+   "data": "2025-10-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida do Rastilho",
@@ -1463,10 +1462,10 @@
    "dist_km": 0.68,
    "elev_m": 50,
    "tempo": "2:38",
-   "data": "2025-10-14"
+   "data": "2025-10-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista 300m Rio Maior",
@@ -1475,10 +1474,10 @@
    "dist_km": 0.28,
    "elev_m": 0,
    "tempo": "41s",
-   "data": "2025-10-11"
+   "data": "2025-10-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "#CabanasMeiaVolta",
@@ -1487,10 +1486,10 @@
    "dist_km": 1.19,
    "elev_m": 28,
    "tempo": "4:17",
-   "data": "2025-10-09"
+   "data": "2025-10-09",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "5Km do Sázão",
@@ -1499,10 +1498,10 @@
    "dist_km": 5.02,
    "elev_m": 91,
    "tempo": "20:29",
-   "data": "2025-10-08"
+   "data": "2025-10-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa paralela Av. Brasil",
@@ -1511,10 +1510,10 @@
    "dist_km": 0.35,
    "elev_m": 21,
    "tempo": "1:07",
-   "data": "2025-10-07"
+   "data": "2025-10-07",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida R. Cooperativa do Pessoal da F. da Pólvora de Barcarena",
@@ -1523,10 +1522,10 @@
    "dist_km": 0.29,
    "elev_m": 17,
    "tempo": "1:00",
-   "data": "2025-10-07"
+   "data": "2025-10-07",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Avenida Brasil 8 Climb",
@@ -1535,10 +1534,10 @@
    "dist_km": 0.65,
    "elev_m": 40,
    "tempo": "2:26",
-   "data": "2025-09-25"
+   "data": "2025-09-25",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Carreira de Tiro",
@@ -1547,10 +1546,10 @@
    "dist_km": 0.9,
    "elev_m": 19,
    "tempo": "3:00",
-   "data": "2025-09-24"
+   "data": "2025-09-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Terra da Luísa",
@@ -1559,10 +1558,10 @@
    "dist_km": 0.98,
    "elev_m": 11,
    "tempo": "3:37",
-   "data": "2025-09-23"
+   "data": "2025-09-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Coloured Up & Down",
@@ -1571,10 +1570,10 @@
    "dist_km": 0.28,
    "elev_m": 6,
    "tempo": "52s",
-   "data": "2025-09-18"
+   "data": "2025-09-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida das Séries - Intermaché",
@@ -1583,10 +1582,10 @@
    "dist_km": 0.2,
    "elev_m": 16,
    "tempo": "37s",
-   "data": "2025-09-17"
+   "data": "2025-09-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Séries 250m reta do meio",
@@ -1595,10 +1594,10 @@
    "dist_km": 0.24,
    "elev_m": 6,
    "tempo": "33s",
-   "data": "2025-09-16"
+   "data": "2025-09-16",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista Celestino Graça",
@@ -1607,10 +1606,10 @@
    "dist_km": 0.39,
    "elev_m": 3,
    "tempo": "1:02",
-   "data": "2025-09-12"
+   "data": "2025-09-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "NB to BCP",
@@ -1619,10 +1618,10 @@
    "dist_km": 0.83,
    "elev_m": 26,
    "tempo": "2:18",
-   "data": "2025-09-10"
+   "data": "2025-09-10",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av_Jacques_Delors",
@@ -1631,10 +1630,10 @@
    "dist_km": 0.35,
    "elev_m": 12,
    "tempo": "1:07",
-   "data": "2025-09-03"
+   "data": "2025-09-03",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Novartis -> Rotunda do Millennium BCP",
@@ -1643,10 +1642,10 @@
    "dist_km": 1.11,
    "elev_m": 24,
    "tempo": "3:28",
-   "data": "2025-09-02"
+   "data": "2025-09-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Novartis -> ISQ",
@@ -1655,10 +1654,10 @@
    "dist_km": 0.74,
    "elev_m": 20,
    "tempo": "2:12",
-   "data": "2025-09-01"
+   "data": "2025-09-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta Porta do Sol N-S",
@@ -1667,10 +1666,10 @@
    "dist_km": 0.23,
    "elev_m": 7,
    "tempo": "30s",
-   "data": "2025-08-30"
+   "data": "2025-08-30",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av. Prof. Dr. Cavaco down",
@@ -1679,10 +1678,10 @@
    "dist_km": 0.36,
    "elev_m": 13,
    "tempo": "1:04",
-   "data": "2025-08-27"
+   "data": "2025-08-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av. do Brasil (São Marcos) Down",
@@ -1691,10 +1690,10 @@
    "dist_km": 0.49,
    "elev_m": 6,
    "tempo": "1:20",
-   "data": "2025-08-25"
+   "data": "2025-08-25",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa Estrada de São Marcos Up",
@@ -1703,10 +1702,10 @@
    "dist_km": 0.22,
    "elev_m": 12,
    "tempo": "41s",
-   "data": "2025-08-25"
+   "data": "2025-08-25",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "#PortalexAtéEscola",
@@ -1715,10 +1714,10 @@
    "dist_km": 0.39,
    "elev_m": 11,
    "tempo": "1:01",
-   "data": "2025-08-21"
+   "data": "2025-08-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Técnico - Novartis",
@@ -1727,10 +1726,10 @@
    "dist_km": 0.51,
    "elev_m": 21,
    "tempo": "1:51",
-   "data": "2025-08-20"
+   "data": "2025-08-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Climb to Residence",
@@ -1739,10 +1738,10 @@
    "dist_km": 0.41,
    "elev_m": 14,
    "tempo": "1:20",
-   "data": "2025-08-20"
+   "data": "2025-08-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida Millenium",
@@ -1751,10 +1750,10 @@
    "dist_km": 1.36,
    "elev_m": 53,
    "tempo": "4:35",
-   "data": "2025-08-19"
+   "data": "2025-08-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "av lopo soares de albergaria",
@@ -1763,10 +1762,10 @@
    "dist_km": 0.34,
    "elev_m": 8,
    "tempo": "59s",
-   "data": "2025-08-18"
+   "data": "2025-08-18",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista Agrária 400m",
@@ -1775,10 +1774,10 @@
    "dist_km": 0.41,
    "elev_m": 3,
    "tempo": "1:01",
-   "data": "2025-08-16"
+   "data": "2025-08-16",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series Rampas da Elis",
@@ -1787,10 +1786,10 @@
    "dist_km": 0.25,
    "elev_m": 13,
    "tempo": "35s",
-   "data": "2025-08-12"
+   "data": "2025-08-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa da Elis",
@@ -1799,10 +1798,10 @@
    "dist_km": 0.59,
    "elev_m": 15,
    "tempo": "2:22",
-   "data": "2025-08-12"
+   "data": "2025-08-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Avenida Brasil Climb",
@@ -1811,10 +1810,10 @@
    "dist_km": 1.13,
    "elev_m": 49,
    "tempo": "4:37",
-   "data": "2025-08-12"
+   "data": "2025-08-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Mercadona uphill",
@@ -1823,10 +1822,10 @@
    "dist_km": 0.4,
    "elev_m": 8,
    "tempo": "1:12",
-   "data": "2025-08-11"
+   "data": "2025-08-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Atalho_Pelo_Estacionamento",
@@ -1835,10 +1834,10 @@
    "dist_km": 0.24,
    "elev_m": 3,
    "tempo": "41s",
-   "data": "2025-08-06"
+   "data": "2025-08-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Nova ciclovia São Marcos 1/2",
@@ -1847,10 +1846,10 @@
    "dist_km": 0.55,
    "elev_m": 14,
    "tempo": "1:51",
-   "data": "2025-08-06"
+   "data": "2025-08-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Nova ciclovia São Marcos completa",
@@ -1859,10 +1858,10 @@
    "dist_km": 1.11,
    "elev_m": 16,
    "tempo": "3:53",
-   "data": "2025-08-06"
+   "data": "2025-08-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "RampasSico",
@@ -1871,10 +1870,10 @@
    "dist_km": 0.12,
    "elev_m": 11,
    "tempo": "19s",
-   "data": "2025-08-05"
+   "data": "2025-08-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Quatro caminhos a São Marcos, subida",
@@ -1883,10 +1882,10 @@
    "dist_km": 0.86,
    "elev_m": 45,
    "tempo": "3:30",
-   "data": "2025-08-05"
+   "data": "2025-08-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida até à Rua Carreira de Tiro",
@@ -1895,10 +1894,10 @@
    "dist_km": 1.51,
    "elev_m": 69,
    "tempo": "6:34",
-   "data": "2025-07-31"
+   "data": "2025-07-31",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Séries 250m",
@@ -1907,10 +1906,10 @@
    "dist_km": 0.27,
    "elev_m": 2,
    "tempo": "40s",
-   "data": "2025-07-29"
+   "data": "2025-07-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Segmento duvidoso",
@@ -1919,10 +1918,10 @@
    "dist_km": 0.15,
    "elev_m": 5,
    "tempo": "21s",
-   "data": "2025-07-24"
+   "data": "2025-07-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Série 400mts Universidade Católica",
@@ -1931,10 +1930,10 @@
    "dist_km": 0.44,
    "elev_m": 7,
    "tempo": "1:15",
-   "data": "2025-07-23"
+   "data": "2025-07-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Golf_Rampas_100M",
@@ -1943,10 +1942,10 @@
    "dist_km": 0.12,
    "elev_m": 5,
    "tempo": "18s",
-   "data": "2025-07-22"
+   "data": "2025-07-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Casal de Cabanas NCN UP",
@@ -1955,10 +1954,10 @@
    "dist_km": 0.65,
    "elev_m": 26,
    "tempo": "2:07",
-   "data": "2025-07-22"
+   "data": "2025-07-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta Porta do Sol S-N",
@@ -1967,10 +1966,10 @@
    "dist_km": 0.23,
    "elev_m": 8,
    "tempo": "34s",
-   "data": "2025-07-20"
+   "data": "2025-07-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Liceu - Miradouro - Depósito",
@@ -1979,10 +1978,10 @@
    "dist_km": 0.63,
    "elev_m": 23,
    "tempo": "2:03",
-   "data": "2025-07-20"
+   "data": "2025-07-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "EM583 (subir)",
@@ -1991,10 +1990,10 @@
    "dist_km": 0.28,
    "elev_m": 4,
    "tempo": "44s",
-   "data": "2025-07-19"
+   "data": "2025-07-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Zona Norte junto à  Compal",
@@ -2003,10 +2002,10 @@
    "dist_km": 0.22,
    "elev_m": 0,
    "tempo": "33s",
-   "data": "2025-07-19"
+   "data": "2025-07-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Miguel Bombarda",
@@ -2015,10 +2014,10 @@
    "dist_km": 0.41,
    "elev_m": 2,
    "tempo": "1:07",
-   "data": "2025-07-19"
+   "data": "2025-07-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida do Bruxedo",
@@ -2027,10 +2026,10 @@
    "dist_km": 0.24,
    "elev_m": 12,
    "tempo": "43s",
-   "data": "2025-07-17"
+   "data": "2025-07-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "ISQ -> Estacionamento NB",
@@ -2039,10 +2038,10 @@
    "dist_km": 1.26,
    "elev_m": 27,
    "tempo": "4:57",
-   "data": "2025-07-15"
+   "data": "2025-07-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida 5,5% 1200m",
@@ -2051,10 +2050,10 @@
    "dist_km": 1.15,
    "elev_m": 64,
    "tempo": "5:14",
-   "data": "2025-07-10"
+   "data": "2025-07-10",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Qta. Estribeira",
@@ -2063,10 +2062,10 @@
    "dist_km": 0.49,
    "elev_m": 60,
    "tempo": "2:00",
-   "data": "2025-07-07"
+   "data": "2025-07-07",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa do Campeão",
@@ -2075,10 +2074,10 @@
    "dist_km": 0.29,
    "elev_m": 30,
    "tempo": "1:03",
-   "data": "2025-06-23"
+   "data": "2025-06-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Meia rampa do campeão",
@@ -2087,10 +2086,10 @@
    "dist_km": 0.25,
    "elev_m": 22,
    "tempo": "58s",
-   "data": "2025-06-19"
+   "data": "2025-06-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "voltinha pequena down",
@@ -2099,10 +2098,10 @@
    "dist_km": 0.79,
    "elev_m": 7,
    "tempo": "2:49",
-   "data": "2025-06-17"
+   "data": "2025-06-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "1ª Subida completa",
@@ -2111,10 +2110,10 @@
    "dist_km": 0.48,
    "elev_m": 6,
    "tempo": "1:34",
-   "data": "2025-06-16"
+   "data": "2025-06-16",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descida R. Cooperativa do Pessoal da F. da Pólvora de Barcarena",
@@ -2123,10 +2122,10 @@
    "dist_km": 0.3,
    "elev_m": 18,
    "tempo": "40s",
-   "data": "2025-06-10"
+   "data": "2025-06-10",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Milénio",
@@ -2135,10 +2134,10 @@
    "dist_km": 0.16,
    "elev_m": 15,
    "tempo": "30s",
-   "data": "2025-06-09"
+   "data": "2025-06-09",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Descendente escadas jardim",
@@ -2147,10 +2146,10 @@
    "dist_km": 0.16,
    "elev_m": 12,
    "tempo": "28s",
-   "data": "2025-05-29"
+   "data": "2025-05-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Ascendente escadas jardim",
@@ -2159,10 +2158,10 @@
    "dist_km": 0.15,
    "elev_m": 18,
    "tempo": "26s",
-   "data": "2025-05-28"
+   "data": "2025-05-28",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series acelerações DOWN 150m",
@@ -2171,10 +2170,10 @@
    "dist_km": 0.15,
    "elev_m": 1,
    "tempo": "18s",
-   "data": "2025-05-26"
+   "data": "2025-05-26",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "#RampaDosOssosDOWN",
@@ -2183,10 +2182,10 @@
    "dist_km": 0.25,
    "elev_m": 8,
    "tempo": "34s",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series acelerações DOWN 2 160m",
@@ -2195,10 +2194,10 @@
    "dist_km": 0.16,
    "elev_m": 1,
    "tempo": "21s",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Serie 60s Univ Católica down",
@@ -2207,10 +2206,10 @@
    "dist_km": 0.34,
    "elev_m": 2,
    "tempo": "53s",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Barreirão de S. Marcos",
@@ -2219,10 +2218,10 @@
    "dist_km": 1.09,
    "elev_m": 80,
    "tempo": "4:56",
-   "data": "2025-05-22"
+   "data": "2025-05-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Meia volta à Católica",
@@ -2231,10 +2230,10 @@
    "dist_km": 0.68,
    "elev_m": 18,
    "tempo": "2:16",
-   "data": "2025-05-21"
+   "data": "2025-05-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta a Universidade Católica 1K",
@@ -2243,10 +2242,10 @@
    "dist_km": 1.04,
    "elev_m": 13,
    "tempo": "4:07",
-   "data": "2025-05-21"
+   "data": "2025-05-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Series acelerações UP 140m",
@@ -2255,10 +2254,10 @@
    "dist_km": 0.14,
    "elev_m": 1,
    "tempo": "20s",
-   "data": "2025-05-19"
+   "data": "2025-05-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Recta Univ Católica down",
@@ -2267,10 +2266,10 @@
    "dist_km": 0.31,
    "elev_m": 6,
    "tempo": "51s",
-   "data": "2025-05-19"
+   "data": "2025-05-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Recta Univ Católica IDA E VOLTA",
@@ -2279,10 +2278,10 @@
    "dist_km": 0.61,
    "elev_m": 6,
    "tempo": "1:50",
-   "data": "2025-05-15"
+   "data": "2025-05-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Estrada Octávio Pato completa DOWN",
@@ -2291,10 +2290,10 @@
    "dist_km": 0.65,
    "elev_m": 6,
    "tempo": "2:03",
-   "data": "2025-05-15"
+   "data": "2025-05-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Volta à Católica",
@@ -2303,10 +2302,10 @@
    "dist_km": 1.09,
    "elev_m": 34,
    "tempo": "4:29",
-   "data": "2025-05-14"
+   "data": "2025-05-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Segmento R. Vicente Pereira Bento",
@@ -2315,10 +2314,10 @@
    "dist_km": 0.27,
    "elev_m": 8,
    "tempo": "45s",
-   "data": "2025-05-13"
+   "data": "2025-05-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Sacrovir Moreira Climb",
@@ -2327,10 +2326,10 @@
    "dist_km": 0.62,
    "elev_m": 45,
    "tempo": "2:46",
-   "data": "2025-05-08"
+   "data": "2025-05-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rotunda BCP a rotunda Mac Tagus Park Up",
@@ -2339,10 +2338,10 @@
    "dist_km": 0.42,
    "elev_m": 5,
    "tempo": "1:11",
-   "data": "2025-05-05"
+   "data": "2025-05-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Av. do Brasil Climb (Oeiras side)",
@@ -2351,10 +2350,10 @@
    "dist_km": 1.06,
    "elev_m": 62,
    "tempo": "5:08",
-   "data": "2025-04-17"
+   "data": "2025-04-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rampa dos ciclistas",
@@ -2363,10 +2362,10 @@
    "dist_km": 0.1,
    "elev_m": 5,
    "tempo": "19s",
-   "data": "2025-04-13"
+   "data": "2025-04-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "#RainhaLeonorLencastreUP",
@@ -2375,10 +2374,10 @@
    "dist_km": 0.28,
    "elev_m": 24,
    "tempo": "1:11",
-   "data": "2025-04-07"
+   "data": "2025-04-07",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua do Matador",
@@ -2387,10 +2386,10 @@
    "dist_km": 0.47,
    "elev_m": 5,
    "tempo": "1:30",
-   "data": "2025-03-06"
+   "data": "2025-03-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida do Quinzena",
@@ -2399,10 +2398,10 @@
    "dist_km": 0.09,
    "elev_m": 10,
    "tempo": "12s",
-   "data": "2025-02-08"
+   "data": "2025-02-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Calçada da Junqueira (Quinzena)",
@@ -2411,10 +2410,10 @@
    "dist_km": 0.09,
    "elev_m": 10,
    "tempo": "13s",
-   "data": "2025-02-08"
+   "data": "2025-02-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Rua Braamcamp Freire",
@@ -2423,10 +2422,10 @@
    "dist_km": 0.1,
    "elev_m": 5,
    "tempo": "16s",
-   "data": "2025-02-08"
+   "data": "2025-02-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Av Duarte Pacheco Pereira",
@@ -2435,10 +2434,10 @@
    "dist_km": 0.13,
    "elev_m": 6,
    "tempo": "22s",
-   "data": "2025-02-01"
+   "data": "2025-02-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida curta N114",
@@ -2447,10 +2446,10 @@
    "dist_km": 0.31,
    "elev_m": 16,
    "tempo": "58s",
-   "data": "2025-01-11"
+   "data": "2025-01-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Alameda Half Garden",
@@ -2459,10 +2458,10 @@
    "dist_km": 0.38,
    "elev_m": 6,
    "tempo": "1:10",
-   "data": "2025-01-05"
+   "data": "2025-01-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "400 m Alameda v2",
@@ -2471,10 +2470,10 @@
    "dist_km": 0.4,
    "elev_m": 4,
    "tempo": "1:01",
-   "data": "2025-01-05"
+   "data": "2025-01-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "400 m Alameda v1",
@@ -2483,10 +2482,10 @@
    "dist_km": 0.4,
    "elev_m": 4,
    "tempo": "1:01",
-   "data": "2025-01-03"
+   "data": "2025-01-03",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "UP PRÉ-MONTE GORDO",
@@ -2495,10 +2494,10 @@
    "dist_km": 0.19,
    "elev_m": 32,
    "tempo": "55s",
-   "data": "2025-01-01"
+   "data": "2025-01-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rovisco Pais NP",
@@ -2507,10 +2506,10 @@
    "dist_km": 0.32,
    "elev_m": 9,
    "tempo": "52s",
-   "data": "2024-12-31"
+   "data": "2024-12-31",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Pista do Liceu 2",
@@ -2519,10 +2518,10 @@
    "dist_km": 0.46,
    "elev_m": 1,
    "tempo": "1:21",
-   "data": "2024-12-29"
+   "data": "2024-12-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Rua Guilherme de Azevedo S-N",
@@ -2531,10 +2530,10 @@
    "dist_km": 0.24,
    "elev_m": 5,
    "tempo": "41s",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Tribunal - PSP",
@@ -2543,10 +2542,10 @@
    "dist_km": 0.3,
    "elev_m": 3,
    "tempo": "49s",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Aristides de Sousa Mendes",
@@ -2555,10 +2554,10 @@
    "dist_km": 0.54,
    "elev_m": 9,
    "tempo": "1:33",
-   "data": "2024-12-27"
+   "data": "2024-12-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida Rua 16 Abril",
@@ -2567,10 +2566,10 @@
    "dist_km": 0.11,
    "elev_m": 7,
    "tempo": "22s",
-   "data": "2024-12-24"
+   "data": "2024-12-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Topo",
@@ -2579,10 +2578,10 @@
    "dist_km": 0.56,
    "elev_m": 15,
    "tempo": "2:10",
-   "data": "2024-12-24"
+   "data": "2024-12-24",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Giro vale Dourado",
@@ -2591,10 +2590,10 @@
    "dist_km": 0.94,
    "elev_m": 10,
    "tempo": "3:41",
-   "data": "2024-12-23"
+   "data": "2024-12-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Mercados @",
@@ -2603,10 +2602,10 @@
    "dist_km": 0.22,
    "elev_m": 4,
    "tempo": "34s",
-   "data": "2024-12-19"
+   "data": "2024-12-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta Complexo aquático (sul - Norte)",
@@ -2615,10 +2614,10 @@
    "dist_km": 0.22,
    "elev_m": 3,
    "tempo": "39s",
-   "data": "2024-12-15"
+   "data": "2024-12-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Reta Complexo aquático (Norte - Sul)",
@@ -2627,10 +2626,10 @@
    "dist_km": 0.2,
    "elev_m": 1,
    "tempo": "32s",
-   "data": "2024-12-14"
+   "data": "2024-12-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "uphill",
@@ -2639,10 +2638,10 @@
    "dist_km": 0.26,
    "elev_m": 12,
    "tempo": "42s",
-   "data": "2024-12-13"
+   "data": "2024-12-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Ferreira do Amaral",
@@ -2651,10 +2650,10 @@
    "dist_km": 0.22,
    "elev_m": 7,
    "tempo": "38s",
-   "data": "2024-12-12"
+   "data": "2024-12-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "IST- Av Rep",
@@ -2663,10 +2662,10 @@
    "dist_km": 0.77,
    "elev_m": 10,
    "tempo": "2:43",
-   "data": "2024-09-15"
+   "data": "2024-09-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 1,
    "tipo": "Run",
    "segmento": "Subida ao VG Jose Morto",
@@ -2675,10 +2674,10 @@
    "dist_km": 0.92,
    "elev_m": 41,
    "tempo": "4:00",
-   "data": "2024-07-13"
+   "data": "2024-07-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 9,
    "tipo": "Run",
    "segmento": "Rampasico",
@@ -2687,10 +2686,10 @@
    "dist_km": 0.11,
    "elev_m": 17,
    "tempo": "33s",
-   "data": "2026-06-02"
+   "data": "2026-06-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 6,
    "tipo": "Run",
    "segmento": "#RampaDosOssosUP",
@@ -2699,10 +2698,10 @@
    "dist_km": 0.26,
    "elev_m": 34,
    "tempo": "1:16",
-   "data": "2026-06-02"
+   "data": "2026-06-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 8,
    "tipo": "Run",
    "segmento": "Av Cidade de Lisboa Down",
@@ -2711,10 +2710,10 @@
    "dist_km": 0.77,
    "elev_m": 24,
    "tempo": "3:10",
-   "data": "2026-05-27"
+   "data": "2026-05-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "1000m p séries 2",
@@ -2723,10 +2722,10 @@
    "dist_km": 0.98,
    "elev_m": 7,
    "tempo": "3:08",
-   "data": "2026-05-21"
+   "data": "2026-05-21",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 6,
    "tipo": "Run",
    "segmento": "Recta das Séries - reverso",
@@ -2735,10 +2734,10 @@
    "dist_km": 0.29,
    "elev_m": 3,
    "tempo": "47s",
-   "data": "2026-05-20"
+   "data": "2026-05-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 8,
    "tipo": "Run",
    "segmento": "MF_EDP Lisboa a Mulher e a Vida 2021",
@@ -2747,10 +2746,10 @@
    "dist_km": 4.81,
    "elev_m": 2,
    "tempo": "16:56",
-   "data": "2026-05-17"
+   "data": "2026-05-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Corrida Lisboa, Mulher e a Vida 2017",
@@ -2759,10 +2758,10 @@
    "dist_km": 5.26,
    "elev_m": 13,
    "tempo": "17:48",
-   "data": "2026-05-17"
+   "data": "2026-05-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Series 1K TAGUS",
@@ -2771,10 +2770,10 @@
    "dist_km": 1.0,
    "elev_m": 10,
    "tempo": "3:27",
-   "data": "2026-05-13"
+   "data": "2026-05-13",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Volta da Marmeleira,  META FINAL",
@@ -2783,10 +2782,10 @@
    "dist_km": 0.25,
    "elev_m": 8,
    "tempo": "1:00",
-   "data": "2026-05-10"
+   "data": "2026-05-10",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "NOVA ESTRADA OCTÁVIO PATO COMPLETA - IDA",
@@ -2795,10 +2794,10 @@
    "dist_km": 1.17,
    "elev_m": 10,
    "tempo": "3:49",
-   "data": "2026-04-30"
+   "data": "2026-04-30",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Santa Rufina",
@@ -2807,10 +2806,10 @@
    "dist_km": 1.23,
    "elev_m": 37,
    "tempo": "4:58",
-   "data": "2026-04-19"
+   "data": "2026-04-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 8,
    "tipo": "Run",
    "segmento": "Estrada da Relvinha",
@@ -2819,10 +2818,10 @@
    "dist_km": 1.24,
    "elev_m": 6,
    "tempo": "4:38",
-   "data": "2026-04-19"
+   "data": "2026-04-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Estação de Óbidos-Arelho",
@@ -2831,10 +2830,10 @@
    "dist_km": 3.4,
    "elev_m": 36,
    "tempo": "12:50",
-   "data": "2026-04-19"
+   "data": "2026-04-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Meia Maratona de Obidos 2026",
@@ -2843,10 +2842,10 @@
    "dist_km": 21.49,
    "elev_m": 56,
    "tempo": "1:20:16",
-   "data": "2026-04-19"
+   "data": "2026-04-19",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Final río - Puente Campanar",
@@ -2855,10 +2854,10 @@
    "dist_km": 6.45,
    "elev_m": 13,
    "tempo": "25:23",
-   "data": "2026-04-08"
+   "data": "2026-04-08",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Subida Feira de Santana",
@@ -2867,10 +2866,10 @@
    "dist_km": 0.99,
    "elev_m": 45,
    "tempo": "4:14",
-   "data": "2026-03-14"
+   "data": "2026-03-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "#RampaDaDor",
@@ -2879,10 +2878,10 @@
    "dist_km": 0.25,
    "elev_m": 25,
    "tempo": "1:01",
-   "data": "2026-02-26"
+   "data": "2026-02-26",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Estádio Municipal - Parque da Zona Norte",
@@ -2891,10 +2890,10 @@
    "dist_km": 0.88,
    "elev_m": 5,
    "tempo": "2:59",
-   "data": "2026-02-22"
+   "data": "2026-02-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Descida Escola Prática",
@@ -2903,10 +2902,10 @@
    "dist_km": 0.7,
    "elev_m": 53,
    "tempo": "2:03",
-   "data": "2025-12-20"
+   "data": "2025-12-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Estrada Octávio Pato Climb",
@@ -2915,10 +2914,10 @@
    "dist_km": 0.56,
    "elev_m": 60,
    "tempo": "1:49",
-   "data": "2025-12-04"
+   "data": "2025-12-04",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "reta final",
@@ -2927,10 +2926,10 @@
    "dist_km": 0.58,
    "elev_m": 13,
    "tempo": "1:42",
-   "data": "2025-10-23"
+   "data": "2025-10-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "entre passadeiras",
@@ -2939,10 +2938,10 @@
    "dist_km": 0.92,
    "elev_m": 26,
    "tempo": "2:42",
-   "data": "2025-10-22"
+   "data": "2025-10-22",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Estrada da Lezíria (Vale de Figueira/Santarém)",
@@ -2951,10 +2950,10 @@
    "dist_km": 8.12,
    "elev_m": 16,
    "tempo": "32:38",
-   "data": "2025-10-12"
+   "data": "2025-10-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Vindimas 8k Sul-Norte",
@@ -2963,10 +2962,10 @@
    "dist_km": 8.02,
    "elev_m": 22,
    "tempo": "33:43",
-   "data": "2025-10-12"
+   "data": "2025-10-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Vindimas 16km",
@@ -2975,10 +2974,10 @@
    "dist_km": 16.14,
    "elev_m": 26,
    "tempo": "1:07:02",
-   "data": "2025-10-12"
+   "data": "2025-10-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Estrada da Lezíria (Santarém/Vale de Figueira)",
@@ -2987,10 +2986,10 @@
    "dist_km": 8.13,
    "elev_m": 17,
    "tempo": "33:54",
-   "data": "2025-10-12"
+   "data": "2025-10-12",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Reta 400m para a estrebaria",
@@ -2999,10 +2998,10 @@
    "dist_km": 0.4,
    "elev_m": 5,
    "tempo": "1:03",
-   "data": "2025-10-06"
+   "data": "2025-10-06",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "ou vais ...ou ficas",
@@ -3011,10 +3010,10 @@
    "dist_km": 1.39,
    "elev_m": 45,
    "tempo": "6:11",
-   "data": "2025-09-29"
+   "data": "2025-09-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 9,
    "tipo": "Ride",
    "segmento": "Outeiro - Casais do Arrocho",
@@ -3023,10 +3022,10 @@
    "dist_km": 4.95,
    "elev_m": 105,
    "tempo": "19:32",
-   "data": "2025-09-20"
+   "data": "2025-09-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 10,
    "tipo": "Ride",
    "segmento": "Giro Zona Industrial",
@@ -3035,10 +3034,10 @@
    "dist_km": 1.45,
    "elev_m": 12,
    "tempo": "3:19",
-   "data": "2025-08-15"
+   "data": "2025-08-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Reta 400m fugir da estrebaria",
@@ -3047,10 +3046,10 @@
    "dist_km": 0.4,
    "elev_m": 5,
    "tempo": "1:07",
-   "data": "2025-07-03"
+   "data": "2025-07-03",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "ESTRADA OCTÁVIO PATO IDA E VOLTA",
@@ -3059,10 +3058,10 @@
    "dist_km": 1.21,
    "elev_m": 6,
    "tempo": "4:42",
-   "data": "2025-07-02"
+   "data": "2025-07-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Volta aquecimento Estrada Octávio Pato",
@@ -3071,10 +3070,10 @@
    "dist_km": 2.32,
    "elev_m": 10,
    "tempo": "8:39",
-   "data": "2025-07-02"
+   "data": "2025-07-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Rua Dr. Mário Soares (rua dos aliados - avenida d. joão I)",
@@ -3083,10 +3082,10 @@
    "dist_km": 0.4,
    "elev_m": 3,
    "tempo": "1:15",
-   "data": "2025-06-27"
+   "data": "2025-06-27",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 5,
    "tipo": "Run",
    "segmento": "Rampa Cotovelo",
@@ -3095,10 +3094,10 @@
    "dist_km": 0.14,
    "elev_m": 17,
    "tempo": "26s",
-   "data": "2025-06-23"
+   "data": "2025-06-23",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Volta desce e sobe 850m",
@@ -3107,10 +3106,10 @@
    "dist_km": 0.85,
    "elev_m": 10,
    "tempo": "2:44",
-   "data": "2025-06-17"
+   "data": "2025-06-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Ride",
    "segmento": "circuito pelo parque e complexo aquatico",
@@ -3119,10 +3118,10 @@
    "dist_km": 0.7,
    "elev_m": 5,
    "tempo": "1:26",
-   "data": "2025-06-15"
+   "data": "2025-06-15",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Avenida Brasil Climb",
@@ -3131,10 +3130,10 @@
    "dist_km": 0.82,
    "elev_m": 50,
    "tempo": "3:30",
-   "data": "2025-06-04"
+   "data": "2025-06-04",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Tagus Kilometer",
@@ -3143,10 +3142,10 @@
    "dist_km": 1.07,
    "elev_m": 14,
    "tempo": "3:48",
-   "data": "2025-05-01"
+   "data": "2025-05-01",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 9,
    "tipo": "Run",
    "segmento": "Subida Cerealis - |  |",
@@ -3155,10 +3154,10 @@
    "dist_km": 0.99,
    "elev_m": 15,
    "tempo": "4:38",
-   "data": "2025-04-25"
+   "data": "2025-04-25",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "downhill",
@@ -3167,10 +3166,10 @@
    "dist_km": 0.2,
    "elev_m": 2,
    "tempo": "34s",
-   "data": "2025-01-05"
+   "data": "2025-01-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Cervejeiros Runners Brasil - Lisboa PT",
@@ -3179,10 +3178,10 @@
    "dist_km": 0.6,
    "elev_m": 5,
    "tempo": "2:00",
-   "data": "2024-12-20"
+   "data": "2024-12-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 6,
    "tipo": "Run",
    "segmento": "Reta INE",
@@ -3191,10 +3190,10 @@
    "dist_km": 0.2,
    "elev_m": 3,
    "tempo": "34s",
-   "data": "2024-12-17"
+   "data": "2024-12-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Instituto Superior Tecnico Loop",
@@ -3203,10 +3202,10 @@
    "dist_km": 1.15,
    "elev_m": 20,
    "tempo": "4:11",
-   "data": "2024-12-17"
+   "data": "2024-12-17",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Alameda 2 sectores",
@@ -3215,10 +3214,10 @@
    "dist_km": 0.61,
    "elev_m": 12,
    "tempo": "1:50",
-   "data": "2024-12-11"
+   "data": "2024-12-11",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "DOWN! to Magalhães",
@@ -3227,10 +3226,10 @@
    "dist_km": 0.4,
    "elev_m": 29,
    "tempo": "1:20",
-   "data": "2024-12-02"
+   "data": "2024-12-02",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Meia Maratona de Almada 2024",
@@ -3239,10 +3238,10 @@
    "dist_km": 21.06,
    "elev_m": 100,
    "tempo": "1:35:40",
-   "data": "2024-11-10"
+   "data": "2024-11-10",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 10,
    "tipo": "Run",
    "segmento": "Subida Avenida D. Afonso Henriques",
@@ -3251,10 +3250,10 @@
    "dist_km": 0.33,
    "elev_m": 37,
    "tempo": "1:30",
-   "data": "2024-11-05"
+   "data": "2024-11-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Av. D. Afonso Henriques",
@@ -3263,10 +3262,10 @@
    "dist_km": 0.54,
    "elev_m": 40,
    "tempo": "2:11",
-   "data": "2024-11-05"
+   "data": "2024-11-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Mercadona >Vila flor",
@@ -3275,10 +3274,10 @@
    "dist_km": 0.31,
    "elev_m": 16,
    "tempo": "1:04",
-   "data": "2024-11-05"
+   "data": "2024-11-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Descida do Santarém Hotel",
@@ -3287,10 +3286,10 @@
    "dist_km": 1.0,
    "elev_m": 63,
    "tempo": "3:04",
-   "data": "2024-10-05"
+   "data": "2024-10-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Carreiro das piscinas",
@@ -3299,10 +3298,10 @@
    "dist_km": 0.18,
    "elev_m": 18,
    "tempo": "1:25",
-   "data": "2024-10-05"
+   "data": "2024-10-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 8,
    "tipo": "Run",
    "segmento": "Av. Guerra Junqueiro",
@@ -3311,10 +3310,10 @@
    "dist_km": 0.31,
    "elev_m": 11,
    "tempo": "1:02",
-   "data": "2024-09-28"
+   "data": "2024-09-28",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Rampa Av. México",
@@ -3323,10 +3322,10 @@
    "dist_km": 0.22,
    "elev_m": 12,
    "tempo": "48s",
-   "data": "2024-09-20"
+   "data": "2024-09-20",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Escola Agricola",
@@ -3335,10 +3334,10 @@
    "dist_km": 0.39,
    "elev_m": 2,
    "tempo": "1:10",
-   "data": "2024-08-29"
+   "data": "2024-08-29",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Travessa da Praia Formosa Climb",
@@ -3347,10 +3346,10 @@
    "dist_km": 0.42,
    "elev_m": 54,
    "tempo": "2:01",
-   "data": "2024-08-05"
+   "data": "2024-08-05",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 2,
    "tipo": "Run",
    "segmento": "Rua da Escola",
@@ -3359,10 +3358,10 @@
    "dist_km": 0.25,
    "elev_m": 9,
    "tempo": "57s",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Trav das Piteiras",
@@ -3371,10 +3370,10 @@
    "dist_km": 0.19,
    "elev_m": 7,
    "tempo": "48s",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 3,
    "tipo": "Run",
    "segmento": "Pinhais",
@@ -3383,10 +3382,10 @@
    "dist_km": 0.4,
    "elev_m": 15,
    "tempo": "1:57",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Xeira"
   },
   {
-   "atleta": "Xeira",
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Volta ao 0",
@@ -3395,7 +3394,8 @@
    "dist_km": 1.95,
    "elev_m": 15,
    "tempo": "8:57",
-   "data": "2024-07-14"
+   "data": "2024-07-14",
+   "atleta": "Xeira"
   }
  ]
 }
