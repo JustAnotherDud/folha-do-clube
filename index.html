@@ -59,7 +59,7 @@
 
 <table id="ranking">
   <thead><tr>
-    <th>Nome</th><th>👑</th><th>🏅</th><th>Pontos</th><th>Posição Média</th>
+    <th>Nome</th><th>👑</th><th>🏆</th><th>Pontos</th><th>Posição Média</th>
   </tr></thead>
   <tbody></tbody>
 </table>
@@ -68,9 +68,9 @@
   <select id="f-atleta"><option value="">Todos os atletas</option></select>
   <select id="f-tipo"><option value="">Todos os tipos</option></select>
   <select id="f-trofeu">
-    <option value="">👑 + 🏅</option>
+    <option value="">👑 + 🏆</option>
     <option value="kom">Só 👑 (1º)</option>
-    <option value="top">Só 🏅 (2–10)</option>
+    <option value="top">Só 🏆 (2–10)</option>
   </select>
   <input id="f-busca" type="search" placeholder="Procurar segmento…">
   <span id="conta"></span>
@@ -111,7 +111,7 @@ function corAtleta(n) {
   for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
   return PALETA[h % PALETA.length];
 }
-function trofeu(p) { return p === 1 ? "👑" : "🏅"; }
+function trofeu(p) { return p === 1 ? "👑" : "🏆"; }
 const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️" };
 function emojiTipo(t) { return TIPOS[t] ?? t; }
 function dataPt(iso) {
