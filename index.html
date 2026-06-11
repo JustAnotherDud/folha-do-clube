@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Club 🌸 — KOMs &amp; Top10s</title>
+<style>
+  :root {
+    --laranja: #ff6d01;
+    --grelha: #d0d0d0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Roboto, "Segoe UI", Arial, sans-serif;
+    margin: 0; padding: 16px;
+    background: #f8f9fa; color: #202124;
+    font-size: 14px;
+  }
+  h1 { font-size: 20px; margin: 0 0 12px; }
+  h1 small { font-weight: normal; color: #5f6368; font-size: 12px; }
+
+  table { border-collapse: collapse; background: #fff; }
+  th, td { border: 1px solid var(--grelha); padding: 4px 10px; text-align: center; }
+  thead th { background: var(--laranja); color: #000; font-weight: 700; }
+
+  /* cores por atleta, como na sheet */
+  .a-Xeira    { background: #9900ff; color: #fff; font-weight: 700; }
+  .a-Zé      { background: #cc0000; color: #fff; font-weight: 700; }
+  .a-Carolina { background: #ffff00; color: #000; font-weight: 700; }
+  .a-Ana      { background: #00838f; color: #fff; font-weight: 700; }
+  .a-outro    { background: #666;    color: #fff; font-weight: 700; }
+
+  #ranking { margin-bottom: 20px; }
+  #ranking td.num { text-align: center; }
+  #ranking tr.r0 td:not(:first-child) { background: #ffe599; }
+  #ranking td { font-weight: 600; }
+
+  .filtros { margin: 0 0 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .filtros select, .filtros input {
+    padding: 5px 8px; border: 1px solid var(--grelha); border-radius: 4px;
+    font-size: 13px; background: #fff;
+  }
+  .filtros input { width: 220px; }
+  #conta { color: #5f6368; font-size: 12px; }
+
+  #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela th .seta { font-size: 10px; }
+  #tabela td.seg { text-align: left; }
+  #tabela a { color: #1155cc; }
+  #tabela tbody tr:nth-child(even) { background: #fff7f0; }
+  td.num, th.num { text-align: right; }
+  .trofeu { font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Club 🌸 — KOMs &amp; Top10s <small id="gerado"></small></h1>
+
+<table id="ranking">
+  <thead><tr>
+    <th>Nome</th><th>👑</th><th>🏅</th><th>Pontos</th><th>Posição Média</th>
+  </tr></thead>
+  <tbody></tbody>
+</table>
+
+<div class="filtros">
+  <select id="f-atleta"><option value="">Todos os atletas</option></select>
+  <select id="f-tipo"><option value="">Todos os tipos</option></select>
+  <select id="f-trofeu">
+    <option value="">👑 + 🏅</option>
+    <option value="kom">Só 👑 (1º)</option>
+    <option value="top">Só 🏅 (2–10)</option>
+  </select>
+  <input id="f-busca" type="search" placeholder="Procurar segmento…">
+  <span id="conta"></span>
+</div>
+
+<table id="tabela">
+  <thead><tr>
+    <th data-k="atleta">Nome <span class="seta"></span></th>
+    <th data-k="posicao">Posição <span class="seta"></span></th>
+    <th>Troféu</th>
+    <th data-k="tipo">Tipo <span class="seta"></span></th>
+    <th data-k="segmento">Segmento <span class="seta"></span></th>
+    <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
+    <th data-k="elev_m" class="num">Elevação <span class="seta"></span></th>
+    <th data-k="tempo">Tempo <span class="seta"></span></th>
+    <th data-k="data">Data <span class="seta"></span></th>
+  </tr></thead>
+  <tbody></tbody>
+</table>
+
+<script>
+"use strict";
+let linhas = [];
+let ordem = { k: "data", asc: false };
+
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g,
+    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function corAtleta(n) {
+  return ["Xeira", "Zé", "Carolina", "Ana"].includes(n) ? "a-" + n : "a-outro";
+}
+function trofeu(p) { return p === 1 ? "👑" : "🏅"; }
+function dataPt(iso) {
+  const [a, m, d] = iso.split("-");
+  return `${d}/${m}/${a}`;
+}
+
+function ranking() {
+  const por = {};
+  for (const l of linhas) {
+    const r = por[l.atleta] ??= { nome: l.atleta, koms: 0, meds: 0, pontos: 0, soma: 0, n: 0 };
+    if (l.posicao === 1) r.koms++; else r.meds++;
+    r.pontos += 11 - l.posicao;       // 👑=10 … 10º=1
+    r.soma += l.posicao; r.n++;
+  }
+  const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos);
+  document.querySelector("#ranking tbody").innerHTML = ord.map((r, i) => `
+    <tr class="r${i}">
+      <td class="${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
+      <td class="num">${r.koms}</td><td class="num">${r.meds}</td>
+      <td class="num">${r.pontos}</td>
+      <td class="num">${(r.soma / r.n).toFixed(3)}</td>
+    </tr>`).join("");
+}
+
+function filtradas() {
+  const fa = document.getElementById("f-atleta").value;
+  const ft = document.getElementById("f-tipo").value;
+  const fr = document.getElementById("f-trofeu").value;
+  const q = document.getElementById("f-busca").value.toLowerCase();
+  return linhas.filter(l =>
+    (!fa || l.atleta === fa) &&
+    (!ft || l.tipo === ft) &&
+    (!fr || (fr === "kom" ? l.posicao === 1 : l.posicao > 1)) &&
+    (!q || l.segmento.toLowerCase().includes(q)));
+}
+
+function render() {
+  const ls = filtradas().slice().sort((a, b) => {
+    const va = a[ordem.k], vb = b[ordem.k];
+    const c = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb), "pt");
+    return ordem.asc ? c : -c;
+  });
+  document.querySelector("#tabela tbody").innerHTML = ls.map(l => `
+    <tr>
+      <td class="${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
+      <td>${l.posicao}</td>
+      <td class="trofeu">${trofeu(l.posicao)}</td>
+      <td>${escHtml(l.tipo)}</td>
+      <td class="seg"><a href="${escHtml(l.url)}" target="_blank" rel="noopener">${escHtml(l.segmento)}</a></td>
+      <td class="num">${l.dist_km.toFixed(2)} km</td>
+      <td class="num">${l.elev_m} m</td>
+      <td>${l.effort_url
+        ? `<a href="${escHtml(l.effort_url)}" target="_blank" rel="noopener">${escHtml(l.tempo)}</a>`
+        : escHtml(l.tempo)}</td>
+      <td>${dataPt(l.data)}</td>
+    </tr>`).join("");
+  document.getElementById("conta").textContent = `${ls.length} de ${linhas.length}`;
+  document.querySelectorAll("#tabela th[data-k]").forEach(th => {
+    th.querySelector(".seta").textContent =
+      th.dataset.k === ordem.k ? (ordem.asc ? "▲" : "▼") : "";
+  });
+}
+
+function popularFiltros() {
+  const op = (sel, vals) => {
+    const s = document.getElementById(sel);
+    for (const v of vals) s.insertAdjacentHTML("beforeend",
+      `<option value="${escHtml(v)}">${escHtml(v)}</option>`);
+  };
+  op("f-atleta", [...new Set(linhas.map(l => l.atleta))].sort());
+  op("f-tipo", [...new Set(linhas.map(l => l.tipo))].sort());
+}
+
+document.querySelectorAll("#tabela th[data-k]").forEach(th =>
+  th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    ordem = { k, asc: ordem.k === k ? !ordem.asc : true };
+    render();
+  }));
+document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
+  el.addEventListener("input", render));
+
+fetch("data.json").then(r => r.json()).then(d => {
+  linhas = d.linhas;
+  document.getElementById("gerado").textContent =
+    "actualizado " + d.gerado.replace("T", " ");
+  popularFiltros();
+  ranking();
+  render();
+});
+</script>
+</body>
+</html>
