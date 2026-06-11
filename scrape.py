@@ -18,11 +18,9 @@ from datetime import datetime, date
 import requests
 from bs4 import BeautifulSoup
 
-ATLETAS = [
-    ("100300630", "Zé"),
-    ("135219743", "Xeira"),
-    # acrescentar ("id", "Nome") quando houver mais
-]
+CLUBE = "nozes"
+# alcunhas; quem não estiver aqui usa o primeiro nome do perfil
+ALCUNHAS = {"100300630": "Zé", "135219743": "Xeira"}
 BASE = "https://www.strava.com"
 PAGE_DELAY = 1.5
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -66,6 +64,30 @@ def parse_rows(html):
     return rows
 
 
+def membros_clube(s):
+    """Lista (id, nome) dos membros do clube, com paginação."""
+    atletas, n = {}, 1
+    while True:
+        r = s.get(f"{BASE}/clubs/{CLUBE}/members?page={n}",
+                  headers=HEADERS, timeout=30)
+        r.raise_for_status()
+        if "/login" in r.url:
+            sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
+        soup = BeautifulSoup(r.text, "html.parser")
+        antes = len(atletas)
+        for a in soup.select("a[href^='/athletes/']"):
+            m = re.fullmatch(r"/athletes/(\d+)", a["href"])
+            nome = a.get_text(strip=True)
+            if m and nome:
+                aid = m.group(1)
+                atletas.setdefault(aid, ALCUNHAS.get(aid, nome.split()[0]))
+        if len(atletas) == antes:    # página sem membros novos = fim
+            break
+        n += 1
+        time.sleep(PAGE_DELAY)
+    return sorted(atletas.items(), key=lambda kv: kv[1].lower())
+
+
 def main():
     cookie = os.environ.get("STRAVA_SESSION", "").strip()
     if not cookie:
@@ -73,8 +95,11 @@ def main():
     s = requests.Session()
     s.cookies.set("_strava4_session", cookie, domain=".strava.com")
 
+    atletas = membros_clube(s)
+    print(f"{len(atletas)} membros: " + ", ".join(n for _, n in atletas))
+
     linhas = []
-    for athlete_id, nome in ATLETAS:
+    for athlete_id, nome in atletas:
         for top_tens in (False, True):
             n = 1
             while True:

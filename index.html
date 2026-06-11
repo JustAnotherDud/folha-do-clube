@@ -7,48 +7,49 @@
 <title>Club 🌸 — KOMs &amp; Top10s</title>
 <style>
   :root {
-    --laranja: #ff6d01;
-    --grelha: #d0d0d0;
+    --laranja: #c75b12;
+    --grelha: #3c4043;
+    --fundo: #1b1b1d;
+    --painel: #242528;
+    --texto: #e8eaed;
+    --suave: #9aa0a6;
+    --link: #8ab4f8;
   }
   * { box-sizing: border-box; }
   body {
     font-family: Roboto, "Segoe UI", Arial, sans-serif;
     margin: 0; padding: 16px;
-    background: #f8f9fa; color: #202124;
+    background: var(--fundo); color: var(--texto);
     font-size: 14px;
+    color-scheme: dark;
   }
   h1 { font-size: 20px; margin: 0 0 12px; }
-  h1 small { font-weight: normal; color: #5f6368; font-size: 12px; }
+  h1 small { font-weight: normal; color: var(--suave); font-size: 12px; }
 
-  table { border-collapse: collapse; background: #fff; }
+  table { border-collapse: collapse; background: var(--painel); }
   th, td { border: 1px solid var(--grelha); padding: 4px 10px; text-align: center; }
-  thead th { background: var(--laranja); color: #000; font-weight: 700; }
+  thead th { background: var(--laranja); color: #fff; font-weight: 700; }
 
-  /* cores por atleta, como na sheet */
-  .a-Xeira    { background: #9900ff; color: #fff; font-weight: 700; }
-  .a-Zé      { background: #cc0000; color: #fff; font-weight: 700; }
-  .a-Carolina { background: #ffff00; color: #000; font-weight: 700; }
-  .a-Ana      { background: #00838f; color: #fff; font-weight: 700; }
-  .a-outro    { background: #666;    color: #fff; font-weight: 700; }
+  td.atleta { color: #fff; font-weight: 700; }
 
   #ranking { margin-bottom: 20px; }
   #ranking td.num { text-align: center; }
-  #ranking tr.r0 td:not(:first-child) { background: #ffe599; }
+  #ranking tr.r0 td:not(:first-child) { background: #4a3a12; }
   #ranking td { font-weight: 600; }
 
   .filtros { margin: 0 0 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   .filtros select, .filtros input {
     padding: 5px 8px; border: 1px solid var(--grelha); border-radius: 4px;
-    font-size: 13px; background: #fff;
+    font-size: 13px; background: var(--painel); color: var(--texto);
   }
   .filtros input { width: 220px; }
-  #conta { color: #5f6368; font-size: 12px; }
+  #conta { color: var(--suave); font-size: 12px; }
 
   #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
   #tabela th .seta { font-size: 10px; }
   #tabela td.seg { text-align: left; }
-  #tabela a { color: #1155cc; }
-  #tabela tbody tr:nth-child(even) { background: #fff7f0; }
+  a { color: var(--link); }
+  #tabela tbody tr:nth-child(even) { background: #2a2622; }
   td.num, th.num { text-align: right; }
   .trofeu { font-size: 15px; }
 </style>
@@ -99,8 +100,16 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g,
     c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
+// cores fixas da sheet (ajustadas p/ dark) + paleta para o resto do clube
+const CORES_FIXAS = { "Xeira": "#8e24aa", "Zé": "#c62828",
+                      "Carolina": "#b8a000", "Ana": "#00838f" };
+const PALETA = ["#2e7d32", "#1565c0", "#e65100", "#5d4037",
+                "#37474f", "#6a1b9a", "#00695c", "#9e9d24"];
 function corAtleta(n) {
-  return ["Xeira", "Zé", "Carolina", "Ana"].includes(n) ? "a-" + n : "a-outro";
+  if (CORES_FIXAS[n]) return CORES_FIXAS[n];
+  let h = 0;                       // hash determinístico: cor estável entre dias
+  for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
+  return PALETA[h % PALETA.length];
 }
 function trofeu(p) { return p === 1 ? "👑" : "🏅"; }
 function dataPt(iso) {
@@ -119,7 +128,7 @@ function ranking() {
   const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos);
   document.querySelector("#ranking tbody").innerHTML = ord.map((r, i) => `
     <tr class="r${i}">
-      <td class="${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
+      <td class="atleta" style="background:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
       <td class="num">${r.koms}</td><td class="num">${r.meds}</td>
       <td class="num">${r.pontos}</td>
       <td class="num">${(r.soma / r.n).toFixed(3)}</td>
@@ -146,7 +155,7 @@ function render() {
   });
   document.querySelector("#tabela tbody").innerHTML = ls.map(l => `
     <tr>
-      <td class="${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
+      <td class="atleta" style="background:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
       <td>${l.posicao}</td>
       <td class="trofeu">${trofeu(l.posicao)}</td>
       <td>${escHtml(l.tipo)}</td>
