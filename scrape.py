@@ -21,6 +21,10 @@ from bs4 import BeautifulSoup
 CLUBE = "nozes"
 # alcunhas; quem não estiver aqui usa o primeiro nome do perfil
 ALCUNHAS = {"100300630": "Zé", "135219743": "Xeira"}
+# segmentos com bug no Strava a excluir (id numérico do URL /segments/<id>)
+IGNORAR = {
+    # "12345678",  # exemplo — nome do segmento e porquê
+}
 BASE = "https://www.strava.com"
 PAGE_DELAY = 1.5
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -44,6 +48,8 @@ def parse_rows(html):
     for tr in table.select("tbody tr"):
         seg = tr.select_one("a[href^='/segments/']")
         if not seg:
+            continue
+        if seg["href"].rsplit("/", 1)[-1] in IGNORAR:
             continue
         effort = tr.select_one("a[href^='/segment_efforts/']")
         icon = tr.select_one("td.icon img")
