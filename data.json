@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-11T21:26Z",
+ "gerado": "2026-06-11T23:24Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2306,18 +2306,6 @@
    "atleta": "Xeira"
   },
   {
-   "posicao": 2,
-   "tipo": "Run",
-   "segmento": "1000m p séries 2",
-   "url": "https://www.strava.com/segments/8843490",
-   "effort_url": "https://www.strava.com/segment_efforts/3492626727605133638",
-   "dist_km": 0.98,
-   "elev_m": 7,
-   "tempo": "3:08",
-   "data": "2026-05-21",
-   "atleta": "Xeira"
-  },
-  {
    "posicao": 6,
    "tipo": "Run",
    "segmento": "Recta das Séries - reverso",
@@ -2351,18 +2339,6 @@
    "elev_m": 13,
    "tempo": "17:48",
    "data": "2026-05-17",
-   "atleta": "Xeira"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Run",
-   "segmento": "Series 1K TAGUS",
-   "url": "https://www.strava.com/segments/30832045",
-   "effort_url": "https://www.strava.com/segment_efforts/3489731615633234512",
-   "dist_km": 1.0,
-   "elev_m": 10,
-   "tempo": "3:27",
-   "data": "2026-05-13",
    "atleta": "Xeira"
   },
   {
@@ -2819,18 +2795,6 @@
    "elev_m": 29,
    "tempo": "1:20",
    "data": "2024-12-02",
-   "atleta": "Xeira"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Run",
-   "segmento": "Meia Maratona de Almada 2024",
-   "url": "https://www.strava.com/segments/38123078",
-   "effort_url": "https://www.strava.com/segment_efforts/3290722650844960216",
-   "dist_km": 21.06,
-   "elev_m": 100,
-   "tempo": "1:35:40",
-   "data": "2024-11-10",
    "atleta": "Xeira"
   },
   {
