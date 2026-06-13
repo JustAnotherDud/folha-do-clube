@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-12T09:41Z",
+ "gerado": "2026-06-13T08:38Z",
  "linhas": [
   {
    "posicao": 3,
@@ -156,6 +156,18 @@
    "tempo": "1:54",
    "data": "2026-03-06",
    "atleta": "Inês"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Rampasico",
+   "url": "https://www.strava.com/segments/26444804",
+   "effort_url": "https://www.strava.com/segment_efforts/3500603956955407758",
+   "dist_km": 0.11,
+   "elev_m": 17,
+   "tempo": "25s",
+   "data": "2026-06-12",
+   "atleta": "Xeira"
   },
   {
    "posicao": 1,
@@ -2270,27 +2282,15 @@
    "atleta": "Xeira"
   },
   {
-   "posicao": 9,
-   "tipo": "Run",
-   "segmento": "Rampasico",
-   "url": "https://www.strava.com/segments/26444804",
-   "effort_url": "https://www.strava.com/segment_efforts/3496974091460452236",
-   "dist_km": 0.11,
-   "elev_m": 17,
-   "tempo": "33s",
-   "data": "2026-06-02",
-   "atleta": "Xeira"
-  },
-  {
-   "posicao": 6,
+   "posicao": 4,
    "tipo": "Run",
    "segmento": "#RampaDosOssosUP",
    "url": "https://www.strava.com/segments/21352589",
-   "effort_url": "https://www.strava.com/segment_efforts/3496974091459355532",
+   "effort_url": "https://www.strava.com/segment_efforts/3500603956956628366",
    "dist_km": 0.26,
    "elev_m": 34,
-   "tempo": "1:16",
-   "data": "2026-06-02",
+   "tempo": "1:12",
+   "data": "2026-06-12",
    "atleta": "Xeira"
   },
   {
