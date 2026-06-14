@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-13T08:38Z",
+ "gerado": "2026-06-14T08:54Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2591,18 +2591,6 @@
    "elev_m": 105,
    "tempo": "19:32",
    "data": "2025-09-20",
-   "atleta": "Xeira"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Ride",
-   "segmento": "Giro Zona Industrial",
-   "url": "https://www.strava.com/segments/35737714",
-   "effort_url": "https://www.strava.com/segment_efforts/3391506930498416788",
-   "dist_km": 1.45,
-   "elev_m": 12,
-   "tempo": "3:19",
-   "data": "2025-08-15",
    "atleta": "Xeira"
   },
   {
