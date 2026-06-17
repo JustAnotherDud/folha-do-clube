@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-16T10:24Z",
+ "gerado": "2026-06-17T10:13Z",
  "linhas": [
   {
    "posicao": 3,
@@ -143,18 +143,6 @@
    "elev_m": 32,
    "tempo": "4:02",
    "data": "2026-03-25",
-   "atleta": "Inês"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Run",
-   "segmento": "PSP - SCAL",
-   "url": "https://www.strava.com/segments/10787280",
-   "effort_url": "https://www.strava.com/segment_efforts/3465103589344269066",
-   "dist_km": 0.38,
-   "elev_m": 2,
-   "tempo": "1:54",
-   "data": "2026-03-06",
    "atleta": "Inês"
   },
   {
