@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-18T09:52Z",
+ "gerado": "2026-06-19T09:58Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2267,6 +2267,18 @@
    "elev_m": 41,
    "tempo": "4:00",
    "data": "2024-07-13",
+   "atleta": "Xeira"
+  },
+  {
+   "posicao": 8,
+   "tipo": "Run",
+   "segmento": "Estação à Polvora",
+   "url": "https://www.strava.com/segments/10382253",
+   "effort_url": "https://www.strava.com/segment_efforts/3502771800912782318",
+   "dist_km": 1.28,
+   "elev_m": 30,
+   "tempo": "4:45",
+   "data": "2026-06-18",
    "atleta": "Xeira"
   },
   {
