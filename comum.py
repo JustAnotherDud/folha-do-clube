@@ -26,7 +26,9 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
 
 CACHE_LOCAIS = Path(__file__).parent / "localizacoes.json"
-LOCAL_DELAY = 1.0  # segundos entre pedidos a /segments/<id> (só para ids novos)
+CACHE_SEGS   = Path(__file__).parent / "segmentos.json"
+LOCAL_DELAY  = 1.0   # segundos entre pedidos a /segments/<id>
+API_DELAY    = 0.3   # segundos entre pedidos à API v3
 
 
 def iso_date(s):
@@ -72,6 +74,49 @@ def _carregar_cache():
 def _guardar_cache(cache):
     CACHE_LOCAIS.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True),
                              encoding="utf-8")
+
+
+def _carregar_cache_segs():
+    if CACHE_SEGS.exists():
+        return json.loads(CACHE_SEGS.read_text(encoding="utf-8"))
+    return {}
+
+
+def _guardar_cache_segs(cache):
+    CACHE_SEGS.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True),
+                          encoding="utf-8")
+
+
+def buscar_detalhes_segmentos(seg_ids, access_token):
+    """
+    Devolve {seg_id: {"elev_gain": m, "avg_grade": %, "climb_cat": 0-5}}
+    via API v3 (requer access_token OAuth). Usa cache em segmentos.json.
+    """
+    cache = _carregar_cache_segs()
+    novos = 0
+    for sid in seg_ids:
+        if sid in cache:
+            continue
+        try:
+            r = requests.get(f"https://www.strava.com/api/v3/segments/{sid}",
+                             headers={"Authorization": f"Bearer {access_token}"},
+                             timeout=30)
+            r.raise_for_status()
+            d = r.json()
+            cache[sid] = {
+                "elev_gain":  round(d.get("total_elevation_gain", 0)),
+                "avg_grade":  round(d.get("average_grade", 0), 1),
+                "climb_cat":  d.get("climb_category", 0),
+            }
+        except requests.RequestException:
+            cache[sid] = {"elev_gain": 0, "avg_grade": 0, "climb_cat": 0}
+        novos += 1
+        time.sleep(API_DELAY)
+    if novos:
+        _guardar_cache_segs(cache)
+        print(f"  detalhes: {novos} segmento(s) consultados via API "
+              f"({len(cache)} no cache total).")
+    return cache
 
 
 def localizar_segmentos(seg_ids, sessao=None):

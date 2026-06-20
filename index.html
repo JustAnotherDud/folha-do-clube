@@ -86,7 +86,8 @@
     <th data-k="tipo">Tipo <span class="seta"></span></th>
     <th data-k="segmento">Segmento <span class="seta"></span></th>
     <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
-    <th data-k="elev_m" class="num">Elevação <span class="seta"></span></th>
+    <th data-k="elev_gain" class="num">Ganho <span class="seta"></span></th>
+    <th data-k="avg_grade" class="num">Declive <span class="seta"></span></th>
     <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
     <th data-k="tempo">Tempo <span class="seta"></span></th>
     <th data-k="cidade">Cidade <span class="seta"></span></th>
@@ -193,7 +194,8 @@ function render() {
       <td>${emojiTipo(l.tipo)}</td>
       <td class="seg"><a href="${escHtml(l.url)}" target="_blank" rel="noopener">${escHtml(l.segmento)}</a></td>
       <td class="num">${l.dist_km.toFixed(2)} km</td>
-      <td class="num">${l.elev_m} m</td>
+      <td class="num">${l.elev_gain != null ? l.elev_gain + " m" : "—"}</td>
+      <td class="num">${l.avg_grade != null ? l.avg_grade + " %" : "—"}</td>
       <td class="num">${formatarRitmo(l)}</td>
       <td>${l.effort_url
         ? `<a href="${escHtml(l.effort_url)}" target="_blank" rel="noopener">${escHtml(l.tempo)}</a>`
