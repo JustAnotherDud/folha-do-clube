@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-20T23:06Z",
+ "gerado": "2026-06-20T23:20Z",
  "linhas": [
   {
    "posicao": 3,
@@ -12,8 +12,8 @@
    "tempo": "2:29",
    "data": "2025-07-10",
    "atleta": "Ana",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Uccle - Ukkel",
+   "pais": "Belgium"
   },
   {
    "posicao": 5,
@@ -26,8 +26,8 @@
    "tempo": "5:28",
    "data": "2025-01-19",
    "atleta": "Ana",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Cartaxo",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -40,8 +40,8 @@
    "tempo": "0:52",
    "data": "2025-04-13",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -54,8 +54,8 @@
    "tempo": "2:22",
    "data": "2026-05-03",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -68,8 +68,8 @@
    "tempo": "4:59",
    "data": "2026-05-03",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -82,8 +82,8 @@
    "tempo": "5:35",
    "data": "2026-05-03",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -96,8 +96,8 @@
    "tempo": "1:33",
    "data": "2025-12-02",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Almeirim",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -110,8 +110,8 @@
    "tempo": "1:35",
    "data": "2025-04-13",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -124,8 +124,8 @@
    "tempo": "2:14",
    "data": "2025-04-13",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -138,8 +138,8 @@
    "tempo": "5:28",
    "data": "2025-01-19",
    "atleta": "Carolina",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Cartaxo",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -166,8 +166,8 @@
    "tempo": "4:02",
    "data": "2026-03-25",
    "atleta": "Inês",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Alcobaça",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -194,8 +194,8 @@
    "tempo": "1:32",
    "data": "2026-06-07",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -208,8 +208,8 @@
    "tempo": "8:23",
    "data": "2026-06-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -222,8 +222,8 @@
    "tempo": "3:07",
    "data": "2026-06-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -236,8 +236,8 @@
    "tempo": "1:51",
    "data": "2026-06-04",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -250,8 +250,8 @@
    "tempo": "3:12",
    "data": "2026-06-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -264,8 +264,8 @@
    "tempo": "4:19",
    "data": "2026-05-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -278,8 +278,8 @@
    "tempo": "1:27",
    "data": "2026-05-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -292,8 +292,8 @@
    "tempo": "1:01",
    "data": "2026-05-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -306,8 +306,8 @@
    "tempo": "1:54",
    "data": "2026-05-21",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -320,8 +320,8 @@
    "tempo": "2:12",
    "data": "2026-05-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -334,8 +334,8 @@
    "tempo": "1:57",
    "data": "2026-05-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -348,8 +348,8 @@
    "tempo": "9:30",
    "data": "2026-05-13",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -362,8 +362,8 @@
    "tempo": "3:22",
    "data": "2026-05-13",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -376,8 +376,8 @@
    "tempo": "18:02",
    "data": "2026-05-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -390,8 +390,8 @@
    "tempo": "3:10",
    "data": "2026-05-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -404,8 +404,8 @@
    "tempo": "2:10",
    "data": "2026-04-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -418,8 +418,8 @@
    "tempo": "3:25",
    "data": "2026-04-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -432,8 +432,8 @@
    "tempo": "1:58",
    "data": "2026-04-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -446,8 +446,8 @@
    "tempo": "2:29",
    "data": "2026-04-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -460,8 +460,8 @@
    "tempo": "2:56",
    "data": "2026-04-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -474,8 +474,8 @@
    "tempo": "1:33",
    "data": "2026-03-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -488,8 +488,8 @@
    "tempo": "2:47",
    "data": "2026-03-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Maia",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -502,8 +502,8 @@
    "tempo": "0:59",
    "data": "2026-02-28",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -516,8 +516,8 @@
    "tempo": "1:43",
    "data": "2026-02-28",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -530,8 +530,8 @@
    "tempo": "0:29",
    "data": "2026-02-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -544,8 +544,8 @@
    "tempo": "3:02",
    "data": "2026-02-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -572,8 +572,8 @@
    "tempo": "2:29",
    "data": "2026-01-24",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -586,8 +586,8 @@
    "tempo": "1:31",
    "data": "2026-01-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -600,8 +600,8 @@
    "tempo": "4:00",
    "data": "2026-01-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -614,8 +614,8 @@
    "tempo": "0:57",
    "data": "2026-01-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -628,8 +628,8 @@
    "tempo": "8:32",
    "data": "2026-01-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -642,8 +642,8 @@
    "tempo": "2:57",
    "data": "2026-01-03",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -656,8 +656,8 @@
    "tempo": "2:56",
    "data": "2026-01-03",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -670,8 +670,8 @@
    "tempo": "2:03",
    "data": "2025-12-31",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -684,8 +684,8 @@
    "tempo": "1:02",
    "data": "2025-12-26",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -698,8 +698,8 @@
    "tempo": "7:43",
    "data": "2025-12-24",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -712,8 +712,8 @@
    "tempo": "20:47",
    "data": "2025-12-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -726,8 +726,8 @@
    "tempo": "4:06",
    "data": "2025-12-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -740,8 +740,8 @@
    "tempo": "0:33",
    "data": "2025-12-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -754,8 +754,8 @@
    "tempo": "1:58",
    "data": "2025-12-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -768,8 +768,8 @@
    "tempo": "0:35",
    "data": "2025-11-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -782,8 +782,8 @@
    "tempo": "0:49",
    "data": "2025-11-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -810,8 +810,8 @@
    "tempo": "0:44",
    "data": "2025-11-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -824,8 +824,8 @@
    "tempo": "3:09",
    "data": "2025-11-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -838,8 +838,8 @@
    "tempo": "3:59",
    "data": "2025-11-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -852,8 +852,8 @@
    "tempo": "2:09",
    "data": "2025-11-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -880,8 +880,8 @@
    "tempo": "0:28",
    "data": "2025-11-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -894,8 +894,8 @@
    "tempo": "1:06",
    "data": "2025-11-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -908,8 +908,8 @@
    "tempo": "1:46",
    "data": "2025-11-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -922,8 +922,8 @@
    "tempo": "2:13",
    "data": "2025-11-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -936,8 +936,8 @@
    "tempo": "2:05",
    "data": "2025-11-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -950,8 +950,8 @@
    "tempo": "1:33",
    "data": "2025-11-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -964,8 +964,8 @@
    "tempo": "2:52",
    "data": "2025-11-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -978,8 +978,8 @@
    "tempo": "6:32",
    "data": "2025-11-04",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -992,8 +992,8 @@
    "tempo": "3:07",
    "data": "2025-11-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1006,8 +1006,8 @@
    "tempo": "3:34",
    "data": "2025-11-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1020,8 +1020,8 @@
    "tempo": "0:47",
    "data": "2025-10-30",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1034,8 +1034,8 @@
    "tempo": "6:18",
    "data": "2025-10-28",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1048,8 +1048,8 @@
    "tempo": "3:32",
    "data": "2025-10-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1062,8 +1062,8 @@
    "tempo": "0:42",
    "data": "2025-10-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1076,8 +1076,8 @@
    "tempo": "6:02",
    "data": "2025-10-21",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1090,8 +1090,8 @@
    "tempo": "1:29",
    "data": "2025-10-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1104,8 +1104,8 @@
    "tempo": "3:36",
    "data": "2025-10-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1118,8 +1118,8 @@
    "tempo": "4:19",
    "data": "2025-10-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1132,8 +1132,8 @@
    "tempo": "0:32",
    "data": "2025-10-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1146,8 +1146,8 @@
    "tempo": "1:08",
    "data": "2025-10-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1160,8 +1160,8 @@
    "tempo": "3:17",
    "data": "2025-10-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1174,8 +1174,8 @@
    "tempo": "3:44",
    "data": "2025-10-16",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1188,8 +1188,8 @@
    "tempo": "3:14",
    "data": "2025-10-16",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1216,8 +1216,8 @@
    "tempo": "3:37",
    "data": "2025-10-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1230,8 +1230,8 @@
    "tempo": "2:38",
    "data": "2025-10-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1244,8 +1244,8 @@
    "tempo": "0:41",
    "data": "2025-10-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1272,8 +1272,8 @@
    "tempo": "20:29",
    "data": "2025-10-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1300,8 +1300,8 @@
    "tempo": "1:00",
    "data": "2025-10-07",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1314,8 +1314,8 @@
    "tempo": "2:26",
    "data": "2025-09-25",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1328,8 +1328,8 @@
    "tempo": "3:00",
    "data": "2025-09-24",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1342,8 +1342,8 @@
    "tempo": "3:37",
    "data": "2025-09-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1356,8 +1356,8 @@
    "tempo": "0:52",
    "data": "2025-09-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1370,8 +1370,8 @@
    "tempo": "0:37",
    "data": "2025-09-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1384,8 +1384,8 @@
    "tempo": "0:33",
    "data": "2025-09-16",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1398,8 +1398,8 @@
    "tempo": "1:02",
    "data": "2025-09-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1412,8 +1412,8 @@
    "tempo": "2:18",
    "data": "2025-09-10",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1426,8 +1426,8 @@
    "tempo": "1:07",
    "data": "2025-09-03",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1440,8 +1440,8 @@
    "tempo": "3:28",
    "data": "2025-09-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1454,8 +1454,8 @@
    "tempo": "2:12",
    "data": "2025-09-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1468,8 +1468,8 @@
    "tempo": "0:30",
    "data": "2025-08-30",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1482,8 +1482,8 @@
    "tempo": "1:04",
    "data": "2025-08-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1496,8 +1496,8 @@
    "tempo": "1:20",
    "data": "2025-08-25",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1510,8 +1510,8 @@
    "tempo": "0:41",
    "data": "2025-08-25",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1524,8 +1524,8 @@
    "tempo": "1:01",
    "data": "2025-08-21",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1538,8 +1538,8 @@
    "tempo": "1:51",
    "data": "2025-08-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1552,8 +1552,8 @@
    "tempo": "1:20",
    "data": "2025-08-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1566,8 +1566,8 @@
    "tempo": "4:35",
    "data": "2025-08-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1580,8 +1580,8 @@
    "tempo": "0:59",
    "data": "2025-08-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1594,8 +1594,8 @@
    "tempo": "1:01",
    "data": "2025-08-16",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1608,8 +1608,8 @@
    "tempo": "0:35",
    "data": "2025-08-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1622,8 +1622,8 @@
    "tempo": "2:22",
    "data": "2025-08-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1636,8 +1636,8 @@
    "tempo": "4:37",
    "data": "2025-08-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1650,8 +1650,8 @@
    "tempo": "1:12",
    "data": "2025-08-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1664,8 +1664,8 @@
    "tempo": "0:41",
    "data": "2025-08-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1678,8 +1678,8 @@
    "tempo": "1:51",
    "data": "2025-08-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1692,8 +1692,8 @@
    "tempo": "3:53",
    "data": "2025-08-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1706,8 +1706,8 @@
    "tempo": "0:19",
    "data": "2025-08-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1720,8 +1720,8 @@
    "tempo": "3:30",
    "data": "2025-08-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1734,8 +1734,8 @@
    "tempo": "6:34",
    "data": "2025-07-31",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1748,8 +1748,8 @@
    "tempo": "0:40",
    "data": "2025-07-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1762,8 +1762,8 @@
    "tempo": "0:21",
    "data": "2025-07-24",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1776,8 +1776,8 @@
    "tempo": "1:15",
    "data": "2025-07-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1790,8 +1790,8 @@
    "tempo": "0:18",
    "data": "2025-07-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1818,8 +1818,8 @@
    "tempo": "0:34",
    "data": "2025-07-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1832,8 +1832,8 @@
    "tempo": "2:03",
    "data": "2025-07-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1846,8 +1846,8 @@
    "tempo": "0:44",
    "data": "2025-07-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Almeirim",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1874,8 +1874,8 @@
    "tempo": "1:07",
    "data": "2025-07-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Almeirim",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1888,8 +1888,8 @@
    "tempo": "0:43",
    "data": "2025-07-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1902,8 +1902,8 @@
    "tempo": "4:57",
    "data": "2025-07-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1930,8 +1930,8 @@
    "tempo": "2:00",
    "data": "2025-07-07",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1944,8 +1944,8 @@
    "tempo": "1:03",
    "data": "2025-06-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1958,8 +1958,8 @@
    "tempo": "0:58",
    "data": "2025-06-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1972,8 +1972,8 @@
    "tempo": "2:49",
    "data": "2025-06-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1986,8 +1986,8 @@
    "tempo": "1:34",
    "data": "2025-06-16",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2000,8 +2000,8 @@
    "tempo": "0:40",
    "data": "2025-06-10",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2014,8 +2014,8 @@
    "tempo": "0:30",
    "data": "2025-06-09",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2028,8 +2028,8 @@
    "tempo": "0:28",
    "data": "2025-05-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2042,8 +2042,8 @@
    "tempo": "0:26",
    "data": "2025-05-28",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2056,8 +2056,8 @@
    "tempo": "0:18",
    "data": "2025-05-26",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2070,8 +2070,8 @@
    "tempo": "0:34",
    "data": "2025-05-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2084,8 +2084,8 @@
    "tempo": "0:21",
    "data": "2025-05-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2098,8 +2098,8 @@
    "tempo": "0:53",
    "data": "2025-05-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2112,8 +2112,8 @@
    "tempo": "4:56",
    "data": "2025-05-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2126,8 +2126,8 @@
    "tempo": "2:16",
    "data": "2025-05-21",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2140,8 +2140,8 @@
    "tempo": "4:07",
    "data": "2025-05-21",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2154,8 +2154,8 @@
    "tempo": "0:20",
    "data": "2025-05-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2168,8 +2168,8 @@
    "tempo": "0:51",
    "data": "2025-05-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2182,8 +2182,8 @@
    "tempo": "1:50",
    "data": "2025-05-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2196,8 +2196,8 @@
    "tempo": "2:03",
    "data": "2025-05-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2210,8 +2210,8 @@
    "tempo": "4:29",
    "data": "2025-05-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2224,8 +2224,8 @@
    "tempo": "0:45",
    "data": "2025-05-13",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2238,8 +2238,8 @@
    "tempo": "2:46",
    "data": "2025-05-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2252,8 +2252,8 @@
    "tempo": "1:11",
    "data": "2025-05-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2280,8 +2280,8 @@
    "tempo": "0:19",
    "data": "2025-04-13",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2294,8 +2294,8 @@
    "tempo": "1:11",
    "data": "2025-04-07",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2322,8 +2322,8 @@
    "tempo": "0:12",
    "data": "2025-02-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2336,8 +2336,8 @@
    "tempo": "0:13",
    "data": "2025-02-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2350,8 +2350,8 @@
    "tempo": "0:16",
    "data": "2025-02-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2364,8 +2364,8 @@
    "tempo": "0:22",
    "data": "2025-02-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2378,8 +2378,8 @@
    "tempo": "0:58",
    "data": "2025-01-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2392,8 +2392,8 @@
    "tempo": "1:10",
    "data": "2025-01-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2420,8 +2420,8 @@
    "tempo": "1:01",
    "data": "2025-01-03",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2434,8 +2434,8 @@
    "tempo": "0:55",
    "data": "2025-01-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Vila Franca de Xira",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2448,8 +2448,8 @@
    "tempo": "0:52",
    "data": "2024-12-31",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2462,8 +2462,8 @@
    "tempo": "1:21",
    "data": "2024-12-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2476,8 +2476,8 @@
    "tempo": "0:41",
    "data": "2024-12-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2490,8 +2490,8 @@
    "tempo": "0:49",
    "data": "2024-12-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2504,8 +2504,8 @@
    "tempo": "1:33",
    "data": "2024-12-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2532,8 +2532,8 @@
    "tempo": "2:10",
    "data": "2024-12-24",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2546,8 +2546,8 @@
    "tempo": "3:41",
    "data": "2024-12-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2560,8 +2560,8 @@
    "tempo": "0:34",
    "data": "2024-12-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2574,8 +2574,8 @@
    "tempo": "0:39",
    "data": "2024-12-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2588,8 +2588,8 @@
    "tempo": "0:32",
    "data": "2024-12-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2602,8 +2602,8 @@
    "tempo": "0:42",
    "data": "2024-12-13",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2616,8 +2616,8 @@
    "tempo": "0:38",
    "data": "2024-12-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2630,8 +2630,8 @@
    "tempo": "2:43",
    "data": "2024-09-15",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2658,8 +2658,8 @@
    "tempo": "4:45",
    "data": "2026-06-18",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -2672,8 +2672,8 @@
    "tempo": "1:12",
    "data": "2026-06-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -2686,8 +2686,8 @@
    "tempo": "3:10",
    "data": "2026-05-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -2700,8 +2700,8 @@
    "tempo": "0:47",
    "data": "2026-05-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -2714,8 +2714,8 @@
    "tempo": "16:56",
    "data": "2026-05-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -2728,8 +2728,8 @@
    "tempo": "17:48",
    "data": "2026-05-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -2742,8 +2742,8 @@
    "tempo": "1:00",
    "data": "2026-05-10",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2756,8 +2756,8 @@
    "tempo": "3:49",
    "data": "2026-04-30",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -2770,8 +2770,8 @@
    "tempo": "4:58",
    "data": "2026-04-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Óbidos",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -2784,8 +2784,8 @@
    "tempo": "4:38",
    "data": "2026-04-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Óbidos",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -2798,8 +2798,8 @@
    "tempo": "12:50",
    "data": "2026-04-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Óbidos",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -2812,8 +2812,8 @@
    "tempo": "1:20:16",
    "data": "2026-04-19",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Óbidos",
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -2826,8 +2826,8 @@
    "tempo": "25:23",
    "data": "2026-04-08",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Valencia",
+   "pais": "Spain"
   },
   {
    "posicao": 5,
@@ -2840,8 +2840,8 @@
    "tempo": "4:14",
    "data": "2026-03-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Matosinhos",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -2868,8 +2868,8 @@
    "tempo": "2:59",
    "data": "2026-02-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Almeirim",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2882,8 +2882,8 @@
    "tempo": "2:03",
    "data": "2025-12-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2896,8 +2896,8 @@
    "tempo": "1:49",
    "data": "2025-12-04",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2910,8 +2910,8 @@
    "tempo": "1:42",
    "data": "2025-10-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2924,8 +2924,8 @@
    "tempo": "2:42",
    "data": "2025-10-22",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -2938,8 +2938,8 @@
    "tempo": "32:38",
    "data": "2025-10-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2952,8 +2952,8 @@
    "tempo": "33:43",
    "data": "2025-10-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2966,8 +2966,8 @@
    "tempo": "1:07:02",
    "data": "2025-10-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -2980,8 +2980,8 @@
    "tempo": "33:54",
    "data": "2025-10-12",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -2994,8 +2994,8 @@
    "tempo": "1:03",
    "data": "2025-10-06",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3008,8 +3008,8 @@
    "tempo": "6:11",
    "data": "2025-09-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Cascais",
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3022,8 +3022,8 @@
    "tempo": "19:32",
    "data": "2025-09-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3036,8 +3036,8 @@
    "tempo": "1:07",
    "data": "2025-07-03",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3050,8 +3050,8 @@
    "tempo": "4:42",
    "data": "2025-07-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3064,8 +3064,8 @@
    "tempo": "8:39",
    "data": "2025-07-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3078,8 +3078,8 @@
    "tempo": "1:15",
    "data": "2025-06-27",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Almeirim",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3092,8 +3092,8 @@
    "tempo": "0:26",
    "data": "2025-06-23",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3106,8 +3106,8 @@
    "tempo": "2:44",
    "data": "2025-06-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3134,8 +3134,8 @@
    "tempo": "3:30",
    "data": "2025-06-04",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3148,8 +3148,8 @@
    "tempo": "3:48",
    "data": "2025-05-01",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oeiras",
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3162,8 +3162,8 @@
    "tempo": "4:38",
    "data": "2025-04-25",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Maia",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3190,8 +3190,8 @@
    "tempo": "2:00",
    "data": "2024-12-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -3204,8 +3204,8 @@
    "tempo": "0:34",
    "data": "2024-12-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3218,8 +3218,8 @@
    "tempo": "4:11",
    "data": "2024-12-17",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3232,8 +3232,8 @@
    "tempo": "1:50",
    "data": "2024-12-11",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3246,8 +3246,8 @@
    "tempo": "1:20",
    "data": "2024-12-02",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -3260,8 +3260,8 @@
    "tempo": "1:30",
    "data": "2024-11-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Guimarães",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3274,8 +3274,8 @@
    "tempo": "2:11",
    "data": "2024-11-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Guimarães",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3288,8 +3288,8 @@
    "tempo": "1:04",
    "data": "2024-11-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Guimarães",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3302,8 +3302,8 @@
    "tempo": "3:04",
    "data": "2024-10-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3316,8 +3316,8 @@
    "tempo": "1:25",
    "data": "2024-10-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -3330,8 +3330,8 @@
    "tempo": "1:02",
    "data": "2024-09-28",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3344,8 +3344,8 @@
    "tempo": "0:48",
    "data": "2024-09-20",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Lisbon",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3358,8 +3358,8 @@
    "tempo": "1:10",
    "data": "2024-08-29",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3372,8 +3372,8 @@
    "tempo": "2:01",
    "data": "2024-08-05",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Funchal",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3386,8 +3386,8 @@
    "tempo": "0:57",
    "data": "2024-07-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3400,8 +3400,8 @@
    "tempo": "0:48",
    "data": "2024-07-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3414,8 +3414,8 @@
    "tempo": "1:57",
    "data": "2024-07-14",
    "atleta": "Xeira",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3442,8 +3442,8 @@
    "tempo": "0:43",
    "data": "2025-07-18",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Caldas da Rainha",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3456,8 +3456,8 @@
    "tempo": "2:01",
    "data": "2025-05-22",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3470,8 +3470,8 @@
    "tempo": "0:20",
    "data": "2025-05-22",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3484,8 +3484,8 @@
    "tempo": "0:52",
    "data": "2025-05-17",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3498,8 +3498,8 @@
    "tempo": "1:17",
    "data": "2025-05-17",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3512,8 +3512,8 @@
    "tempo": "0:17",
    "data": "2025-05-17",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3526,8 +3526,8 @@
    "tempo": "1:06",
    "data": "2025-05-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3540,8 +3540,8 @@
    "tempo": "1:43",
    "data": "2025-05-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3554,8 +3554,8 @@
    "tempo": "1:04",
    "data": "2025-05-13",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3568,8 +3568,8 @@
    "tempo": "3:03",
    "data": "2024-10-05",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3582,8 +3582,8 @@
    "tempo": "2:58",
    "data": "2024-10-04",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3596,8 +3596,8 @@
    "tempo": "1:54",
    "data": "2024-09-25",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3610,8 +3610,8 @@
    "tempo": "1:34",
    "data": "2024-09-23",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3624,8 +3624,8 @@
    "tempo": "2:26",
    "data": "2026-05-21",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3638,8 +3638,8 @@
    "tempo": "14:23",
    "data": "2025-09-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Oleiros",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3652,8 +3652,8 @@
    "tempo": "1:12",
    "data": "2025-08-16",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3666,8 +3666,8 @@
    "tempo": "5:23",
    "data": "2025-07-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -3680,8 +3680,8 @@
    "tempo": "1:15",
    "data": "2025-06-01",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -3694,8 +3694,8 @@
    "tempo": "2:14",
    "data": "2025-05-13",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3708,8 +3708,8 @@
    "tempo": "1:20",
    "data": "2025-05-13",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -3736,8 +3736,8 @@
    "tempo": "2:40",
    "data": "2025-02-25",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3750,8 +3750,8 @@
    "tempo": "6:58",
    "data": "2025-02-25",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3764,8 +3764,8 @@
    "tempo": "0:58",
    "data": "2025-01-01",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Vila Franca de Xira",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3778,8 +3778,8 @@
    "tempo": "2:12",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3792,8 +3792,8 @@
    "tempo": "1:06",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3806,8 +3806,8 @@
    "tempo": "0:43",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3820,8 +3820,8 @@
    "tempo": "0:51",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3834,8 +3834,8 @@
    "tempo": "1:16",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3848,8 +3848,8 @@
    "tempo": "1:24",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3862,8 +3862,8 @@
    "tempo": "1:34",
    "data": "2024-12-27",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -3876,8 +3876,8 @@
    "tempo": "1:57",
    "data": "2024-10-20",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -3890,8 +3890,8 @@
    "tempo": "2:33",
    "data": "2024-10-20",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3904,8 +3904,8 @@
    "tempo": "1:30",
    "data": "2024-10-05",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3918,8 +3918,8 @@
    "tempo": "0:36",
    "data": "2024-09-19",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3932,8 +3932,8 @@
    "tempo": "3:34",
    "data": "2024-09-18",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3946,8 +3946,8 @@
    "tempo": "2:02",
    "data": "2024-09-17",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3960,8 +3960,8 @@
    "tempo": "2:01",
    "data": "2024-09-15",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3974,8 +3974,8 @@
    "tempo": "0:47",
    "data": "2024-08-12",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3988,8 +3988,8 @@
    "tempo": "0:55",
    "data": "2024-08-08",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4002,8 +4002,8 @@
    "tempo": "0:57",
    "data": "2024-07-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4016,8 +4016,8 @@
    "tempo": "0:48",
    "data": "2024-07-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4030,8 +4030,8 @@
    "tempo": "1:57",
    "data": "2024-07-14",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Santarém",
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -4072,8 +4072,8 @@
    "tempo": "1:18",
    "data": "2024-07-11",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4086,8 +4086,8 @@
    "tempo": "4:41",
    "data": "2024-06-20",
    "atleta": "Zé",
-   "cidade": "",
-   "pais": ""
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
   }
  ]
 }
