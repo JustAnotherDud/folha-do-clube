@@ -92,8 +92,8 @@
   "pais": "Portugal"
  },
  "11406768": {
-  "cidade": "",
-  "pais": ""
+  "cidade": "Lisbon",
+  "pais": "Lisbon"
  },
  "12349828": {
   "cidade": "Santarém",
@@ -136,8 +136,8 @@
   "pais": "Portugal"
  },
  "13652719": {
-  "cidade": "",
-  "pais": ""
+  "cidade": "Sintra",
+  "pais": "Lisbon"
  },
  "13743835": {
   "cidade": "Sintra",
@@ -184,8 +184,8 @@
   "pais": "Portugal"
  },
  "14857801": {
-  "cidade": "",
-  "pais": ""
+  "cidade": "Santarém",
+  "pais": "Santarém"
  },
  "14906608": {
   "cidade": "Lisbon",
@@ -234,10 +234,6 @@
  "17124506": {
   "cidade": "Oeiras",
   "pais": "Portugal"
- },
- "17166903": {
-  "cidade": "",
-  "pais": ""
  },
  "17314021": {
   "cidade": "Oeiras",
@@ -295,10 +291,6 @@
   "cidade": "Alcobaça",
   "pais": "Portugal"
  },
- "19742683": {
-  "cidade": "",
-  "pais": ""
- },
  "19957194": {
   "cidade": "Rio Maior",
   "pais": "Portugal"
@@ -331,10 +323,6 @@
   "cidade": "Lisbon",
   "pais": "Portugal"
  },
- "21617213": {
-  "cidade": "",
-  "pais": ""
- },
  "21753913": {
   "cidade": "Oeiras",
   "pais": "Portugal"
@@ -362,10 +350,6 @@
  "23070204": {
   "cidade": "Oeiras",
   "pais": "Portugal"
- },
- "23381728": {
-  "cidade": "",
-  "pais": ""
  },
  "23672066": {
   "cidade": "Santarém",
@@ -408,8 +392,8 @@
   "pais": "Portugal"
  },
  "26444804": {
-  "cidade": "",
-  "pais": ""
+  "cidade": "Sintra",
+  "pais": "Lisbon"
  },
  "26458505": {
   "cidade": "Sintra",
@@ -475,10 +459,6 @@
   "cidade": "Santarém",
   "pais": "Portugal"
  },
- "27638338": {
-  "cidade": "",
-  "pais": ""
- },
  "27645633": {
   "cidade": "Sintra",
   "pais": "Portugal"
@@ -539,10 +519,6 @@
   "cidade": "Sintra",
   "pais": "Portugal"
  },
- "30398704": {
-  "cidade": "",
-  "pais": ""
- },
  "30585531": {
   "cidade": "Rio Maior",
   "pais": "Portugal"
@@ -587,10 +563,6 @@
   "cidade": "Sintra",
   "pais": "Portugal"
  },
- "30846781": {
-  "cidade": "",
-  "pais": ""
- },
  "30846831": {
   "cidade": "Sintra",
   "pais": "Portugal"
@@ -611,10 +583,6 @@
   "cidade": "Santarém",
   "pais": "Portugal"
  },
- "31150529": {
-  "cidade": "",
-  "pais": ""
- },
  "31468757": {
   "cidade": "Sintra",
   "pais": "Portugal"
@@ -622,10 +590,6 @@
  "31860428": {
   "cidade": "Rio Maior",
   "pais": "Portugal"
- },
- "31900346": {
-  "cidade": "",
-  "pais": ""
  },
  "32320437": {
   "cidade": "Sintra",
@@ -690,10 +654,6 @@
  "33542238": {
   "cidade": "Santarém",
   "pais": "Portugal"
- },
- "33656959": {
-  "cidade": "",
-  "pais": ""
  },
  "34178045": {
   "cidade": "Oeiras",
@@ -791,10 +751,6 @@
   "cidade": "Almeirim",
   "pais": "Portugal"
  },
- "38391441": {
-  "cidade": "",
-  "pais": ""
- },
  "38444438": {
   "cidade": "Santarém",
   "pais": "Portugal"
@@ -826,10 +782,6 @@
  "3966263": {
   "cidade": "Lisbon",
   "pais": "Portugal"
- },
- "3966266": {
-  "cidade": "",
-  "pais": ""
  },
  "40074674": {
   "cidade": "Santarém",
@@ -891,17 +843,9 @@
   "cidade": "Oeiras",
   "pais": "Portugal"
  },
- "6422009": {
-  "cidade": "",
-  "pais": ""
- },
  "6719768": {
   "cidade": "Oeiras",
   "pais": "Portugal"
- },
- "6807898": {
-  "cidade": "",
-  "pais": ""
  },
  "7068968": {
   "cidade": "Santarém",
@@ -934,10 +878,6 @@
  "7554640": {
   "cidade": "Santarém",
   "pais": "Portugal"
- },
- "7560180": {
-  "cidade": "",
-  "pais": ""
  },
  "7574992": {
   "cidade": "Lisbon",
@@ -1023,10 +963,6 @@
   "cidade": "Lisbon",
   "pais": "Portugal"
  },
- "8821044": {
-  "cidade": "",
-  "pais": ""
- },
  "8862828": {
   "cidade": "Guimarães",
   "pais": "Portugal"
@@ -1058,9 +994,5 @@
  "9848028": {
   "cidade": "Oeiras",
   "pais": "Portugal"
- },
- "9981591": {
-  "cidade": "",
-  "pais": ""
  }
 }
