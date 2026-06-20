@@ -18,8 +18,7 @@ from datetime import datetime, timezone
 import requests
 from bs4 import BeautifulSoup
 
-from comum import (HEADERS, extrair_seg_id, iso_date, localizar_segmentos,
-                   normalizar_tempo, buscar_detalhes_segmentos)
+from comum import HEADERS, extrair_seg_id, iso_date, localizar_segmentos, normalizar_tempo
 
 CLUBE = "nozes"
 # alcunhas; quem não estiver aqui usa o primeiro nome do perfil
@@ -90,17 +89,6 @@ def membros_clube(s):
     return sorted(atletas.items(), key=lambda kv: kv[1].lower())
 
 
-def obter_access_token(client_id, client_secret, refresh_token):
-    r = requests.post("https://www.strava.com/oauth/token", data={
-        "client_id": client_id,
-        "client_secret": client_secret,
-        "refresh_token": refresh_token,
-        "grant_type": "refresh_token",
-    }, timeout=30)
-    r.raise_for_status()
-    return r.json()["access_token"]
-
-
 def main():
     cookie = os.environ.get("STRAVA_SESSION", "").strip()
     if not cookie:
@@ -142,21 +130,6 @@ def main():
         info = locais.get(extrair_seg_id(l["url"]), {})
         l["cidade"] = info.get("cidade", "")
         l["pais"] = info.get("pais", "")
-
-    client_id     = os.environ.get("STRAVA_CLIENT_ID", "").strip()
-    client_secret = os.environ.get("STRAVA_CLIENT_SECRET", "").strip()
-    refresh_token = os.environ.get("STRAVA_REFRESH_TOKEN", "").strip()
-    if client_id and client_secret and refresh_token:
-        access_token = obter_access_token(client_id, client_secret, refresh_token)
-        print("Token OAuth obtido.")
-        detalhes = buscar_detalhes_segmentos(ids, access_token)
-        for l in linhas:
-            info = detalhes.get(extrair_seg_id(l["url"]), {})
-            l["elev_gain"] = info.get("elev_gain", 0)
-            l["avg_grade"] = info.get("avg_grade", 0)
-            l["climb_cat"] = info.get("climb_cat", 0)
-    else:
-        print("Sem credenciais OAuth — elev_gain/avg_grade não disponíveis.")
 
     out = {"gerado": datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
            "linhas": linhas}
