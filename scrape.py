@@ -124,7 +124,7 @@ def main():
         sys.exit("0 linhas — estrutura da página mudou ou bloqueio anti-bot.")
 
     ids = {extrair_seg_id(l["url"]) for l in linhas} - {None}
-    locais = localizar_segmentos(ids, sessao=s)
+    locais = localizar_segmentos(ids)
     for l in linhas:
         info = locais.get(extrair_seg_id(l["url"]), {})
         l["cidade"] = info.get("cidade", "")

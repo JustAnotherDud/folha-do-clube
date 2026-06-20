@@ -140,7 +140,6 @@ function velKmh(l) {
 // Ride mostra-se em km/h; Run/Walk mostra-se em ritmo min:seg por km.
 function formatarRitmo(l) {
   if (!l.vel_kmh) return "—";
-  if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
   const segKm = 3600 / l.vel_kmh;
   const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
   return `${m}:${String(s).padStart(2, "0")} /km`;
