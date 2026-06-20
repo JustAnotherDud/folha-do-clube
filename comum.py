@@ -90,7 +90,7 @@ def localizar_segmentos(seg_ids, sessao=None):
             r = s.get(f"https://www.strava.com/segments/{sid}",
                       headers=HEADERS, timeout=30)
             r.raise_for_status()
-            m = re.search(r"<title>.*?Segment in ([^<]+)</title>", r.text, re.S)
+            m = re.search(r"<title[^>]*>.*?Segment in ([^<]+)</title>", r.text, re.S)
             if m:
                 local = m.group(1).strip()
                 cidade, _, pais = local.rpartition(",")
