@@ -13,10 +13,12 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, date
+from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
+
+from comum import HEADERS, extrair_seg_id, iso_date, localizar_segmentos, normalizar_tempo
 
 CLUBE = "nozes"
 # alcunhas; quem não estiver aqui usa o primeiro nome do perfil
@@ -30,16 +32,6 @@ IGNORAR = {
 }
 BASE = "https://www.strava.com"
 PAGE_DELAY = 1.5
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
-MESES = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
-         "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
-
-
-def iso_date(s):
-    m = re.match(r"([A-Za-z]{3})\w* (\d+), (\d+)", s.strip())
-    return (date(int(m.group(3)), MESES[m.group(1)[:3]], int(m.group(2))).isoformat()
-            if m else s)
 
 
 def parse_rows(html):
@@ -67,7 +59,7 @@ def parse_rows(html):
             "effort_url": (BASE + effort["href"]) if effort else "",
             "dist_km": float(nowrap[0].replace(" km", "")) if nowrap else 0,
             "elev_m": int((nowrap[1] if len(nowrap) > 1 else "0").replace(" m", "") or 0),
-            "tempo": effort.get_text(strip=True) if effort else "",
+            "tempo": normalizar_tempo(effort.get_text(strip=True)) if effort else "",
             "data": iso_date(tr.find("time").get_text(strip=True)) if tr.find("time") else "",
         })
     return rows
@@ -130,6 +122,13 @@ def main():
 
     if not linhas:
         sys.exit("0 linhas — estrutura da página mudou ou bloqueio anti-bot.")
+
+    ids = {extrair_seg_id(l["url"]) for l in linhas} - {None}
+    locais = localizar_segmentos(ids, sessao=s)
+    for l in linhas:
+        info = locais.get(extrair_seg_id(l["url"]), {})
+        l["cidade"] = info.get("cidade", "")
+        l["pais"] = info.get("pais", "")
 
     out = {"gerado": datetime.utcnow().isoformat(timespec="minutes") + "Z",
            "linhas": linhas}

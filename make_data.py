@@ -6,24 +6,16 @@ Lê todos os D:\\sync_hub\\output\\strava_koms*.csv e escreve data.json aqui.
 """
 import csv
 import json
-import re
-from datetime import datetime, date
+from datetime import datetime
 from pathlib import Path
+
+from comum import extrair_seg_id, iso_date, localizar_segmentos, normalizar_tempo
 
 CSV_DIR = Path(r"D:\sync_hub\output")
 OUT = Path(__file__).parent / "data.json"
 
 # normalizar nomes do CSV -> nomes da sheet
 NOMES = {"Ze": "Zé", "Joao": "Xeira"}
-MESES = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
-         "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
-
-
-def iso_date(s):
-    m = re.match(r"([A-Za-z]{3})\w* (\d+), (\d+)", s.strip())
-    if not m:
-        return s
-    return date(int(m.group(3)), MESES[m.group(1)[:3]], int(m.group(2))).isoformat()
 
 
 rows = []
@@ -39,9 +31,16 @@ for f in sorted(CSV_DIR.glob("strava_koms*.csv")):
                 "effort_url": r["effort_url"],
                 "dist_km": float(r["distancia"].replace(" km", "")),
                 "elev_m": int(r["elevacao"].replace(" m", "") or 0),
-                "tempo": r["tempo"],
+                "tempo": normalizar_tempo(r["tempo"]),
                 "data": iso_date(r["data"]),
             })
+
+ids = {extrair_seg_id(r["url"]) for r in rows} - {None}
+locais = localizar_segmentos(ids)
+for r in rows:
+    info = locais.get(extrair_seg_id(r["url"]), {})
+    r["cidade"] = info.get("cidade", "")
+    r["pais"] = info.get("pais", "")
 
 out = {"gerado": datetime.now().isoformat(timespec="minutes"), "linhas": rows}
 OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

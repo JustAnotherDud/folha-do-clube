@@ -67,6 +67,8 @@
 <div class="filtros">
   <select id="f-atleta"><option value="">Todos os atletas</option></select>
   <select id="f-tipo"><option value="">Todos os tipos</option></select>
+  <select id="f-pais"><option value="">Todos os países</option></select>
+  <select id="f-cidade"><option value="">Todas as cidades</option></select>
   <select id="f-trofeu">
     <option value="">👑 + 🏆</option>
     <option value="kom">Só 👑 (1º)</option>
@@ -85,7 +87,10 @@
     <th data-k="segmento">Segmento <span class="seta"></span></th>
     <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
     <th data-k="elev_m" class="num">Elevação <span class="seta"></span></th>
+    <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
     <th data-k="tempo">Tempo <span class="seta"></span></th>
+    <th data-k="cidade">Cidade <span class="seta"></span></th>
+    <th data-k="pais">País <span class="seta"></span></th>
     <th data-k="data">Data <span class="seta"></span></th>
   </tr></thead>
   <tbody></tbody>
@@ -119,6 +124,28 @@ function dataPt(iso) {
   return `${d}/${m}/${a}`;
 }
 
+// "tempo" vem normalizado do scraper como "M:SS" ou "H:MM:SS";
+// aceita também o formato antigo "Ns" por segurança em dados não migrados.
+function tempoSegundos(t) {
+  if (t.endsWith("s") && !t.includes(":")) return parseInt(t, 10);
+  const p = t.split(":").map(Number);
+  while (p.length < 3) p.unshift(0);
+  const [h, m, s] = p;
+  return h * 3600 + m * 60 + s;
+}
+function velKmh(l) {
+  const seg = tempoSegundos(l.tempo);
+  return seg > 0 && l.dist_km > 0 ? l.dist_km / (seg / 3600) : 0;
+}
+// Ride mostra-se em km/h; Run/Walk mostra-se em ritmo min:seg por km.
+function formatarRitmo(l) {
+  if (!l.vel_kmh) return "—";
+  if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
+  const segKm = 3600 / l.vel_kmh;
+  const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
+  return `${m}:${String(s).padStart(2, "0")} /km`;
+}
+
 function ranking() {
   const por = {};
   for (const l of linhas) {
@@ -140,11 +167,15 @@ function ranking() {
 function filtradas() {
   const fa = document.getElementById("f-atleta").value;
   const ft = document.getElementById("f-tipo").value;
+  const fp = document.getElementById("f-pais").value;
+  const fc = document.getElementById("f-cidade").value;
   const fr = document.getElementById("f-trofeu").value;
   const q = document.getElementById("f-busca").value.toLowerCase();
   return linhas.filter(l =>
     (!fa || l.atleta === fa) &&
     (!ft || l.tipo === ft) &&
+    (!fp || l.pais === fp) &&
+    (!fc || l.cidade === fc) &&
     (!fr || (fr === "kom" ? l.posicao === 1 : l.posicao > 1)) &&
     (!q || l.segmento.toLowerCase().includes(q)));
 }
@@ -164,9 +195,12 @@ function render() {
       <td class="seg"><a href="${escHtml(l.url)}" target="_blank" rel="noopener">${escHtml(l.segmento)}</a></td>
       <td class="num">${l.dist_km.toFixed(2)} km</td>
       <td class="num">${l.elev_m} m</td>
+      <td class="num">${formatarRitmo(l)}</td>
       <td>${l.effort_url
         ? `<a href="${escHtml(l.effort_url)}" target="_blank" rel="noopener">${escHtml(l.tempo)}</a>`
         : escHtml(l.tempo)}</td>
+      <td>${escHtml(l.cidade || "—")}</td>
+      <td>${escHtml(l.pais || "—")}</td>
       <td>${dataPt(l.data)}</td>
     </tr>`).join("");
   document.getElementById("conta").textContent = `${ls.length} de ${linhas.length}`;
@@ -183,6 +217,8 @@ function popularFiltros() {
       `<option value="${escHtml(v)}">${escHtml(v)}</option>`);
   };
   op("f-atleta", [...new Set(linhas.map(l => l.atleta))].sort());
+  op("f-pais", [...new Set(linhas.map(l => l.pais).filter(Boolean))].sort());
+  op("f-cidade", [...new Set(linhas.map(l => l.cidade).filter(Boolean))].sort());
   const st = document.getElementById("f-tipo");
   for (const v of [...new Set(linhas.map(l => l.tipo))].sort())
     st.insertAdjacentHTML("beforeend",
@@ -200,6 +236,7 @@ document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
 
 fetch("data.json").then(r => r.json()).then(d => {
   linhas = d.linhas;
+  for (const l of linhas) l.vel_kmh = velKmh(l);
   // gerado vem em UTC ("...Z"); mostrar em hora local pt-PT
   document.getElementById("gerado").textContent =
     "actualizado " + new Date(d.gerado).toLocaleString("pt-PT",
