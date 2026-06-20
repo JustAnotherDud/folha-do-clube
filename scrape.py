@@ -13,7 +13,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 from bs4 import BeautifulSoup
@@ -130,7 +130,7 @@ def main():
         l["cidade"] = info.get("cidade", "")
         l["pais"] = info.get("pais", "")
 
-    out = {"gerado": datetime.utcnow().isoformat(timespec="minutes") + "Z",
+    out = {"gerado": datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
            "linhas": linhas}
     with open(os.path.join(os.path.dirname(__file__) or ".", "data.json"),
               "w", encoding="utf-8") as f:
