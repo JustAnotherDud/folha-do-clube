@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-20T08:32Z",
+ "gerado": "2026-06-20T22:52Z",
  "linhas": [
   {
    "posicao": 3,
@@ -11,7 +11,9 @@
    "elev_m": 31,
    "tempo": "2:29",
    "data": "2025-07-10",
-   "atleta": "Ana"
+   "atleta": "Ana",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -23,7 +25,9 @@
    "elev_m": 12,
    "tempo": "5:28",
    "data": "2025-01-19",
-   "atleta": "Ana"
+   "atleta": "Ana",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -33,9 +37,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3346449667800096404",
    "dist_km": 0.1,
    "elev_m": 4,
-   "tempo": "52s",
+   "tempo": "0:52",
    "data": "2025-04-13",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 9,
@@ -47,7 +53,9 @@
    "elev_m": 28,
    "tempo": "2:22",
    "data": "2026-05-03",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -59,7 +67,9 @@
    "elev_m": 76,
    "tempo": "4:59",
    "data": "2026-05-03",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -71,7 +81,9 @@
    "elev_m": 79,
    "tempo": "5:35",
    "data": "2026-05-03",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -83,7 +95,9 @@
    "elev_m": 3,
    "tempo": "1:33",
    "data": "2025-12-02",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -95,7 +109,9 @@
    "elev_m": 16,
    "tempo": "1:35",
    "data": "2025-04-13",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -107,7 +123,9 @@
    "elev_m": 16,
    "tempo": "2:14",
    "data": "2025-04-13",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -119,7 +137,9 @@
    "elev_m": 12,
    "tempo": "5:28",
    "data": "2025-01-19",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 6,
@@ -131,7 +151,9 @@
    "elev_m": 9,
    "tempo": "3:46",
    "data": "2024-09-06",
-   "atleta": "Carolina"
+   "atleta": "Carolina",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -143,7 +165,9 @@
    "elev_m": 32,
    "tempo": "4:02",
    "data": "2026-03-25",
-   "atleta": "Inês"
+   "atleta": "Inês",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -153,9 +177,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3500603956955407758",
    "dist_km": 0.11,
    "elev_m": 17,
-   "tempo": "25s",
+   "tempo": "0:25",
    "data": "2026-06-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -167,7 +193,9 @@
    "elev_m": 11,
    "tempo": "1:32",
    "data": "2026-06-07",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -179,7 +207,9 @@
    "elev_m": 13,
    "tempo": "8:23",
    "data": "2026-06-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -191,7 +221,9 @@
    "elev_m": 12,
    "tempo": "3:07",
    "data": "2026-06-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -203,7 +235,9 @@
    "elev_m": 16,
    "tempo": "1:51",
    "data": "2026-06-04",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -215,7 +249,9 @@
    "elev_m": 51,
    "tempo": "3:12",
    "data": "2026-06-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -227,7 +263,9 @@
    "elev_m": 54,
    "tempo": "4:19",
    "data": "2026-05-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -239,7 +277,9 @@
    "elev_m": 11,
    "tempo": "1:27",
    "data": "2026-05-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -251,7 +291,9 @@
    "elev_m": 2,
    "tempo": "1:01",
    "data": "2026-05-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -263,7 +305,9 @@
    "elev_m": 4,
    "tempo": "1:54",
    "data": "2026-05-21",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -275,7 +319,9 @@
    "elev_m": 4,
    "tempo": "2:12",
    "data": "2026-05-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -287,7 +333,9 @@
    "elev_m": 4,
    "tempo": "1:57",
    "data": "2026-05-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -299,7 +347,9 @@
    "elev_m": 10,
    "tempo": "9:30",
    "data": "2026-05-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -311,7 +361,9 @@
    "elev_m": 9,
    "tempo": "3:22",
    "data": "2026-05-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -323,7 +375,9 @@
    "elev_m": 4,
    "tempo": "18:02",
    "data": "2026-05-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -335,7 +389,9 @@
    "elev_m": 4,
    "tempo": "3:10",
    "data": "2026-05-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -347,7 +403,9 @@
    "elev_m": 30,
    "tempo": "2:10",
    "data": "2026-04-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -359,7 +417,9 @@
    "elev_m": 32,
    "tempo": "3:25",
    "data": "2026-04-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -371,7 +431,9 @@
    "elev_m": 11,
    "tempo": "1:58",
    "data": "2026-04-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -383,7 +445,9 @@
    "elev_m": 11,
    "tempo": "2:29",
    "data": "2026-04-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -395,7 +459,9 @@
    "elev_m": 10,
    "tempo": "2:56",
    "data": "2026-04-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -407,7 +473,9 @@
    "elev_m": 4,
    "tempo": "1:33",
    "data": "2026-03-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -419,7 +487,9 @@
    "elev_m": 44,
    "tempo": "2:47",
    "data": "2026-03-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -429,9 +499,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3462859763706988748",
    "dist_km": 0.27,
    "elev_m": 15,
-   "tempo": "59s",
+   "tempo": "0:59",
    "data": "2026-02-28",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -443,7 +515,9 @@
    "elev_m": 20,
    "tempo": "1:43",
    "data": "2026-02-28",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -453,9 +527,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3458164462417058748",
    "dist_km": 0.18,
    "elev_m": 3,
-   "tempo": "29s",
+   "tempo": "0:29",
    "data": "2026-02-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -467,7 +543,9 @@
    "elev_m": 27,
    "tempo": "3:02",
    "data": "2026-02-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -479,7 +557,9 @@
    "elev_m": 40,
    "tempo": "3:29",
    "data": "2026-01-31",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -491,7 +571,9 @@
    "elev_m": 10,
    "tempo": "2:29",
    "data": "2026-01-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -503,7 +585,9 @@
    "elev_m": 6,
    "tempo": "1:31",
    "data": "2026-01-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -515,7 +599,9 @@
    "elev_m": 12,
    "tempo": "4:00",
    "data": "2026-01-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -525,9 +611,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3443717385641589406",
    "dist_km": 0.29,
    "elev_m": 9,
-   "tempo": "57s",
+   "tempo": "0:57",
    "data": "2026-01-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -539,7 +627,9 @@
    "elev_m": 92,
    "tempo": "8:32",
    "data": "2026-01-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -551,7 +641,9 @@
    "elev_m": 6,
    "tempo": "2:57",
    "data": "2026-01-03",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -563,7 +655,9 @@
    "elev_m": 5,
    "tempo": "2:56",
    "data": "2026-01-03",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -575,7 +669,9 @@
    "elev_m": 28,
    "tempo": "2:03",
    "data": "2025-12-31",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -587,7 +683,9 @@
    "elev_m": 2,
    "tempo": "1:02",
    "data": "2025-12-26",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -599,7 +697,9 @@
    "elev_m": 85,
    "tempo": "7:43",
    "data": "2025-12-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -611,7 +711,9 @@
    "elev_m": 32,
    "tempo": "20:47",
    "data": "2025-12-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -623,7 +725,9 @@
    "elev_m": 66,
    "tempo": "4:06",
    "data": "2025-12-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -633,9 +737,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3432413486514368718",
    "dist_km": 0.2,
    "elev_m": 10,
-   "tempo": "33s",
+   "tempo": "0:33",
    "data": "2025-12-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -647,7 +753,9 @@
    "elev_m": 2,
    "tempo": "1:58",
    "data": "2025-12-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -657,9 +765,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3429827599926973782",
    "dist_km": 0.24,
    "elev_m": 1,
-   "tempo": "35s",
+   "tempo": "0:35",
    "data": "2025-11-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -669,9 +779,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3429225674065730164",
    "dist_km": 0.32,
    "elev_m": 8,
-   "tempo": "49s",
+   "tempo": "0:49",
    "data": "2025-11-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -681,9 +793,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3428503749987446920",
    "dist_km": 0.11,
    "elev_m": 2,
-   "tempo": "13s",
+   "tempo": "0:13",
    "data": "2025-11-25",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -693,9 +807,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3426662878655447222",
    "dist_km": 0.28,
    "elev_m": 9,
-   "tempo": "44s",
+   "tempo": "0:44",
    "data": "2025-11-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -707,7 +823,9 @@
    "elev_m": 40,
    "tempo": "3:09",
    "data": "2025-11-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -719,7 +837,9 @@
    "elev_m": 52,
    "tempo": "3:59",
    "data": "2025-11-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -731,7 +851,9 @@
    "elev_m": 41,
    "tempo": "2:09",
    "data": "2025-11-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -743,7 +865,9 @@
    "elev_m": 37,
    "tempo": "2:18",
    "data": "2025-11-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -753,9 +877,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3422280158716870078",
    "dist_km": 0.18,
    "elev_m": 2,
-   "tempo": "28s",
+   "tempo": "0:28",
    "data": "2025-11-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -767,7 +893,9 @@
    "elev_m": 28,
    "tempo": "1:06",
    "data": "2025-11-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -779,7 +907,9 @@
    "elev_m": 36,
    "tempo": "1:46",
    "data": "2025-11-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -791,7 +921,9 @@
    "elev_m": 45,
    "tempo": "2:13",
    "data": "2025-11-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -803,7 +935,9 @@
    "elev_m": 6,
    "tempo": "2:05",
    "data": "2025-11-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -815,7 +949,9 @@
    "elev_m": 13,
    "tempo": "1:33",
    "data": "2025-11-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -827,7 +963,9 @@
    "elev_m": 11,
    "tempo": "2:52",
    "data": "2025-11-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -839,7 +977,9 @@
    "elev_m": 41,
    "tempo": "6:32",
    "data": "2025-11-04",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -851,7 +991,9 @@
    "elev_m": 76,
    "tempo": "3:07",
    "data": "2025-11-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -863,7 +1005,9 @@
    "elev_m": 79,
    "tempo": "3:34",
    "data": "2025-11-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -873,9 +1017,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3419078575627758490",
    "dist_km": 0.3,
    "elev_m": 6,
-   "tempo": "47s",
+   "tempo": "0:47",
    "data": "2025-10-30",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -887,7 +1033,9 @@
    "elev_m": 31,
    "tempo": "6:18",
    "data": "2025-10-28",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -899,7 +1047,9 @@
    "elev_m": 27,
    "tempo": "3:32",
    "data": "2025-10-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -909,9 +1059,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3416159798185211014",
    "dist_km": 0.23,
    "elev_m": 1,
-   "tempo": "42s",
+   "tempo": "0:42",
    "data": "2025-10-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -923,7 +1075,9 @@
    "elev_m": 33,
    "tempo": "6:02",
    "data": "2025-10-21",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -935,7 +1089,9 @@
    "elev_m": 38,
    "tempo": "1:29",
    "data": "2025-10-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -947,7 +1103,9 @@
    "elev_m": 48,
    "tempo": "3:36",
    "data": "2025-10-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -959,7 +1117,9 @@
    "elev_m": 67,
    "tempo": "4:19",
    "data": "2025-10-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -969,9 +1129,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3414578488980726028",
    "dist_km": 0.2,
    "elev_m": 9,
-   "tempo": "32s",
+   "tempo": "0:32",
    "data": "2025-10-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -983,7 +1145,9 @@
    "elev_m": 4,
    "tempo": "1:08",
    "data": "2025-10-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -995,7 +1159,9 @@
    "elev_m": 6,
    "tempo": "3:17",
    "data": "2025-10-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1007,7 +1173,9 @@
    "elev_m": 23,
    "tempo": "3:44",
    "data": "2025-10-16",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1019,7 +1187,9 @@
    "elev_m": 23,
    "tempo": "3:14",
    "data": "2025-10-16",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1031,7 +1201,9 @@
    "elev_m": 34,
    "tempo": "3:12",
    "data": "2025-10-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1043,7 +1215,9 @@
    "elev_m": 23,
    "tempo": "3:37",
    "data": "2025-10-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1055,7 +1229,9 @@
    "elev_m": 50,
    "tempo": "2:38",
    "data": "2025-10-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1065,9 +1241,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3412041322555145012",
    "dist_km": 0.28,
    "elev_m": 0,
-   "tempo": "41s",
+   "tempo": "0:41",
    "data": "2025-10-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1079,7 +1257,9 @@
    "elev_m": 28,
    "tempo": "4:17",
    "data": "2025-10-09",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1091,7 +1271,9 @@
    "elev_m": 91,
    "tempo": "20:29",
    "data": "2025-10-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1103,7 +1285,9 @@
    "elev_m": 21,
    "tempo": "1:07",
    "data": "2025-10-07",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1115,7 +1299,9 @@
    "elev_m": 17,
    "tempo": "1:00",
    "data": "2025-10-07",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1127,7 +1313,9 @@
    "elev_m": 40,
    "tempo": "2:26",
    "data": "2025-09-25",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1139,7 +1327,9 @@
    "elev_m": 19,
    "tempo": "3:00",
    "data": "2025-09-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1151,7 +1341,9 @@
    "elev_m": 11,
    "tempo": "3:37",
    "data": "2025-09-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1161,9 +1353,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3403840509827231298",
    "dist_km": 0.28,
    "elev_m": 6,
-   "tempo": "52s",
+   "tempo": "0:52",
    "data": "2025-09-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1173,9 +1367,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3403475620601603464",
    "dist_km": 0.2,
    "elev_m": 16,
-   "tempo": "37s",
+   "tempo": "0:37",
    "data": "2025-09-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1185,9 +1381,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3403113317507051742",
    "dist_km": 0.24,
    "elev_m": 6,
-   "tempo": "33s",
+   "tempo": "0:33",
    "data": "2025-09-16",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1199,7 +1397,9 @@
    "elev_m": 3,
    "tempo": "1:02",
    "data": "2025-09-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1211,7 +1411,9 @@
    "elev_m": 26,
    "tempo": "2:18",
    "data": "2025-09-10",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1223,7 +1425,9 @@
    "elev_m": 12,
    "tempo": "1:07",
    "data": "2025-09-03",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1235,7 +1439,9 @@
    "elev_m": 24,
    "tempo": "3:28",
    "data": "2025-09-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1247,7 +1453,9 @@
    "elev_m": 20,
    "tempo": "2:12",
    "data": "2025-09-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1257,9 +1465,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3396845096019112740",
    "dist_km": 0.23,
    "elev_m": 7,
-   "tempo": "30s",
+   "tempo": "0:30",
    "data": "2025-08-30",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1271,7 +1481,9 @@
    "elev_m": 13,
    "tempo": "1:04",
    "data": "2025-08-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1283,7 +1495,9 @@
    "elev_m": 6,
    "tempo": "1:20",
    "data": "2025-08-25",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1293,9 +1507,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3395154787391017526",
    "dist_km": 0.22,
    "elev_m": 12,
-   "tempo": "41s",
+   "tempo": "0:41",
    "data": "2025-08-25",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1307,7 +1523,9 @@
    "elev_m": 11,
    "tempo": "1:01",
    "data": "2025-08-21",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1319,7 +1537,9 @@
    "elev_m": 21,
    "tempo": "1:51",
    "data": "2025-08-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1331,7 +1551,9 @@
    "elev_m": 14,
    "tempo": "1:20",
    "data": "2025-08-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1343,7 +1565,9 @@
    "elev_m": 53,
    "tempo": "4:35",
    "data": "2025-08-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1353,9 +1577,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3392609678259392024",
    "dist_km": 0.34,
    "elev_m": 8,
-   "tempo": "59s",
+   "tempo": "0:59",
    "data": "2025-08-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1367,7 +1593,9 @@
    "elev_m": 3,
    "tempo": "1:01",
    "data": "2025-08-16",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1377,9 +1605,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3390427098647303540",
    "dist_km": 0.25,
    "elev_m": 13,
-   "tempo": "35s",
+   "tempo": "0:35",
    "data": "2025-08-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1391,7 +1621,9 @@
    "elev_m": 15,
    "tempo": "2:22",
    "data": "2025-08-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1403,7 +1635,9 @@
    "elev_m": 49,
    "tempo": "4:37",
    "data": "2025-08-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1415,7 +1649,9 @@
    "elev_m": 8,
    "tempo": "1:12",
    "data": "2025-08-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1425,9 +1661,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3388257219595620526",
    "dist_km": 0.24,
    "elev_m": 3,
-   "tempo": "41s",
+   "tempo": "0:41",
    "data": "2025-08-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1439,7 +1677,9 @@
    "elev_m": 14,
    "tempo": "1:51",
    "data": "2025-08-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1451,7 +1691,9 @@
    "elev_m": 16,
    "tempo": "3:53",
    "data": "2025-08-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1461,9 +1703,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3387900869966422530",
    "dist_km": 0.12,
    "elev_m": 11,
-   "tempo": "19s",
+   "tempo": "0:19",
    "data": "2025-08-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1475,7 +1719,9 @@
    "elev_m": 45,
    "tempo": "3:30",
    "data": "2025-08-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1487,7 +1733,9 @@
    "elev_m": 69,
    "tempo": "6:34",
    "data": "2025-07-31",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1497,9 +1745,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3385365679125522990",
    "dist_km": 0.27,
    "elev_m": 2,
-   "tempo": "40s",
+   "tempo": "0:40",
    "data": "2025-07-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1509,9 +1759,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3383554897097239064",
    "dist_km": 0.15,
    "elev_m": 5,
-   "tempo": "21s",
+   "tempo": "0:21",
    "data": "2025-07-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1523,7 +1775,9 @@
    "elev_m": 7,
    "tempo": "1:15",
    "data": "2025-07-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1533,9 +1787,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3382833387022687834",
    "dist_km": 0.12,
    "elev_m": 5,
-   "tempo": "18s",
+   "tempo": "0:18",
    "data": "2025-07-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1547,7 +1803,9 @@
    "elev_m": 26,
    "tempo": "2:07",
    "data": "2025-07-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1557,9 +1815,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3382056018767409742",
    "dist_km": 0.23,
    "elev_m": 8,
-   "tempo": "34s",
+   "tempo": "0:34",
    "data": "2025-07-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1571,7 +1831,9 @@
    "elev_m": 23,
    "tempo": "2:03",
    "data": "2025-07-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1581,9 +1843,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3381716125537752244",
    "dist_km": 0.28,
    "elev_m": 4,
-   "tempo": "44s",
+   "tempo": "0:44",
    "data": "2025-07-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1593,9 +1857,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3381716125535453364",
    "dist_km": 0.22,
    "elev_m": 0,
-   "tempo": "33s",
+   "tempo": "0:33",
    "data": "2025-07-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1607,7 +1873,9 @@
    "elev_m": 2,
    "tempo": "1:07",
    "data": "2025-07-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1617,9 +1885,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3381019797319228582",
    "dist_km": 0.24,
    "elev_m": 12,
-   "tempo": "43s",
+   "tempo": "0:43",
    "data": "2025-07-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1631,7 +1901,9 @@
    "elev_m": 27,
    "tempo": "4:57",
    "data": "2025-07-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1643,7 +1915,9 @@
    "elev_m": 64,
    "tempo": "5:14",
    "data": "2025-07-10",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1655,7 +1929,9 @@
    "elev_m": 60,
    "tempo": "2:00",
    "data": "2025-07-07",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1667,7 +1943,9 @@
    "elev_m": 30,
    "tempo": "1:03",
    "data": "2025-06-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1677,9 +1955,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3370909503703496194",
    "dist_km": 0.25,
    "elev_m": 22,
-   "tempo": "58s",
+   "tempo": "0:58",
    "data": "2025-06-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1691,7 +1971,9 @@
    "elev_m": 7,
    "tempo": "2:49",
    "data": "2025-06-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1703,7 +1985,9 @@
    "elev_m": 6,
    "tempo": "1:34",
    "data": "2025-06-16",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1713,9 +1997,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3367594328964695420",
    "dist_km": 0.3,
    "elev_m": 18,
-   "tempo": "40s",
+   "tempo": "0:40",
    "data": "2025-06-10",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1725,9 +2011,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3367277110198573326",
    "dist_km": 0.16,
    "elev_m": 15,
-   "tempo": "30s",
+   "tempo": "0:30",
    "data": "2025-06-09",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1737,9 +2025,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3363256713587635048",
    "dist_km": 0.16,
    "elev_m": 12,
-   "tempo": "28s",
+   "tempo": "0:28",
    "data": "2025-05-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1749,9 +2039,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3362892531509862650",
    "dist_km": 0.15,
    "elev_m": 18,
-   "tempo": "26s",
+   "tempo": "0:26",
    "data": "2025-05-28",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1761,9 +2053,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3362167250099077220",
    "dist_km": 0.15,
    "elev_m": 1,
-   "tempo": "18s",
+   "tempo": "0:18",
    "data": "2025-05-26",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1773,9 +2067,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3360720180439564782",
    "dist_km": 0.25,
    "elev_m": 8,
-   "tempo": "34s",
+   "tempo": "0:34",
    "data": "2025-05-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1785,9 +2081,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3360720180441596398",
    "dist_km": 0.16,
    "elev_m": 1,
-   "tempo": "21s",
+   "tempo": "0:21",
    "data": "2025-05-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1797,9 +2095,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3360720180441373166",
    "dist_km": 0.34,
    "elev_m": 2,
-   "tempo": "53s",
+   "tempo": "0:53",
    "data": "2025-05-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1811,7 +2111,9 @@
    "elev_m": 80,
    "tempo": "4:56",
    "data": "2025-05-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1823,7 +2125,9 @@
    "elev_m": 18,
    "tempo": "2:16",
    "data": "2025-05-21",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1835,7 +2139,9 @@
    "elev_m": 13,
    "tempo": "4:07",
    "data": "2025-05-21",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1845,9 +2151,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3359630025211481614",
    "dist_km": 0.14,
    "elev_m": 1,
-   "tempo": "20s",
+   "tempo": "0:20",
    "data": "2025-05-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1857,9 +2165,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3359630025209935374",
    "dist_km": 0.31,
    "elev_m": 6,
-   "tempo": "51s",
+   "tempo": "0:51",
    "data": "2025-05-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1871,7 +2181,9 @@
    "elev_m": 6,
    "tempo": "1:50",
    "data": "2025-05-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1883,7 +2195,9 @@
    "elev_m": 6,
    "tempo": "2:03",
    "data": "2025-05-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1895,7 +2209,9 @@
    "elev_m": 34,
    "tempo": "4:29",
    "data": "2025-05-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1905,9 +2221,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3357452376377671886",
    "dist_km": 0.27,
    "elev_m": 8,
-   "tempo": "45s",
+   "tempo": "0:45",
    "data": "2025-05-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1919,7 +2237,9 @@
    "elev_m": 45,
    "tempo": "2:46",
    "data": "2025-05-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1931,7 +2251,9 @@
    "elev_m": 5,
    "tempo": "1:11",
    "data": "2025-05-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1943,7 +2265,9 @@
    "elev_m": 62,
    "tempo": "5:08",
    "data": "2025-04-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1953,9 +2277,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3346456817586511508",
    "dist_km": 0.1,
    "elev_m": 5,
-   "tempo": "19s",
+   "tempo": "0:19",
    "data": "2025-04-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1967,7 +2293,9 @@
    "elev_m": 24,
    "tempo": "1:11",
    "data": "2025-04-07",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1979,7 +2307,9 @@
    "elev_m": 5,
    "tempo": "1:30",
    "data": "2025-03-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -1989,9 +2319,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3323344029117453538",
    "dist_km": 0.09,
    "elev_m": 10,
-   "tempo": "12s",
+   "tempo": "0:12",
    "data": "2025-02-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2001,9 +2333,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3323344029115772130",
    "dist_km": 0.09,
    "elev_m": 10,
-   "tempo": "13s",
+   "tempo": "0:13",
    "data": "2025-02-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2013,9 +2347,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3323344029116007650",
    "dist_km": 0.1,
    "elev_m": 5,
-   "tempo": "16s",
+   "tempo": "0:16",
    "data": "2025-02-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2025,9 +2361,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3320751701248821826",
    "dist_km": 0.13,
    "elev_m": 6,
-   "tempo": "22s",
+   "tempo": "0:22",
    "data": "2025-02-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2037,9 +2375,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3313209398727213040",
    "dist_km": 0.31,
    "elev_m": 16,
-   "tempo": "58s",
+   "tempo": "0:58",
    "data": "2025-01-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2051,7 +2391,9 @@
    "elev_m": 6,
    "tempo": "1:10",
    "data": "2025-01-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2063,7 +2405,9 @@
    "elev_m": 4,
    "tempo": "1:01",
    "data": "2025-01-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2075,7 +2419,9 @@
    "elev_m": 4,
    "tempo": "1:01",
    "data": "2025-01-03",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2085,9 +2431,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3309450867705216246",
    "dist_km": 0.19,
    "elev_m": 32,
-   "tempo": "55s",
+   "tempo": "0:55",
    "data": "2025-01-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2097,9 +2445,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3309228287223538666",
    "dist_km": 0.32,
    "elev_m": 9,
-   "tempo": "52s",
+   "tempo": "0:52",
    "data": "2024-12-31",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2111,7 +2461,9 @@
    "elev_m": 1,
    "tempo": "1:21",
    "data": "2024-12-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2121,9 +2473,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3307781467287346448",
    "dist_km": 0.24,
    "elev_m": 5,
-   "tempo": "41s",
+   "tempo": "0:41",
    "data": "2024-12-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2133,9 +2487,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3307781467290035472",
    "dist_km": 0.3,
    "elev_m": 3,
-   "tempo": "49s",
+   "tempo": "0:49",
    "data": "2024-12-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2147,7 +2503,9 @@
    "elev_m": 9,
    "tempo": "1:33",
    "data": "2024-12-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2157,9 +2515,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3306683723362578678",
    "dist_km": 0.11,
    "elev_m": 7,
-   "tempo": "22s",
+   "tempo": "0:22",
    "data": "2024-12-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2171,7 +2531,9 @@
    "elev_m": 15,
    "tempo": "2:10",
    "data": "2024-12-24",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2183,7 +2545,9 @@
    "elev_m": 10,
    "tempo": "3:41",
    "data": "2024-12-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2193,9 +2557,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3304923686668712306",
    "dist_km": 0.22,
    "elev_m": 4,
-   "tempo": "34s",
+   "tempo": "0:34",
    "data": "2024-12-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2205,9 +2571,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3303413069783344140",
    "dist_km": 0.22,
    "elev_m": 3,
-   "tempo": "39s",
+   "tempo": "0:39",
    "data": "2024-12-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2217,9 +2585,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3303082253979334462",
    "dist_km": 0.2,
    "elev_m": 1,
-   "tempo": "32s",
+   "tempo": "0:32",
    "data": "2024-12-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2229,9 +2599,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3302752736370028748",
    "dist_km": 0.26,
    "elev_m": 12,
-   "tempo": "42s",
+   "tempo": "0:42",
    "data": "2024-12-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2241,9 +2613,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3302383093531461436",
    "dist_km": 0.22,
    "elev_m": 7,
-   "tempo": "38s",
+   "tempo": "0:38",
    "data": "2024-12-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2255,7 +2629,9 @@
    "elev_m": 10,
    "tempo": "2:43",
    "data": "2024-09-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2267,7 +2643,9 @@
    "elev_m": 41,
    "tempo": "4:00",
    "data": "2024-07-13",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -2279,7 +2657,9 @@
    "elev_m": 30,
    "tempo": "4:45",
    "data": "2026-06-18",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2291,7 +2671,9 @@
    "elev_m": 34,
    "tempo": "1:12",
    "data": "2026-06-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -2303,7 +2685,9 @@
    "elev_m": 24,
    "tempo": "3:10",
    "data": "2026-05-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 6,
@@ -2313,9 +2697,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3492260194020838586",
    "dist_km": 0.29,
    "elev_m": 3,
-   "tempo": "47s",
+   "tempo": "0:47",
    "data": "2026-05-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -2327,7 +2713,9 @@
    "elev_m": 2,
    "tempo": "16:56",
    "data": "2026-05-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -2339,7 +2727,9 @@
    "elev_m": 13,
    "tempo": "17:48",
    "data": "2026-05-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -2351,7 +2741,9 @@
    "elev_m": 8,
    "tempo": "1:00",
    "data": "2026-05-10",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2363,7 +2755,9 @@
    "elev_m": 10,
    "tempo": "3:49",
    "data": "2026-04-30",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -2375,7 +2769,9 @@
    "elev_m": 37,
    "tempo": "4:58",
    "data": "2026-04-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -2387,7 +2783,9 @@
    "elev_m": 6,
    "tempo": "4:38",
    "data": "2026-04-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2399,7 +2797,9 @@
    "elev_m": 36,
    "tempo": "12:50",
    "data": "2026-04-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2411,7 +2811,9 @@
    "elev_m": 56,
    "tempo": "1:20:16",
    "data": "2026-04-19",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 10,
@@ -2423,7 +2825,9 @@
    "elev_m": 13,
    "tempo": "25:23",
    "data": "2026-04-08",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -2435,7 +2839,9 @@
    "elev_m": 45,
    "tempo": "4:14",
    "data": "2026-03-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2447,7 +2853,9 @@
    "elev_m": 25,
    "tempo": "1:01",
    "data": "2026-02-26",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2459,7 +2867,9 @@
    "elev_m": 5,
    "tempo": "2:59",
    "data": "2026-02-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2471,7 +2881,9 @@
    "elev_m": 53,
    "tempo": "2:03",
    "data": "2025-12-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2483,7 +2895,9 @@
    "elev_m": 60,
    "tempo": "1:49",
    "data": "2025-12-04",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2495,7 +2909,9 @@
    "elev_m": 13,
    "tempo": "1:42",
    "data": "2025-10-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2507,7 +2923,9 @@
    "elev_m": 26,
    "tempo": "2:42",
    "data": "2025-10-22",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2519,7 +2937,9 @@
    "elev_m": 16,
    "tempo": "32:38",
    "data": "2025-10-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2531,7 +2951,9 @@
    "elev_m": 22,
    "tempo": "33:43",
    "data": "2025-10-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2543,7 +2965,9 @@
    "elev_m": 26,
    "tempo": "1:07:02",
    "data": "2025-10-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2555,7 +2979,9 @@
    "elev_m": 17,
    "tempo": "33:54",
    "data": "2025-10-12",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2567,7 +2993,9 @@
    "elev_m": 5,
    "tempo": "1:03",
    "data": "2025-10-06",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -2579,7 +3007,9 @@
    "elev_m": 45,
    "tempo": "6:11",
    "data": "2025-09-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 9,
@@ -2591,7 +3021,9 @@
    "elev_m": 105,
    "tempo": "19:32",
    "data": "2025-09-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2603,7 +3035,9 @@
    "elev_m": 5,
    "tempo": "1:07",
    "data": "2025-07-03",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2615,7 +3049,9 @@
    "elev_m": 6,
    "tempo": "4:42",
    "data": "2025-07-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2627,7 +3063,9 @@
    "elev_m": 10,
    "tempo": "8:39",
    "data": "2025-07-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -2639,7 +3077,9 @@
    "elev_m": 3,
    "tempo": "1:15",
    "data": "2025-06-27",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -2649,9 +3089,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3372316895454683038",
    "dist_km": 0.14,
    "elev_m": 17,
-   "tempo": "26s",
+   "tempo": "0:26",
    "data": "2025-06-23",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2663,7 +3105,9 @@
    "elev_m": 10,
    "tempo": "2:44",
    "data": "2025-06-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2675,7 +3119,9 @@
    "elev_m": 5,
    "tempo": "1:26",
    "data": "2025-06-15",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2687,7 +3133,9 @@
    "elev_m": 50,
    "tempo": "3:30",
    "data": "2025-06-04",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2699,7 +3147,9 @@
    "elev_m": 14,
    "tempo": "3:48",
    "data": "2025-05-01",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 9,
@@ -2711,7 +3161,9 @@
    "elev_m": 15,
    "tempo": "4:38",
    "data": "2025-04-25",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2721,9 +3173,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3311131093555745014",
    "dist_km": 0.2,
    "elev_m": 2,
-   "tempo": "34s",
+   "tempo": "0:34",
    "data": "2025-01-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2735,7 +3189,9 @@
    "elev_m": 5,
    "tempo": "2:00",
    "data": "2024-12-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 6,
@@ -2745,9 +3201,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3304219068392474484",
    "dist_km": 0.2,
    "elev_m": 3,
-   "tempo": "34s",
+   "tempo": "0:34",
    "data": "2024-12-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2759,7 +3217,9 @@
    "elev_m": 20,
    "tempo": "4:11",
    "data": "2024-12-17",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2771,7 +3231,9 @@
    "elev_m": 12,
    "tempo": "1:50",
    "data": "2024-12-11",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -2783,7 +3245,9 @@
    "elev_m": 29,
    "tempo": "1:20",
    "data": "2024-12-02",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 10,
@@ -2795,7 +3259,9 @@
    "elev_m": 37,
    "tempo": "1:30",
    "data": "2024-11-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2807,7 +3273,9 @@
    "elev_m": 40,
    "tempo": "2:11",
    "data": "2024-11-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2819,7 +3287,9 @@
    "elev_m": 16,
    "tempo": "1:04",
    "data": "2024-11-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2831,7 +3301,9 @@
    "elev_m": 63,
    "tempo": "3:04",
    "data": "2024-10-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2843,7 +3315,9 @@
    "elev_m": 18,
    "tempo": "1:25",
    "data": "2024-10-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -2855,7 +3329,9 @@
    "elev_m": 11,
    "tempo": "1:02",
    "data": "2024-09-28",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2865,9 +3341,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3272005878120579724",
    "dist_km": 0.22,
    "elev_m": 12,
-   "tempo": "48s",
+   "tempo": "0:48",
    "data": "2024-09-20",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2879,7 +3357,9 @@
    "elev_m": 2,
    "tempo": "1:10",
    "data": "2024-08-29",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -2891,7 +3371,9 @@
    "elev_m": 54,
    "tempo": "2:01",
    "data": "2024-08-05",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -2901,9 +3383,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3247517046924253644",
    "dist_km": 0.25,
    "elev_m": 9,
-   "tempo": "57s",
+   "tempo": "0:57",
    "data": "2024-07-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2913,9 +3397,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3247517046924646860",
    "dist_km": 0.19,
    "elev_m": 7,
-   "tempo": "48s",
+   "tempo": "0:48",
    "data": "2024-07-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -2927,7 +3413,9 @@
    "elev_m": 15,
    "tempo": "1:57",
    "data": "2024-07-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -2939,7 +3427,9 @@
    "elev_m": 15,
    "tempo": "8:57",
    "data": "2024-07-14",
-   "atleta": "Xeira"
+   "atleta": "Xeira",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2949,9 +3439,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3381281510758054346",
    "dist_km": 0.21,
    "elev_m": 17,
-   "tempo": "43s",
+   "tempo": "0:43",
    "data": "2025-07-18",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2963,7 +3455,9 @@
    "elev_m": 21,
    "tempo": "2:01",
    "data": "2025-05-22",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2973,9 +3467,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3360730524843726520",
    "dist_km": 0.11,
    "elev_m": 7,
-   "tempo": "20s",
+   "tempo": "0:20",
    "data": "2025-05-22",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2985,9 +3481,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3358786469616206404",
    "dist_km": 0.31,
    "elev_m": 4,
-   "tempo": "52s",
+   "tempo": "0:52",
    "data": "2025-05-17",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -2999,7 +3497,9 @@
    "elev_m": 3,
    "tempo": "1:17",
    "data": "2025-05-17",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3009,9 +3509,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3358786469617819204",
    "dist_km": 0.1,
    "elev_m": 11,
-   "tempo": "17s",
+   "tempo": "0:17",
    "data": "2025-05-17",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3023,7 +3525,9 @@
    "elev_m": 2,
    "tempo": "1:06",
    "data": "2025-05-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3035,7 +3539,9 @@
    "elev_m": 27,
    "tempo": "1:43",
    "data": "2025-05-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3047,7 +3553,9 @@
    "elev_m": 3,
    "tempo": "1:04",
    "data": "2025-05-13",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3059,7 +3567,9 @@
    "elev_m": 63,
    "tempo": "3:03",
    "data": "2024-10-05",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3071,7 +3581,9 @@
    "elev_m": 31,
    "tempo": "2:58",
    "data": "2024-10-04",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3083,7 +3595,9 @@
    "elev_m": 25,
    "tempo": "1:54",
    "data": "2024-09-25",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 1,
@@ -3095,7 +3609,9 @@
    "elev_m": 15,
    "tempo": "1:34",
    "data": "2024-09-23",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3107,7 +3623,9 @@
    "elev_m": 15,
    "tempo": "2:26",
    "data": "2026-05-21",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -3119,7 +3637,9 @@
    "elev_m": 231,
    "tempo": "14:23",
    "data": "2025-09-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3131,7 +3651,9 @@
    "elev_m": 3,
    "tempo": "1:12",
    "data": "2025-08-16",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -3143,7 +3665,9 @@
    "elev_m": 5,
    "tempo": "5:23",
    "data": "2025-07-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 10,
@@ -3155,7 +3679,9 @@
    "elev_m": 22,
    "tempo": "1:15",
    "data": "2025-06-01",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 10,
@@ -3167,7 +3693,9 @@
    "elev_m": 26,
    "tempo": "2:14",
    "data": "2025-05-13",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3179,7 +3707,9 @@
    "elev_m": 23,
    "tempo": "1:20",
    "data": "2025-05-13",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 6,
@@ -3191,7 +3721,9 @@
    "elev_m": 57,
    "tempo": "9:13",
    "data": "2025-03-11",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -3203,7 +3735,9 @@
    "elev_m": 21,
    "tempo": "2:40",
    "data": "2025-02-25",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3215,7 +3749,9 @@
    "elev_m": 78,
    "tempo": "6:58",
    "data": "2025-02-25",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3225,9 +3761,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3309450725640575222",
    "dist_km": 0.19,
    "elev_m": 32,
-   "tempo": "58s",
+   "tempo": "0:58",
    "data": "2025-01-01",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -3239,7 +3777,9 @@
    "elev_m": 53,
    "tempo": "2:12",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3251,7 +3791,9 @@
    "elev_m": 16,
    "tempo": "1:06",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3261,9 +3803,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3307781226181202192",
    "dist_km": 0.24,
    "elev_m": 5,
-   "tempo": "43s",
+   "tempo": "0:43",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3273,9 +3817,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3307781226178698512",
    "dist_km": 0.3,
    "elev_m": 3,
-   "tempo": "51s",
+   "tempo": "0:51",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3287,7 +3833,9 @@
    "elev_m": 4,
    "tempo": "1:16",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3299,7 +3847,9 @@
    "elev_m": 1,
    "tempo": "1:24",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3311,7 +3861,9 @@
    "elev_m": 9,
    "tempo": "1:34",
    "data": "2024-12-27",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 8,
@@ -3323,7 +3875,9 @@
    "elev_m": 36,
    "tempo": "1:57",
    "data": "2024-10-20",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 6,
@@ -3335,7 +3889,9 @@
    "elev_m": 45,
    "tempo": "2:33",
    "data": "2024-10-20",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 5,
@@ -3347,7 +3903,9 @@
    "elev_m": 18,
    "tempo": "1:30",
    "data": "2024-10-05",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3357,9 +3915,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3271922189680555182",
    "dist_km": 0.23,
    "elev_m": 8,
-   "tempo": "36s",
+   "tempo": "0:36",
    "data": "2024-09-19",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 9,
@@ -3371,7 +3931,9 @@
    "elev_m": 32,
    "tempo": "3:34",
    "data": "2024-09-18",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3383,7 +3945,9 @@
    "elev_m": 30,
    "tempo": "2:02",
    "data": "2024-09-17",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 9,
@@ -3395,7 +3959,9 @@
    "elev_m": 1,
    "tempo": "2:01",
    "data": "2024-09-15",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3405,9 +3971,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3258027016163638396",
    "dist_km": 0.28,
    "elev_m": 0,
-   "tempo": "47s",
+   "tempo": "0:47",
    "data": "2024-08-12",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 4,
@@ -3417,9 +3985,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3256575177272579540",
    "dist_km": 0.31,
    "elev_m": 2,
-   "tempo": "55s",
+   "tempo": "0:55",
    "data": "2024-08-08",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3429,9 +3999,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3247517340149169080",
    "dist_km": 0.25,
    "elev_m": 9,
-   "tempo": "57s",
+   "tempo": "0:57",
    "data": "2024-07-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3441,9 +4013,11 @@
    "effort_url": "https://www.strava.com/segment_efforts/3247517340152160184",
    "dist_km": 0.19,
    "elev_m": 7,
-   "tempo": "48s",
+   "tempo": "0:48",
    "data": "2024-07-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3455,7 +4029,9 @@
    "elev_m": 15,
    "tempo": "1:57",
    "data": "2024-07-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 7,
@@ -3467,7 +4043,9 @@
    "elev_m": 15,
    "tempo": "8:57",
    "data": "2024-07-14",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3479,7 +4057,9 @@
    "elev_m": 41,
    "tempo": "4:23",
    "data": "2024-07-13",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 3,
@@ -3491,7 +4071,9 @@
    "elev_m": 6,
    "tempo": "1:18",
    "data": "2024-07-11",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   },
   {
    "posicao": 2,
@@ -3503,7 +4085,9 @@
    "elev_m": 7,
    "tempo": "4:41",
    "data": "2024-06-20",
-   "atleta": "Zé"
+   "atleta": "Zé",
+   "cidade": "",
+   "pais": ""
   }
  ]
 }
