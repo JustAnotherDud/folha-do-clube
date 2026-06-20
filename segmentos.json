@@ -1,0 +1,1332 @@
+{
+ "10008610": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10077276": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10094370": {
+  "avg_grade": 5.9,
+  "climb_cat": 0,
+  "elev_gain": 17
+ },
+ "10094459": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10216066": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10216116": {
+  "avg_grade": 2.2,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10256713": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10317245": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10366546": {
+  "avg_grade": 3.0,
+  "climb_cat": 0,
+  "elev_gain": 16
+ },
+ "10382253": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10387481": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10485733": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10787280": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10867505": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "10966268": {
+  "avg_grade": 10.7,
+  "climb_cat": 0,
+  "elev_gain": 10
+ },
+ "11015499": {
+  "avg_grade": -0.2,
+  "climb_cat": 0,
+  "elev_gain": 2
+ },
+ "11015501": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11015503": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11035095": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 38
+ },
+ "11211718": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11264439": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11384799": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11406762": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "11406768": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 4
+ },
+ "12349828": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "12364453": {
+  "avg_grade": 1.7,
+  "climb_cat": 0,
+  "elev_gain": 8
+ },
+ "12507586": {
+  "avg_grade": -1.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13092246": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13175152": {
+  "avg_grade": -1.3,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13175556": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13362356": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13363753": {
+  "avg_grade": -1.1,
+  "climb_cat": 0,
+  "elev_gain": 22
+ },
+ "13417253": {
+  "avg_grade": 2.0,
+  "climb_cat": 0,
+  "elev_gain": 25
+ },
+ "13530776": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13652719": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13743835": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13938512": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13938514": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13943659": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13961777": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "13970916": {
+  "avg_grade": 8.1,
+  "climb_cat": 0,
+  "elev_gain": 17
+ },
+ "14270382": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "14422411": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "14503636": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "14857775": {
+  "avg_grade": -1.5,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "14857788": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "14857801": {
+  "avg_grade": 5.9,
+  "climb_cat": 0,
+  "elev_gain": 7
+ },
+ "14906608": {
+  "avg_grade": 1.6,
+  "climb_cat": 0,
+  "elev_gain": 9
+ },
+ "15084305": {
+  "avg_grade": 11.6,
+  "climb_cat": 0,
+  "elev_gain": 60
+ },
+ "15413552": {
+  "avg_grade": 1.2,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "16134729": {
+  "avg_grade": 0.5,
+  "climb_cat": 0,
+  "elev_gain": 36
+ },
+ "16487914": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "16487944": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "16552309": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "16571623": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "16602317": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "17011517": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "17018271": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "17124506": {
+  "avg_grade": 0.8,
+  "climb_cat": 0,
+  "elev_gain": 37
+ },
+ "17166903": {
+  "avg_grade": 3.6,
+  "climb_cat": 0,
+  "elev_gain": 37
+ },
+ "17314021": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "17476281": {
+  "avg_grade": 1.5,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "17557962": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "17566239": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "18247122": {
+  "avg_grade": -0.1,
+  "climb_cat": 0,
+  "elev_gain": 28
+ },
+ "18488395": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "18575276": {
+  "avg_grade": 8.0,
+  "climb_cat": 0,
+  "elev_gain": 36
+ },
+ "18589514": {
+  "avg_grade": 1.1,
+  "climb_cat": 0,
+  "elev_gain": 23
+ },
+ "18589548": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19146130": {
+  "avg_grade": -0.3,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19226217": {
+  "avg_grade": 9.2,
+  "climb_cat": 0,
+  "elev_gain": 15
+ },
+ "19319549": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19562337": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19575142": {
+  "avg_grade": 6.0,
+  "climb_cat": 0,
+  "elev_gain": 25
+ },
+ "19742683": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19957194": {
+  "avg_grade": 6.1,
+  "climb_cat": 0,
+  "elev_gain": 7
+ },
+ "19957217": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "19957234": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "2018837": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "20610363": {
+  "avg_grade": -0.8,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "21352584": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "21352589": {
+  "avg_grade": 12.8,
+  "climb_cat": 0,
+  "elev_gain": 34
+ },
+ "21435449": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "21617213": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "21753913": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "22296020": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "22955070": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "23048275": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "23070125": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "23070158": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "23070204": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "23381728": {
+  "avg_grade": 5.9,
+  "climb_cat": 0,
+  "elev_gain": 21
+ },
+ "23672066": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "2413854": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "24185869": {
+  "avg_grade": 11.5,
+  "climb_cat": 0,
+  "elev_gain": 18
+ },
+ "24185912": {
+  "avg_grade": -7.4,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "25883055": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "25883068": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "2617002": {
+  "avg_grade": 5.5,
+  "climb_cat": 0,
+  "elev_gain": 56
+ },
+ "26227434": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26412255": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26412423": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26444804": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26458505": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26614853": {
+  "avg_grade": 0.2,
+  "climb_cat": 0,
+  "elev_gain": 13
+ },
+ "26999500": {
+  "avg_grade": 5.1,
+  "climb_cat": 0,
+  "elev_gain": 12
+ },
+ "26999516": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "26999557": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27051327": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27051424": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27051659": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27051663": {
+  "avg_grade": -0.5,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27051739": {
+  "avg_grade": -3.2,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27068095": {
+  "avg_grade": 2.0,
+  "climb_cat": 0,
+  "elev_gain": 6
+ },
+ "27068109": {
+  "avg_grade": -2.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27068238": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27218211": {
+  "avg_grade": 0.2,
+  "climb_cat": 0,
+  "elev_gain": 13
+ },
+ "27218220": {
+  "avg_grade": -1.6,
+  "climb_cat": 0,
+  "elev_gain": 3
+ },
+ "27218238": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27638338": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27645633": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 6
+ },
+ "27645656": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "27914385": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "28434783": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "29825071": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30072263": {
+  "avg_grade": -3.9,
+  "climb_cat": 0,
+  "elev_gain": 2
+ },
+ "30080734": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30235510": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30311198": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 13
+ },
+ "30311255": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30359372": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 6
+ },
+ "30359393": {
+  "avg_grade": -0.3,
+  "climb_cat": 0,
+  "elev_gain": 6
+ },
+ "30365718": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30365727": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30377089": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30398704": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30585531": {
+  "avg_grade": -0.5,
+  "climb_cat": 0,
+  "elev_gain": 4
+ },
+ "30644264": {
+  "avg_grade": -6.6,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30711256": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30723027": {
+  "avg_grade": 0.4,
+  "climb_cat": 0,
+  "elev_gain": 5
+ },
+ "30728485": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30728528": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30781677": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30831951": {
+  "avg_grade": 0.6,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30831970": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30831990": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30845515": {
+  "avg_grade": 3.1,
+  "climb_cat": 0,
+  "elev_gain": 32
+ },
+ "30846781": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "30846831": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "31060842": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "31084921": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "31114324": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "31139274": {
+  "avg_grade": -3.4,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "31150529": {
+  "avg_grade": 5.6,
+  "climb_cat": 0,
+  "elev_gain": 64
+ },
+ "31468757": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "31860428": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "31900346": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32320437": {
+  "avg_grade": -0.7,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32341247": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32601823": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32601840": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 15
+ },
+ "32717959": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32759701": {
+  "avg_grade": -0.5,
+  "climb_cat": 0,
+  "elev_gain": 38
+ },
+ "32785007": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32910892": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32945868": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "32945892": {
+  "avg_grade": 1.4,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "33142103": {
+  "avg_grade": 4.1,
+  "climb_cat": 0,
+  "elev_gain": 24
+ },
+ "33397925": {
+  "avg_grade": 0.1,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "33397933": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "33542160": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "33542184": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 41
+ },
+ "33542238": {
+  "avg_grade": 0.2,
+  "climb_cat": 0,
+  "elev_gain": 30
+ },
+ "33656959": {
+  "avg_grade": 0.1,
+  "climb_cat": 0,
+  "elev_gain": 26
+ },
+ "34178045": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "34549137": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "34549145": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "35004342": {
+  "avg_grade": 4.1,
+  "climb_cat": 0,
+  "elev_gain": 21
+ },
+ "35201923": {
+  "avg_grade": 3.0,
+  "climb_cat": 0,
+  "elev_gain": 16
+ },
+ "35530751": {
+  "avg_grade": -0.3,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "35568817": {
+  "avg_grade": -3.5,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "35670092": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 10
+ },
+ "35717261": {
+  "avg_grade": 10.4,
+  "climb_cat": 0,
+  "elev_gain": 27
+ },
+ "35893893": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "36476648": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "3651386": {
+  "avg_grade": 11.4,
+  "climb_cat": 0,
+  "elev_gain": 76
+ },
+ "37092039": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "37188103": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "37338160": {
+  "avg_grade": 1.2,
+  "climb_cat": 0,
+  "elev_gain": 14
+ },
+ "37493404": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "37595265": {
+  "avg_grade": 4.9,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "37617933": {
+  "avg_grade": 8.6,
+  "climb_cat": 0,
+  "elev_gain": 22
+ },
+ "37854675": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "37854687": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "37854727": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "38163042": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "38314440": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "38359960": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "38391441": {
+  "avg_grade": 0.1,
+  "climb_cat": 0,
+  "elev_gain": 5
+ },
+ "38444438": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "38749597": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "39004542": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "39067437": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "39166883": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "39166897": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "39443178": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "3966263": {
+  "avg_grade": 2.6,
+  "climb_cat": 0,
+  "elev_gain": 12
+ },
+ "3966266": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "40074674": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "40187279": {
+  "avg_grade": -0.3,
+  "climb_cat": 0,
+  "elev_gain": 3
+ },
+ "40254086": {
+  "avg_grade": -7.2,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "4052325": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "40752988": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "40839841": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "41271539": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "41271560": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "41328927": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 4
+ },
+ "4879651": {
+  "avg_grade": 6.5,
+  "climb_cat": 0,
+  "elev_gain": 57
+ },
+ "5132705": {
+  "avg_grade": 10.6,
+  "climb_cat": 0,
+  "elev_gain": 62
+ },
+ "5194070": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "5868587": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "6026751": {
+  "avg_grade": 0.0,
+  "climb_cat": 0,
+  "elev_gain": 2
+ },
+ "6103938": {
+  "avg_grade": 4.3,
+  "climb_cat": 0,
+  "elev_gain": 52
+ },
+ "6422009": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "6719768": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "6807898": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7068968": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7199281": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7208975": {
+  "avg_grade": 0.7,
+  "climb_cat": 0,
+  "elev_gain": 3
+ },
+ "7297767": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7368015": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 28
+ },
+ "7414262": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7500148": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7554640": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7560180": {
+  "avg_grade": 5.2,
+  "climb_cat": 0,
+  "elev_gain": 40
+ },
+ "7574992": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7721405": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7721416": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7933214": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "7933252": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8175792": {
+  "avg_grade": 10.3,
+  "climb_cat": 0,
+  "elev_gain": 81
+ },
+ "8175796": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8270979": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8490548": {
+  "avg_grade": 3.3,
+  "climb_cat": 0,
+  "elev_gain": 7
+ },
+ "8490555": {
+  "avg_grade": 3.5,
+  "climb_cat": 0,
+  "elev_gain": 9
+ },
+ "8541380": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8555442": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8562106": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8567886": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8607121": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8608883": {
+  "avg_grade": -0.0,
+  "climb_cat": 0,
+  "elev_gain": 22
+ },
+ "8621458": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8627666": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8674411": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8740201": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8818166": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8821044": {
+  "avg_grade": -1.1,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8862828": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "8910529": {
+  "avg_grade": 0.9,
+  "climb_cat": 0,
+  "elev_gain": 11
+ },
+ "8953048": {
+  "avg_grade": 4.3,
+  "climb_cat": 0,
+  "elev_gain": 20
+ },
+ "8953257": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "9042447": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "9576478": {
+  "avg_grade": 4.9,
+  "climb_cat": 0,
+  "elev_gain": 5
+ },
+ "9658324": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "9848028": {
+  "avg_grade": 0,
+  "climb_cat": 0,
+  "elev_gain": 0
+ },
+ "9981591": {
+  "avg_grade": 5.5,
+  "climb_cat": 0,
+  "elev_gain": 62
+ }
+}
