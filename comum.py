@@ -101,6 +101,9 @@ def buscar_detalhes_segmentos(seg_ids, access_token):
             r = requests.get(f"https://www.strava.com/api/v3/segments/{sid}",
                              headers={"Authorization": f"Bearer {access_token}"},
                              timeout=30)
+            if r.status_code == 429:
+                print("  detalhes: rate limit atingido — continua no próximo run.")
+                break
             r.raise_for_status()
             d = r.json()
             cache[sid] = {
