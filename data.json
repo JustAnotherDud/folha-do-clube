@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-20T23:42Z",
+ "gerado": "2026-06-21T09:07Z",
  "linhas": [
   {
    "posicao": 3,
@@ -13,10 +13,7 @@
    "data": "2025-07-10",
    "atleta": "Ana",
    "cidade": "Uccle - Ukkel",
-   "pais": "Belgium",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Belgium"
   },
   {
    "posicao": 5,
@@ -30,10 +27,7 @@
    "data": "2025-01-19",
    "atleta": "Ana",
    "cidade": "Cartaxo",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -47,10 +41,7 @@
    "data": "2025-04-13",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -64,10 +55,7 @@
    "data": "2026-05-03",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -81,10 +69,7 @@
    "data": "2026-05-03",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 76,
-   "avg_grade": 11.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -98,10 +83,7 @@
    "data": "2026-05-03",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 81,
-   "avg_grade": 10.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -115,10 +97,7 @@
    "data": "2025-12-02",
    "atleta": "Carolina",
    "cidade": "Almeirim",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.8,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -132,10 +111,7 @@
    "data": "2025-04-13",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -149,10 +125,7 @@
    "data": "2025-04-13",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -166,10 +139,7 @@
    "data": "2025-01-19",
    "atleta": "Carolina",
    "cidade": "Cartaxo",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -183,10 +153,7 @@
    "data": "2024-09-06",
    "atleta": "Carolina",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 3,
@@ -200,10 +167,7 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
-   "pais": "Portugal",
-   "elev_gain": 25,
-   "avg_grade": 6.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -217,10 +181,7 @@
    "data": "2026-06-12",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -234,10 +195,7 @@
    "data": "2026-06-07",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 2.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -251,10 +209,7 @@
    "data": "2026-06-06",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -268,10 +223,7 @@
    "data": "2026-06-06",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -285,10 +237,7 @@
    "data": "2026-06-04",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 16,
-   "avg_grade": 3.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -302,10 +251,7 @@
    "data": "2026-06-02",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 57,
-   "avg_grade": 6.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -319,10 +265,7 @@
    "data": "2026-05-27",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 56,
-   "avg_grade": 5.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -336,10 +279,7 @@
    "data": "2026-05-27",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": 0.9,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -353,10 +293,7 @@
    "data": "2026-05-23",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -370,10 +307,7 @@
    "data": "2026-05-21",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -387,10 +321,7 @@
    "data": "2026-05-20",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -404,10 +335,7 @@
    "data": "2026-05-20",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -421,10 +349,7 @@
    "data": "2026-05-13",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -438,10 +363,7 @@
    "data": "2026-05-13",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -455,10 +377,7 @@
    "data": "2026-05-02",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -472,10 +391,7 @@
    "data": "2026-05-01",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 4,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -489,10 +405,7 @@
    "data": "2026-04-29",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -506,10 +419,7 @@
    "data": "2026-04-29",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 32,
-   "avg_grade": 3.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -523,10 +433,7 @@
    "data": "2026-04-23",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": 1.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -540,10 +447,7 @@
    "data": "2026-04-23",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 1.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -557,10 +461,7 @@
    "data": "2026-04-22",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -574,10 +475,7 @@
    "data": "2026-03-29",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -591,10 +489,7 @@
    "data": "2026-03-15",
    "atleta": "Xeira",
    "cidade": "Maia",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -608,10 +503,7 @@
    "data": "2026-02-28",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -625,10 +517,7 @@
    "data": "2026-02-28",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 20,
-   "avg_grade": 4.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -642,10 +531,7 @@
    "data": "2026-02-15",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -1.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -659,10 +545,7 @@
    "data": "2026-02-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 28,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -676,10 +559,7 @@
    "data": "2026-01-31",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 40,
-   "avg_grade": 5.2,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 1,
@@ -693,10 +573,7 @@
    "data": "2026-01-24",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -710,10 +587,7 @@
    "data": "2026-01-19",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -727,10 +601,7 @@
    "data": "2026-01-08",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -744,10 +615,7 @@
    "data": "2026-01-06",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -761,10 +629,7 @@
    "data": "2026-01-05",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 2,
-   "avg_grade": -3.9,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -778,10 +643,7 @@
    "data": "2026-01-03",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -795,10 +657,7 @@
    "data": "2026-01-03",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -812,10 +671,7 @@
    "data": "2025-12-31",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -829,10 +685,7 @@
    "data": "2025-12-26",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -846,10 +699,7 @@
    "data": "2025-12-24",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -863,10 +713,7 @@
    "data": "2025-12-11",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -880,10 +727,7 @@
    "data": "2025-12-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -897,10 +741,7 @@
    "data": "2025-12-06",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -914,10 +755,7 @@
    "data": "2025-12-06",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -931,10 +769,7 @@
    "data": "2025-11-29",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -948,10 +783,7 @@
    "data": "2025-11-27",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -965,10 +797,7 @@
    "data": "2025-11-25",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -982,10 +811,7 @@
    "data": "2025-11-20",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -3.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -999,10 +825,7 @@
    "data": "2025-11-19",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1016,10 +839,7 @@
    "data": "2025-11-18",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1033,10 +853,7 @@
    "data": "2025-11-11",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1050,10 +867,7 @@
    "data": "2025-11-11",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -1067,10 +881,7 @@
    "data": "2025-11-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 2,
-   "avg_grade": -0.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1084,10 +895,7 @@
    "data": "2025-11-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1101,10 +909,7 @@
    "data": "2025-11-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 36,
-   "avg_grade": 8.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1118,10 +923,7 @@
    "data": "2025-11-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1135,10 +937,7 @@
    "data": "2025-11-06",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1152,10 +951,7 @@
    "data": "2025-11-06",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1169,10 +965,7 @@
    "data": "2025-11-06",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1186,10 +979,7 @@
    "data": "2025-11-04",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1203,10 +993,7 @@
    "data": "2025-11-01",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 76,
-   "avg_grade": 11.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1220,10 +1007,7 @@
    "data": "2025-11-01",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 81,
-   "avg_grade": 10.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1237,10 +1021,7 @@
    "data": "2025-10-30",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 6,
-   "avg_grade": 2.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1254,10 +1035,7 @@
    "data": "2025-10-28",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 38,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1271,10 +1049,7 @@
    "data": "2025-10-23",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1288,10 +1063,7 @@
    "data": "2025-10-22",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1305,10 +1077,7 @@
    "data": "2025-10-21",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1322,10 +1091,7 @@
    "data": "2025-10-20",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1339,10 +1105,7 @@
    "data": "2025-10-19",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": -3.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1356,10 +1119,7 @@
    "data": "2025-10-19",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1373,10 +1133,7 @@
    "data": "2025-10-18",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1390,10 +1147,7 @@
    "data": "2025-10-18",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1407,10 +1161,7 @@
    "data": "2025-10-18",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1424,10 +1175,7 @@
    "data": "2025-10-16",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1441,10 +1189,7 @@
    "data": "2025-10-16",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1458,10 +1203,7 @@
    "data": "2025-10-15",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 37,
-   "avg_grade": 3.6,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -1475,10 +1217,7 @@
    "data": "2025-10-15",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1492,10 +1231,7 @@
    "data": "2025-10-14",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1509,10 +1245,7 @@
    "data": "2025-10-11",
    "atleta": "Xeira",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1526,10 +1259,7 @@
    "data": "2025-10-09",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 26,
-   "avg_grade": 0.1,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -1543,10 +1273,7 @@
    "data": "2025-10-08",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1560,10 +1287,7 @@
    "data": "2025-10-07",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 21,
-   "avg_grade": 5.9,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -1577,10 +1301,7 @@
    "data": "2025-10-07",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 17,
-   "avg_grade": 5.9,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1594,10 +1315,7 @@
    "data": "2025-09-25",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1611,10 +1329,7 @@
    "data": "2025-09-24",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 25,
-   "avg_grade": 2.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1628,10 +1343,7 @@
    "data": "2025-09-23",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 10,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1645,10 +1357,7 @@
    "data": "2025-09-18",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1662,10 +1371,7 @@
    "data": "2025-09-17",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1679,10 +1385,7 @@
    "data": "2025-09-16",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1696,10 +1399,7 @@
    "data": "2025-09-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1713,10 +1413,7 @@
    "data": "2025-09-10",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1730,10 +1427,7 @@
    "data": "2025-09-03",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1747,10 +1441,7 @@
    "data": "2025-09-02",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 22,
-   "avg_grade": -1.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1764,10 +1455,7 @@
    "data": "2025-09-01",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1781,10 +1469,7 @@
    "data": "2025-08-30",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1798,10 +1483,7 @@
    "data": "2025-08-27",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -3.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1815,10 +1497,7 @@
    "data": "2025-08-25",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1832,10 +1511,7 @@
    "data": "2025-08-25",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 12,
-   "avg_grade": 5.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1849,10 +1525,7 @@
    "data": "2025-08-21",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1866,10 +1539,7 @@
    "data": "2025-08-20",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 21,
-   "avg_grade": 4.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1883,10 +1553,7 @@
    "data": "2025-08-20",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 16,
-   "avg_grade": 3.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1900,10 +1567,7 @@
    "data": "2025-08-19",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1917,10 +1581,7 @@
    "data": "2025-08-18",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 8,
-   "avg_grade": 1.7,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1934,10 +1595,7 @@
    "data": "2025-08-16",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1951,10 +1609,7 @@
    "data": "2025-08-12",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": 4.9,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1968,10 +1623,7 @@
    "data": "2025-08-12",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 14,
-   "avg_grade": 1.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -1985,10 +1637,7 @@
    "data": "2025-08-12",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 52,
-   "avg_grade": 4.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2002,10 +1651,7 @@
    "data": "2025-08-11",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": 1.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2019,10 +1665,7 @@
    "data": "2025-08-06",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2036,10 +1679,7 @@
    "data": "2025-08-06",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2053,10 +1693,7 @@
    "data": "2025-08-06",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 15,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2070,10 +1707,7 @@
    "data": "2025-08-05",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2087,10 +1721,7 @@
    "data": "2025-08-05",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2104,10 +1735,7 @@
    "data": "2025-07-31",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2121,10 +1749,7 @@
    "data": "2025-07-29",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.7,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2138,10 +1763,7 @@
    "data": "2025-07-24",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2155,10 +1777,7 @@
    "data": "2025-07-23",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2172,10 +1791,7 @@
    "data": "2025-07-22",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2189,10 +1805,7 @@
    "data": "2025-07-22",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -2206,10 +1819,7 @@
    "data": "2025-07-20",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2223,10 +1833,7 @@
    "data": "2025-07-20",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 23,
-   "avg_grade": 1.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2240,10 +1847,7 @@
    "data": "2025-07-19",
    "atleta": "Xeira",
    "cidade": "Almeirim",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2257,10 +1861,7 @@
    "data": "2025-07-19",
    "atleta": "Xeira",
    "cidade": "Almeirim",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 1,
@@ -2274,10 +1875,7 @@
    "data": "2025-07-19",
    "atleta": "Xeira",
    "cidade": "Almeirim",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2291,10 +1889,7 @@
    "data": "2025-07-17",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2308,10 +1903,7 @@
    "data": "2025-07-15",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 37,
-   "avg_grade": 0.8,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2325,10 +1917,7 @@
    "data": "2025-07-10",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Lisbon",
-   "elev_gain": 64,
-   "avg_grade": 5.6,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -2342,10 +1931,7 @@
    "data": "2025-07-07",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 60,
-   "avg_grade": 11.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2359,10 +1945,7 @@
    "data": "2025-06-23",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 27,
-   "avg_grade": 10.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2376,10 +1959,7 @@
    "data": "2025-06-19",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 22,
-   "avg_grade": 8.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2393,10 +1973,7 @@
    "data": "2025-06-17",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2410,10 +1987,7 @@
    "data": "2025-06-16",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2427,10 +2001,7 @@
    "data": "2025-06-10",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2444,10 +2015,7 @@
    "data": "2025-06-09",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 15,
-   "avg_grade": 9.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2461,10 +2029,7 @@
    "data": "2025-05-29",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -7.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2478,10 +2043,7 @@
    "data": "2025-05-28",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 18,
-   "avg_grade": 11.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2495,10 +2057,7 @@
    "data": "2025-05-26",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2512,10 +2071,7 @@
    "data": "2025-05-22",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2529,10 +2085,7 @@
    "data": "2025-05-22",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2546,10 +2099,7 @@
    "data": "2025-05-22",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2563,10 +2113,7 @@
    "data": "2025-05-22",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2580,10 +2127,7 @@
    "data": "2025-05-21",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2597,10 +2141,7 @@
    "data": "2025-05-21",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 11,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2614,10 +2155,7 @@
    "data": "2025-05-19",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2631,10 +2169,7 @@
    "data": "2025-05-19",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -2.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2648,10 +2183,7 @@
    "data": "2025-05-15",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 6,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2665,10 +2197,7 @@
    "data": "2025-05-15",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2682,10 +2211,7 @@
    "data": "2025-05-14",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2699,10 +2225,7 @@
    "data": "2025-05-13",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2716,10 +2239,7 @@
    "data": "2025-05-08",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2733,10 +2253,7 @@
    "data": "2025-05-05",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2750,10 +2267,7 @@
    "data": "2025-04-17",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 62,
-   "avg_grade": 5.5,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -2767,10 +2281,7 @@
    "data": "2025-04-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 5,
-   "avg_grade": 4.9,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2784,10 +2295,7 @@
    "data": "2025-04-07",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2801,10 +2309,7 @@
    "data": "2025-03-06",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": -1.1,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 1,
@@ -2818,10 +2323,7 @@
    "data": "2025-02-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2835,10 +2337,7 @@
    "data": "2025-02-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 10,
-   "avg_grade": 10.7,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2852,10 +2351,7 @@
    "data": "2025-02-08",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2869,10 +2365,7 @@
    "data": "2025-02-01",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2886,10 +2379,7 @@
    "data": "2025-01-11",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2903,10 +2393,7 @@
    "data": "2025-01-05",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2920,10 +2407,7 @@
    "data": "2025-01-05",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Lisbon",
-   "elev_gain": 4,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 1,
@@ -2937,10 +2421,7 @@
    "data": "2025-01-03",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2954,10 +2435,7 @@
    "data": "2025-01-01",
    "atleta": "Xeira",
    "cidade": "Vila Franca de Xira",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2971,10 +2449,7 @@
    "data": "2024-12-31",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 9,
-   "avg_grade": 1.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -2988,10 +2463,7 @@
    "data": "2024-12-29",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3005,10 +2477,7 @@
    "data": "2024-12-27",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3022,10 +2491,7 @@
    "data": "2024-12-27",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3039,10 +2505,7 @@
    "data": "2024-12-27",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 3,
-   "avg_grade": -1.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3056,10 +2519,7 @@
    "data": "2024-12-24",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 7,
-   "avg_grade": 5.9,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 1,
@@ -3073,10 +2533,7 @@
    "data": "2024-12-24",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3090,10 +2547,7 @@
    "data": "2024-12-23",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 13,
-   "avg_grade": 0.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3107,10 +2561,7 @@
    "data": "2024-12-19",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3124,10 +2575,7 @@
    "data": "2024-12-15",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3141,10 +2589,7 @@
    "data": "2024-12-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3158,10 +2603,7 @@
    "data": "2024-12-13",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 12,
-   "avg_grade": 2.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3175,10 +2617,7 @@
    "data": "2024-12-12",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3192,10 +2631,7 @@
    "data": "2024-09-15",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -3209,10 +2645,7 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 8,
@@ -3226,10 +2659,7 @@
    "data": "2026-06-18",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3243,10 +2673,7 @@
    "data": "2026-06-12",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 34,
-   "avg_grade": 12.8,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -3260,10 +2687,7 @@
    "data": "2026-05-27",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -3277,10 +2701,7 @@
    "data": "2026-05-20",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -3294,10 +2715,7 @@
    "data": "2026-05-17",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3311,10 +2729,7 @@
    "data": "2026-05-17",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3328,10 +2743,7 @@
    "data": "2026-05-10",
    "atleta": "Xeira",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3345,10 +2757,7 @@
    "data": "2026-04-30",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3362,10 +2771,7 @@
    "data": "2026-04-19",
    "atleta": "Xeira",
    "cidade": "Óbidos",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -3379,10 +2785,7 @@
    "data": "2026-04-19",
    "atleta": "Xeira",
    "cidade": "Óbidos",
-   "pais": "Portugal",
-   "elev_gain": 3,
-   "avg_grade": -0.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3396,10 +2799,7 @@
    "data": "2026-04-19",
    "atleta": "Xeira",
    "cidade": "Óbidos",
-   "pais": "Portugal",
-   "elev_gain": 36,
-   "avg_grade": 0.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3413,10 +2813,7 @@
    "data": "2026-04-19",
    "atleta": "Xeira",
    "cidade": "Óbidos",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -3430,10 +2827,7 @@
    "data": "2026-04-08",
    "atleta": "Xeira",
    "cidade": "Valencia",
-   "pais": "Spain",
-   "elev_gain": 13,
-   "avg_grade": 0.2,
-   "climb_cat": 0
+   "pais": "Spain"
   },
   {
    "posicao": 5,
@@ -3447,10 +2841,7 @@
    "data": "2026-03-14",
    "atleta": "Xeira",
    "cidade": "Matosinhos",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3464,10 +2855,7 @@
    "data": "2026-02-26",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 2,
@@ -3481,10 +2869,7 @@
    "data": "2026-02-22",
    "atleta": "Xeira",
    "cidade": "Almeirim",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3498,10 +2883,7 @@
    "data": "2025-12-20",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3515,10 +2897,7 @@
    "data": "2025-12-04",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 62,
-   "avg_grade": 10.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3532,10 +2911,7 @@
    "data": "2025-10-23",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3549,10 +2925,7 @@
    "data": "2025-10-22",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3566,10 +2939,7 @@
    "data": "2025-10-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 22,
-   "avg_grade": -0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3583,10 +2953,7 @@
    "data": "2025-10-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 30,
-   "avg_grade": 0.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3600,10 +2967,7 @@
    "data": "2025-10-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 41,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3617,10 +2981,7 @@
    "data": "2025-10-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -3634,10 +2995,7 @@
    "data": "2025-10-06",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -1.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3651,10 +3009,7 @@
    "data": "2025-09-29",
    "atleta": "Xeira",
    "cidade": "Cascais",
-   "pais": "Portugal",
-   "elev_gain": 38,
-   "avg_grade": -0.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3668,10 +3023,7 @@
    "data": "2025-09-20",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3685,10 +3037,7 @@
    "data": "2025-07-03",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3702,10 +3051,7 @@
    "data": "2025-07-02",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 6,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3719,10 +3065,7 @@
    "data": "2025-07-02",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 13,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3736,10 +3079,7 @@
    "data": "2025-06-27",
    "atleta": "Xeira",
    "cidade": "Almeirim",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -3753,10 +3093,7 @@
    "data": "2025-06-23",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 17,
-   "avg_grade": 8.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3770,10 +3107,7 @@
    "data": "2025-06-17",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 6,
-   "avg_grade": -0.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3787,10 +3121,7 @@
    "data": "2025-06-15",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 5,
-   "avg_grade": 0.1,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 3,
@@ -3804,10 +3135,7 @@
    "data": "2025-06-04",
    "atleta": "Xeira",
    "cidade": "Sintra",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3821,10 +3149,7 @@
    "data": "2025-05-01",
    "atleta": "Xeira",
    "cidade": "Oeiras",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -1.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -3838,10 +3163,7 @@
    "data": "2025-04-25",
    "atleta": "Xeira",
    "cidade": "Maia",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -0.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -3855,10 +3177,7 @@
    "data": "2025-01-05",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Lisbon",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Lisbon"
   },
   {
    "posicao": 4,
@@ -3872,10 +3191,7 @@
    "data": "2024-12-20",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -3889,10 +3205,7 @@
    "data": "2024-12-17",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 3,
-   "avg_grade": 0.7,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3906,10 +3219,7 @@
    "data": "2024-12-17",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 28,
-   "avg_grade": -0.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3923,10 +3233,7 @@
    "data": "2024-12-11",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -3940,10 +3247,7 @@
    "data": "2024-12-02",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -7.2,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -3957,10 +3261,7 @@
    "data": "2024-11-05",
    "atleta": "Xeira",
    "cidade": "Guimarães",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3974,10 +3275,7 @@
    "data": "2024-11-05",
    "atleta": "Xeira",
    "cidade": "Guimarães",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -3991,10 +3289,7 @@
    "data": "2024-11-05",
    "atleta": "Xeira",
    "cidade": "Guimarães",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4008,10 +3303,7 @@
    "data": "2024-10-05",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -4025,10 +3317,7 @@
    "data": "2024-10-05",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -4042,10 +3331,7 @@
    "data": "2024-09-28",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4059,10 +3345,7 @@
    "data": "2024-09-20",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4076,10 +3359,7 @@
    "data": "2024-08-29",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 2,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -4093,10 +3373,7 @@
    "data": "2024-08-05",
    "atleta": "Xeira",
    "cidade": "Funchal",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4110,10 +3387,7 @@
    "data": "2024-07-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 9,
-   "avg_grade": 3.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4127,10 +3401,7 @@
    "data": "2024-07-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 7,
-   "avg_grade": 3.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4144,10 +3415,7 @@
    "data": "2024-07-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -4161,10 +3429,7 @@
    "data": "2024-07-14",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 1,
@@ -4178,10 +3443,7 @@
    "data": "2025-07-18",
    "atleta": "Zé",
    "cidade": "Caldas da Rainha",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4195,10 +3457,7 @@
    "data": "2025-05-22",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 24,
-   "avg_grade": 4.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4212,10 +3471,7 @@
    "data": "2025-05-22",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 7,
-   "avg_grade": 6.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4229,10 +3485,7 @@
    "data": "2025-05-17",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4246,10 +3499,7 @@
    "data": "2025-05-17",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4263,10 +3513,7 @@
    "data": "2025-05-17",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4280,10 +3527,7 @@
    "data": "2025-05-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 2,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4297,10 +3541,7 @@
    "data": "2025-05-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4314,10 +3555,7 @@
    "data": "2025-05-13",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4331,10 +3569,7 @@
    "data": "2024-10-05",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4348,10 +3583,7 @@
    "data": "2024-10-04",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4365,10 +3597,7 @@
    "data": "2024-09-25",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 1,
@@ -4382,10 +3611,7 @@
    "data": "2024-09-23",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4399,10 +3625,7 @@
    "data": "2026-05-21",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -4416,10 +3639,7 @@
    "data": "2025-09-14",
    "atleta": "Zé",
    "cidade": "Oleiros",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": -6.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4433,10 +3653,7 @@
    "data": "2025-08-16",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -4450,10 +3667,7 @@
    "data": "2025-07-27",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 5,
-   "avg_grade": 0.4,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -4467,10 +3681,7 @@
    "data": "2025-06-01",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 10,
@@ -4484,10 +3695,7 @@
    "data": "2025-05-13",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4501,10 +3709,7 @@
    "data": "2025-05-13",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -4518,10 +3723,7 @@
    "data": "2025-03-11",
    "atleta": "Zé",
    "cidade": "Caldas da Rainha",
-   "pais": "Leiria",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Leiria"
   },
   {
    "posicao": 7,
@@ -4535,10 +3737,7 @@
    "data": "2025-02-25",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4552,10 +3751,7 @@
    "data": "2025-02-25",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4569,10 +3765,7 @@
    "data": "2025-01-01",
    "atleta": "Zé",
    "cidade": "Vila Franca de Xira",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -4586,10 +3779,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4603,10 +3793,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4620,10 +3807,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4637,10 +3821,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4654,10 +3835,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4671,10 +3849,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4688,10 +3863,7 @@
    "data": "2024-12-27",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 3,
-   "avg_grade": -1.6,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
@@ -4705,10 +3877,7 @@
    "data": "2024-10-20",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 36,
-   "avg_grade": 8.0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
@@ -4722,10 +3891,7 @@
    "data": "2024-10-20",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 5,
@@ -4739,10 +3905,7 @@
    "data": "2024-10-05",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4756,10 +3919,7 @@
    "data": "2024-09-19",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -4773,10 +3933,7 @@
    "data": "2024-09-18",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4790,10 +3947,7 @@
    "data": "2024-09-17",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 9,
@@ -4807,10 +3961,7 @@
    "data": "2024-09-15",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0.1,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4824,10 +3975,7 @@
    "data": "2024-08-12",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 4,
@@ -4841,10 +3989,7 @@
    "data": "2024-08-08",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4858,10 +4003,7 @@
    "data": "2024-07-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 9,
-   "avg_grade": 3.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4875,10 +4017,7 @@
    "data": "2024-07-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 7,
-   "avg_grade": 3.3,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 3,
@@ -4892,10 +4031,7 @@
    "data": "2024-07-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 7,
@@ -4909,10 +4045,7 @@
    "data": "2024-07-14",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 2,
@@ -4926,10 +4059,7 @@
    "data": "2024-07-13",
    "atleta": "Zé",
    "cidade": "Santarém",
-   "pais": "Santarém",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Santarém"
   },
   {
    "posicao": 3,
@@ -4943,10 +4073,7 @@
    "data": "2024-07-11",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 0,
-   "avg_grade": 0,
-   "climb_cat": 0
+   "pais": "Portugal"
   },
   {
    "posicao": 2,
@@ -4960,10 +4087,7 @@
    "data": "2024-06-20",
    "atleta": "Zé",
    "cidade": "Rio Maior",
-   "pais": "Portugal",
-   "elev_gain": 4,
-   "avg_grade": -0.5,
-   "climb_cat": 0
+   "pais": "Portugal"
   }
  ]
 }
