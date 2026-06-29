@@ -1,5 +1,5 @@
 {
- "gerado": "2026-06-28T08:32Z",
+ "gerado": "2026-06-29T10:05Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2646,6 +2646,20 @@
    "atleta": "Xeira",
    "cidade": "Santarém",
    "pais": "Santarém"
+  },
+  {
+   "posicao": 6,
+   "tipo": "Run",
+   "segmento": "Subida para o Casalinho",
+   "url": "https://www.strava.com/segments/29246909",
+   "effort_url": "https://www.strava.com/segment_efforts/3506237178562586774",
+   "dist_km": 0.83,
+   "elev_m": 25,
+   "tempo": "3:26",
+   "data": "2026-06-28",
+   "atleta": "Xeira",
+   "cidade": "Alpiarça",
+   "pais": "Portugal"
   },
   {
    "posicao": 8,
