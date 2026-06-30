@@ -45,6 +45,19 @@
   .filtros input { width: 220px; }
   #conta { color: var(--suave); font-size: 12px; }
 
+  .toggle {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border: 1px solid var(--grelha); border-radius: 999px;
+    background: var(--painel); color: var(--texto);
+    font-size: 13px; cursor: pointer; user-select: none;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  .toggle:hover { border-color: var(--laranja); }
+  .toggle input { width: 14px; height: 14px; accent-color: var(--laranja); cursor: pointer; }
+  .toggle:has(input:checked) {
+    background: var(--laranja); border-color: var(--laranja); color: #fff; font-weight: 700;
+  }
+
   #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
   #tabela.agrupada th { cursor: default; }
   #tabela th .seta { font-size: 10px; }
@@ -81,7 +94,7 @@
     <option value="top">Só 🏆 (2–10)</option>
   </select>
   <input id="f-busca" type="search" placeholder="Procurar segmento…">
-  <label style="display:flex;align-items:center;gap:4px;">
+  <label class="toggle">
     <input id="f-multi" type="checkbox"> ≥2 membros no segmento
   </label>
   <span id="conta"></span>
