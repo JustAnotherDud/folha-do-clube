@@ -58,6 +58,16 @@
     background: var(--laranja); border-color: var(--laranja); color: #fff; font-weight: 700;
   }
 
+  .pills { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .pill {
+    padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;
+    color: #fff; cursor: pointer; opacity: .4;
+    transition: opacity .15s, box-shadow .15s;
+  }
+  .pill:hover { opacity: .7; }
+  .pill.active { opacity: 1; box-shadow: 0 0 0 2px rgba(255,255,255,.35) inset; }
+  .pill-todos { background: var(--grelha) !important; }
+
   #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
   #tabela.agrupada th { cursor: default; }
   #tabela th .seta { font-size: 10px; }
@@ -84,7 +94,7 @@
 </table>
 
 <div class="filtros">
-  <select id="f-atleta"><option value="">Todos os atletas</option></select>
+  <div id="f-atleta" class="pills"></div>
   <select id="f-tipo"><option value="">Todos os tipos</option></select>
   <select id="f-pais"><option value="">Todos os países</option></select>
   <select id="f-cidade"><option value="">Todas as cidades</option></select>
@@ -121,6 +131,7 @@
 "use strict";
 let linhas = [];
 let ordem = { k: "data", asc: false };
+const atletasSelecionados = new Set();
 
 function escHtml(s) {
   return String(s).replace(/[&<>"']/g,
@@ -194,7 +205,6 @@ function calcularAtletasPorSegmento() {
 }
 
 function filtradas() {
-  const fa = document.getElementById("f-atleta").value;
   const ft = document.getElementById("f-tipo").value;
   const fp = document.getElementById("f-pais").value;
   const fc = document.getElementById("f-cidade").value;
@@ -202,7 +212,7 @@ function filtradas() {
   const fm = document.getElementById("f-multi").checked;
   const q = document.getElementById("f-busca").value.toLowerCase();
   return linhas.filter(l =>
-    (!fa || l.atleta === fa) &&
+    (!atletasSelecionados.size || atletasSelecionados.has(l.atleta)) &&
     (!ft || l.tipo === ft) &&
     (!fp || l.pais === fp) &&
     (!fc || l.cidade === fc) &&
@@ -277,14 +287,39 @@ function popularFiltros() {
     for (const v of vals) s.insertAdjacentHTML("beforeend",
       `<option value="${escHtml(v)}">${escHtml(v)}</option>`);
   };
-  op("f-atleta", [...new Set(linhas.map(l => l.atleta))].sort());
   op("f-pais", [...new Set(linhas.map(l => l.pais).filter(Boolean))].sort());
   op("f-cidade", [...new Set(linhas.map(l => l.cidade).filter(Boolean))].sort());
   const st = document.getElementById("f-tipo");
   for (const v of [...new Set(linhas.map(l => l.tipo))].sort())
     st.insertAdjacentHTML("beforeend",
       `<option value="${escHtml(v)}">${emojiTipo(v)}</option>`);
+
+  const atletas = [...new Set(linhas.map(l => l.atleta))].sort();
+  document.getElementById("f-atleta").innerHTML =
+    `<span class="pill pill-todos" data-atleta="">Todos</span>` +
+    atletas.map(a => `<span class="pill" data-atleta="${escHtml(a)}"
+      style="background:${corAtleta(a)}">${escHtml(a)}</span>`).join("");
+  atualizarPillsAtletas();
 }
+
+function atualizarPillsAtletas() {
+  document.querySelectorAll("#f-atleta .pill").forEach(p => {
+    const a = p.dataset.atleta;
+    p.classList.toggle("active",
+      a === "" ? atletasSelecionados.size === 0 : atletasSelecionados.has(a));
+  });
+}
+
+document.getElementById("f-atleta").addEventListener("click", e => {
+  const pill = e.target.closest(".pill");
+  if (!pill) return;
+  const a = pill.dataset.atleta;
+  if (a === "") atletasSelecionados.clear();
+  else if (atletasSelecionados.has(a)) atletasSelecionados.delete(a);
+  else atletasSelecionados.add(a);
+  atualizarPillsAtletas();
+  render();
+});
 
 document.querySelectorAll("#tabela th[data-k]").forEach(th =>
   th.addEventListener("click", () => {
