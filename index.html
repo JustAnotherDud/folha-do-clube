@@ -46,12 +46,18 @@
   #conta { color: var(--suave); font-size: 12px; }
 
   #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela.agrupada th { cursor: default; }
   #tabela th .seta { font-size: 10px; }
   #tabela td.seg { text-align: left; }
   a { color: var(--link); }
   #tabela tbody tr:nth-child(even) { background: #2a2622; }
   td.num, th.num { text-align: right; }
   .trofeu { font-size: 15px; }
+  tr.grupo-cabecalho td {
+    text-align: left; background: #33291c; color: var(--suave);
+    font-weight: 700; font-size: 12px; border-top: 3px solid var(--laranja);
+  }
+  tr.grupo-cabecalho:first-child td { border-top: none; }
 </style>
 </head>
 <body>
@@ -192,13 +198,8 @@ function filtradas() {
     (!q || l.segmento.toLowerCase().includes(q)));
 }
 
-function render() {
-  const ls = filtradas().slice().sort((a, b) => {
-    const va = a[ordem.k], vb = b[ordem.k];
-    const c = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb), "pt");
-    return ordem.asc ? c : -c;
-  });
-  document.querySelector("#tabela tbody").innerHTML = ls.map(l => `
+function linhaHtml(l) {
+  return `
     <tr>
       <td class="atleta" style="background:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
       <td>${l.posicao}</td>
@@ -213,11 +214,47 @@ function render() {
       <td>${escHtml(l.cidade || "—")}</td>
       <td>${escHtml(l.pais || "—")}</td>
       <td>${dataPt(l.data)}</td>
-    </tr>`).join("");
+    </tr>`;
+}
+
+function grupoCabecalhoHtml(grupo) {
+  const l0 = grupo[0];
+  return `<tr class="grupo-cabecalho"><td colspan="11">
+    ${emojiTipo(l0.tipo)} ${escHtml(l0.segmento)} — ${l0.dist_km.toFixed(2)} km ·
+    ${escHtml(l0.cidade || "—")}, ${escHtml(l0.pais || "—")}
+  </td></tr>`;
+}
+
+function render() {
+  const fm = document.getElementById("f-multi").checked;
+  document.getElementById("tabela").classList.toggle("agrupada", fm);
+  const ls = filtradas();
+  let html;
+  if (fm) {
+    const grupos = {};
+    for (const l of ls) (grupos[l.url] ??= []).push(l);
+    const ordemGrupos = Object.values(grupos).sort((a, b) => {
+      const da = a.reduce((m, l) => l.data > m ? l.data : m, a[0].data);
+      const db = b.reduce((m, l) => l.data > m ? l.data : m, b[0].data);
+      return db.localeCompare(da);          // mais recente primeiro
+    });
+    html = ordemGrupos.map(grupo => {
+      const ordenado = grupo.slice().sort((a, b) => a.posicao - b.posicao); // melhor tempo primeiro
+      return grupoCabecalhoHtml(ordenado) + ordenado.map(linhaHtml).join("");
+    }).join("");
+  } else {
+    const ordenado = ls.slice().sort((a, b) => {
+      const va = a[ordem.k], vb = b[ordem.k];
+      const c = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb), "pt");
+      return ordem.asc ? c : -c;
+    });
+    html = ordenado.map(linhaHtml).join("");
+  }
+  document.querySelector("#tabela tbody").innerHTML = html;
   document.getElementById("conta").textContent = `${ls.length} de ${linhas.length}`;
   document.querySelectorAll("#tabela th[data-k]").forEach(th => {
     th.querySelector(".seta").textContent =
-      th.dataset.k === ordem.k ? (ordem.asc ? "▲" : "▼") : "";
+      !fm && th.dataset.k === ordem.k ? (ordem.asc ? "▲" : "▼") : "";
   });
 }
 
@@ -238,6 +275,7 @@ function popularFiltros() {
 
 document.querySelectorAll("#tabela th[data-k]").forEach(th =>
   th.addEventListener("click", () => {
+    if (document.getElementById("f-multi").checked) return; // ordenação fixa por grupo
     const k = th.dataset.k;
     ordem = { k, asc: ordem.k === k ? !ordem.asc : true };
     render();
