@@ -1,5 +1,5 @@
 {
- "gerado": "2026-07-11T07:23Z",
+ "gerado": "2026-07-12T07:40Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2646,6 +2646,20 @@
    "atleta": "Xeira",
    "cidade": "Santarém",
    "pais": "Santarém"
+  },
+  {
+   "posicao": 4,
+   "tipo": "Trail Run",
+   "segmento": "Praça Dom Fernando Ii 3 Climb",
+   "url": "https://www.strava.com/segments/3495809",
+   "effort_url": "https://www.strava.com/segment_efforts/3511129247895179544",
+   "dist_km": 0.37,
+   "elev_m": 47,
+   "tempo": "1:56",
+   "data": "2026-07-11",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 6,
