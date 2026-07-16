@@ -82,64 +82,109 @@
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
-  h2 { font-size: 16px; margin: 28px 0 8px; }
-  h2 small { font-weight: normal; color: var(--suave); font-size: 12px; }
   #prs td.melhor { background: #4a3a12; font-weight: 700; }
   #prs td.vazio { color: var(--grelha); }
+
+  /* navegação por tabs */
+  .tabs {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    border-bottom: 2px solid var(--grelha); margin: 0 0 16px;
+  }
+  .tab {
+    padding: 8px 16px; margin-bottom: -2px;
+    border: none; border-bottom: 2px solid transparent;
+    background: none; color: var(--suave);
+    font: 600 14px inherit; font-family: inherit; cursor: pointer;
+  }
+  .tab:hover { color: var(--texto); }
+  .tab.active { color: #fff; border-bottom-color: var(--laranja); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .panel-meta { color: var(--suave); font-size: 12px; margin: 0 0 12px; }
 </style>
 </head>
 <body>
-<h1>Club 🍁 — KOMs &amp; Top10s <small id="gerado"></small></h1>
+<h1>Club 🍁</h1>
 
-<table id="ranking">
-  <thead><tr>
-    <th>Nome</th><th>👑</th><th>🏆</th><th>Pontos</th><th>Posição Média</th>
-  </tr></thead>
-  <tbody></tbody>
-</table>
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-tab="koms">KOMs &amp; Top10s</button>
+  <button class="tab" data-tab="best-efforts">Best Efforts 🏃</button>
+</nav>
 
-<div class="filtros">
-  <div id="f-atleta" class="pills"></div>
-  <select id="f-tipo"><option value="">Todos os tipos</option></select>
-  <select id="f-pais"><option value="">Todos os países</option></select>
-  <select id="f-cidade"><option value="">Todas as cidades</option></select>
-  <select id="f-trofeu">
-    <option value="">👑 + 🏆</option>
-    <option value="kom">Só 👑 (1º)</option>
-    <option value="top">Só 🏆 (2–10)</option>
-  </select>
-  <input id="f-busca" type="search" placeholder="Procurar segmento…">
-  <label class="toggle">
-    <input id="f-multi" type="checkbox"> ≥2 membros no segmento
-  </label>
-  <span id="conta"></span>
-</div>
+<section class="panel active" id="tab-koms">
+  <div class="panel-meta"><span id="gerado"></span></div>
 
-<h2>Best Efforts 🏃 <small id="prs-gerado"></small></h2>
-<table id="prs">
-  <thead><tr></tr></thead>
-  <tbody></tbody>
-</table>
+  <table id="ranking">
+    <thead><tr>
+      <th>Nome</th><th>👑</th><th>🏆</th><th>Pontos</th><th>Posição Média</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
 
-<table id="tabela">
-  <thead><tr>
-    <th data-k="atleta">Nome <span class="seta"></span></th>
-    <th data-k="posicao">Posição <span class="seta"></span></th>
-    <th>Troféu</th>
-    <th data-k="tipo">Tipo <span class="seta"></span></th>
-    <th data-k="segmento">Segmento <span class="seta"></span></th>
-    <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
-    <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
-    <th data-k="tempo">Tempo <span class="seta"></span></th>
-    <th data-k="cidade">Cidade <span class="seta"></span></th>
-    <th data-k="pais">País <span class="seta"></span></th>
-    <th data-k="data">Data <span class="seta"></span></th>
-  </tr></thead>
-  <tbody></tbody>
-</table>
+  <div class="filtros">
+    <div id="f-atleta" class="pills"></div>
+    <select id="f-tipo"><option value="">Todos os tipos</option></select>
+    <select id="f-pais"><option value="">Todos os países</option></select>
+    <select id="f-cidade"><option value="">Todas as cidades</option></select>
+    <select id="f-trofeu">
+      <option value="">👑 + 🏆</option>
+      <option value="kom">Só 👑 (1º)</option>
+      <option value="top">Só 🏆 (2–10)</option>
+    </select>
+    <input id="f-busca" type="search" placeholder="Procurar segmento…">
+    <label class="toggle">
+      <input id="f-multi" type="checkbox"> ≥2 membros no segmento
+    </label>
+    <span id="conta"></span>
+  </div>
+
+  <table id="tabela">
+    <thead><tr>
+      <th data-k="atleta">Nome <span class="seta"></span></th>
+      <th data-k="posicao">Posição <span class="seta"></span></th>
+      <th>Troféu</th>
+      <th data-k="tipo">Tipo <span class="seta"></span></th>
+      <th data-k="segmento">Segmento <span class="seta"></span></th>
+      <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
+      <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
+      <th data-k="tempo">Tempo <span class="seta"></span></th>
+      <th data-k="cidade">Cidade <span class="seta"></span></th>
+      <th data-k="pais">País <span class="seta"></span></th>
+      <th data-k="data">Data <span class="seta"></span></th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<section class="panel" id="tab-best-efforts">
+  <div class="panel-meta">
+    Melhores tempos de corrida por distância, calculados pela Strava. <span id="prs-gerado"></span>
+  </div>
+  <table id="prs">
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
 
 <script>
 "use strict";
+
+// --- navegação por tabs (estado no hash do URL, p/ ser bookmarkable) ---
+const TABS = ["koms", "best-efforts"];
+function activarTab(nome) {
+  if (!TABS.includes(nome)) nome = TABS[0];
+  document.querySelectorAll(".tab").forEach(t =>
+    t.classList.toggle("active", t.dataset.tab === nome));
+  document.querySelectorAll(".panel").forEach(p =>
+    p.classList.toggle("active", p.id === "tab-" + nome));
+}
+document.getElementById("tabs").addEventListener("click", e => {
+  const tab = e.target.closest(".tab");
+  if (tab) location.hash = tab.dataset.tab;
+});
+window.addEventListener("hashchange", () => activarTab(location.hash.slice(1)));
+activarTab(location.hash.slice(1));
+
 let linhas = [];
 let ordem = { k: "data", asc: false };
 const atletasSelecionados = new Set();

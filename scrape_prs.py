@@ -4,17 +4,28 @@
 Corre no GitHub Actions (cron diário) ou localmente:
     STRAVA_SESSION=<cookie _strava4_session> python scrape_prs.py
 
-Fonte: widget "Best Efforts" na sidebar do perfil público de cada atleta
-(https://www.strava.com/athletes/<id>), separador Run. NÃO é o "All-Time PRs"
-(esse é preenchido à mão pelo próprio atleta, via botão "Add PR", e por isso
-diverge do que a Strava calcula sozinha) — é a tabela calculada automaticamente
-pela Strava a partir do histórico de corridas, a mesma que já usávamos à mão
-na folha de cálculo do clube.
+Fonte: widget "Best Efforts" da sidebar do perfil. O HTML da página
+/athletes/<id> é uma app React — a tabela é preenchida por JS, por isso o
+HTML servido não a contém. Os dados vêm de um endpoint AJAX à parte:
+
+    /athletes/<id>/profile_sidebar_comparison?hl=en-GB
+
+...que devolve um fragmento HTML já com a tabela, mas SÓ quando pedido com
+o header X-Requested-With: XMLHttpRequest (sem ele devolve corpo vazio).
+O hl=en-GB força labels em inglês ("Half-Marathon", "Best Efforts"),
+independentemente da locale da conta — o parsing depende deles.
+
+NÃO é o "All-Time PRs" (esse é preenchido à mão pelo próprio atleta, via
+botão "Add PR", e diverge do que a Strava calcula) — é a tabela calculada
+automaticamente a partir do histórico de corridas, a mesma que usávamos à
+mão na folha de cálculo do clube.
 
 Quando se vê o perfil de outra pessoa (não o dono da sessão), a Strava
 acrescenta uma 2ª coluna de tempos com a comparação do próprio utilizador
 autenticado — por isso o parsing usa sempre a 1ª coluna de tempo (tds[1]),
-nunca a 2ª (tds[2], que seria o Zé, não o atleta da página).
+nunca a 2ª (tds[2], que seria o dono da sessão, não o atleta da página).
+No perfil do próprio dono da sessão há só uma coluna, e tds[1] continua a
+ser o tempo dele — logo a mesma regra serve nos dois casos.
 
 Não cobre bike: a Strava não tem um widget agregado de Best Efforts por
 distância para Ride (só a "Power Curve", que é outra coisa) — ver README.
@@ -24,6 +35,7 @@ com um cookie fresco copiado do browser.
 """
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -36,9 +48,16 @@ from scrape import BASE, membros_clube
 
 PAGE_DELAY = 1.5
 
+# fragmento AJAX da sidebar; precisa do header XHR ou devolve corpo vazio
+XHR_HEADERS = {**HEADERS, "X-Requested-With": "XMLHttpRequest",
+               "Accept": "text/javascript, text/html, application/xml, text/xml, */*"}
+SIDEBAR = "/athletes/{}/profile_sidebar_comparison?hl=en-GB"
+# tempo válido: "1:03" (M:SS) ou "1:20:16" (H:MM:SS) — filtra linhas não-dados
+TEMPO_RE = re.compile(r"^\d{1,2}(:\d{2}){1,2}$")
+
 
 def parse_best_efforts(html):
-    """{"5K": "19:26", ...} a partir do perfil de um atleta. {} se não houver widget."""
+    """{"5K": "19:26", ...} a partir do fragmento da sidebar. {} se não houver widget."""
     soup = BeautifulSoup(html, "html.parser")
     marcador = soup.select_one('span[data-glossary-term="definition-best-efforts"]')
     if not marcador:
@@ -47,13 +66,13 @@ def parse_best_efforts(html):
     if not tbody:
         return {}
     resultado = {}
-    for tr in tbody.find_all("tr")[1:]:   # [0] é a linha de título "Best Efforts"
+    for tr in tbody.find_all("tr"):
         tds = tr.find_all("td")
         if len(tds) < 2:
-            continue
+            continue                          # linha de título "Best Efforts" (só th)
         label = tds[0].get_text(strip=True)
-        tempo_raw = tds[1].get_text(strip=True)
-        if label and tempo_raw:
+        tempo_raw = tds[1].get_text(strip=True)   # 1ª coluna = atleta da página
+        if label and TEMPO_RE.match(tempo_raw):
             resultado[label] = normalizar_tempo(tempo_raw)
     return resultado
 
@@ -70,7 +89,7 @@ def main():
 
     prs = {}
     for athlete_id, nome in atletas:
-        r = s.get(f"{BASE}/athletes/{athlete_id}", headers=HEADERS, timeout=30)
+        r = s.get(BASE + SIDEBAR.format(athlete_id), headers=XHR_HEADERS, timeout=30)
         r.raise_for_status()
         if "/login" in r.url:
             sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
