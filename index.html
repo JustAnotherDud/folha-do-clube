@@ -149,7 +149,7 @@ function corAtleta(n) {
   return PALETA[h % PALETA.length];
 }
 function trofeu(p) { return p === 1 ? "👑" : "🏆"; }
-const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️" };
+const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️", "Trail Run": "🏔️" };
 function emojiTipo(t) { return TIPOS[t] ?? t; }
 function dataPt(iso) {
   const [a, m, d] = iso.split("-");
