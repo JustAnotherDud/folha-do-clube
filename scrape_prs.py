@@ -57,7 +57,7 @@ TEMPO_RE = re.compile(r"^\d{1,2}(:\d{2}){1,2}$")
 
 
 def parse_best_efforts(html):
-    """{"5K": "19:26", ...} a partir do fragmento da sidebar. {} se não houver widget."""
+    """{"5K": {"tempo": "19:26", "url": ".../activities/123"}, ...} do fragmento. {} se vazio."""
     soup = BeautifulSoup(html, "html.parser")
     marcador = soup.select_one('span[data-glossary-term="definition-best-efforts"]')
     if not marcador:
@@ -71,9 +71,19 @@ def parse_best_efforts(html):
         if len(tds) < 2:
             continue                          # linha de título "Best Efforts" (só th)
         label = tds[0].get_text(strip=True)
-        tempo_raw = tds[1].get_text(strip=True)   # 1ª coluna = atleta da página
-        if label and TEMPO_RE.match(tempo_raw):
-            resultado[label] = normalizar_tempo(tempo_raw)
+        cel = tds[1]                          # 1ª coluna = atleta da página
+        tempo_raw = cel.get_text(strip=True)
+        if not (label and TEMPO_RE.match(tempo_raw)):
+            continue
+        # o tempo é um link para /activities/<id>/best-efforts — guardar a
+        # actividade em si (sem o sufixo /best-efforts)
+        url = ""
+        a = cel.find("a", href=True)
+        if a:
+            m = re.search(r"/activities/(\d+)", a["href"])
+            if m:
+                url = f"{BASE}/activities/{m.group(1)}"
+        resultado[label] = {"tempo": normalizar_tempo(tempo_raw), "url": url}
     return resultado
 
 

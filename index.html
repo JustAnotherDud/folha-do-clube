@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Club 🍁 — KOMs &amp; Top10s</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
 <style>
   :root {
     --laranja: #c75b12;
@@ -84,6 +85,10 @@
 
   #prs td.melhor { background: #4a3a12; font-weight: 700; }
   #prs td.vazio { color: var(--grelha); }
+  #prs thead tr.metros th {
+    background: #8f4a1a; color: #f0d9c8;
+    font-weight: 400; font-size: 11px;
+  }
 
   /* navegação por tabs */
   .tabs {
@@ -233,38 +238,58 @@ function formatarRitmo(l) {
   return `${m}:${String(s).padStart(2, "0")} /km`;
 }
 
-// ordem "oficial" das distâncias tal como a Strava as mostra no widget Best Efforts
-const ORDEM_DIST = ["400m", "1/2 mile", "1K", "1 mile", "2 mile", "5K", "10K", "15K",
-                     "10 mile", "20K", "Half-Marathon", "25K", "30K", "Marathon", "50K"];
+// distância -> metros. Fonte única: ordena as colunas (asc) e alimenta a
+// linha de conversão por baixo dos labels. Ordem = a "oficial" da Strava.
+const DIST_METROS = {
+  "400m": 400, "1/2 mile": 805, "1K": 1000, "1 mile": 1609, "2 mile": 3219,
+  "5K": 5000, "10K": 10000, "15K": 15000, "10 mile": 16093, "20K": 20000,
+  "Half-Marathon": 21098, "25K": 25000, "30K": 30000, "Marathon": 42195, "50K": 50000,
+};
+// "5 000 m" — separador de milhar manual (toLocaleString pt-PT não agrupa 4 dígitos)
+const fmtMetros = m => String(m).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " m";
+
+// prs.json guarda {tempo, url} por distância; aceita também string (formato antigo).
+function celPR(v) {
+  if (v == null) return null;
+  return typeof v === "string" ? { tempo: v, url: "" } : { tempo: v.tempo, url: v.url || "" };
+}
 
 function renderPRs(prsData) {
   const atletasData = prsData.atletas;
   const nomes = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
-  const distancias = ORDEM_DIST.filter(d => nomes.some(n => atletasData[n][d]));
+  // distâncias presentes em qualquer atleta, ordenadas por metros (asc)
+  const distancias = [...new Set(nomes.flatMap(n => Object.keys(atletasData[n])))]
+    .filter(d => d in DIST_METROS)
+    .sort((a, b) => DIST_METROS[a] - DIST_METROS[b]);
   if (!nomes.length || !distancias.length) return;
 
   const melhores = {};
   for (const d of distancias) {
     let melhorNome = null, melhorSeg = Infinity;
     for (const n of nomes) {
-      const t = atletasData[n][d];
-      if (!t) continue;
-      const seg = tempoSegundos(t);
+      const c = celPR(atletasData[n][d]);
+      if (!c) continue;
+      const seg = tempoSegundos(c.tempo);
       if (seg < melhorSeg) { melhorSeg = seg; melhorNome = n; }
     }
     melhores[d] = melhorNome;
   }
 
-  document.querySelector("#prs thead tr").innerHTML =
-    "<th>Nome</th>" + distancias.map(d => `<th>${escHtml(d)}</th>`).join("");
+  document.querySelector("#prs thead").innerHTML =
+    "<tr><th>Nome</th>" + distancias.map(d => `<th>${escHtml(d)}</th>`).join("") + "</tr>" +
+    `<tr class="metros"><th></th>` +
+      distancias.map(d => `<th>${fmtMetros(DIST_METROS[d])}</th>`).join("") + "</tr>";
+
   document.querySelector("#prs tbody").innerHTML = nomes.map(n => `
     <tr>
       <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
       ${distancias.map(d => {
-        const t = atletasData[n][d];
-        return t
-          ? `<td class="${n === melhores[d] ? "melhor" : ""}">${escHtml(t)}</td>`
-          : `<td class="vazio">—</td>`;
+        const c = celPR(atletasData[n][d]);
+        if (!c) return `<td class="vazio">—</td>`;
+        const inner = c.url
+          ? `<a href="${escHtml(c.url)}" target="_blank" rel="noopener">${escHtml(c.tempo)}</a>`
+          : escHtml(c.tempo);
+        return `<td class="${n === melhores[d] ? "melhor" : ""}">${inner}</td>`;
       }).join("")}
     </tr>`).join("");
 
