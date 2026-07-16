@@ -81,6 +81,11 @@
     font-weight: 700; font-size: 12px; border-top: 3px solid var(--laranja);
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
+
+  h2 { font-size: 16px; margin: 28px 0 8px; }
+  h2 small { font-weight: normal; color: var(--suave); font-size: 12px; }
+  #prs td.melhor { background: #4a3a12; font-weight: 700; }
+  #prs td.vazio { color: var(--grelha); }
 </style>
 </head>
 <body>
@@ -109,6 +114,12 @@
   </label>
   <span id="conta"></span>
 </div>
+
+<h2>Best Efforts 🏃 <small id="prs-gerado"></small></h2>
+<table id="prs">
+  <thead><tr></tr></thead>
+  <tbody></tbody>
+</table>
 
 <table id="tabela">
   <thead><tr>
@@ -175,6 +186,47 @@ function formatarRitmo(l) {
   const segKm = 3600 / l.vel_kmh;
   const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
   return `${m}:${String(s).padStart(2, "0")} /km`;
+}
+
+// ordem "oficial" das distâncias tal como a Strava as mostra no widget Best Efforts
+const ORDEM_DIST = ["400m", "1/2 mile", "1K", "1 mile", "2 mile", "5K", "10K", "15K",
+                     "10 mile", "20K", "Half-Marathon", "25K", "30K", "Marathon", "50K"];
+
+function renderPRs(prsData) {
+  const atletasData = prsData.atletas;
+  const nomes = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
+  const distancias = ORDEM_DIST.filter(d => nomes.some(n => atletasData[n][d]));
+  if (!nomes.length || !distancias.length) return;
+
+  const melhores = {};
+  for (const d of distancias) {
+    let melhorNome = null, melhorSeg = Infinity;
+    for (const n of nomes) {
+      const t = atletasData[n][d];
+      if (!t) continue;
+      const seg = tempoSegundos(t);
+      if (seg < melhorSeg) { melhorSeg = seg; melhorNome = n; }
+    }
+    melhores[d] = melhorNome;
+  }
+
+  document.querySelector("#prs thead tr").innerHTML =
+    "<th>Nome</th>" + distancias.map(d => `<th>${escHtml(d)}</th>`).join("");
+  document.querySelector("#prs tbody").innerHTML = nomes.map(n => `
+    <tr>
+      <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
+      ${distancias.map(d => {
+        const t = atletasData[n][d];
+        return t
+          ? `<td class="${n === melhores[d] ? "melhor" : ""}">${escHtml(t)}</td>`
+          : `<td class="vazio">—</td>`;
+      }).join("")}
+    </tr>`).join("");
+
+  document.getElementById("prs-gerado").textContent =
+    "actualizado " + new Date(prsData.gerado).toLocaleString("pt-PT",
+      { day: "2-digit", month: "2-digit", year: "numeric",
+        hour: "2-digit", minute: "2-digit" });
 }
 
 function ranking() {
@@ -344,6 +396,10 @@ fetch("data.json").then(r => r.json()).then(d => {
   ranking();
   render();
 });
+
+// prs.json é opcional (só existe depois da 1ª corrida do scrape_prs.py) —
+// a página de KOMs continua a funcionar normalmente sem ele.
+fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
 </script>
 </body>
 </html>

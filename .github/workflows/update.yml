@@ -17,15 +17,19 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests beautifulsoup4
-      - name: scrape Strava
+      - name: scrape Strava (KOMs/Top10s)
         env:
           STRAVA_SESSION: ${{ secrets.STRAVA_SESSION }}
         run: python scrape.py
+      - name: scrape Strava (Best Efforts / PRs)
+        env:
+          STRAVA_SESSION: ${{ secrets.STRAVA_SESSION }}
+        run: python scrape_prs.py
       - name: commit se houver mudanças
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json localizacoes.json
+          git add data.json localizacoes.json prs.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: dados $(date -u +%F)"
             git push

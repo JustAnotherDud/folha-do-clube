@@ -27,3 +27,23 @@ ritmo calculado não é muito representativo, é normal parecer estranho.
 
 Lógica partilhada entre `scrape.py` e `make_data.py` está em `comum.py`.
 
+## Best Efforts / PRs de corrida (`scrape_prs.py`)
+
+Extrai o widget "Best Efforts" da sidebar do perfil de cada atleta
+(`/athletes/<id>`, separador Run) e escreve `prs.json` — a mesma tabela que
+antes era mantida à mão na folha de cálculo do clube. Corre com a mesma
+sessão do `scrape.py`:
+
+    STRAVA_SESSION=<cookie _strava4_session> python scrape_prs.py
+
+Não é o "All-Time PRs" (esse é preenchido manualmente pelo atleta) nem cobre
+bike — a Strava não tem um widget agregado de Best Efforts por distância
+para Ride, só a Power Curve, que é outra coisa. O `index.html` mostra o
+resultado numa tabela "Best Efforts 🏃" abaixo do ranking de KOMs, com o
+melhor tempo por distância destacado; carrega `prs.json` de forma opcional —
+a página de KOMs continua a funcionar normalmente antes da 1ª corrida do
+script (ficheiro ainda não existe).
+
+O workflow do GitHub Actions já corre os dois scrapers e faz commit de
+`prs.json` junto com `data.json`.
+
