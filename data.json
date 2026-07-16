@@ -1,5 +1,5 @@
 {
- "gerado": "2026-07-15T07:28Z",
+ "gerado": "2026-07-16T07:35Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2842,6 +2842,20 @@
    "atleta": "Xeira",
    "cidade": "Óbidos",
    "pais": "Portugal"
+  },
+  {
+   "posicao": 5,
+   "tipo": "Run",
+   "segmento": "Vuela para abajo 🏃🏾‍♂️💨",
+   "url": "https://www.strava.com/segments/22551783",
+   "effort_url": "https://www.strava.com/segment_efforts/3512648383204176066",
+   "dist_km": 0.61,
+   "elev_m": 23,
+   "tempo": "2:21",
+   "data": "2026-04-11",
+   "atleta": "Xeira",
+   "cidade": "Mérida",
+   "pais": "Spain"
   },
   {
    "posicao": 10,
