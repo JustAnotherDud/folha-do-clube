@@ -1,6 +1,32 @@
 {
- "gerado": "2026-07-17T07:33Z",
+ "gerado": "2026-07-17T22:16Z",
  "atletas": {
+  "Ana": {
+   "400m": {
+    "tempo": "1:24",
+    "url": "https://www.strava.com/activities/15617153538"
+   },
+   "1/2 mile": {
+    "tempo": "3:13",
+    "url": "https://www.strava.com/activities/15617153538"
+   },
+   "1K": {
+    "tempo": "4:08",
+    "url": "https://www.strava.com/activities/15617153538"
+   },
+   "1 mile": {
+    "tempo": "9:25",
+    "url": "https://www.strava.com/activities/11742905381"
+   },
+   "2 mile": {
+    "tempo": "19:04",
+    "url": "https://www.strava.com/activities/11692459522"
+   },
+   "5K": {
+    "tempo": "41:22",
+    "url": "https://www.strava.com/activities/15617153538"
+   }
+  },
   "Carolina": {
    "400m": {
     "tempo": "1:36",
@@ -61,6 +87,36 @@
     "url": "https://www.strava.com/activities/11883741800"
    }
   },
+  "Gonçalo": {
+   "400m": {
+    "tempo": "1:35",
+    "url": "https://www.strava.com/activities/11255313118"
+   },
+   "1/2 mile": {
+    "tempo": "3:20",
+    "url": "https://www.strava.com/activities/11255313118"
+   },
+   "1K": {
+    "tempo": "4:11",
+    "url": "https://www.strava.com/activities/11255313118"
+   },
+   "1 mile": {
+    "tempo": "6:57",
+    "url": "https://www.strava.com/activities/11255313118"
+   },
+   "2 mile": {
+    "tempo": "16:23",
+    "url": "https://www.strava.com/activities/11480448686"
+   },
+   "5K": {
+    "tempo": "27:28",
+    "url": "https://www.strava.com/activities/11418211962"
+   },
+   "10K": {
+    "tempo": "55:45",
+    "url": "https://www.strava.com/activities/11418211962"
+   }
+  },
   "Inês": {
    "400m": {
     "tempo": "1:39",
@@ -95,26 +151,38 @@
     "url": "https://www.strava.com/activities/19090981038"
    }
   },
-  "João": {
+  "Pedro": {
+   "400m": {
+    "tempo": "1:32",
+    "url": "https://www.strava.com/activities/16517253369"
+   },
    "1/2 mile": {
-    "tempo": "2:16",
-    "url": "https://www.strava.com/activities/15160179039"
+    "tempo": "3:29",
+    "url": "https://www.strava.com/activities/17927530430"
    },
    "1K": {
-    "tempo": "3:25",
-    "url": "https://www.strava.com/activities/15160179039"
+    "tempo": "4:30",
+    "url": "https://www.strava.com/activities/17927530430"
    },
    "1 mile": {
-    "tempo": "6:54",
-    "url": "https://www.strava.com/activities/15160179039"
+    "tempo": "7:41",
+    "url": "https://www.strava.com/activities/12530175294"
    },
    "2 mile": {
-    "tempo": "17:57",
-    "url": "https://www.strava.com/activities/15160179039"
+    "tempo": "15:56",
+    "url": "https://www.strava.com/activities/17648898073"
    },
    "5K": {
-    "tempo": "28:50",
-    "url": "https://www.strava.com/activities/15160179039"
+    "tempo": "25:36",
+    "url": "https://www.strava.com/activities/17648898073"
+   },
+   "10K": {
+    "tempo": "53:05",
+    "url": "https://www.strava.com/activities/17648898073"
+   },
+   "15K": {
+    "tempo": "1:45:59",
+    "url": "https://www.strava.com/activities/12931694190"
    }
   },
   "Pipas": {
