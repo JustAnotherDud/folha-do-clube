@@ -1,5 +1,5 @@
 {
- "gerado": "2026-07-21T07:46Z",
+ "gerado": "2026-07-22T07:46Z",
  "linhas": [
   {
    "posicao": 3,
@@ -167,6 +167,20 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "São Marcos - Caxias",
+   "url": "https://www.strava.com/segments/9981603",
+   "effort_url": "https://www.strava.com/segment_efforts/3514737921667520652",
+   "dist_km": 6.6,
+   "elev_m": 95,
+   "tempo": "26:10",
+   "data": "2026-07-21",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
    "pais": "Portugal"
   },
   {
@@ -2646,6 +2660,34 @@
    "atleta": "Xeira",
    "cidade": "Santarém",
    "pais": "Santarém"
+  },
+  {
+   "posicao": 9,
+   "tipo": "Run",
+   "segmento": "Caxias - Prisão",
+   "url": "https://www.strava.com/segments/23796904",
+   "effort_url": "https://www.strava.com/segment_efforts/3514737921670027404",
+   "dist_km": 1.03,
+   "elev_m": 29,
+   "tempo": "4:36",
+   "data": "2026-07-21",
+   "atleta": "Xeira",
+   "cidade": "Oeiras",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 9,
+   "tipo": "Trail Run",
+   "segmento": "Quinta da Regaleira - Palácio Nacional de Sintra",
+   "url": "https://www.strava.com/segments/41835720",
+   "effort_url": "https://www.strava.com/segment_efforts/3514819916502283408",
+   "dist_km": 0.65,
+   "elev_m": 9,
+   "tempo": "2:26",
+   "data": "2026-07-11",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
+   "pais": "Portugal"
   },
   {
    "posicao": 4,

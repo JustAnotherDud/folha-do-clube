@@ -375,6 +375,10 @@
   "cidade": "Santarém",
   "pais": "Portugal"
  },
+ "23796904": {
+  "cidade": "Oeiras",
+  "pais": "Portugal"
+ },
  "2413854": {
   "cidade": "Uccle - Ukkel",
   "pais": "Belgium"
@@ -879,6 +883,10 @@
   "cidade": "Santarém",
   "pais": "Portugal"
  },
+ "41835720": {
+  "cidade": "Sintra",
+  "pais": "Portugal"
+ },
  "4879651": {
   "cidade": "Sintra",
   "pais": "Portugal"
@@ -1074,5 +1082,9 @@
  "9981591": {
   "cidade": "Oeiras",
   "pais": "Lisbon"
+ },
+ "9981603": {
+  "cidade": "Sintra",
+  "pais": "Portugal"
  }
 }
