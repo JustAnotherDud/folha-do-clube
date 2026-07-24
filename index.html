@@ -32,6 +32,7 @@
   thead th { background: var(--laranja); color: #fff; font-weight: 700; }
 
   td.atleta { color: #fff; font-weight: 700; }
+  td.atleta a { color: inherit; text-decoration: underline; }
 
   #ranking { margin-bottom: 20px; }
   #ranking td.num { text-align: center; }
@@ -83,7 +84,7 @@
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
-  #prs td.melhor { background: #4a3a12; font-weight: 700; }
+  #prs td.melhor, #squadrats td.melhor { background: #4a3a12; font-weight: 700; }
   #prs td.vazio { color: var(--grelha); }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
@@ -492,16 +493,53 @@ fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
 // Pages dele — sem acoplar os dois repos, só consumido como ficheiro
 // estático público (mesmo princípio do prs.json local).
 const SQUADRATS_URL = "https://justanotherdud.github.io/squadrats-map/data/squadrats.json";
+// UIDs Firebase — só para montar o link do mapa público de cada atleta
+// (squadrats.com/map/{uid}/17), não vêm no squadrats.json.
+const SQUADRATS_UID = {
+  "Zé": "PjHY1RpxbmgMrQG3ITdTeDa7t6M2",
+  "Xeira": "yIVPnafX3WcNbDt5MKWqEZMqUD42",
+  "Carolina": "ZF81dc6PXFQm3iEfyNFMsUPlSHz2",
+};
+// übersquadrat/übersquadratinho: o `size` é o N do quadrado NxN (ver
+// squadrats-map/pipeline README) — mostrar como "6x6", não "6".
+const CAMPOS_UBER = new Set(["ubersquadrat", "ubersquadratinho"]);
+function fmtSquadratsValor(campo, v) {
+  if (v == null) return "—";
+  return CAMPOS_UBER.has(campo) ? `${v}x${v}` : v;
+}
 function renderSquadrats(d) {
   const atletas = d.atletas;
   const nomes = Object.keys(atletas).sort((a, b) => a.localeCompare(b, "pt"));
   const campos = ["squadrats", "squadratinhos", "yard", "yardinho",
     "ubersquadrat", "ubersquadratinho", "backyards", "backyardinhos"];
-  document.querySelector("#squadrats tbody").innerHTML = nomes.map(n => `
+
+  // maior valor de cada coluna, para destacar a liderança (mesmo estilo
+  // "melhor" já usado no Best Efforts)
+  const melhorPorCampo = {};
+  for (const c of campos) {
+    let melhorNome = null, melhorVal = -Infinity;
+    for (const n of nomes) {
+      const v = atletas[n][c];
+      if (v != null && v > melhorVal) { melhorVal = v; melhorNome = n; }
+    }
+    melhorPorCampo[c] = melhorNome;
+  }
+
+  document.querySelector("#squadrats tbody").innerHTML = nomes.map(n => {
+    const uid = SQUADRATS_UID[n];
+    const nomeHtml = uid
+      ? `<a href="https://squadrats.com/map/${uid}/17" target="_blank" rel="noopener">${escHtml(n)}</a>`
+      : escHtml(n);
+    return `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
-      ${campos.map(c => `<td class="num">${atletas[n][c] ?? "—"}</td>`).join("")}
-    </tr>`).join("");
+      <td class="atleta" style="background:${corAtleta(n)}">${nomeHtml}</td>
+      ${campos.map(c => {
+        const v = atletas[n][c];
+        const cls = melhorPorCampo[c] === n ? "num melhor" : "num";
+        return `<td class="${cls}">${fmtSquadratsValor(c, v)}</td>`;
+      }).join("")}
+    </tr>`;
+  }).join("");
   document.getElementById("squadrats-gerado").textContent =
     "actualizado " + new Date(d.atualizado).toLocaleString("pt-PT",
       { day: "2-digit", month: "2-digit", year: "numeric",
