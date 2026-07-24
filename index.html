@@ -114,6 +114,7 @@
 <nav class="tabs" id="tabs">
   <button class="tab active" data-tab="koms">KOMs &amp; Top10s</button>
   <button class="tab" data-tab="best-efforts">Best Efforts 🏃</button>
+  <button class="tab" data-tab="squadrats">Squadrats 🗺️</button>
 </nav>
 
 <section class="panel active" id="tab-koms">
@@ -171,11 +172,27 @@
   </table>
 </section>
 
+<section class="panel" id="tab-squadrats">
+  <div class="panel-meta">
+    Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
+    <span id="squadrats-gerado"></span>
+  </div>
+  <table id="squadrats">
+    <thead><tr>
+      <th>Nome</th><th>Squadrats</th><th>Squadratinhos</th>
+      <th>Yard</th><th>Yardinho</th>
+      <th>Übersquadrat</th><th>Übersquadratinho</th>
+      <th>Backyards</th><th>Backyardinhos</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
 <script>
 "use strict";
 
 // --- navegação por tabs (estado no hash do URL, p/ ser bookmarkable) ---
-const TABS = ["koms", "best-efforts"];
+const TABS = ["koms", "best-efforts", "squadrats"];
 function activarTab(nome) {
   if (!TABS.includes(nome)) nome = TABS[0];
   document.querySelectorAll(".tab").forEach(t =>
@@ -470,6 +487,27 @@ fetch("data.json").then(r => r.json()).then(d => {
 // prs.json é opcional (só existe depois da 1ª corrida do scrape_prs.py) —
 // a página de KOMs continua a funcionar normalmente sem ele.
 fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
+
+// squadrats.json vive noutro repo (squadrats-map), publicado no GitHub
+// Pages dele — sem acoplar os dois repos, só consumido como ficheiro
+// estático público (mesmo princípio do prs.json local).
+const SQUADRATS_URL = "https://justanotherdud.github.io/squadrats-map/data/squadrats.json";
+function renderSquadrats(d) {
+  const atletas = d.atletas;
+  const nomes = Object.keys(atletas).sort((a, b) => a.localeCompare(b, "pt"));
+  const campos = ["squadrats", "squadratinhos", "yard", "yardinho",
+    "ubersquadrat", "ubersquadratinho", "backyards", "backyardinhos"];
+  document.querySelector("#squadrats tbody").innerHTML = nomes.map(n => `
+    <tr>
+      <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
+      ${campos.map(c => `<td class="num">${atletas[n][c] ?? "—"}</td>`).join("")}
+    </tr>`).join("");
+  document.getElementById("squadrats-gerado").textContent =
+    "actualizado " + new Date(d.atualizado).toLocaleString("pt-PT",
+      { day: "2-digit", month: "2-digit", year: "numeric",
+        hour: "2-digit", minute: "2-digit" });
+}
+fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 </script>
 </body>
 </html>
