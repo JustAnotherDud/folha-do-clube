@@ -85,6 +85,10 @@
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
   #prs td.melhor, #squadrats td.melhor { background: #4a3a12; font-weight: 700; }
+  #squadrats td.prata { background: #3a3a3d; font-weight: 700; }
+  #squadrats td.bronze { background: #4a2f12; font-weight: 700; }
+  #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap; }
+  #squadrats th .seta { font-size: 10px; }
   #prs td.vazio { color: var(--grelha); }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
@@ -180,10 +184,15 @@
   </div>
   <table id="squadrats">
     <thead><tr>
-      <th>Nome</th><th>Squadrats</th><th>Squadratinhos</th>
-      <th>Yard</th><th>Yardinho</th>
-      <th>Übersquadrat</th><th>Übersquadratinho</th>
-      <th>Backyards</th><th>Backyardinhos</th>
+      <th data-c="nome">Nome <span class="seta"></span></th>
+      <th data-c="squadrats">Squadrats <span class="seta"></span></th>
+      <th data-c="squadratinhos">Squadratinhos <span class="seta"></span></th>
+      <th data-c="yard">Yard <span class="seta"></span></th>
+      <th data-c="yardinho">Yardinho <span class="seta"></span></th>
+      <th data-c="ubersquadrat">Übersquadrat <span class="seta"></span></th>
+      <th data-c="ubersquadratinho">Übersquadratinho <span class="seta"></span></th>
+      <th data-c="backyards">Backyards <span class="seta"></span></th>
+      <th data-c="backyardinhos">Backyardinhos <span class="seta"></span></th>
     </tr></thead>
     <tbody></tbody>
   </table>
@@ -507,23 +516,35 @@ function fmtSquadratsValor(campo, v) {
   if (v == null) return "—";
   return CAMPOS_UBER.has(campo) ? `${v}x${v}` : v;
 }
-function renderSquadrats(d) {
-  const atletas = d.atletas;
-  const nomes = Object.keys(atletas).sort((a, b) => a.localeCompare(b, "pt"));
-  const campos = ["squadrats", "squadratinhos", "yard", "yardinho",
-    "ubersquadrat", "ubersquadratinho", "backyards", "backyardinhos"];
+const CAMPOS_SQUADRATS = ["squadrats", "squadratinhos", "yard", "yardinho",
+  "ubersquadrat", "ubersquadratinho", "backyards", "backyardinhos"];
+let squadratsData = null;
+let ordemSquadrats = { c: "squadrats", asc: false };
 
-  // maior valor de cada coluna, para destacar a liderança (mesmo estilo
-  // "melhor" já usado no Best Efforts)
-  const melhorPorCampo = {};
-  for (const c of campos) {
-    let melhorNome = null, melhorVal = -Infinity;
-    for (const n of nomes) {
-      const v = atletas[n][c];
-      if (v != null && v > melhorVal) { melhorVal = v; melhorNome = n; }
-    }
-    melhorPorCampo[c] = melhorNome;
+function podioPorCampo(atletas, nomes) {
+  // top 3 de cada coluna (ouro/prata/bronze) — mesma ideia do "melhor" do
+  // Best Efforts, mas para os 3 primeiros lugares
+  const podio = {};
+  for (const c of CAMPOS_SQUADRATS) {
+    const ord = nomes.filter(n => atletas[n][c] != null)
+      .sort((a, b) => atletas[b][c] - atletas[a][c]);
+    podio[c] = { ouro: ord[0], prata: ord[1], bronze: ord[2] };
   }
+  return podio;
+}
+
+function renderSquadrats(d) {
+  squadratsData = d;
+  const atletas = d.atletas;
+  let nomes = Object.keys(atletas);
+  const podio = podioPorCampo(atletas, nomes);
+
+  if (ordemSquadrats.c === "nome") {
+    nomes.sort((a, b) => a.localeCompare(b, "pt"));
+  } else {
+    nomes.sort((a, b) => (atletas[a][ordemSquadrats.c] ?? -Infinity) - (atletas[b][ordemSquadrats.c] ?? -Infinity));
+  }
+  if (!ordemSquadrats.asc) nomes.reverse();
 
   document.querySelector("#squadrats tbody").innerHTML = nomes.map(n => {
     const uid = SQUADRATS_UID[n];
@@ -533,18 +554,34 @@ function renderSquadrats(d) {
     return `
     <tr>
       <td class="atleta" style="background:${corAtleta(n)}">${nomeHtml}</td>
-      ${campos.map(c => {
+      ${CAMPOS_SQUADRATS.map(c => {
         const v = atletas[n][c];
-        const cls = melhorPorCampo[c] === n ? "num melhor" : "num";
+        const p = podio[c];
+        let cls = "num";
+        if (p.ouro === n) cls += " melhor";
+        else if (p.prata === n) cls += " prata";
+        else if (p.bronze === n) cls += " bronze";
         return `<td class="${cls}">${fmtSquadratsValor(c, v)}</td>`;
       }).join("")}
     </tr>`;
   }).join("");
+
+  document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
+    th.querySelector(".seta").textContent =
+      th.dataset.c === ordemSquadrats.c ? (ordemSquadrats.asc ? "▲" : "▼") : "";
+  });
+
   document.getElementById("squadrats-gerado").textContent =
     "actualizado " + new Date(d.atualizado).toLocaleString("pt-PT",
       { day: "2-digit", month: "2-digit", year: "numeric",
         hour: "2-digit", minute: "2-digit" });
 }
+document.querySelectorAll("#squadrats th[data-c]").forEach(th =>
+  th.addEventListener("click", () => {
+    const c = th.dataset.c;
+    ordemSquadrats = { c, asc: ordemSquadrats.c === c ? !ordemSquadrats.asc : false };
+    if (squadratsData) renderSquadrats(squadratsData);
+  }));
 fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 </script>
 </body>
