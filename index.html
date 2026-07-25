@@ -88,6 +88,7 @@
   #squadrats td.prata { background: #3a3a3d; font-weight: 700; }
   #squadrats td.bronze { background: #4a2f12; font-weight: 700; }
   #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap; }
+  #squadrats th[title] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
   #squadrats th .seta { font-size: 10px; }
   #prs td.vazio { color: var(--grelha); }
   #prs thead tr.metros th {
@@ -180,19 +181,21 @@
 <section class="panel" id="tab-squadrats">
   <div class="panel-meta">
     Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
+    Passa o rato sobre os cabeçalhos para ver o que cada coluna conta —
+    <b>Backyards</b> conta <i>clusters</i>, não squares.
     <span id="squadrats-gerado"></span>
   </div>
   <table id="squadrats">
     <thead><tr>
       <th data-c="nome">Nome <span class="seta"></span></th>
-      <th data-c="squadrats">Squadrats <span class="seta"></span></th>
-      <th data-c="squadratinhos">Squadratinhos <span class="seta"></span></th>
-      <th data-c="yard">Yard <span class="seta"></span></th>
-      <th data-c="yardinho">Yardinho <span class="seta"></span></th>
-      <th data-c="ubersquadrat">Übersquadrat <span class="seta"></span></th>
-      <th data-c="ubersquadratinho">Übersquadratinho <span class="seta"></span></th>
-      <th data-c="backyards">Backyards <span class="seta"></span></th>
-      <th data-c="backyardinhos">Backyardinhos <span class="seta"></span></th>
+      <th data-c="squadrats" title="Nº de squares de 1609 m visitados.">Squadrats <span class="seta"></span></th>
+      <th data-c="squadratinhos" title="Nº de squares de 201 m visitados.">Squadratinhos <span class="seta"></span></th>
+      <th data-c="yard" title="Nº de squares do MAIOR cluster fechado (cluster fechado = squares em que cada um tem os 4 vizinhos também visitados).">Yard <span class="seta"></span></th>
+      <th data-c="yardinho" title="Igual ao Yard, mas na grelha dos squadratinhos.">Yardinho <span class="seta"></span></th>
+      <th data-c="ubersquadrat" title="Maior quadrado totalmente preenchido, em squadrats.">Übersquadrat <span class="seta"></span></th>
+      <th data-c="ubersquadratinho" title="Maior quadrado totalmente preenchido, em squadratinhos.">Übersquadratinho <span class="seta"></span></th>
+      <th data-c="backyards" title="Nº de CLUSTERS fechados (não de squares!), incluindo o próprio Yard. Ex: 10 backyards = o yard principal + 9 clusters secundários, muitos deles com um único square.">Backyards <span class="seta"></span></th>
+      <th data-c="backyardinhos" title="Igual aos Backyards, mas na grelha dos squadratinhos: nº de clusters, incluindo o Yardinho.">Backyardinhos <span class="seta"></span></th>
     </tr></thead>
     <tbody></tbody>
   </table>
