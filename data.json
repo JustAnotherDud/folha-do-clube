@@ -1,5 +1,5 @@
 {
- "gerado": "2026-07-24T07:45Z",
+ "gerado": "2026-07-25T07:32Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2958,6 +2958,20 @@
   {
    "posicao": 2,
    "tipo": "Run",
+   "segmento": "Wassim Street",
+   "url": "https://www.strava.com/segments/41851167",
+   "effort_url": "https://www.strava.com/segment_efforts/3515709318639429748",
+   "dist_km": 0.93,
+   "elev_m": 42,
+   "tempo": "3:14",
+   "data": "2026-01-05",
+   "atleta": "Xeira",
+   "cidade": "Oeiras",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
    "segmento": "Descida Escola Prática",
    "url": "https://www.strava.com/segments/18589548",
    "effort_url": "https://www.strava.com/segment_efforts/3437491869956678942",
@@ -3194,7 +3208,7 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 4,
+   "posicao": 5,
    "tipo": "Ride",
    "segmento": "circuito pelo parque e complexo aquatico",
    "url": "https://www.strava.com/segments/38391441",
