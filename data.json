@@ -1,5 +1,5 @@
 {
- "gerado": "2026-07-25T07:32Z",
+ "gerado": "2026-07-26T07:55Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2659,6 +2659,20 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 3,
+   "tipo": "Run",
+   "segmento": "Da Madeira ao Mar",
+   "url": "https://www.strava.com/segments/36237693",
+   "effort_url": "https://www.strava.com/segment_efforts/3516046556677914054",
+   "dist_km": 1.05,
+   "elev_m": 6,
+   "tempo": "4:00",
+   "data": "2026-07-25",
+   "atleta": "Xeira",
+   "cidade": "Almada",
    "pais": "Portugal"
   },
   {
