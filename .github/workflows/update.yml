@@ -31,7 +31,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json localizacoes.json prs.json flagged.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore: dados $(date -u +%F)"
+            # scope "(data)" igual ao do squadrats-map: um único filtro separa
+            # commits de dados de commits de código nos dois repos, que é o que
+            # torna o histórico analisável
+            git commit -m "chore(data): dados $(date -u +%F)"
             git push
           else
             echo "sem alterações"
