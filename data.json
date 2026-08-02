@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-01T07:41Z",
+ "gerado": "2026-08-02T07:44Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2659,6 +2659,34 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 5,
+   "tipo": "Run",
+   "segmento": "Casa Branca UP",
+   "url": "https://www.strava.com/segments/37866554",
+   "effort_url": "https://www.strava.com/segment_efforts/3518760514396527102",
+   "dist_km": 0.5,
+   "elev_m": 25,
+   "tempo": "1:53",
+   "data": "2026-08-01",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 9,
+   "tipo": "Run",
+   "segmento": "Velha da Ajuda",
+   "url": "https://www.strava.com/segments/15647762",
+   "effort_url": "https://www.strava.com/segment_efforts/3518760514398261758",
+   "dist_km": 1.15,
+   "elev_m": 28,
+   "tempo": "4:24",
+   "data": "2026-08-01",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
    "pais": "Portugal"
   },
   {
