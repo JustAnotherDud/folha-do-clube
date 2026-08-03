@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-02T07:44Z",
+ "gerado": "2026-08-03T08:46Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2659,6 +2659,48 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 5,
+   "tipo": "Run",
+   "segmento": "Descida Jardim do Amparo",
+   "url": "https://www.strava.com/segments/33388313",
+   "effort_url": "https://www.strava.com/segment_efforts/3519131467018798450",
+   "dist_km": 0.58,
+   "elev_m": 72,
+   "tempo": "1:53",
+   "data": "2026-08-02",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 4,
+   "tipo": "Run",
+   "segmento": "Rampa enforcado I+II+III",
+   "url": "https://www.strava.com/segments/8337673",
+   "effort_url": "https://www.strava.com/segment_efforts/3519131467020569970",
+   "dist_km": 0.87,
+   "elev_m": 113,
+   "tempo": "4:49",
+   "data": "2026-08-02",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 8,
+   "tipo": "Run",
+   "segmento": "Ajuda to Amparo",
+   "url": "https://www.strava.com/segments/7926749",
+   "effort_url": "https://www.strava.com/segment_efforts/3519131467021096306",
+   "dist_km": 0.67,
+   "elev_m": 4,
+   "tempo": "2:42",
+   "data": "2026-08-02",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
    "pais": "Portugal"
   },
   {
