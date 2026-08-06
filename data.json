@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-05T08:00Z",
+ "gerado": "2026-08-06T08:00Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2662,6 +2662,20 @@
    "pais": "Portugal"
   },
   {
+   "posicao": 3,
+   "tipo": "Run",
+   "segmento": "Casa Branca UP",
+   "url": "https://www.strava.com/segments/37866554",
+   "effort_url": "https://www.strava.com/segment_efforts/3520227133259466524",
+   "dist_km": 0.5,
+   "elev_m": 25,
+   "tempo": "1:46",
+   "data": "2026-08-05",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
+   "pais": "Portugal"
+  },
+  {
    "posicao": 4,
    "tipo": "Run",
    "segmento": "Descida Jardim do Amparo",
@@ -2699,20 +2713,6 @@
    "elev_m": 4,
    "tempo": "2:42",
    "data": "2026-08-02",
-   "atleta": "Xeira",
-   "cidade": "Funchal",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 5,
-   "tipo": "Run",
-   "segmento": "Casa Branca UP",
-   "url": "https://www.strava.com/segments/37866554",
-   "effort_url": "https://www.strava.com/segment_efforts/3518760514396527102",
-   "dist_km": 0.5,
-   "elev_m": 25,
-   "tempo": "1:53",
-   "data": "2026-08-01",
    "atleta": "Xeira",
    "cidade": "Funchal",
    "pais": "Portugal"
@@ -3418,7 +3418,7 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 7,
+   "posicao": 8,
    "tipo": "Run",
    "segmento": "DOWN! to Magalhães",
    "url": "https://www.strava.com/segments/40254086",
