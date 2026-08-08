@@ -773,6 +773,24 @@ function dataPtCurta(iso) {
   return `${d}/${m}`;
 }
 
+const GANHOS_JANELA_DIAS = 14;
+
+// preenche os dias sem entrada (sem actividade nenhuma) para a janela ficar
+// contínua — sem isto os "buracos" no calendário nem apareciam
+function janelaComBuracos(dias) {
+  const porData = Object.fromEntries(dias.map(d => [d.data, d.atletas]));
+  const ultimo = dias.length ? dias[dias.length - 1].data : new Date().toISOString().slice(0, 10);
+  const fim = new Date(ultimo + "T00:00:00Z");
+  const janela = [];
+  for (let i = GANHOS_JANELA_DIAS - 1; i >= 0; i--) {
+    const dt = new Date(fim);
+    dt.setUTCDate(dt.getUTCDate() - i);
+    const iso = dt.toISOString().slice(0, 10);
+    janela.push({ data: iso, atletas: porData[iso] || {} });
+  }
+  return janela;
+}
+
 function renderGanhosGrafico(dias, nomes) {
   const svg = document.getElementById("ganhos-grafico");
   const W = 560, H = 160, padBottom = 16, padTop = 14;
@@ -819,8 +837,8 @@ function renderGanhosTabela(dias, nomes) {
 function renderGanhos() {
   if (!ganhosData || !ganhosData.dias.length) return;
   document.getElementById("ganhos-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
-  const dias = ganhosData.dias;
-  const nomes = [...new Set(dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
+  const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
+  const dias = janelaComBuracos(ganhosData.dias);
   renderGanhosGrafico(dias, nomes);
   renderGanhosTabela(dias, nomes);
   document.getElementById("ganhos-gerado").textContent =
