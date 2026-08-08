@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-07T06:42Z",
+ "gerado": "2026-08-08T06:04Z",
  "linhas": [
   {
    "posicao": 3,
@@ -167,6 +167,20 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Casa Branca UP",
+   "url": "https://www.strava.com/segments/37866554",
+   "effort_url": "https://www.strava.com/segment_efforts/3520957177177511888",
+   "dist_km": 0.5,
+   "elev_m": 25,
+   "tempo": "1:40",
+   "data": "2026-08-07",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
    "pais": "Portugal"
   },
   {
@@ -2662,15 +2676,29 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 3,
+   "posicao": 2,
    "tipo": "Run",
-   "segmento": "Casa Branca UP",
-   "url": "https://www.strava.com/segments/37866554",
-   "effort_url": "https://www.strava.com/segment_efforts/3520227133259466524",
-   "dist_km": 0.5,
-   "elev_m": 25,
-   "tempo": "1:46",
-   "data": "2026-08-05",
+   "segmento": "Ponte da P. Formosa => Shopping climb",
+   "url": "https://www.strava.com/segments/6011262",
+   "effort_url": "https://www.strava.com/segment_efforts/3520957177177102288",
+   "dist_km": 2.87,
+   "elev_m": 246,
+   "tempo": "17:03",
+   "data": "2026-08-07",
+   "atleta": "Xeira",
+   "cidade": "Funchal",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Hotel Jardins D'Ajuda climb",
+   "url": "https://www.strava.com/segments/4546394",
+   "effort_url": "https://www.strava.com/segment_efforts/3520957177180990416",
+   "dist_km": 0.16,
+   "elev_m": 17,
+   "tempo": "0:23",
+   "data": "2026-08-07",
    "atleta": "Xeira",
    "cidade": "Funchal",
    "pais": "Portugal"
