@@ -7,15 +7,29 @@
 <title>Club 🍁 — KOMs &amp; Top10s</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
 <style>
+  @font-face { font-family: 'Plex Cond'; font-weight: 700; font-display: swap;
+    src: url("fonts/plexcond-700.woff2") format('woff2'); }
+  @font-face { font-family: 'Plex Mono'; font-weight: 500; font-display: swap;
+    src: url("fonts/plexmono-500.woff2") format('woff2'); }
+  @font-face { font-family: 'Plex Mono'; font-weight: 700; font-display: swap;
+    src: url("fonts/plexmono-700.woff2") format('woff2'); }
+  @font-face { font-family: 'Plex Sans'; font-weight: 400; font-display: swap;
+    src: url("fonts/plexsans-400.woff2") format('woff2'); }
+
   :root {
     --laranja: #c75b12;
     --grelha: #3c4043;
     --fundo: #1b1b1d;
     --painel: #242528;
+    --painel-alto: #2b2c30;
     --texto: #e8eaed;
     --suave: #9aa0a6;
     --link: #8ab4f8;
+    --ouro: #d9a544;      --ouro-brilho: #f6dfa0;   --ouro-tinta: #241a05;
+    --prata: #aeb4bb;     --prata-brilho: #e7eaed;  --prata-tinta: #1b1d1f;
+    --bronze: #a5673a;    --bronze-brilho: #dba173; --bronze-tinta: #241408;
   }
+  .num { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   body {
     font-family: Roboto, "Segoe UI", Arial, sans-serif;
@@ -84,13 +98,92 @@
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
-  #prs td.melhor, #squadrats td.melhor { background: #4a3a12; font-weight: 700; }
-  #squadrats td.prata { background: #3a3a3d; font-weight: 700; }
-  #squadrats td.bronze { background: #4a2f12; font-weight: 700; }
-  #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap; }
-  #squadrats th[title] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
-  #squadrats th .seta { font-size: 10px; }
+  #prs td.melhor { background: #4a3a12; font-weight: 700; }
   #prs td.vazio { color: var(--grelha); }
+
+  /* --- pódio Squadrats: terraços, altura = posição --- */
+  .podio-titulo { margin: 0 0 14px; }
+  .podio-titulo .podio-metrica {
+    font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 24px;
+    color: var(--laranja); letter-spacing: .01em;
+  }
+  .podio { display: grid; grid-template-columns: repeat(3, minmax(0,150px)); gap: 3px;
+    align-items: end; max-width: 500px; margin: 0 0 22px; }
+  .riser {
+    --h: 118px;
+    background: linear-gradient(180deg, var(--painel-alto), var(--painel) 75%);
+    border: 1px solid var(--grelha); border-top: none;
+    min-height: var(--h); padding: 20px 10px 14px; text-align: center; position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 5px;
+    opacity: 0; transform: translateY(14px);
+    animation: podio-subir .55s cubic-bezier(.2,.8,.2,1) forwards;
+  }
+  @media (prefers-reduced-motion: reduce) { .riser { animation: none; opacity: 1; transform: none; } }
+  @keyframes podio-subir { to { opacity: 1; transform: translateY(0); } }
+  .riser.p2 { order: -1; --h: 104px; animation-delay: .05s; }
+  .riser.p1 { --h: 136px; animation-delay: .2s; }
+  .riser.p3 { --h: 92px; animation-delay: .35s; }
+  .riser::before {
+    content: ""; position: absolute; top: -5px; left: 0; right: 0; height: 5px;
+    background: repeating-linear-gradient(-45deg, var(--medalha) 0 7px, var(--medalha-brilho) 7px 14px);
+  }
+  .riser .disco {
+    width: 34px; height: 34px; border-radius: 50%; flex: none;
+    display: flex; align-items: center; justify-content: center;
+    font: 700 14px 'Plex Mono', monospace; color: var(--medalha-tinta);
+    background: radial-gradient(circle at 32% 28%, var(--medalha-brilho), var(--medalha) 65%);
+    box-shadow: inset 0 -2px 3px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,.5), 0 2px 5px rgba(0,0,0,.4);
+  }
+  .riser .chip { display: inline-flex; align-items: center; gap: 6px; }
+  .riser .nome { font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 13px; }
+  .riser .valor { font-size: 21px; font-weight: 700; line-height: 1; margin-top: 1px; }
+  .riser.p1 .valor { font-size: 27px; color: var(--ouro-brilho); text-shadow: 0 0 18px rgba(217,165,68,.35); }
+
+  /* --- tabela Squadrats: régua de medição em vez de fundo tingido --- */
+  #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap;
+    transition: color .15s; position: relative; }
+  #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: #fff; }
+  #squadrats th[data-tip] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
+  /* tooltip próprio, sempre por baixo do cabeçalho — o title nativo do
+     browser decide a posição sozinho (normalmente acima do cursor); isto dá
+     controlo total */
+  #squadrats th[data-tip]:hover::after, #squadrats th[data-tip]:focus-visible::after {
+    content: attr(data-tip);
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    margin-top: 9px; width: 220px; white-space: normal; text-align: left;
+    background: var(--painel-alto); color: var(--texto); font-weight: 400;
+    font-size: 11.5px; line-height: 1.5; letter-spacing: 0; text-transform: none;
+    padding: 8px 10px; border-radius: 5px; border: 1px solid var(--grelha);
+    box-shadow: 0 6px 16px rgba(0,0,0,.4); z-index: 20; pointer-events: none;
+  }
+  #squadrats th[data-tip]:hover::before, #squadrats th[data-tip]:focus-visible::before {
+    content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    margin-top: 3px; border: 5px solid transparent; border-bottom-color: var(--painel-alto);
+    z-index: 21; pointer-events: none;
+  }
+  /* cabeçalho activo: fundo laranja já é o default de TODOS os th (ver
+     "thead th" acima) — inverter para branco é o único jeito de continuar
+     visível em cima dele */
+  #squadrats th.metrica-activa,
+  #squadrats th.metrica-activa:hover,
+  #squadrats th.metrica-activa:focus-visible { background: #fff; color: var(--laranja); }
+  #squadrats .barcell { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+  #squadrats .valorlinha { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
+  #squadrats .regua { width: 84px; height: 8px; position: relative;
+    background-image: repeating-linear-gradient(90deg, var(--grelha) 0 1px, transparent 1px 7px); }
+  #squadrats .regua .cheio { position: absolute; top: 3px; left: 0; height: 2px; background: var(--suave); }
+  #squadrats .regua .ponta { position: absolute; top: .5px; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--suave); transform: translateX(-50%); }
+  #squadrats td.r1 .cheio, #squadrats td.r1 .ponta { background: var(--ouro); }
+  #squadrats td.r2 .cheio, #squadrats td.r2 .ponta { background: var(--prata); }
+  #squadrats td.r3 .cheio, #squadrats td.r3 .ponta { background: var(--bronze); }
+  #squadrats .rank-disco {
+    width: 15px; height: 15px; border-radius: 50%; font: 700 8.5px 'Plex Mono', monospace;
+    display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  #squadrats td.r1 .rank-disco { background: var(--ouro); color: var(--ouro-tinta); }
+  #squadrats td.r2 .rank-disco { background: var(--prata); color: var(--prata-tinta); }
+  #squadrats td.r3 .rank-disco { background: var(--bronze); color: var(--bronze-tinta); }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
     font-weight: 400; font-size: 11px;
@@ -179,26 +272,32 @@
 </section>
 
 <section class="panel" id="tab-squadrats">
-  <div class="panel-meta">
+  <p class="podio-titulo">
+    <span class="podio-metrica" id="podio-metrica-nome"></span>
+  </p>
+  <div class="podio" id="squadrats-podio"></div>
+
+  <table id="squadrats">
+    <thead><tr>
+      <th>Nome</th>
+      <th data-c="squadrats" data-tip="Nº de squares de 1609 m visitados.">Squadrats</th>
+      <th data-c="squadratinhos" data-tip="Nº de squares de 201 m visitados.">Squadratinhos</th>
+      <th data-c="yard" data-tip="Nº de squares do MAIOR cluster fechado (cluster fechado = squares em que cada um tem os 4 vizinhos também visitados).">Yard</th>
+      <th data-c="yardinho" data-tip="Igual ao Yard, mas na grelha dos squadratinhos.">Yardinho</th>
+      <th data-c="ubersquadrat" data-tip="Maior quadrado totalmente preenchido, em squadrats.">Übersquadrat</th>
+      <th data-c="ubersquadratinho" data-tip="Maior quadrado totalmente preenchido, em squadratinhos.">Übersquadratinho</th>
+      <th data-c="backyards" data-tip="Nº de CLUSTERS fechados (não de squares!), incluindo o próprio Yard. Ex: 10 backyards = o yard principal + 9 clusters secundários, muitos deles com um único square.">Backyards</th>
+      <th data-c="backyardinhos" data-tip="Igual aos Backyards, mas na grelha dos squadratinhos: nº de clusters, incluindo o Yardinho.">Backyardinhos</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="panel-meta" style="margin-top:14px;">
     Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
     Passa o rato sobre os cabeçalhos para ver o que cada coluna conta —
     <b>Backyards</b> conta <i>clusters</i>, não squares.
     <span id="squadrats-gerado"></span>
   </div>
-  <table id="squadrats">
-    <thead><tr>
-      <th data-c="nome">Nome <span class="seta"></span></th>
-      <th data-c="squadrats" title="Nº de squares de 1609 m visitados.">Squadrats <span class="seta"></span></th>
-      <th data-c="squadratinhos" title="Nº de squares de 201 m visitados.">Squadratinhos <span class="seta"></span></th>
-      <th data-c="yard" title="Nº de squares do MAIOR cluster fechado (cluster fechado = squares em que cada um tem os 4 vizinhos também visitados).">Yard <span class="seta"></span></th>
-      <th data-c="yardinho" title="Igual ao Yard, mas na grelha dos squadratinhos.">Yardinho <span class="seta"></span></th>
-      <th data-c="ubersquadrat" title="Maior quadrado totalmente preenchido, em squadrats.">Übersquadrat <span class="seta"></span></th>
-      <th data-c="ubersquadratinho" title="Maior quadrado totalmente preenchido, em squadratinhos.">Übersquadratinho <span class="seta"></span></th>
-      <th data-c="backyards" title="Nº de CLUSTERS fechados (não de squares!), incluindo o próprio Yard. Ex: 10 backyards = o yard principal + 9 clusters secundários, muitos deles com um único square.">Backyards <span class="seta"></span></th>
-      <th data-c="backyardinhos" title="Igual aos Backyards, mas na grelha dos squadratinhos: nº de clusters, incluindo o Yardinho.">Backyardinhos <span class="seta"></span></th>
-    </tr></thead>
-    <tbody></tbody>
-  </table>
 </section>
 
 <script>
@@ -512,6 +611,7 @@ const SQUADRATS_UID = {
   "Xeira": "yIVPnafX3WcNbDt5MKWqEZMqUD42",
   "Carolina": "ZF81dc6PXFQm3iEfyNFMsUPlSHz2",
   "Inês S.": "C4bIQgAqI7SlSo7SPsudWM4LSwq2",
+  "Pedro": "zrId7ywBfCQPt28q5VAzpva01ST2", // faltava — adicionado ao ligar o pódio
 };
 // übersquadrat/übersquadratinho: o `size` é o N do quadrado NxN (ver
 // squadrats-map/pipeline README) — mostrar como "6x6", não "6".
@@ -522,70 +622,108 @@ function fmtSquadratsValor(campo, v) {
 }
 const CAMPOS_SQUADRATS = ["squadrats", "squadratinhos", "yard", "yardinho",
   "ubersquadrat", "ubersquadratinho", "backyards", "backyardinhos"];
+const LABEL_SQUADRATS = {
+  squadrats: "Squadrats", squadratinhos: "Squadratinhos", yard: "Yard", yardinho: "Yardinho",
+  ubersquadrat: "Übersquadrat", ubersquadratinho: "Übersquadratinho",
+  backyards: "Backyards", backyardinhos: "Backyardinhos",
+};
 let squadratsData = null;
-let ordemSquadrats = { c: "squadrats", asc: false };
+let metricaSquadrats = "squadrats"; // coluna que manda no pódio e na ordem da tabela
 
 function podioPorCampo(atletas, nomes) {
-  // top 3 de cada coluna (ouro/prata/bronze) — mesma ideia do "melhor" do
-  // Best Efforts, mas para os 3 primeiros lugares
+  // top 3 de cada coluna (ouro/prata/bronze) — usado no pódio E para marcar
+  // as 3 primeiras linhas da régua na tabela
   const podio = {};
   for (const c of CAMPOS_SQUADRATS) {
     const ord = nomes.filter(n => atletas[n][c] != null)
       .sort((a, b) => atletas[b][c] - atletas[a][c]);
-    podio[c] = { ouro: ord[0], prata: ord[1], bronze: ord[2] };
+    podio[c] = ord; // ord[0]=ouro, ord[1]=prata, ord[2]=bronze
   }
   return podio;
+}
+
+function nomeLigado(n) {
+  const uid = SQUADRATS_UID[n];
+  return uid
+    ? `<a href="https://squadrats.com/map/${uid}/17" target="_blank" rel="noopener">${escHtml(n)}</a>`
+    : escHtml(n);
+}
+
+function renderSquadratsPodio(atletas, podio) {
+  document.getElementById("podio-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
+  const ord = podio[metricaSquadrats];
+  const posicoes = [
+    { classe: "p2", n: 2, cor: "prata", tinta: "prata-tinta", brilho: "prata-brilho" },
+    { classe: "p1", n: 1, cor: "ouro", tinta: "ouro-tinta", brilho: "ouro-brilho" },
+    { classe: "p3", n: 3, cor: "bronze", tinta: "bronze-tinta", brilho: "bronze-brilho" },
+  ];
+  document.getElementById("squadrats-podio").innerHTML = posicoes.map(p => {
+    const nome = ord[p.n - 1];
+    const estilo = `--medalha:var(--${p.cor});--medalha-brilho:var(--${p.brilho});--medalha-tinta:var(--${p.tinta})`;
+    if (!nome) return `<div class="riser ${p.classe}" style="${estilo}"></div>`;
+    return `
+    <div class="riser ${p.classe}" style="${estilo}">
+      <div class="disco">${p.n}</div>
+      <div class="chip"><span class="dot" style="background:${corAtleta(nome)}"></span>
+        <span class="nome">${escHtml(nome)}</span></div>
+      <div class="valor num">${fmtSquadratsValor(metricaSquadrats, atletas[nome][metricaSquadrats])}</div>
+    </div>`;
+  }).join("");
 }
 
 function renderSquadrats(d) {
   squadratsData = d;
   const atletas = d.atletas;
-  let nomes = Object.keys(atletas);
+  const nomes = Object.keys(atletas);
   const podio = podioPorCampo(atletas, nomes);
 
-  if (ordemSquadrats.c === "nome") {
-    nomes.sort((a, b) => a.localeCompare(b, "pt"));
-  } else {
-    nomes.sort((a, b) => (atletas[a][ordemSquadrats.c] ?? -Infinity) - (atletas[b][ordemSquadrats.c] ?? -Infinity));
-  }
-  if (!ordemSquadrats.asc) nomes.reverse();
+  renderSquadratsPodio(atletas, podio);
 
-  document.querySelector("#squadrats tbody").innerHTML = nomes.map(n => {
-    const uid = SQUADRATS_UID[n];
-    const nomeHtml = uid
-      ? `<a href="https://squadrats.com/map/${uid}/17" target="_blank" rel="noopener">${escHtml(n)}</a>`
-      : escHtml(n);
-    return `
+  const ordenados = nomes.slice()
+    .sort((a, b) => (atletas[b][metricaSquadrats] ?? -1) - (atletas[a][metricaSquadrats] ?? -1));
+
+  document.querySelector("#squadrats tbody").innerHTML = ordenados.map(n => `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${nomeHtml}</td>
+      <td class="atleta" style="background:${corAtleta(n)}">${nomeLigado(n)}</td>
       ${CAMPOS_SQUADRATS.map(c => {
         const v = atletas[n][c];
-        const p = podio[c];
-        let cls = "num";
-        if (p.ouro === n) cls += " melhor";
-        else if (p.prata === n) cls += " prata";
-        else if (p.bronze === n) cls += " bronze";
-        return `<td class="${cls}">${fmtSquadratsValor(c, v)}</td>`;
+        if (v == null) return `<td class="num">—</td>`;
+        const pos = podio[c].indexOf(n) + 1;
+        const cls = pos >= 1 && pos <= 3 ? `num r${pos}` : "num";
+        const max = Math.max(...nomes.map(m => atletas[m][c] || 0));
+        const pct = max ? Math.max(6, Math.round(100 * v / max)) : 0;
+        return `<td class="${cls}">
+          <div class="barcell">
+            <div class="valorlinha">
+              ${pos >= 1 && pos <= 3 ? `<span class="rank-disco">${pos}</span>` : ""}
+              <span>${fmtSquadratsValor(c, v)}</span>
+            </div>
+            <div class="regua"><div class="cheio" style="width:${pct}%"></div><div class="ponta" style="left:${pct}%"></div></div>
+          </div>
+        </td>`;
       }).join("")}
-    </tr>`;
-  }).join("");
+    </tr>`).join("");
 
-  document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
-    th.querySelector(".seta").textContent =
-      th.dataset.c === ordemSquadrats.c ? (ordemSquadrats.asc ? "▲" : "▼") : "";
-  });
+  document.querySelectorAll("#squadrats th[data-c]").forEach(th =>
+    th.classList.toggle("metrica-activa", th.dataset.c === metricaSquadrats));
 
   document.getElementById("squadrats-gerado").textContent =
     "actualizado " + new Date(d.atualizado).toLocaleString("pt-PT",
       { day: "2-digit", month: "2-digit", year: "numeric",
         hour: "2-digit", minute: "2-digit" });
 }
-document.querySelectorAll("#squadrats th[data-c]").forEach(th =>
-  th.addEventListener("click", () => {
-    const c = th.dataset.c;
-    ordemSquadrats = { c, asc: ordemSquadrats.c === c ? !ordemSquadrats.asc : false };
+document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
+  th.tabIndex = 0;
+  th.setAttribute("role", "button");
+  const escolher = () => {
+    metricaSquadrats = th.dataset.c;
     if (squadratsData) renderSquadrats(squadratsData);
-  }));
+  };
+  th.addEventListener("click", escolher);
+  th.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(); }
+  });
+});
 fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 </script>
 </body>
