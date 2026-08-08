@@ -189,10 +189,6 @@
   .squadrats-cols { display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-start; }
   .squadrats-col-principal { flex: 0 0 auto; }
   .squadrats-col-ganhos { flex: 1 1 380px; max-width: 560px; min-width: 320px; }
-  .ganhos-select {
-    padding: 4px 8px; border: 1px solid var(--grelha); border-radius: 4px;
-    font-size: 12.5px; background: var(--painel); color: var(--texto); cursor: pointer;
-  }
   .ganhos-grafico { width: 100%; height: 160px; display: block; margin: 4px 0 10px; }
   .ganhos-grafico .barra { transition: opacity .12s; }
   .ganhos-grafico .barra:hover { opacity: .75; }
@@ -327,7 +323,7 @@
     <div class="squadrats-col-ganhos" id="ganhos-wrap">
       <p class="podio-titulo">
         <span class="podio-metrica" style="font-size:18px;">Ganhos diários</span>
-        <select id="ganhos-metrica" class="ganhos-select"></select>
+        <span class="podio-metrica" id="ganhos-metrica-nome" style="font-size:14px;color:var(--suave);"></span>
       </p>
       <svg id="ganhos-grafico" class="ganhos-grafico"></svg>
       <div class="tabela-ganhos-wrap">
@@ -756,6 +752,7 @@ document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
   const escolher = () => {
     metricaSquadrats = th.dataset.c;
     if (squadratsData) renderSquadrats(squadratsData);
+    if (ganhosData) renderGanhos();
   };
   th.addEventListener("click", escolher);
   th.addEventListener("keydown", e => {
@@ -768,18 +765,12 @@ fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 // {dia, atletas: {nome: {campo: delta}}}, só campos que mudaram nesse dia.
 const GANHOS_URL = "https://justanotherdud.github.io/squadrats-map/data/daily_gains.json";
 let ganhosData = null;
-let metricaGanhos = "squadratinhos"; // a mais activa dia-a-dia — as outras ficam no selector
+// sem metrica própria — segue metricaSquadrats, a mesma que o clique no
+// cabeçalho da tabela principal já controla (um selector só, não dois)
 
 function dataPtCurta(iso) {
   const [, m, d] = iso.split("-");
   return `${d}/${m}`;
-}
-
-function renderGanhosSelect() {
-  const sel = document.getElementById("ganhos-metrica");
-  sel.innerHTML = CAMPOS_SQUADRATS.map(c =>
-    `<option value="${c}" ${c === metricaGanhos ? "selected" : ""}>${LABEL_SQUADRATS[c]}</option>`).join("");
-  sel.onchange = () => { metricaGanhos = sel.value; renderGanhos(); };
 }
 
 function renderGanhosGrafico(dias, nomes) {
@@ -787,7 +778,7 @@ function renderGanhosGrafico(dias, nomes) {
   const W = 560, H = 160, padBottom = 16, padTop = 14;
   const passo = (W - 20) / Math.max(dias.length, 1);
   const larguraBarra = Math.min(28, passo - 6);
-  const totais = dias.map(d => nomes.reduce((s, n) => s + Math.max(0, (d.atletas[n] || {})[metricaGanhos] || 0), 0));
+  const totais = dias.map(d => nomes.reduce((s, n) => s + Math.max(0, (d.atletas[n] || {})[metricaSquadrats] || 0), 0));
   const maxTotal = Math.max(1, ...totais);
   const escala = (H - padTop - padBottom) / maxTotal;
 
@@ -796,7 +787,7 @@ function renderGanhosGrafico(dias, nomes) {
     const x = 10 + i * passo + (passo - larguraBarra) / 2;
     let y = H - padBottom;
     nomes.forEach(nome => {
-      const v = (dia.atletas[nome] || {})[metricaGanhos] || 0;
+      const v = (dia.atletas[nome] || {})[metricaSquadrats] || 0;
       if (v <= 0) return;
       const altura = v * escala;
       y -= altura;
@@ -817,7 +808,7 @@ function renderGanhosTabela(dias, nomes) {
     `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
   document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
     const cels = nomes.map(n => {
-      const v = (dia.atletas[n] || {})[metricaGanhos];
+      const v = (dia.atletas[n] || {})[metricaSquadrats];
       if (!v) return `<td class="num zero">—</td>`;
       return `<td class="num${v < 0 ? " negativo" : ""}">${v > 0 ? "+" : ""}${v}</td>`;
     }).join("");
@@ -827,6 +818,7 @@ function renderGanhosTabela(dias, nomes) {
 
 function renderGanhos() {
   if (!ganhosData || !ganhosData.dias.length) return;
+  document.getElementById("ganhos-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
   const dias = ganhosData.dias;
   const nomes = [...new Set(dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
   renderGanhosGrafico(dias, nomes);
@@ -836,7 +828,6 @@ function renderGanhos() {
       { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
 }
 
-renderGanhosSelect();
 fetch(GANHOS_URL).then(r => r.json()).then(d => { ganhosData = d; renderGanhos(); })
   .catch(() => { document.getElementById("ganhos-wrap").style.display = "none"; });
 </script>
