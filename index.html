@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Club 🍁 — KOMs &amp; Top10s</title>
+<title>Folha do Clube</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
 <style>
   @font-face { font-family: 'Plex Cond'; font-weight: 700; font-display: swap;
@@ -184,6 +184,28 @@
   #squadrats td.r1 .rank-disco { background: var(--ouro); color: var(--ouro-tinta); }
   #squadrats td.r2 .rank-disco { background: var(--prata); color: var(--prata-tinta); }
   #squadrats td.r3 .rank-disco { background: var(--bronze); color: var(--bronze-tinta); }
+
+  /* --- ganhos diários: ao lado da tabela principal, não noutro separador --- */
+  .squadrats-cols { display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-start; }
+  .squadrats-col-principal { flex: 0 0 auto; }
+  .squadrats-col-ganhos { flex: 1 1 380px; max-width: 560px; min-width: 320px; }
+  .ganhos-select {
+    padding: 4px 8px; border: 1px solid var(--grelha); border-radius: 4px;
+    font-size: 12.5px; background: var(--painel); color: var(--texto); cursor: pointer;
+  }
+  .ganhos-grafico { width: 100%; height: 160px; display: block; margin: 4px 0 10px; }
+  .ganhos-grafico .barra { transition: opacity .12s; }
+  .ganhos-grafico .barra:hover { opacity: .75; }
+  .ganhos-grafico text { font-size: 9px; fill: var(--suave); font-family: inherit; }
+  .ganhos-grafico .total-dia { font-size: 9.5px; fill: var(--texto); font-weight: 700; }
+  .tabela-ganhos-wrap { overflow-x: auto; }
+  #ganhos-tabela { width: 100%; }
+  #ganhos-tabela th, #ganhos-tabela td { padding: 4px 8px; font-size: 12.5px; }
+  #ganhos-tabela thead th { background: var(--painel-alto); color: var(--suave); font-weight: 700; }
+  #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; }
+  #ganhos-tabela td.num { text-align: right; }
+  #ganhos-tabela td.num.zero { color: var(--grelha); }
+  #ganhos-tabela td.num.negativo { color: #e08a6a; }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
     font-weight: 400; font-size: 11px;
@@ -208,7 +230,7 @@
 </style>
 </head>
 <body>
-<h1>Club 🍁</h1>
+<h1>Folha do Clube</h1>
 
 <nav class="tabs" id="tabs">
   <button class="tab active" data-tab="koms">KOMs &amp; Top10s</button>
@@ -272,31 +294,47 @@
 </section>
 
 <section class="panel" id="tab-squadrats">
-  <p class="podio-titulo">
-    <span class="podio-metrica" id="podio-metrica-nome"></span>
-  </p>
-  <div class="podio" id="squadrats-podio"></div>
+  <div class="squadrats-cols">
+    <div class="squadrats-col-principal">
+      <p class="podio-titulo">
+        <span class="podio-metrica" id="podio-metrica-nome"></span>
+      </p>
+      <div class="podio" id="squadrats-podio"></div>
 
-  <table id="squadrats">
-    <thead><tr>
-      <th>Nome</th>
-      <th data-c="squadrats" data-tip="Nº de squares de 1609 m visitados.">Squadrats</th>
-      <th data-c="squadratinhos" data-tip="Nº de squares de 201 m visitados.">Squadratinhos</th>
-      <th data-c="yard" data-tip="Nº de squares do MAIOR cluster fechado (cluster fechado = squares em que cada um tem os 4 vizinhos também visitados).">Yard</th>
-      <th data-c="yardinho" data-tip="Igual ao Yard, mas na grelha dos squadratinhos.">Yardinho</th>
-      <th data-c="ubersquadrat" data-tip="Maior quadrado totalmente preenchido, em squadrats.">Übersquadrat</th>
-      <th data-c="ubersquadratinho" data-tip="Maior quadrado totalmente preenchido, em squadratinhos.">Übersquadratinho</th>
-      <th data-c="backyards" data-tip="Nº de CLUSTERS fechados (não de squares!), incluindo o próprio Yard. Ex: 10 backyards = o yard principal + 9 clusters secundários, muitos deles com um único square.">Backyards</th>
-      <th data-c="backyardinhos" data-tip="Igual aos Backyards, mas na grelha dos squadratinhos: nº de clusters, incluindo o Yardinho.">Backyardinhos</th>
-    </tr></thead>
-    <tbody></tbody>
-  </table>
+      <table id="squadrats">
+        <thead><tr>
+          <th>Nome</th>
+          <th data-c="squadrats" data-tip="Nº de squares de 1609 m visitados.">Squadrats</th>
+          <th data-c="squadratinhos" data-tip="Nº de squares de 201 m visitados.">Squadratinhos</th>
+          <th data-c="yard" data-tip="Nº de squares do MAIOR cluster fechado (cluster fechado = squares em que cada um tem os 4 vizinhos também visitados).">Yard</th>
+          <th data-c="yardinho" data-tip="Igual ao Yard, mas na grelha dos squadratinhos.">Yardinho</th>
+          <th data-c="ubersquadrat" data-tip="Maior quadrado totalmente preenchido, em squadrats.">Übersquadrat</th>
+          <th data-c="ubersquadratinho" data-tip="Maior quadrado totalmente preenchido, em squadratinhos.">Übersquadratinho</th>
+          <th data-c="backyards" data-tip="Nº de CLUSTERS fechados (não de squares!), incluindo o próprio Yard. Ex: 10 backyards = o yard principal + 9 clusters secundários, muitos deles com um único square.">Backyards</th>
+          <th data-c="backyardinhos" data-tip="Igual aos Backyards, mas na grelha dos squadratinhos: nº de clusters, incluindo o Yardinho.">Backyardinhos</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
 
-  <div class="panel-meta" style="margin-top:14px;">
-    Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
-    Passa o rato sobre os cabeçalhos para ver o que cada coluna conta —
-    <b>Backyards</b> conta <i>clusters</i>, não squares.
-    <span id="squadrats-gerado"></span>
+      <div class="panel-meta" style="margin-top:14px;">
+        Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
+        Passa o rato sobre os cabeçalhos para ver o que cada coluna conta —
+        <b>Backyards</b> conta <i>clusters</i>, não squares.
+        <span id="squadrats-gerado"></span>
+      </div>
+    </div>
+
+    <div class="squadrats-col-ganhos" id="ganhos-wrap">
+      <p class="podio-titulo">
+        <span class="podio-metrica" style="font-size:18px;">Ganhos diários</span>
+        <select id="ganhos-metrica" class="ganhos-select"></select>
+      </p>
+      <svg id="ganhos-grafico" class="ganhos-grafico"></svg>
+      <div class="tabela-ganhos-wrap">
+        <table id="ganhos-tabela"><thead><tr></tr></thead><tbody></tbody></table>
+      </div>
+      <div class="panel-meta" id="ganhos-gerado" style="margin-top:10px;"></div>
+    </div>
   </div>
 </section>
 
@@ -725,6 +763,82 @@ document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
   });
 });
 fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
+
+// data/daily_gains.json vive no squadrats-map, mesmo princípio do squadrats.json —
+// {dia, atletas: {nome: {campo: delta}}}, só campos que mudaram nesse dia.
+const GANHOS_URL = "https://justanotherdud.github.io/squadrats-map/data/daily_gains.json";
+let ganhosData = null;
+let metricaGanhos = "squadratinhos"; // a mais activa dia-a-dia — as outras ficam no selector
+
+function dataPtCurta(iso) {
+  const [, m, d] = iso.split("-");
+  return `${d}/${m}`;
+}
+
+function renderGanhosSelect() {
+  const sel = document.getElementById("ganhos-metrica");
+  sel.innerHTML = CAMPOS_SQUADRATS.map(c =>
+    `<option value="${c}" ${c === metricaGanhos ? "selected" : ""}>${LABEL_SQUADRATS[c]}</option>`).join("");
+  sel.onchange = () => { metricaGanhos = sel.value; renderGanhos(); };
+}
+
+function renderGanhosGrafico(dias, nomes) {
+  const svg = document.getElementById("ganhos-grafico");
+  const W = 560, H = 160, padBottom = 16, padTop = 14;
+  const passo = (W - 20) / Math.max(dias.length, 1);
+  const larguraBarra = Math.min(28, passo - 6);
+  const totais = dias.map(d => nomes.reduce((s, n) => s + Math.max(0, (d.atletas[n] || {})[metricaGanhos] || 0), 0));
+  const maxTotal = Math.max(1, ...totais);
+  const escala = (H - padTop - padBottom) / maxTotal;
+
+  const partes = [];
+  dias.forEach((dia, i) => {
+    const x = 10 + i * passo + (passo - larguraBarra) / 2;
+    let y = H - padBottom;
+    nomes.forEach(nome => {
+      const v = (dia.atletas[nome] || {})[metricaGanhos] || 0;
+      if (v <= 0) return;
+      const altura = v * escala;
+      y -= altura;
+      partes.push(`<rect class="barra" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${larguraBarra}" height="${altura.toFixed(1)}" fill="${corAtleta(nome)}"><title>${escHtml(nome)}: +${v}</title></rect>`);
+    });
+    const total = totais[i];
+    if (total > 0) {
+      partes.push(`<text class="total-dia" x="${(x + larguraBarra / 2).toFixed(1)}" y="${(H - padBottom - total * escala - 4).toFixed(1)}" text-anchor="middle">${total}</text>`);
+    }
+    partes.push(`<text x="${(x + larguraBarra / 2).toFixed(1)}" y="${H - 4}" text-anchor="middle">${dataPtCurta(dia.data)}</text>`);
+  });
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = partes.join("");
+}
+
+function renderGanhosTabela(dias, nomes) {
+  document.querySelector("#ganhos-tabela thead tr").innerHTML =
+    `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
+  document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
+    const cels = nomes.map(n => {
+      const v = (dia.atletas[n] || {})[metricaGanhos];
+      if (!v) return `<td class="num zero">—</td>`;
+      return `<td class="num${v < 0 ? " negativo" : ""}">${v > 0 ? "+" : ""}${v}</td>`;
+    }).join("");
+    return `<tr><td class="dia">${dataPtCurta(dia.data)}</td>${cels}</tr>`;
+  }).join("");
+}
+
+function renderGanhos() {
+  if (!ganhosData || !ganhosData.dias.length) return;
+  const dias = ganhosData.dias;
+  const nomes = [...new Set(dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
+  renderGanhosGrafico(dias, nomes);
+  renderGanhosTabela(dias, nomes);
+  document.getElementById("ganhos-gerado").textContent =
+    "actualizado " + new Date(ganhosData.gerado).toLocaleString("pt-PT",
+      { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+}
+
+renderGanhosSelect();
+fetch(GANHOS_URL).then(r => r.json()).then(d => { ganhosData = d; renderGanhos(); })
+  .catch(() => { document.getElementById("ganhos-wrap").style.display = "none"; });
 </script>
 </body>
 </html>
