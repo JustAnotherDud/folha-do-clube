@@ -32,7 +32,10 @@
   .num { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   body {
-    font-family: Roboto, "Segoe UI", Arial, sans-serif;
+    /* 'Plex Sans' já estava carregada (@font-face acima) mas nunca era
+       aplicada — o corpo do site ficava sempre no Roboto do sistema. Único
+       sítio a mudar: o resto (Plex Cond/Mono) já usa a família certa. */
+    font-family: 'Plex Sans', Roboto, "Segoe UI", Arial, sans-serif;
     margin: 0; padding: 16px;
     background: var(--fundo); color: var(--texto);
     font-size: 14px;
@@ -167,6 +170,10 @@
   #squadrats th.metrica-activa,
   #squadrats th.metrica-activa:hover,
   #squadrats th.metrica-activa:focus-visible { background: #fff; color: var(--laranja); }
+  /* célula sem dado nenhum (v == null): as outras ficam centradas por serem
+     flex (.barcell), não por causa do text-align:right herdado de td.num —
+     esta precisa da regra própria para não desalinhar à direita. */
+  #squadrats td.num.vazio { text-align: center; color: var(--grelha); }
   #squadrats .barcell { display: flex; flex-direction: column; align-items: center; gap: 5px; }
   #squadrats .valorlinha { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
   #squadrats .regua { width: 84px; height: 8px; position: relative;
@@ -216,7 +223,7 @@
     padding: 8px 16px; margin-bottom: -2px;
     border: none; border-bottom: 2px solid transparent;
     background: none; color: var(--suave);
-    font: 600 14px inherit; font-family: inherit; cursor: pointer;
+    font-family: inherit; font-weight: 600; font-size: 14px; cursor: pointer;
   }
   .tab:hover { color: var(--texto); }
   .tab.active { color: #fff; border-bottom-color: var(--laranja); }
@@ -721,7 +728,7 @@ function renderSquadrats(d) {
       <td class="atleta" style="background:${corAtleta(n)}">${nomeLigado(n)}</td>
       ${CAMPOS_SQUADRATS.map(c => {
         const v = atletas[n][c];
-        if (v == null) return `<td class="num">—</td>`;
+        if (v == null) return `<td class="num vazio">—</td>`;
         const pos = podio[c].indexOf(n) + 1;
         const cls = pos >= 1 && pos <= 3 ? `num r${pos}` : "num";
         const max = Math.max(...nomes.map(m => atletas[m][c] || 0));
@@ -779,8 +786,12 @@ const GANHOS_JANELA_DIAS = 14;
 // contínua — sem isto os "buracos" no calendário nem apareciam
 function janelaComBuracos(dias) {
   const porData = Object.fromEntries(dias.map(d => [d.data, d.atletas]));
-  const ultimo = dias.length ? dias[dias.length - 1].data : new Date().toISOString().slice(0, 10);
-  const fim = new Date(ultimo + "T00:00:00Z");
+  // fim é sempre HOJE (UTC, mesma convenção do "dia" no daily_gains.json —
+  // ver fetch_club_koms.py), nunca o último dia com dados. Senão a janela
+  // parava no último ganho registado e "hoje" só aparecia depois de alguém
+  // sincronizar — o utilizador quer ver hoje na lista mesmo a zero.
+  const hoje = new Date().toISOString().slice(0, 10);
+  const fim = new Date(hoje + "T00:00:00Z");
   const janela = [];
   for (let i = GANHOS_JANELA_DIAS - 1; i >= 0; i--) {
     const dt = new Date(fim);
