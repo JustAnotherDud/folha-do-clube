@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-08T06:04Z",
+ "gerado": "2026-08-09T06:06Z",
  "linhas": [
   {
    "posicao": 3,
@@ -3457,20 +3457,6 @@
    "data": "2024-12-02",
    "atleta": "Xeira",
    "cidade": "Lisbon",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Run",
-   "segmento": "Subida Avenida D. Afonso Henriques",
-   "url": "https://www.strava.com/segments/13943659",
-   "effort_url": "https://www.strava.com/segment_efforts/3288965541728805854",
-   "dist_km": 0.33,
-   "elev_m": 37,
-   "tempo": "1:30",
-   "data": "2024-11-05",
-   "atleta": "Xeira",
-   "cidade": "Guimarães",
    "pais": "Portugal"
   },
   {
