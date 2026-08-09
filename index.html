@@ -206,9 +206,11 @@
   #ganhos-tabela th, #ganhos-tabela td { padding: 4px 8px; font-size: 12.5px; }
   #ganhos-tabela thead th { background: var(--painel-alto); color: var(--suave); font-weight: 700; }
   #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; }
-  #ganhos-tabela td.num { text-align: right; }
+  #ganhos-tabela td.num { text-align: center; }
   #ganhos-tabela td.num.zero { color: var(--grelha); }
   #ganhos-tabela td.num.negativo { color: #e08a6a; }
+  /* maior ganho do dia — destaque ligeiro, não é pódio (sem cor por posição) */
+  #ganhos-tabela td.num.maior { background: rgba(199,91,18,.16); font-weight: 700; }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
     font-weight: 400; font-size: 11px;
@@ -836,10 +838,15 @@ function renderGanhosTabela(dias, nomes) {
   document.querySelector("#ganhos-tabela thead tr").innerHTML =
     `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
   document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
+    // maior ganho do dia entre os atletas — só destaca se for positivo, e só
+    // se houver algo a comparar (dia todo a "—" não tem "maior" nenhum)
+    const valoresDia = nomes.map(n => (dia.atletas[n] || {})[metricaSquadrats] || 0);
+    const maiorDia = Math.max(0, ...valoresDia);
     const cels = nomes.map(n => {
       const v = (dia.atletas[n] || {})[metricaSquadrats];
       if (!v) return `<td class="num zero">—</td>`;
-      return `<td class="num${v < 0 ? " negativo" : ""}">${v > 0 ? "+" : ""}${v}</td>`;
+      const destaque = maiorDia > 0 && v === maiorDia ? " maior" : "";
+      return `<td class="num${v < 0 ? " negativo" : ""}${destaque}">${v > 0 ? "+" : ""}${v}</td>`;
     }).join("");
     return `<tr><td class="dia">${dataPtCurta(dia.data)}</td>${cels}</tr>`;
   }).join("");
