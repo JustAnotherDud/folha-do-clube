@@ -385,6 +385,7 @@ function trofeu(p) { return p === 1 ? "👑" : "🏆"; }
 const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️", "Trail Run": "🏔️" };
 function emojiTipo(t) { return TIPOS[t] ?? t; }
 function dataPt(iso) {
+  if (!iso) return "—";
   const [a, m, d] = iso.split("-");
   return `${d}/${m}/${a}`;
 }
@@ -402,9 +403,10 @@ function velKmh(l) {
   const seg = tempoSegundos(l.tempo);
   return seg > 0 && l.dist_km > 0 ? l.dist_km / (seg / 3600) : 0;
 }
-// Ride mostra-se em km/h; Run/Walk mostra-se em ritmo min:seg por km.
+// Ride mostra-se em km/h; Run/Walk/Trail Run mostra-se em ritmo min:seg por km.
 function formatarRitmo(l) {
   if (!l.vel_kmh) return "—";
+  if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
   const segKm = 3600 / l.vel_kmh;
   const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
   return `${m}:${String(s).padStart(2, "0")} /km`;
@@ -637,6 +639,9 @@ fetch("data.json").then(r => r.json()).then(d => {
   calcularAtletasPorSegmento();
   ranking();
   render();
+}).catch(err => {
+  console.error("falha ao carregar data.json:", err);
+  document.getElementById("gerado").textContent = "falha ao carregar dados — tenta recarregar a página";
 });
 
 // prs.json é opcional (só existe depois da 1ª corrida do scrape_prs.py) —
@@ -709,7 +714,7 @@ function renderSquadratsPodio(atletas, podio) {
       <div class="disco">${p.n}</div>
       <div class="chip"><span class="dot" style="background:${corAtleta(nome)}"></span>
         <span class="nome">${escHtml(nome)}</span></div>
-      <div class="valor num">${fmtSquadratsValor(metricaSquadrats, atletas[nome][metricaSquadrats])}</div>
+      <div class="valor num">${escHtml(fmtSquadratsValor(metricaSquadrats, atletas[nome][metricaSquadrats]))}</div>
     </div>`;
   }).join("");
 }
@@ -739,7 +744,7 @@ function renderSquadrats(d) {
           <div class="barcell">
             <div class="valorlinha">
               ${pos >= 1 && pos <= 3 ? `<span class="rank-disco">${pos}</span>` : ""}
-              <span>${fmtSquadratsValor(c, v)}</span>
+              <span>${escHtml(fmtSquadratsValor(c, v))}</span>
             </div>
             <div class="regua"><div class="cheio" style="width:${pct}%"></div><div class="ponta" style="left:${pct}%"></div></div>
           </div>
