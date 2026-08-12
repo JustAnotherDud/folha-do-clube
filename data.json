@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-11T06:13Z",
+ "gerado": "2026-08-12T06:52Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2314,20 +2314,6 @@
   {
    "posicao": 1,
    "tipo": "Run",
-   "segmento": "Rampa dos ciclistas",
-   "url": "https://www.strava.com/segments/9576478",
-   "effort_url": "https://www.strava.com/segment_efforts/3346456817586511508",
-   "dist_km": 0.1,
-   "elev_m": 5,
-   "tempo": "0:19",
-   "data": "2025-04-13",
-   "atleta": "Xeira",
-   "cidade": "Santarém",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 1,
-   "tipo": "Run",
    "segmento": "#RainhaLeonorLencastreUP",
    "url": "https://www.strava.com/segments/30846831",
    "effort_url": "https://www.strava.com/segment_efforts/3344410042862947544",
@@ -3376,6 +3362,20 @@
    "pais": "Portugal"
   },
   {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Rampa dos ciclistas",
+   "url": "https://www.strava.com/segments/9576478",
+   "effort_url": "https://www.strava.com/segment_efforts/3346456817586511508",
+   "dist_km": 0.1,
+   "elev_m": 5,
+   "tempo": "0:19",
+   "data": "2025-04-13",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
    "posicao": 4,
    "tipo": "Run",
    "segmento": "downhill",
@@ -4258,7 +4258,7 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 3,
+   "posicao": 4,
    "tipo": "Run",
    "segmento": "Reta da Av. 13 de Julho",
    "url": "https://www.strava.com/segments/37188103",
