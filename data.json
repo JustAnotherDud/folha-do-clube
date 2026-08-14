@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-13T06:55Z",
+ "gerado": "2026-08-14T06:52Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2673,6 +2673,20 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 6,
+   "tipo": "Run",
+   "segmento": "EM1189 Climb",
+   "url": "https://www.strava.com/segments/5083058",
+   "effort_url": "https://www.strava.com/segment_efforts/3523101969610059570",
+   "dist_km": 1.46,
+   "elev_m": 46,
+   "tempo": "7:06",
+   "data": "2026-08-13",
+   "atleta": "Xeira",
+   "cidade": "Mondim de Basto",
    "pais": "Portugal"
   },
   {
