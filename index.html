@@ -651,7 +651,11 @@ fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
 // squadrats.json vive noutro repo (squadrats-map), publicado no GitHub
 // Pages dele — sem acoplar os dois repos, só consumido como ficheiro
 // estático público (mesmo princípio do prs.json local).
-const SQUADRATS_URL = "https://justanotherdud.github.io/squadrats-map/data/squadrats.json";
+// raw.githubusercontent.com, não o Pages (2026-08-14): os dados do
+// squadrats-map vivem numa branch `data` própria, sem passar pelo rebuild do
+// Pages — chega mais depressa e sem risco de servir uma versão a meio de
+// deploy.
+const SQUADRATS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-map/data/data/squadrats.json";
 // UIDs Firebase — só para montar o link do mapa público de cada atleta
 // (squadrats.com/map/{uid}/17), não vêm no squadrats.json.
 const SQUADRATS_UID = {
@@ -777,7 +781,7 @@ fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 
 // data/daily_gains.json vive no squadrats-map, mesmo princípio do squadrats.json —
 // {dia, atletas: {nome: {campo: delta}}}, só campos que mudaram nesse dia.
-const GANHOS_URL = "https://justanotherdud.github.io/squadrats-map/data/daily_gains.json";
+const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-map/data/data/daily_gains.json";
 let ganhosData = null;
 // sem metrica própria — segue metricaSquadrats, a mesma que o clique no
 // cabeçalho da tabela principal já controla (um selector só, não dois)
