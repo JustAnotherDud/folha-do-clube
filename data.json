@@ -1,5 +1,5 @@
 {
- "gerado": "2026-08-18T05:53Z",
+ "gerado": "2026-08-19T05:54Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2673,6 +2673,34 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 7,
+   "tipo": "Run",
+   "segmento": "Subida Idanha -> Venda Seca",
+   "url": "https://www.strava.com/segments/7418699",
+   "effort_url": "https://www.strava.com/segment_efforts/3524890029425933594",
+   "dist_km": 0.47,
+   "elev_m": 23,
+   "tempo": "2:06",
+   "data": "2026-08-18",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 8,
+   "tipo": "Run",
+   "segmento": "Ida ao Mac",
+   "url": "https://www.strava.com/segments/3547330",
+   "effort_url": "https://www.strava.com/segment_efforts/3524890029425178906",
+   "dist_km": 1.16,
+   "elev_m": 55,
+   "tempo": "5:32",
+   "data": "2026-08-18",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
    "pais": "Portugal"
   },
   {
