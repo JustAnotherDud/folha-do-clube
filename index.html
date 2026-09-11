@@ -368,7 +368,7 @@ function escHtml(s) {
     c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 // Cores de identidade dos membros: fonte única em
-// squadrats-map/data/membros_cores.json (partilhada com o club.html do mapa),
+// squadrats-club/data/membros_cores.json (partilhada com o club.html do mapa),
 // carregada em runtime mais abaixo. Isto é só o fallback offline — mesma
 // paleta, para o site não ficar sem cor se a fetch falhar. O resto do clube
 // (quem não está nesta lista) continua a apanhar cor por hash de PALETA.
@@ -629,10 +629,10 @@ document.querySelectorAll("#tabela th[data-k]").forEach(th =>
 document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
   el.addEventListener("input", render));
 
-// Cores dos membros da fonte única (branch main do squadrats-map). Sobrepõe o
+// Cores dos membros da fonte única (branch main do squadrats-club). Sobrepõe o
 // fallback offline de CORES_FIXAS; se falhar, fica o fallback e o site abre na
 // mesma. Não bloqueia o render principal se o data.json chegar primeiro.
-const CORES_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-map/main/data/membros_cores.json";
+const CORES_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/main/data/membros_cores.json";
 Promise.all([
   fetch("data.json").then(r => r.json()),
   fetch(CORES_URL, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null),
@@ -658,14 +658,14 @@ Promise.all([
 // a página de KOMs continua a funcionar normalmente sem ele.
 fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
 
-// squadrats.json vive noutro repo (squadrats-map), publicado no GitHub
+// squadrats.json vive noutro repo (squadrats-club), publicado no GitHub
 // Pages dele — sem acoplar os dois repos, só consumido como ficheiro
 // estático público (mesmo princípio do prs.json local).
 // raw.githubusercontent.com, não o Pages (2026-08-14): os dados do
-// squadrats-map vivem numa branch `data` própria, sem passar pelo rebuild do
+// squadrats-club vivem numa branch `data` própria, sem passar pelo rebuild do
 // Pages — chega mais depressa e sem risco de servir uma versão a meio de
 // deploy.
-const SQUADRATS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-map/data/data/squadrats.json";
+const SQUADRATS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/squadrats.json";
 // UIDs Firebase — só para montar o link do mapa público de cada atleta
 // (squadrats.com/map/{uid}/17), não vêm no squadrats.json.
 const SQUADRATS_UID = {
@@ -676,7 +676,7 @@ const SQUADRATS_UID = {
   "Pedro": "zrId7ywBfCQPt28q5VAzpva01ST2", // faltava — adicionado ao ligar o pódio
 };
 // übersquadrat/übersquadratinho: o `size` é o N do quadrado NxN (ver
-// squadrats-map/pipeline README) — mostrar como "6x6", não "6".
+// squadrats-club/pipeline README) — mostrar como "6x6", não "6".
 const CAMPOS_UBER = new Set(["ubersquadrat", "ubersquadratinho"]);
 function fmtSquadratsValor(campo, v) {
   if (v == null) return "—";
@@ -788,9 +788,9 @@ document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
 });
 fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 
-// data/daily_gains.json vive no squadrats-map, mesmo princípio do squadrats.json —
+// data/daily_gains.json vive no squadrats-club, mesmo princípio do squadrats.json —
 // {dia, atletas: {nome: {campo: delta}}}, só campos que mudaram nesse dia.
-const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-map/data/data/daily_gains.json";
+const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/daily_gains.json";
 let ganhosData = null;
 // sem metrica própria — segue metricaSquadrats, a mesma que o clique no
 // cabeçalho da tabela principal já controla (um selector só, não dois)
