@@ -28,11 +28,27 @@ recentes) e um `before`/`cursor` construído a partir do cursorData de cada
 entrada (testado à mão) também não avançou a janela, fica por confirmar,
 não vale a pena persegui-lo agora. Em vez disso, o script pede sempre as N
 mais recentes do CLUBE INTEIRO e FUNDE com o activities.json já existente
-por id, sem apagar entradas antigas. Com 5 atletas seguidos e poucas
-actividades por dia, N=20 (todo o clube, 10 membros) cobre folgadamente um
-dia; o histórico acumula-se corrida a corrida, como o append_events.py do
-squadrats-club faz com os eventos. Só perde o que aconteceu antes da
-primeira vez que este script correu: falha única, aceitável.
+por id, sem apagar entradas antigas. O histórico acumula-se corrida a
+corrida, como o append_events.py do squadrats-club faz com os eventos.
+
+Segunda fonte, feed de PERFIL: com 10 membros a competir pelas mesmas 20
+vagas do feed de clube, quem posta menos fica diluído (num teste real, um
+dos 5 atletas seguidos não apareceu nenhuma vez). O perfil de cada atleta
+(/athletes/<id>) resolve isto: não tem endpoint /feed próprio (testei
+várias combinações, 404 sempre), mas a própria página vem com um bloco
+data-react-props (React hidratado no servidor) que já traz
+appContext.preFetchedEntries, a MESMA forma de activity que o feed de
+clube. A maioria das entradas pré-carregadas não são actividades (são
+cartões de "Challenge", desafios/badges do Strava) -- filtra-se por
+entity=="Activity". Sem paginação nenhuma (não há "ver mais" na página);
+tipicamente só 1-4 actividades por atleta, mas cada um tem sempre a fatia
+dele garantida, ao contrário do feed de clube. As duas fontes fundem-se no
+mesmo activities.json, por id; sobreporem-se nalguma actividade não faz mal.
+
+Só perde o que aconteceu antes da primeira vez que este script correu, ou
+o que nunca aparecer em nenhuma das duas janelas entre uma corrida e a
+seguinte (falha rara, aceitável por agora -- ver README para a opção de um
+cron mais frequente só para isto, se vier a fazer falta).
 
 Falha com exit != 0 se a sessão expirou (mesmo critério do scrape.py).
 """
@@ -44,6 +60,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from bs4 import BeautifulSoup
 
 from comum import HEADERS
 from scrape import BASE
@@ -121,6 +138,32 @@ def buscar_feed(s, num_entries=NUM_ENTRIES):
     return dados.get("entries", [])
 
 
+def buscar_perfil_atividades(s, athlete_id):
+    """Actividades reais (entity=="Activity") pré-carregadas na página de
+    perfil do atleta. Sem endpoint /feed próprio: /athletes/<id>/feed dá 404
+    com qualquer combinação de parâmetros que testei. Os dados vêm embutidos
+    num atributo data-react-props (o mesmo mecanismo de hidratação React do
+    resto do site), na forma {"activity": {...}} igual à do feed de clube.
+    Devolve [] em silêncio se a página não tiver esse bloco (perfil privado,
+    conta suspensa, estrutura mudou) -- um atleta sem correspondência aqui
+    não deve travar os outros 4."""
+    r = s.get(f"{BASE}/athletes/{athlete_id}", headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    if "/login" in r.url:
+        sys.exit("Sessão expirada: renovar secret STRAVA_SESSION.")
+    soup = BeautifulSoup(r.text, "html.parser")
+    tag = next((t for t in soup.select("[data-react-props]")
+               if "startDate" in (t.get("data-react-props") or "")), None)
+    if not tag:
+        return []
+    try:
+        props = json.loads(tag["data-react-props"])
+    except (KeyError, ValueError):
+        return []
+    entries = (props.get("appContext") or {}).get("preFetchedEntries") or []
+    return [e for e in entries if e.get("entity") == "Activity"]
+
+
 def fundir(antigas, novas):
     """Junta por id, a versão nova substitui a antiga (kudos/edições não
     interessam aqui, mas por segurança fica sempre a mais recente vista).
@@ -139,9 +182,19 @@ def main():
     s = requests.Session()
     s.cookies.set("_strava4_session", cookie, domain=".strava.com")
 
-    novas = parse_entries(buscar_feed(s))
+    do_clube = parse_entries(buscar_feed(s))
+    print(f"feed de clube: {len(do_clube)} actividade(s) dos 5 seguidos")
+
+    do_perfil = []
+    for athlete_id, nome in ATLETAS_SQUADRATS.items():
+        linhas_atleta = parse_entries(buscar_perfil_atividades(s, athlete_id))
+        print(f"perfil de {nome}: {len(linhas_atleta)} actividade(s)")
+        do_perfil += linhas_atleta
+
+    # as duas fontes podem trazer a mesma actividade; por id, a última ganha
+    novas = list({l["id"]: l for l in do_clube + do_perfil}.values())
     if not novas:
-        sys.exit("0 actividades dos 5 atletas seguidos: API mudou ou sessão sem acesso ao clube.")
+        sys.exit("0 actividades dos 5 atletas seguidos, nas duas fontes: API mudou ou sessão sem acesso.")
 
     antigas = []
     if OUT.exists():
@@ -151,7 +204,7 @@ def main():
     out = {"gerado": datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
            "linhas": linhas}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(novas)} na janela actual ({n_novas} nova(s) desde a última corrida), "
+    print(f"{len(novas)} distintas nas duas fontes ({n_novas} nova(s) desde a última corrida), "
           f"{len(linhas)} no total -> {OUT.name}")
 
 

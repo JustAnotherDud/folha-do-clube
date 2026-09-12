@@ -90,7 +90,25 @@ The API's `page`/`before` pagination didn't reproduce in manual testing, so
 the script always fetches the club's latest `N=20` activities (the whole
 10-member club, not just the 5 tracked) and **merges** them into
 `activities.json` by id instead of replacing it: old rows that fall out of
-that window stay. With 5 tracked athletes and modest daily volume, 20 covers
-a day easily; history accumulates run by run, same idea as squadrats-club's
-`append_events.py`. The only gap is whatever happened before this script's
-first run.
+that window stay. History accumulates run by run, same idea as
+squadrats-club's `append_events.py`.
+
+**Second source, per-athlete profile.** With 10 members competing for the
+same 20 club-feed slots, a less active athlete gets crowded out entirely
+(one of the 5 tracked showed up zero times in a real test). `/athletes/<id>`
+has no `/feed` endpoint of its own (tried every parameter combination that
+worked for the club, all 404), but the profile page itself ships with a
+`data-react-props` attribute (server-side React hydration, same mechanism
+the rest of the site uses) holding `appContext.preFetchedEntries`, the same
+`activity` shape as the club feed. Most pre-fetched entries aren't
+activities (they're "Challenge" cards, Strava's badge/challenge noise),
+filtered by `entity == "Activity"`. No pagination at all here either
+(no "load more" control on the page); typically 1-4 activities per athlete,
+but every one of the 5 always gets its own slice, unlike the club feed.
+
+Both sources feed the same merge, deduplicated by id. The only real gap left
+is an activity that never shows up in either window between one run and the
+next: rare enough with both sources combined that it isn't worth a separate,
+more frequent cron just for this script, at least for now. If real data
+shows otherwise, that's the fallback to reach for, without touching the
+main daily cadence.
