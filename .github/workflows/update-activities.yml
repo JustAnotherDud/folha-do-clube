@@ -1,0 +1,56 @@
+name: actualizar actividades
+
+# Workflow à parte do "actualizar dados" (scrape.py/scrape_prs.py, 1x/dia):
+# scrape_activities.py só vê uma janela pequena de actividades recentes a
+# cada corrida (feed de clube: ~2 vagas por atleta, dividido por 10 membros;
+# feed de perfil: tipicamente 2-4 por atleta, sem paginação nenhuma nas duas
+# fontes). Com 1x/dia, medido no Pedro: ~84% das actividades dele dos
+# últimos 30 dias nunca chegavam a ser vistas (19 no Strava, 2-3 no
+# activities.json). A 4x/dia, uma actividade só se perde se o mesmo atleta
+# postar mais do que a janela aguenta DENTRO de 6h, não de 24h -- encolhe a
+# perda, não a elimina (continua sem paginação, ver scrape_activities.py).
+#
+# Cadência própria de propósito: NÃO sobe a do scrape.py/scrape_prs.py
+# (KOMs/Top10s/Best Efforts), que já tem o seu próprio orçamento de pedidos
+# e cadência decidida à parte. Este script é leve (1 + 5 pedidos, com
+# PAGE_DELAY entre eles) e half-a-dúzia de vezes mais barato por corrida do
+# que o scrape.py.
+#
+# Minuto 7, não 0, mesma razão do squadrats-club (o minuto certo é o pico de
+# carga documentado do scheduler do GitHub Actions).
+on:
+  schedule:
+    - cron: "7 0,6,12,18 * * *"   # 4x/dia, de 6 em 6h
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: folha-do-clube-activities
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: scrape Strava (Actividades, feed do clube + perfil)
+        env:
+          STRAVA_SESSION: ${{ secrets.STRAVA_SESSION }}
+        run: python scrape_activities.py
+      - name: commit se houver mudanças
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add activities.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): actividades $(date -u +%FT%H:%M)Z"
+            git push
+          else
+            echo "sem alterações"
+          fi

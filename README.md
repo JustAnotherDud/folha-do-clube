@@ -15,10 +15,12 @@ reachable.
 
 ## How the data is updated
 
-**Automatic**, via `.github/workflows/update.yml`: runs every day at 05:30 UTC
-(and on `workflow_dispatch`, manually), runs `scrape.py` + `scrape_prs.py` +
-`scrape_activities.py`, and only commits/pushes if something actually
-changed. Nothing to do by hand day to day.
+**Automatic**, two workflows. `.github/workflows/update.yml` runs every day at
+05:30 UTC (and on `workflow_dispatch`), `scrape.py` + `scrape_prs.py`.
+`.github/workflows/update-activities.yml` runs `scrape_activities.py` on its
+own, 4x/day (every 6h): see the "Club activity feed" section below for why
+it needs a tighter cadence than the rest. Both only commit/push if something
+actually changed. Nothing to do by hand day to day.
 
 Manual, only to force an update outside the cron window or to test locally:
 
@@ -106,9 +108,32 @@ filtered by `entity == "Activity"`. No pagination at all here either
 (no "load more" control on the page); typically 1-4 activities per athlete,
 but every one of the 5 always gets its own slice, unlike the club feed.
 
-Both sources feed the same merge, deduplicated by id. The only real gap left
-is an activity that never shows up in either window between one run and the
-next: rare enough with both sources combined that it isn't worth a separate,
-more frequent cron just for this script, at least for now. If real data
-shows otherwise, that's the fallback to reach for, without touching the
-main daily cadence.
+Both sources feed the same merge, deduplicated by id.
+
+**It wasn't rare enough.** Real data made the gap concrete: Pedro's profile
+showed 19 activities in the last 4 weeks (Strava's own "Total Activities"
+count, ~0.7/day), but with the scraper running once a day, only 2-3 ever
+made it into `activities.json`: about 84% silently lost, because both
+windows are small (club feed: ~2 slots per athlete once split 10 ways;
+profile: typically 2-4, mostly crowded out by "Challenge" cards) and neither
+paginates backward. Once something falls out, it's gone for good, not just
+late.
+
+**Mitigation (2026-09-13): a dedicated, more frequent cron for this script
+only**, `update-activities.yml`, 4x/day instead of 1x/day, **not** touching
+`scrape.py`/`scrape_prs.py`'s cadence or request budget (they're a separate
+workflow, separate schedule, separate concern). At 4x/day an activity is
+only lost if the same athlete posts more than the window holds *within 6h*,
+not within 24h. Pedro's actual pattern (bursty but well under that in any
+6h stretch) would have been almost entirely captured. Cost: 6 requests per
+run (1 club feed + 5 profiles, same session, `PAGE_DELAY` between them) vs.
+the tens-to-hundreds `scrape.py` already makes in one daily run: a small
+addition on the same authenticated session, not a new risk category.
+GitHub Actions minutes are free either way (public repo).
+
+**This does not fix the underlying limit.** Still no way to page backward in
+either source; 4x/day only shrinks the *window* in which an activity can be
+lost, it doesn't remove the cap. An athlete bursty enough within a single 6h
+stretch (several activities logged close together) can still lose some.
+Treat this as "day-to-day coverage, much improved", not "complete history",
+which was never the goal.

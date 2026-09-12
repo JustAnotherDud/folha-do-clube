@@ -45,10 +45,17 @@ tipicamente só 1-4 actividades por atleta, mas cada um tem sempre a fatia
 dele garantida, ao contrário do feed de clube. As duas fontes fundem-se no
 mesmo activities.json, por id; sobreporem-se nalguma actividade não faz mal.
 
-Só perde o que aconteceu antes da primeira vez que este script correu, ou
-o que nunca aparecer em nenhuma das duas janelas entre uma corrida e a
-seguinte (falha rara, aceitável por agora -- ver README para a opção de um
-cron mais frequente só para isto, se vier a fazer falta).
+Cadência (2026-09-13): corre à parte do resto da folha, workflow próprio
+(.github/workflows/update-activities.yml), 4x/dia -- não 1x/dia como o
+scrape.py/scrape_prs.py. Medido no perfil do Pedro: 19 actividades em 4
+semanas (~0,7/dia) mas 84% delas nunca chegavam a ser vistas com uma corrida
+só por dia, porque a janela de cada fonte é pequena (feed de clube: ~2 vagas
+por atleta, dividido por 10; feed de perfil: tipicamente 2-4, a maioria do
+espaço ocupada por cartões de "Challenge"). A 4x/dia (de 6 em 6h) uma
+actividade só se perde se o mesmo atleta postar mais actividades do que a
+janela aguenta DENTRO de 6h, muito mais raro do que dentro de 24h. Continua
+SEM paginação: não resolve o tecto de fundo, só encolhe a janela de perda.
+Ver README para a análise completa (custo, porquê 4x, o que não resolve).
 
 Falha com exit != 0 se a sessão expirou (mesmo critério do scrape.py).
 """
@@ -56,6 +63,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -67,6 +75,7 @@ from scrape import BASE
 
 CLUBE_ID = "1238300"  # id numérico de /clubs/nozes; o /feed não aceita o slug
 NUM_ENTRIES = 20
+PAGE_DELAY = 1.5  # entre pedidos, mesmo valor do scrape.py/scrape_prs.py
 
 # Strava athlete id -> nome, EXACTAMENTE os nomes de squadrats-club/data/
 # squadrats.json (squadrats-club/pipeline/atletas.py é a fonte). Só estes 5
@@ -187,6 +196,7 @@ def main():
 
     do_perfil = []
     for athlete_id, nome in ATLETAS_SQUADRATS.items():
+        time.sleep(PAGE_DELAY)
         linhas_atleta = parse_entries(buscar_perfil_atividades(s, athlete_id))
         print(f"perfil de {nome}: {len(linhas_atleta)} actividade(s)")
         do_perfil += linhas_atleta
