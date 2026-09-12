@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-12T13:16Z",
+ "gerado": "2026-09-12T22:29Z",
  "linhas": [
   {
    "posicao": 3,
@@ -2741,6 +2741,20 @@
    "elev_m": 41,
    "tempo": "4:00",
    "data": "2024-07-13",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 4,
+   "tipo": "Run",
+   "segmento": "N3 Quinta dos Anjos",
+   "url": "https://www.strava.com/segments/8017378",
+   "effort_url": "https://www.strava.com/segment_efforts/3533921686702158416",
+   "dist_km": 0.75,
+   "elev_m": 21,
+   "tempo": "3:16",
+   "data": "2026-09-12",
    "atleta": "Xeira",
    "cidade": "Santarém",
    "pais": "Portugal"
