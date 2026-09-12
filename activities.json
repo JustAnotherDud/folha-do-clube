@@ -1,0 +1,185 @@
+{
+ "gerado": "2026-09-12T13:17Z",
+ "linhas": [
+  {
+   "id": "20123168104",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-10T21:44:09Z",
+   "duracao_s": 3924,
+   "dist_km": 15.15,
+   "ritmo": "4:19 /km"
+  },
+  {
+   "id": "20109597009",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-09T22:00:52Z",
+   "duracao_s": 3836,
+   "dist_km": 15.1,
+   "ritmo": "4:14 /km"
+  },
+  {
+   "id": "20080829867",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-07T21:28:56Z",
+   "duracao_s": 3847,
+   "dist_km": 15.08,
+   "ritmo": "4:15 /km"
+  },
+  {
+   "id": "20067366239",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-06T21:24:53Z",
+   "duracao_s": 3765,
+   "dist_km": 15.03,
+   "ritmo": "4:10 /km"
+  },
+  {
+   "id": "20057838693",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-06T09:04:46Z",
+   "duracao_s": 2410,
+   "dist_km": 10.48,
+   "ritmo": "3:50 /km"
+  },
+  {
+   "id": "20049233185",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-05T14:44:25Z",
+   "duracao_s": 3886,
+   "dist_km": 15.09,
+   "ritmo": "4:10 /km"
+  },
+  {
+   "id": "20026206377",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-03T21:22:16Z",
+   "duracao_s": 3976,
+   "dist_km": 15.14,
+   "ritmo": "329 m"
+  },
+  {
+   "id": "20019348178",
+   "atleta": "Zé",
+   "tipo": "Run",
+   "inicio": "2026-09-03T12:11:01Z",
+   "duracao_s": 1759,
+   "dist_km": 6.22,
+   "ritmo": "4:42 /km"
+  },
+  {
+   "id": "20010655811",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-02T18:31:39Z",
+   "duracao_s": 3870,
+   "dist_km": 15.05,
+   "ritmo": "330 m"
+  },
+  {
+   "id": "20004150295",
+   "atleta": "Zé",
+   "tipo": "Run",
+   "inicio": "2026-09-02T11:16:48Z",
+   "duracao_s": 1861,
+   "dist_km": 6.26,
+   "ritmo": "4:53 /km"
+  },
+  {
+   "id": "19995790414",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-09-01T18:37:07Z",
+   "duracao_s": 4035,
+   "dist_km": 15.6,
+   "ritmo": "334 m"
+  },
+  {
+   "id": "19991860336",
+   "atleta": "Carolina",
+   "tipo": "Run",
+   "inicio": "2026-09-01T14:30:33Z",
+   "duracao_s": 4088,
+   "dist_km": 10.32,
+   "ritmo": "6:28 /km"
+  },
+  {
+   "id": "19988942135",
+   "atleta": "Zé",
+   "tipo": "Run",
+   "inicio": "2026-09-01T11:21:14Z",
+   "duracao_s": 1773,
+   "dist_km": 6.2,
+   "ritmo": "4:46 /km"
+  },
+  {
+   "id": "19980522513",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-08-31T18:20:28Z",
+   "duracao_s": 3875,
+   "dist_km": 15.07,
+   "ritmo": "321 m"
+  },
+  {
+   "id": "19980130432",
+   "atleta": "Pedro",
+   "tipo": "Run",
+   "inicio": "2026-08-31T18:13:42Z",
+   "duracao_s": 1893,
+   "dist_km": 5.62,
+   "ritmo": "5:37 /km"
+  },
+  {
+   "id": "19974429564",
+   "atleta": "Zé",
+   "tipo": "Run",
+   "inicio": "2026-08-31T10:54:55Z",
+   "duracao_s": 1765,
+   "dist_km": 6.2,
+   "ritmo": "4:44 /km"
+  },
+  {
+   "id": "19967487205",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-08-30T16:42:36Z",
+   "duracao_s": 5799,
+   "dist_km": 22.49,
+   "ritmo": "4:18 /km"
+  },
+  {
+   "id": "19953897183",
+   "atleta": "Zé",
+   "tipo": "Run",
+   "inicio": "2026-08-29T17:42:42Z",
+   "duracao_s": 6510,
+   "dist_km": 20.42,
+   "ritmo": "5:19 /km"
+  },
+  {
+   "id": "19952811241",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-08-29T16:34:09Z",
+   "duracao_s": 3821,
+   "dist_km": 15.09,
+   "ritmo": "4:13 /km"
+  },
+  {
+   "id": "19940137741",
+   "atleta": "Xeira",
+   "tipo": "Run",
+   "inicio": "2026-08-28T18:44:24Z",
+   "duracao_s": 4005,
+   "dist_km": 15.57,
+   "ritmo": "335 m"
+  }
+ ]
+}
