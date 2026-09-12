@@ -16,15 +16,16 @@ reachable.
 ## How the data is updated
 
 **Automatic**, via `.github/workflows/update.yml`: runs every day at 05:30 UTC
-(and on `workflow_dispatch`, manually), runs `scrape.py` + `scrape_prs.py`,
-and only commits/pushes if something actually changed. Nothing to do by hand
-day to day.
+(and on `workflow_dispatch`, manually), runs `scrape.py` + `scrape_prs.py` +
+`scrape_activities.py`, and only commits/pushes if something actually
+changed. Nothing to do by hand day to day.
 
 Manual, only to force an update outside the cron window or to test locally:
 
 ```
 STRAVA_SESSION=<_strava4_session cookie> python scrape.py
 STRAVA_SESSION=<_strava4_session cookie> python scrape_prs.py
+STRAVA_SESSION=<_strava4_session cookie> python scrape_activities.py
 ```
 
 `STRAVA_SESSION` is the authenticated session cookie (DevTools → Application →
@@ -64,3 +65,32 @@ widget for Ride, only the Power Curve, which is a different thing. `index.html`
 shows the result in a "Best Efforts 🏃" table below the KOM ranking, with the
 best time per distance highlighted; it loads `prs.json` optionally — the KOM
 page keeps working before the script's first run (file doesn't exist yet).
+
+## Club activity feed (`scrape_activities.py`)
+
+Writes `activities.json`: one row per activity (athlete, type, start time,
+duration, distance, pace), only for the 5 athletes also tracked by
+[squadrats-club](https://github.com/JustAnotherDud/squadrats-club): the
+running club has 10 members, the other 5 aren't relevant there. Consumed by
+squadrats-club's own pipeline (`raw.githubusercontent.com/.../main/data/
+activities.json`, same cross-repo pattern it already uses in reverse for
+`squadrats.json`/`daily_gains.json`) to line activities up against
+squadratinhos gains.
+
+Source: `/clubs/<club_id>/feed?club_id=<id>&feed_type=club&num_entries=N`, the
+JSON API behind the club's "Recent Activity" page (React): not HTML to
+scrape like `scrape.py`, not an AJAX HTML fragment like `scrape_prs.py`, a
+clean JSON payload with `athlete`, `type`, `startDate` (ISO-8601 UTC, to the
+second), `elapsedTime` (seconds), and `stats` (distance/pace as marked-up
+text, parsed the same way `scrape.py` parses `<td>` cells). Not publicly
+documented by Strava; found by inspecting the authenticated session
+(2026-09-12), see the script's docstring for the exact field names.
+
+The API's `page`/`before` pagination didn't reproduce in manual testing, so
+the script always fetches the club's latest `N=20` activities (the whole
+10-member club, not just the 5 tracked) and **merges** them into
+`activities.json` by id instead of replacing it: old rows that fall out of
+that window stay. With 5 tracked athletes and modest daily volume, 20 covers
+a day easily; history accumulates run by run, same idea as squadrats-club's
+`append_events.py`. The only gap is whatever happened before this script's
+first run.

@@ -25,11 +25,15 @@ jobs:
         env:
           STRAVA_SESSION: ${{ secrets.STRAVA_SESSION }}
         run: python scrape_prs.py
+      - name: scrape Strava (Actividades, feed do clube)
+        env:
+          STRAVA_SESSION: ${{ secrets.STRAVA_SESSION }}
+        run: python scrape_activities.py
       - name: commit se houver mudanças
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json localizacoes.json prs.json flagged.json
+          git add data.json localizacoes.json prs.json flagged.json activities.json
           if ! git diff --cached --quiet; then
             # scope "(data)" igual ao do squadrats-club: um único filtro separa
             # commits de dados de commits de código nos dois repos, que é o que
