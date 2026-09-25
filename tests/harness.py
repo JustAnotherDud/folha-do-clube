@@ -254,6 +254,9 @@ def casos_ignorar():
 
             def falso_run(cmd, **kw):
                 cmds.append(cmd)
+                # como o git real: pull --rebase recusa com mudanças por commitar
+                if list(cmd[:2]) == ["git", "pull"] and (tmp / "scrape.py").read_text(encoding="utf-8").splitlines() != antes:
+                    return subprocess.CompletedProcess(cmd, 1, "", "error: cannot pull with rebase: You have unstaged changes.")
                 return subprocess.CompletedProcess(cmd, 0, "", "")
             ign.subprocess.run, antigo = falso_run, subprocess.run
             sys.argv, out, saida = ["ignorar.py", *argv], io.StringIO(), None

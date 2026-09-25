@@ -69,7 +69,13 @@
    "stdout": "adicionado 27218238 (bug no Strava)\npublicado — site actualiza em ~3 min.\n"
   },
   "ignorar:repetido": {
-   "cmds": [],
+   "cmds": [
+    [
+     "git",
+     "pull",
+     "--rebase"
+    ]
+   ],
    "exit": "segmento 30832045 já está na blocklist.",
    "scrape.py": [],
    "stdout": ""
@@ -241,16 +247,16 @@
   },
   "best-efforts #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "ce549c4bcb241c9c"
   },
   "best-efforts estilos": {
    "n": 5273,
-   "sha": "3d02b8b04089d489"
+   "sha": "8f4789ce96ffcef4"
   },
   "best-efforts hash": "#best-efforts",
   "best-efforts paineis": [
-   "tab-koms:true",
-   "tab-best-efforts:false",
+   "tab-koms:false",
+   "tab-best-efforts:true",
    "tab-squadrats:false"
   ],
   "consola": [],

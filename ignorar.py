@@ -34,6 +34,7 @@ def main():
     seg_id = m.group(1)
     motivo = " ".join(sys.argv[2:]) or "bug no Strava"
 
+    run("git", "pull", "--rebase")    # antes de editar: com mudanças por commitar o pull recusa
     src = SCRAPE.read_text(encoding="utf-8")
     if f'"{seg_id}"' in src:
         sys.exit(f"segmento {seg_id} já está na blocklist.")
@@ -44,7 +45,6 @@ def main():
     SCRAPE.write_text(novo, encoding="utf-8")
     print(f"adicionado {seg_id} ({motivo})")
 
-    run("git", "pull", "--rebase")
     run("git", "add", "scrape.py")
     run("git", "commit", "-m", f"chore: ignorar segmento {seg_id} — {motivo}")
     run("git", "push")
