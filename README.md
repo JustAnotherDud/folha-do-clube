@@ -26,8 +26,9 @@ reachable.
 
 `.github/workflows/update.yml` runs every day (cron 05:30 UTC, GitHub often
 starts it later) and on `workflow_dispatch`. It runs `scrape.py` and
-`scrape_prs.py` and commits the data files. `gerado` changes on every run, so
-there is a commit every day.
+`scrape_prs.py` and commits the data files only if something besides `gerado`
+changed. So "actualizado" on the site shows the last real change, not the
+last run.
 
 To run by hand:
 

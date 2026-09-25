@@ -30,7 +30,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json localizacoes.json prs.json flagged.json
-          if ! git diff --cached --quiet; then
+          # só o "gerado" mudou = nada de novo
+          if ! git diff --cached --quiet -I '"gerado"'; then
             git commit -m "chore(data): dados $(date -u +%F)"
             git push
           else
