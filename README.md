@@ -49,6 +49,9 @@ fresh cookie into the Actions secret.
   from activities Strava flagged (bad GPS) are dropped; the check is cached in
   `flagged.json`. These are not the manual "All-Time PRs", and Strava has no
   equivalent for Ride.
+- Members are keyed by first name, or by a nickname in `ALCUNHAS`
+  (`scrape.py`). Two members with the same first name would merge: give one
+  of them a nickname.
 - `ignorar.py <url-or-id> [reason]` adds a buggy segment to `IGNORAR` in
   `scrape.py`, pushes and starts the workflow.
 
