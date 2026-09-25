@@ -312,20 +312,20 @@
   },
   "falha sem-cores #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "6714bb128399febe"
   },
   "falha sem-cores consola": [
    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
   ],
   "falha sem-cores estilos": {
    "n": 5273,
-   "sha": "1f7326fb1646c1ed"
+   "sha": "a7ef74a383e43406"
   },
   "falha sem-cores hash": "#squadrats",
   "falha sem-cores paineis": [
-   "tab-koms:true",
+   "tab-koms:false",
    "tab-best-efforts:false",
-   "tab-squadrats:false"
+   "tab-squadrats:true"
   ],
   "falha sem-data #conta": "<span id=\"conta\"></span>",
   "falha sem-data #f-atleta": "<div id=\"f-atleta\" class=\"pills\"></div>",
@@ -367,7 +367,7 @@
   },
   "falha sem-data #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "6714bb128399febe"
   },
   "falha sem-data consola": [
    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
@@ -375,13 +375,13 @@
   ],
   "falha sem-data estilos": {
    "n": 698,
-   "sha": "045c9ed750ad1c3b"
+   "sha": "a93441f7447bac35"
   },
   "falha sem-data hash": "#squadrats",
   "falha sem-data paineis": [
-   "tab-koms:true",
+   "tab-koms:false",
    "tab-best-efforts:false",
-   "tab-squadrats:false"
+   "tab-squadrats:true"
   ],
   "falha sem-ganhos #conta": "<span id=\"conta\">322 de 322</span>",
   "falha sem-ganhos #f-atleta": {
@@ -435,20 +435,20 @@
   },
   "falha sem-ganhos #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "6714bb128399febe"
   },
   "falha sem-ganhos consola": [
    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
   ],
   "falha sem-ganhos estilos": {
    "n": 5147,
-   "sha": "ddfd7309522185bb"
+   "sha": "056994bc0867e73a"
   },
   "falha sem-ganhos hash": "#squadrats",
   "falha sem-ganhos paineis": [
-   "tab-koms:true",
+   "tab-koms:false",
    "tab-best-efforts:false",
-   "tab-squadrats:false"
+   "tab-squadrats:true"
   ],
   "falha sem-prs #conta": "<span id=\"conta\">322 de 322</span>",
   "falha sem-prs #f-atleta": {
@@ -499,20 +499,20 @@
   },
   "falha sem-prs #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "6714bb128399febe"
   },
   "falha sem-prs consola": [
    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
   ],
   "falha sem-prs estilos": {
    "n": 5046,
-   "sha": "7e5b93bdc479c603"
+   "sha": "70c760c6d3035bce"
   },
   "falha sem-prs hash": "#squadrats",
   "falha sem-prs paineis": [
-   "tab-koms:true",
+   "tab-koms:false",
    "tab-best-efforts:false",
-   "tab-squadrats:false"
+   "tab-squadrats:true"
   ],
   "falha sem-squadrats #conta": "<span id=\"conta\">322 de 322</span>",
   "falha sem-squadrats #f-atleta": {
@@ -563,20 +563,20 @@
   },
   "falha sem-squadrats #tabs": {
    "n": 5,
-   "sha": "2a200a048641be7c"
+   "sha": "6714bb128399febe"
   },
   "falha sem-squadrats consola": [
    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
   ],
   "falha sem-squadrats estilos": {
    "n": 5025,
-   "sha": "86280fb83ffdcb19"
+   "sha": "17b85b88ed49b4c7"
   },
   "falha sem-squadrats hash": "#squadrats",
   "falha sem-squadrats paineis": [
-   "tab-koms:true",
+   "tab-koms:false",
    "tab-best-efforts:false",
-   "tab-squadrats:false"
+   "tab-squadrats:true"
   ],
   "filtro #f-cidade=": {
    "n": 4187,
@@ -1065,17 +1065,17 @@
   },
   "squadrats #tabs": {
    "n": 5,
-   "sha": "ce549c4bcb241c9c"
+   "sha": "6714bb128399febe"
   },
   "squadrats estilos": {
    "n": 5273,
-   "sha": "03ddbcaab7ecaced"
+   "sha": "44e225a7aafc4515"
   },
   "squadrats hash": "#squadrats",
   "squadrats paineis": [
    "tab-koms:false",
-   "tab-best-efforts:true",
-   "tab-squadrats:false"
+   "tab-best-efforts:false",
+   "tab-squadrats:true"
   ],
   "tooltip": "\"Nº de squares de 1609 m visitados.\"|26px|220px|rgb(43, 44, 48)"
  }

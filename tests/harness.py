@@ -316,6 +316,12 @@ SNAP_JS = r"""async () => {
 }"""
 
 
+def separador(page, nome):
+    """Clica no separador e espera pelo hashchange, que é assíncrono."""
+    page.click(f'.tab[data-tab="{nome}"]')
+    page.wait_for_selector(f"#tab-{nome}.panel.active")
+
+
 ORDEM_JSON = ("membros_cores.json", "data.json", "prs.json", "squadrats.json", "daily_gains.json")
 
 
@@ -406,9 +412,9 @@ def casos_site():
         for a in pills[1:3] + pills[1:2] + [""]:
             page.click(f'#f-atleta .pill[data-atleta="{a}"]')
             r[f"pill {a}"] = resumo(page.inner_html("#f-atleta") + page.inner_text("#conta"))
-        page.click('.tab[data-tab="best-efforts"]')
+        separador(page, "best-efforts")
         snap(page, "best-efforts")
-        page.click('.tab[data-tab="squadrats"]')
+        separador(page, "squadrats")
         snap(page, "squadrats")
         for c in page.eval_on_selector_all("#squadrats th[data-c]", "ts => ts.map(t => t.dataset.c)"):
             page.click(f'#squadrats th[data-c="{c}"]')
@@ -433,7 +439,7 @@ def casos_site():
                              ("sem-cores", ["membros_cores"]), ("sem-squadrats", ["squadrats.json"]),
                              ("sem-ganhos", ["daily_gains"])):
             ctx, page, erros = abrir(browser, falhas)
-            page.click('.tab[data-tab="squadrats"]')
+            separador(page, "squadrats")
             snap(page, "falha " + nome)
             r[f"falha {nome} consola"] = erros
             ctx.close()
