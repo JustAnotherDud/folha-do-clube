@@ -32,9 +32,6 @@
   .num { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   body {
-    /* 'Plex Sans' já estava carregada (@font-face acima) mas nunca era
-       aplicada — o corpo do site ficava sempre no Roboto do sistema. Único
-       sítio a mudar: o resto (Plex Cond/Mono) já usa a família certa. */
     font-family: 'Plex Sans', Roboto, "Segoe UI", Arial, sans-serif;
     margin: 0; padding: 16px;
     background: var(--fundo); color: var(--texto);
@@ -42,7 +39,6 @@
     color-scheme: dark;
   }
   h1 { font-size: 20px; margin: 0 0 12px; }
-  h1 small { font-weight: normal; color: var(--suave); font-size: 12px; }
 
   table { border-collapse: collapse; background: var(--painel); }
   th, td { border: 1px solid var(--grelha); padding: 4px 10px; text-align: center; }
@@ -147,9 +143,7 @@
     transition: color .15s; position: relative; }
   #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: #fff; }
   #squadrats th[data-tip] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
-  /* tooltip próprio, sempre por baixo do cabeçalho — o title nativo do
-     browser decide a posição sozinho (normalmente acima do cursor); isto dá
-     controlo total */
+  /* tooltip próprio, sempre por baixo do cabeçalho */
   #squadrats th[data-tip]:hover::after, #squadrats th[data-tip]:focus-visible::after {
     content: attr(data-tip);
     position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
@@ -164,15 +158,11 @@
     margin-top: 3px; border: 5px solid transparent; border-bottom-color: var(--painel-alto);
     z-index: 21; pointer-events: none;
   }
-  /* cabeçalho activo: fundo laranja já é o default de TODOS os th (ver
-     "thead th" acima) — inverter para branco é o único jeito de continuar
-     visível em cima dele */
+  /* cabeçalho activo: invertido, porque todos os th já são laranja */
   #squadrats th.metrica-activa,
   #squadrats th.metrica-activa:hover,
   #squadrats th.metrica-activa:focus-visible { background: #fff; color: var(--laranja); }
-  /* célula sem dado nenhum (v == null): as outras ficam centradas por serem
-     flex (.barcell), não por causa do text-align:right herdado de td.num —
-     esta precisa da regra própria para não desalinhar à direita. */
+  /* sem .barcell, esta célula herdava o text-align:right de td.num */
   #squadrats td.num.vazio { text-align: center; color: var(--grelha); }
   #squadrats .barcell { display: flex; flex-direction: column; align-items: center; gap: 5px; }
   #squadrats .valorlinha { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
@@ -192,7 +182,7 @@
   #squadrats td.r2 .rank-disco { background: var(--prata); color: var(--prata-tinta); }
   #squadrats td.r3 .rank-disco { background: var(--bronze); color: var(--bronze-tinta); }
 
-  /* --- ganhos diários: ao lado da tabela principal, não noutro separador --- */
+  /* --- ganhos diários --- */
   .squadrats-cols { display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-start; }
   .squadrats-col-principal { flex: 0 0 auto; }
   .squadrats-col-ganhos { flex: 1 1 380px; max-width: 560px; min-width: 320px; }
@@ -209,7 +199,7 @@
   #ganhos-tabela td.num { text-align: center; }
   #ganhos-tabela td.num.zero { color: var(--grelha); }
   #ganhos-tabela td.num.negativo { color: #e08a6a; }
-  /* maior ganho do dia — destaque ligeiro, não é pódio (sem cor por posição) */
+  /* maior ganho do dia */
   #ganhos-tabela td.num.maior { background: rgba(199,91,18,.16); font-weight: 700; }
   #prs thead tr.metros th {
     background: #8f4a1a; color: #f0d9c8;
@@ -343,7 +333,7 @@
 <script>
 "use strict";
 
-// --- navegação por tabs (estado no hash do URL, p/ ser bookmarkable) ---
+// separador activo no hash do URL
 const TABS = ["koms", "best-efforts", "squadrats"];
 function activarTab(nome) {
   if (!TABS.includes(nome)) nome = TABS[0];
@@ -367,11 +357,7 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g,
     c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
-// Cores de identidade dos membros: fonte única em
-// squadrats-club/data/membros_cores.json (partilhada com o club.html do mapa),
-// carregada em runtime mais abaixo. Isto é só o fallback offline — mesma
-// paleta, para o site não ficar sem cor se a fetch falhar. O resto do clube
-// (quem não está nesta lista) continua a apanhar cor por hash de PALETA.
+// Fallback de CORES_URL (squadrats-club). Quem não está aqui tem cor por hash.
 let CORES_FIXAS = { "Zé": "#e03131", "Xeira": "#9c46d8",
                     "Carolina": "#c99a00", "Inês S.": "#e8710a",
                     "Inês": "#e8710a", "Ana": "#12889c", "Pedro": "#2f5fd0" };
@@ -379,7 +365,7 @@ const PALETA = ["#2e7d32", "#1565c0", "#e65100", "#5d4037",
                 "#37474f", "#6a1b9a", "#00695c", "#9e9d24"];
 function corAtleta(n) {
   if (CORES_FIXAS[n]) return CORES_FIXAS[n];
-  let h = 0;                       // hash determinístico: cor estável entre dias
+  let h = 0;
   for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
   return PALETA[h % PALETA.length];
 }
@@ -392,8 +378,7 @@ function dataPt(iso) {
   return `${d}/${m}/${a}`;
 }
 
-// "tempo" vem normalizado do scraper como "M:SS" ou "H:MM:SS";
-// aceita também o formato antigo "Ns" por segurança em dados não migrados.
+// "M:SS" ou "H:MM:SS" -> segundos
 function tempoSegundos(t) {
   if (t.endsWith("s") && !t.includes(":")) return parseInt(t, 10);
   const p = t.split(":").map(Number);
@@ -405,7 +390,7 @@ function velKmh(l) {
   const seg = tempoSegundos(l.tempo);
   return seg > 0 && l.dist_km > 0 ? l.dist_km / (seg / 3600) : 0;
 }
-// Ride mostra-se em km/h; Run/Walk/Trail Run mostra-se em ritmo min:seg por km.
+// Ride em km/h, o resto em min/km
 function formatarRitmo(l) {
   if (!l.vel_kmh) return "—";
   if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
@@ -414,17 +399,15 @@ function formatarRitmo(l) {
   return `${m}:${String(s).padStart(2, "0")} /km`;
 }
 
-// distância -> metros. Fonte única: ordena as colunas (asc) e alimenta a
-// linha de conversão por baixo dos labels. Ordem = a "oficial" da Strava.
+// distância -> metros: ordena as colunas e dá a linha de metros
 const DIST_METROS = {
   "400m": 400, "1/2 mile": 805, "1K": 1000, "1 mile": 1609, "2 mile": 3219,
   "5K": 5000, "10K": 10000, "15K": 15000, "10 mile": 16093, "20K": 20000,
   "Half-Marathon": 21098, "25K": 25000, "30K": 30000, "Marathon": 42195, "50K": 50000,
 };
-// "5 000 m" — separador de milhar manual (toLocaleString pt-PT não agrupa 4 dígitos)
+// "5 000 m": o toLocaleString pt-PT não agrupa 4 dígitos
 const fmtMetros = m => String(m).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " m";
 
-// prs.json guarda {tempo, url} por distância; aceita também string (formato antigo).
 function celPR(v) {
   if (v == null) return null;
   return typeof v === "string" ? { tempo: v, url: "" } : { tempo: v.tempo, url: v.url || "" };
@@ -433,7 +416,6 @@ function celPR(v) {
 function renderPRs(prsData) {
   const atletasData = prsData.atletas;
   const nomes = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
-  // distâncias presentes em qualquer atleta, ordenadas por metros (asc)
   const distancias = [...new Set(nomes.flatMap(n => Object.keys(atletasData[n])))]
     .filter(d => d in DIST_METROS)
     .sort((a, b) => DIST_METROS[a] - DIST_METROS[b]);
@@ -493,8 +475,7 @@ function ranking() {
     </tr>`).join("");
 }
 
-// url do segmento = id único; usado para contar quantos atletas distintos
-// têm pelo menos um registo (KOM/Top10) nesse segmento.
+// url do segmento -> atletas com KOM/Top10 nele
 let atletasPorSegmento = {};
 function calcularAtletasPorSegmento() {
   const por = {};
@@ -629,9 +610,6 @@ document.querySelectorAll("#tabela th[data-k]").forEach(th =>
 document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
   el.addEventListener("input", render));
 
-// Cores dos membros da fonte única (branch main do squadrats-club). Sobrepõe o
-// fallback offline de CORES_FIXAS; se falhar, fica o fallback e o site abre na
-// mesma. Não bloqueia o render principal se o data.json chegar primeiro.
 const CORES_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/main/data/membros_cores.json";
 Promise.all([
   fetch("data.json").then(r => r.json()),
@@ -640,7 +618,6 @@ Promise.all([
   if (c && c.cores) CORES_FIXAS = { ...CORES_FIXAS, ...c.cores };
   linhas = d.linhas;
   for (const l of linhas) l.vel_kmh = velKmh(l);
-  // gerado vem em UTC ("...Z"); mostrar em hora local pt-PT
   document.getElementById("gerado").textContent =
     "actualizado " + new Date(d.gerado).toLocaleString("pt-PT",
       { day: "2-digit", month: "2-digit", year: "numeric",
@@ -654,29 +631,19 @@ Promise.all([
   document.getElementById("gerado").textContent = "falha ao carregar dados — tenta recarregar a página";
 });
 
-// prs.json é opcional (só existe depois da 1ª corrida do scrape_prs.py) —
-// a página de KOMs continua a funcionar normalmente sem ele.
 fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
 
-// squadrats.json vive noutro repo (squadrats-club), publicado no GitHub
-// Pages dele — sem acoplar os dois repos, só consumido como ficheiro
-// estático público (mesmo princípio do prs.json local).
-// raw.githubusercontent.com, não o Pages (2026-08-14): os dados do
-// squadrats-club vivem numa branch `data` própria, sem passar pelo rebuild do
-// Pages — chega mais depressa e sem risco de servir uma versão a meio de
-// deploy.
+// dados do squadrats-club, da branch `data`
 const SQUADRATS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/squadrats.json";
-// UIDs Firebase — só para montar o link do mapa público de cada atleta
-// (squadrats.com/map/{uid}/17), não vêm no squadrats.json.
+// UIDs para o link do mapa público (squadrats.com/map/{uid}/17)
 const SQUADRATS_UID = {
   "Zé": "PjHY1RpxbmgMrQG3ITdTeDa7t6M2",
   "Xeira": "yIVPnafX3WcNbDt5MKWqEZMqUD42",
   "Carolina": "ZF81dc6PXFQm3iEfyNFMsUPlSHz2",
   "Inês S.": "C4bIQgAqI7SlSo7SPsudWM4LSwq2",
-  "Pedro": "zrId7ywBfCQPt28q5VAzpva01ST2", // faltava — adicionado ao ligar o pódio
+  "Pedro": "zrId7ywBfCQPt28q5VAzpva01ST2",
 };
-// übersquadrat/übersquadratinho: o `size` é o N do quadrado NxN (ver
-// squadrats-club/pipeline README) — mostrar como "6x6", não "6".
+// übersquadrat é o N de um quadrado NxN: mostra "6x6"
 const CAMPOS_UBER = new Set(["ubersquadrat", "ubersquadratinho"]);
 function fmtSquadratsValor(campo, v) {
   if (v == null) return "—";
@@ -692,13 +659,12 @@ let squadratsData = null;
 let metricaSquadrats = "squadrats"; // coluna que manda no pódio e na ordem da tabela
 
 function podioPorCampo(atletas, nomes) {
-  // top 3 de cada coluna (ouro/prata/bronze) — usado no pódio E para marcar
-  // as 3 primeiras linhas da régua na tabela
+  // atletas por ordem em cada coluna: pódio e discos da tabela
   const podio = {};
   for (const c of CAMPOS_SQUADRATS) {
     const ord = nomes.filter(n => atletas[n][c] != null)
       .sort((a, b) => atletas[b][c] - atletas[a][c]);
-    podio[c] = ord; // ord[0]=ouro, ord[1]=prata, ord[2]=bronze
+    podio[c] = ord;
   }
   return podio;
 }
@@ -788,12 +754,10 @@ document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
 });
 fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
 
-// data/daily_gains.json vive no squadrats-club, mesmo princípio do squadrats.json —
-// {dia, atletas: {nome: {campo: delta}}}, só campos que mudaram nesse dia.
+// {dias: [{data, atletas: {nome: {campo: delta}}}]}, só o que mudou em cada dia
 const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/daily_gains.json";
 let ganhosData = null;
-// sem metrica própria — segue metricaSquadrats, a mesma que o clique no
-// cabeçalho da tabela principal já controla (um selector só, não dois)
+// a métrica é a mesma da tabela (metricaSquadrats)
 
 function dataPtCurta(iso) {
   const [, m, d] = iso.split("-");
@@ -802,14 +766,9 @@ function dataPtCurta(iso) {
 
 const GANHOS_JANELA_DIAS = 14;
 
-// preenche os dias sem entrada (sem actividade nenhuma) para a janela ficar
-// contínua — sem isto os "buracos" no calendário nem apareciam
+// últimos GANHOS_JANELA_DIAS até hoje (UTC), com os dias sem ganhos vazios
 function janelaComBuracos(dias) {
   const porData = Object.fromEntries(dias.map(d => [d.data, d.atletas]));
-  // fim é sempre HOJE (UTC, mesma convenção do "dia" no daily_gains.json —
-  // ver fetch_club_koms.py), nunca o último dia com dados. Senão a janela
-  // parava no último ganho registado e "hoje" só aparecia depois de alguém
-  // sincronizar — o utilizador quer ver hoje na lista mesmo a zero.
   const hoje = new Date().toISOString().slice(0, 10);
   const fim = new Date(hoje + "T00:00:00Z");
   const janela = [];
@@ -856,8 +815,7 @@ function renderGanhosTabela(dias, nomes) {
   document.querySelector("#ganhos-tabela thead tr").innerHTML =
     `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
   document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
-    // maior ganho do dia entre os atletas — só destaca se for positivo, e só
-    // se houver algo a comparar (dia todo a "—" não tem "maior" nenhum)
+    // destaca o maior ganho do dia, se for positivo
     const valoresDia = nomes.map(n => (dia.atletas[n] || {})[metricaSquadrats] || 0);
     const maiorDia = Math.max(0, ...valoresDia);
     const cels = nomes.map(n => {
