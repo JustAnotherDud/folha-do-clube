@@ -380,7 +380,6 @@ function dataPt(iso) {
 
 // "M:SS" ou "H:MM:SS" -> segundos
 function tempoSegundos(t) {
-  if (t.endsWith("s") && !t.includes(":")) return parseInt(t, 10);
   const p = t.split(":").map(Number);
   while (p.length < 3) p.unshift(0);
   const [h, m, s] = p;
@@ -408,10 +407,9 @@ const DIST_METROS = {
 // "5 000 m": o toLocaleString pt-PT não agrupa 4 dígitos
 const fmtMetros = m => String(m).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " m";
 
-function celPR(v) {
-  if (v == null) return null;
-  return typeof v === "string" ? { tempo: v, url: "" } : { tempo: v.tempo, url: v.url || "" };
-}
+// "actualizado dd/mm/aaaa, hh:mm" em hora local
+const actualizado = iso => "actualizado " + new Date(iso).toLocaleString("pt-PT",
+  { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
 
 function renderPRs(prsData) {
   const atletasData = prsData.atletas;
@@ -425,7 +423,7 @@ function renderPRs(prsData) {
   for (const d of distancias) {
     let melhorNome = null, melhorSeg = Infinity;
     for (const n of nomes) {
-      const c = celPR(atletasData[n][d]);
+      const c = atletasData[n][d];
       if (!c) continue;
       const seg = tempoSegundos(c.tempo);
       if (seg < melhorSeg) { melhorSeg = seg; melhorNome = n; }
@@ -442,7 +440,7 @@ function renderPRs(prsData) {
     <tr>
       <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
       ${distancias.map(d => {
-        const c = celPR(atletasData[n][d]);
+        const c = atletasData[n][d];
         if (!c) return `<td class="vazio">—</td>`;
         const inner = c.url
           ? `<a href="${escHtml(c.url)}" target="_blank" rel="noopener">${escHtml(c.tempo)}</a>`
@@ -451,10 +449,7 @@ function renderPRs(prsData) {
       }).join("")}
     </tr>`).join("");
 
-  document.getElementById("prs-gerado").textContent =
-    "actualizado " + new Date(prsData.gerado).toLocaleString("pt-PT",
-      { day: "2-digit", month: "2-digit", year: "numeric",
-        hour: "2-digit", minute: "2-digit" });
+  document.getElementById("prs-gerado").textContent = actualizado(prsData.gerado);
 }
 
 function ranking() {
@@ -476,12 +471,7 @@ function ranking() {
 }
 
 // url do segmento -> atletas com KOM/Top10 nele
-let atletasPorSegmento = {};
-function calcularAtletasPorSegmento() {
-  const por = {};
-  for (const l of linhas) (por[l.url] ??= new Set()).add(l.atleta);
-  atletasPorSegmento = por;
-}
+const atletasPorSegmento = {};
 
 function filtradas() {
   const ft = document.getElementById("f-tipo").value;
@@ -561,17 +551,14 @@ function render() {
 }
 
 function popularFiltros() {
-  const op = (sel, vals) => {
+  const op = (sel, vals, label = escHtml) => {
     const s = document.getElementById(sel);
     for (const v of vals) s.insertAdjacentHTML("beforeend",
-      `<option value="${escHtml(v)}">${escHtml(v)}</option>`);
+      `<option value="${escHtml(v)}">${label(v)}</option>`);
   };
   op("f-pais", [...new Set(linhas.map(l => l.pais).filter(Boolean))].sort());
   op("f-cidade", [...new Set(linhas.map(l => l.cidade).filter(Boolean))].sort());
-  const st = document.getElementById("f-tipo");
-  for (const v of [...new Set(linhas.map(l => l.tipo))].sort())
-    st.insertAdjacentHTML("beforeend",
-      `<option value="${escHtml(v)}">${emojiTipo(v)}</option>`);
+  op("f-tipo", [...new Set(linhas.map(l => l.tipo))].sort(), emojiTipo);
 
   const atletas = [...new Set(linhas.map(l => l.atleta))].sort();
   document.getElementById("f-atleta").innerHTML =
@@ -617,13 +604,12 @@ Promise.all([
 ]).then(([d, c]) => {
   if (c && c.cores) CORES_FIXAS = { ...CORES_FIXAS, ...c.cores };
   linhas = d.linhas;
-  for (const l of linhas) l.vel_kmh = velKmh(l);
-  document.getElementById("gerado").textContent =
-    "actualizado " + new Date(d.gerado).toLocaleString("pt-PT",
-      { day: "2-digit", month: "2-digit", year: "numeric",
-        hour: "2-digit", minute: "2-digit" });
+  for (const l of linhas) {
+    l.vel_kmh = velKmh(l);
+    (atletasPorSegmento[l.url] ??= new Set()).add(l.atleta);
+  }
+  document.getElementById("gerado").textContent = actualizado(d.gerado);
   popularFiltros();
-  calcularAtletasPorSegmento();
   ranking();
   render();
 }).catch(err => {
@@ -679,18 +665,14 @@ function nomeLigado(n) {
 function renderSquadratsPodio(atletas, podio) {
   document.getElementById("podio-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
   const ord = podio[metricaSquadrats];
-  const posicoes = [
-    { classe: "p2", n: 2, cor: "prata", tinta: "prata-tinta", brilho: "prata-brilho" },
-    { classe: "p1", n: 1, cor: "ouro", tinta: "ouro-tinta", brilho: "ouro-brilho" },
-    { classe: "p3", n: 3, cor: "bronze", tinta: "bronze-tinta", brilho: "bronze-brilho" },
-  ];
-  document.getElementById("squadrats-podio").innerHTML = posicoes.map(p => {
-    const nome = ord[p.n - 1];
-    const estilo = `--medalha:var(--${p.cor});--medalha-brilho:var(--${p.brilho});--medalha-tinta:var(--${p.tinta})`;
-    if (!nome) return `<div class="riser ${p.classe}" style="${estilo}"></div>`;
+  // ordem no ecrã: prata, ouro, bronze
+  document.getElementById("squadrats-podio").innerHTML = [[2, "prata"], [1, "ouro"], [3, "bronze"]].map(([n, m]) => {
+    const nome = ord[n - 1];
+    const estilo = `--medalha:var(--${m});--medalha-brilho:var(--${m}-brilho);--medalha-tinta:var(--${m}-tinta)`;
+    if (!nome) return `<div class="riser p${n}" style="${estilo}"></div>`;
     return `
-    <div class="riser ${p.classe}" style="${estilo}">
-      <div class="disco">${p.n}</div>
+    <div class="riser p${n}" style="${estilo}">
+      <div class="disco">${n}</div>
       <div class="chip"><span class="dot" style="background:${corAtleta(nome)}"></span>
         <span class="nome">${escHtml(nome)}</span></div>
       <div class="valor num">${escHtml(fmtSquadratsValor(metricaSquadrats, atletas[nome][metricaSquadrats]))}</div>
@@ -734,10 +716,7 @@ function renderSquadrats(d) {
   document.querySelectorAll("#squadrats th[data-c]").forEach(th =>
     th.classList.toggle("metrica-activa", th.dataset.c === metricaSquadrats));
 
-  document.getElementById("squadrats-gerado").textContent =
-    "actualizado " + new Date(d.atualizado).toLocaleString("pt-PT",
-      { day: "2-digit", month: "2-digit", year: "numeric",
-        hour: "2-digit", minute: "2-digit" });
+  document.getElementById("squadrats-gerado").textContent = actualizado(d.atualizado);
 }
 document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
   th.tabIndex = 0;
@@ -835,9 +814,7 @@ function renderGanhos() {
   const dias = janelaComBuracos(ganhosData.dias);
   renderGanhosGrafico(dias, nomes);
   renderGanhosTabela(dias, nomes);
-  document.getElementById("ganhos-gerado").textContent =
-    "actualizado " + new Date(ganhosData.gerado).toLocaleString("pt-PT",
-      { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  document.getElementById("ganhos-gerado").textContent = actualizado(ganhosData.gerado);
 }
 
 fetch(GANHOS_URL).then(r => r.json()).then(d => { ganhosData = d; renderGanhos(); })
