@@ -599,11 +599,12 @@ document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
   el.addEventListener("input", render));
 
 const CORES_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/main/data/membros_cores.json";
-Promise.all([
-  fetch("data.json").then(r => r.json()),
-  fetch(CORES_URL, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null),
-]).then(([d, c]) => {
-  if (c && c.cores) CORES_FIXAS = { ...CORES_FIXAS, ...c.cores };
+const cores = fetch(CORES_URL, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null)
+  .then(c => { if (c && c.cores) CORES_FIXAS = { ...CORES_FIXAS, ...c.cores }; });
+// JSON de url, entregue só depois de as cores chegarem (ou falharem)
+const comCores = url => Promise.all([fetch(url).then(r => r.json()), cores]).then(([d]) => d);
+
+comCores("data.json").then(d => {
   linhas = d.linhas;
   for (const l of linhas) {
     l.vel_kmh = velKmh(l);
@@ -618,7 +619,7 @@ Promise.all([
   document.getElementById("gerado").textContent = "falha ao carregar dados — tenta recarregar a página";
 });
 
-fetch("prs.json").then(r => r.json()).then(renderPRs).catch(() => {});
+comCores("prs.json").then(renderPRs).catch(() => {});
 
 // dados do squadrats-club, da branch `data`
 const SQUADRATS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/squadrats.json";
@@ -732,7 +733,7 @@ document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(); }
   });
 });
-fetch(SQUADRATS_URL).then(r => r.json()).then(renderSquadrats).catch(() => {});
+comCores(SQUADRATS_URL).then(renderSquadrats).catch(() => {});
 
 // {dias: [{data, atletas: {nome: {campo: delta}}}]}, só o que mudou em cada dia
 const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/daily_gains.json";
@@ -818,7 +819,7 @@ function renderGanhos() {
   document.getElementById("ganhos-gerado").textContent = actualizado(ganhosData.gerado);
 }
 
-fetch(GANHOS_URL).then(r => r.json()).then(d => { ganhosData = d; renderGanhos(); })
+comCores(GANHOS_URL).then(d => { ganhosData = d; renderGanhos(); })
   .catch(() => { document.getElementById("ganhos-wrap").style.display = "none"; });
 </script>
 </body>

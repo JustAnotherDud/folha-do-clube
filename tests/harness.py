@@ -335,7 +335,7 @@ def casos_site():
                 raw + "data/data/squadrats.json": SQUADRATS,
                 raw + "data/data/daily_gains.json": GANHOS}
 
-    def abrir(browser, falhas=(), largura=1280):
+    def abrir(browser, falhas=(), largura=1280, ordem=ORDEM_JSON):
         ctx = browser.new_context(viewport={"width": largura, "height": 900}, locale="pt-PT",
                                   timezone_id="Europe/Lisbon", reduced_motion="reduce")
         erros = []
@@ -364,9 +364,9 @@ def casos_site():
         # O site pede 5 JSON em paralelo e o resultado depende da ordem de chegada
         # (as cores podem chegar depois do squadrats.json). Responde sempre pela
         # mesma ordem para a baseline ser estável.
-        while len(pendentes) < len(ORDEM_JSON):
+        while len(pendentes) < len(ordem):
             page.wait_for_timeout(20)
-        for fim in ORDEM_JSON:
+        for fim in ordem:
             url, route = next((u, r) for u, r in pendentes.items() if u.endswith(fim))
             if any(f in url for f in falhas):
                 route.fulfill(status=500, body="erro")
@@ -390,6 +390,8 @@ def casos_site():
 
         ctx, page, erros = abrir(browser)
         snap(page, "inicial")
+        seccoes = ("#ranking", "#prs", "#squadrats", "#squadrats-podio", "#ganhos-tabela", "#ganhos-grafico")
+        normal = {sel: page.inner_html(sel) for sel in seccoes}
         for k in page.eval_on_selector_all("#tabela th[data-k]", "ths => ths.map(t => t.dataset.k)"):
             page.click(f'#tabela th[data-k="{k}"]')
             r[f"ordem {k} asc #tabela"] = resumo(page.inner_html("#tabela"))
@@ -432,6 +434,11 @@ def casos_site():
         page.goto("http://folha.test/#invalido")
         r["hash invalido"] = page.evaluate("[...document.querySelectorAll('.panel.active')].map(p => p.id)")
         r["consola"] = erros
+        ctx.close()
+
+        # cores a chegar depois de tudo: o resultado tem de ser igual ao normal
+        ctx, page, erros = abrir(browser, ordem=ORDEM_JSON[1:] + ORDEM_JSON[:1])
+        r["cores no fim: igual ao normal"] = {sel: page.inner_html(sel) == normal[sel] for sel in seccoes}
         ctx.close()
 
         ctx, page, erros = abrir(browser, largura=375)

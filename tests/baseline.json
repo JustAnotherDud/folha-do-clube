@@ -260,6 +260,14 @@
    "tab-squadrats:false"
   ],
   "consola": [],
+  "cores no fim: igual ao normal": {
+   "#ganhos-grafico": true,
+   "#ganhos-tabela": true,
+   "#prs": true,
+   "#ranking": true,
+   "#squadrats": true,
+   "#squadrats-podio": true
+  },
   "falha sem-cores #conta": "<span id=\"conta\">322 de 322</span>",
   "falha sem-cores #f-atleta": {
    "n": 1,
@@ -339,13 +347,13 @@
   "falha sem-data #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
   "falha sem-data #ganhos-wrap": {
    "n": 11,
-   "sha": "8f96167f988e5d6c"
+   "sha": "bdc3252077a01256"
   },
   "falha sem-data #gerado": "<span id=\"gerado\">falha ao carregar dados — tenta recarregar a página</span>",
   "falha sem-data #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "falha sem-data #prs": {
    "n": 40,
-   "sha": "eea9cd01453acfa6"
+   "sha": "e654a92e369db475"
   },
   "falha sem-data #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "falha sem-data #ranking": {
@@ -354,12 +362,12 @@
   },
   "falha sem-data #squadrats": {
    "n": 256,
-   "sha": "b388b9577647e5a1"
+   "sha": "a1ca7efa39b6187e"
   },
   "falha sem-data #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
   "falha sem-data #squadrats-podio": {
    "n": 19,
-   "sha": "0dcaace0f365ca0f"
+   "sha": "860863f6a51f275f"
   },
   "falha sem-data #tabela": {
    "n": 16,
@@ -375,7 +383,7 @@
   ],
   "falha sem-data estilos": {
    "n": 698,
-   "sha": "a379a5a539b3511c"
+   "sha": "b3bc59ec7b897804"
   },
   "falha sem-data hash": "#squadrats",
   "falha sem-data paineis": [
