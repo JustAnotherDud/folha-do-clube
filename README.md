@@ -1,69 +1,55 @@
 # Folha do Clube
 
-Daily KOM/CR and Top-10 ranking for my running club, scraped from Strava's
-`/segments/leader` pages — plus running Best Efforts and Squadrats stats.
-Published via GitHub Pages.
+KOM/CR and Top 10 ranking for my running club, scraped daily from Strava, plus
+running Best Efforts and Squadrats stats. Published with GitHub Pages.
 
-Internal club tool: it reads Strava through my own authenticated session, with
-the members' knowledge, at a daily cron cadence — not a general-purpose
-scraper.
+Internal club tool: it reads Strava with my own session, with the members'
+knowledge, once a day. It is not a general-purpose scraper.
 
-Sister project:
-[kom-hunter](https://github.com/JustAnotherDud/kom-hunter) — same code origin
-(`comum.py`), different purpose: finds Run segments where a KOM looks
+Sister project: [kom-hunter](https://github.com/JustAnotherDud/kom-hunter)
+started from the same `comum.py` and finds Run segments where a KOM looks
 reachable.
 
-## How the data is updated
+## Site
 
-**Automatic**, via `.github/workflows/update.yml`: runs every day at 05:30 UTC
-(and on `workflow_dispatch`, manually), runs `scrape.py` + `scrape_prs.py`,
-and only commits/pushes if something actually changed. Nothing to do by hand
-day to day.
+`index.html` has three tabs:
 
-Manual, only to force an update outside the cron window or to test locally:
+- **KOMs & Top10s** reads `data.json`. Points: 11 minus the position (KOM = 10,
+  10th = 1). Pace is computed in the page from `dist_km`, `tempo` and `tipo`
+  (min/km, or km/h for Ride). On very short segments it can look odd.
+- **Best Efforts** reads `prs.json` and highlights the best time per distance.
+- **Squadrats** reads `squadrats.json` and `daily_gains.json` from
+  [squadrats-club](https://github.com/JustAnotherDud/squadrats-club). Member
+  colours also come from there (`membros_cores.json`).
+
+## Data updates
+
+`.github/workflows/update.yml` runs every day (cron 05:30 UTC, GitHub often
+starts it later) and on `workflow_dispatch`. It runs `scrape.py` and
+`scrape_prs.py` and commits the data files. `gerado` changes on every run, so
+there is a commit every day.
+
+To run by hand:
 
 ```
-STRAVA_SESSION=<_strava4_session cookie> python scrape.py
-STRAVA_SESSION=<_strava4_session cookie> python scrape_prs.py
+STRAVA_SESSION=<cookie> python scrape.py
+STRAVA_SESSION=<cookie> python scrape_prs.py
 ```
 
-`STRAVA_SESSION` is the authenticated session cookie (DevTools → Application →
-Cookies → strava.com → `_strava4_session`). Renew it manually when it expires.
+`STRAVA_SESSION` is the `_strava4_session` cookie (DevTools > Application >
+Cookies > strava.com). When it expires the scripts exit with an error: copy a
+fresh cookie into the Actions secret.
 
-Ranking points: position 1 = 10 pts … position 10 = 1 pt (11 − position).
-
-## City/country + pace fields
-
-`scrape.py` also fills `cidade` and `pais` per row, from the `<title>` of the
-public `/segments/<id>` page (no login needed). The result is cached in
-`localizacoes.json` — Strava is only asked for what isn't already there, so
-it's worth keeping that file versioned (the workflow already commits it). To
-force a re-fetch of a segment, delete its entry in that file.
-
-`tempo` always comes normalised to `M:SS` or `H:MM:SS` (it used to be mixed,
-e.g. `"25s"` vs `"2:29"`). Pace (min/km for Run/Walk/Trail Run, km/h for Ride)
-is computed in `index.html` from `dist_km` + `tempo` + `tipo` — it is not
-stored in `data.json`. Note: for very short segments (sprints/ramps <300m) the
-computed pace isn't very representative, so it's normal for it to look odd.
-
-Shared logic between `scrape.py` and `scrape_prs.py` lives in `comum.py`.
-
-## Running Best Efforts / PRs (`scrape_prs.py`)
-
-Extracts the "Best Efforts" widget from each athlete's profile sidebar and
-writes `prs.json` — the same table the club used to maintain by hand in a
-spreadsheet. The `/athletes/<id>` page is React (the table comes in via JS,
-it's not in the served HTML), so the data comes from the AJAX endpoint
-`/athletes/<id>/profile_sidebar_comparison?hl=en-GB`, which only responds with
-the `X-Requested-With: XMLHttpRequest` header. Runs with the same session as
-`scrape.py`.
-
-This is not the "All-Time PRs" (those are filled in manually by the athlete)
-and it doesn't cover bike — Strava has no aggregated Best-Efforts-by-distance
-widget for Ride, only the Power Curve, which is a different thing. `index.html`
-shows the result in a "Best Efforts 🏃" table below the KOM ranking, with the
-best time per distance highlighted; it loads `prs.json` optionally — the KOM
-page keeps working before the script's first run (file doesn't exist yet).
+- `scrape.py` reads each member's `/segments/leader` pages and writes
+  `data.json`. City and country come from the `<title>` of the public segment
+  page and are cached in `localizacoes.json`. Delete an entry to fetch it again.
+- `scrape_prs.py` reads the Run "Best Efforts" table from
+  `/athletes/<id>/profile_sidebar_comparison` and writes `prs.json`. Efforts
+  from activities Strava flagged (bad GPS) are dropped; the check is cached in
+  `flagged.json`. These are not the manual "All-Time PRs", and Strava has no
+  equivalent for Ride.
+- `ignorar.py <url-or-id> [reason]` adds a buggy segment to `IGNORAR` in
+  `scrape.py`, pushes and starts the workflow.
 
 ## Tests
 
