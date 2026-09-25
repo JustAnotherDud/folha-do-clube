@@ -251,7 +251,7 @@
   },
   "best-efforts estilos": {
    "n": 5273,
-   "sha": "8f4789ce96ffcef4"
+   "sha": "803f4421e16d391d"
   },
   "best-efforts hash": "#best-efforts",
   "best-efforts paineis": [
@@ -319,7 +319,7 @@
   ],
   "falha sem-cores estilos": {
    "n": 5273,
-   "sha": "a7ef74a383e43406"
+   "sha": "b17476d2d216f465"
   },
   "falha sem-cores hash": "#squadrats",
   "falha sem-cores paineis": [
@@ -375,7 +375,7 @@
   ],
   "falha sem-data estilos": {
    "n": 698,
-   "sha": "a93441f7447bac35"
+   "sha": "a379a5a539b3511c"
   },
   "falha sem-data hash": "#squadrats",
   "falha sem-data paineis": [
@@ -442,7 +442,7 @@
   ],
   "falha sem-ganhos estilos": {
    "n": 5147,
-   "sha": "056994bc0867e73a"
+   "sha": "23865602a1490d99"
   },
   "falha sem-ganhos hash": "#squadrats",
   "falha sem-ganhos paineis": [
@@ -506,7 +506,7 @@
   ],
   "falha sem-prs estilos": {
    "n": 5046,
-   "sha": "70c760c6d3035bce"
+   "sha": "85652243aa4e67cc"
   },
   "falha sem-prs hash": "#squadrats",
   "falha sem-prs paineis": [
@@ -789,7 +789,7 @@
   },
   "inicial estilos": {
    "n": 5273,
-   "sha": "6690561220e79c26"
+   "sha": "9df1238b8ff5d24c"
   },
   "inicial hash": "",
   "inicial paineis": [
@@ -881,7 +881,7 @@
   },
   "mobile estilos": {
    "n": 5273,
-   "sha": "08c3edb90fb193f3"
+   "sha": "70e8ef64077c8319"
   },
   "mobile hash": "",
   "mobile paineis": [
@@ -949,7 +949,7 @@
   },
   "multi estilos": {
    "n": 1545,
-   "sha": "fac14e49bf535536"
+   "sha": "06879d2532799f5a"
   },
   "multi hash": "",
   "multi paineis": [
@@ -1013,6 +1013,11 @@
    "n": 1,
    "sha": "edc37ee8d963e583"
   },
+  "podio bolinhas": [
+   "9x9 rgb(1, 2, 3) 50%",
+   "9x9 rgb(224, 49, 49) 50%",
+   "9x9 rgb(156, 70, 216) 50%"
+  ],
   "squadrats #conta": "<span id=\"conta\">322 de 322</span>",
   "squadrats #f-atleta": {
    "n": 1,
@@ -1069,7 +1074,7 @@
   },
   "squadrats estilos": {
    "n": 5273,
-   "sha": "44e225a7aafc4515"
+   "sha": "15ff77c4a5e608d6"
   },
   "squadrats hash": "#squadrats",
   "squadrats paineis": [

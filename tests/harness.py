@@ -416,6 +416,9 @@ def casos_site():
         snap(page, "best-efforts")
         separador(page, "squadrats")
         snap(page, "squadrats")
+        r["podio bolinhas"] = page.eval_on_selector_all(".riser .dot", """ds => ds.map(d => {
+            const b = d.getBoundingClientRect(), c = getComputedStyle(d);
+            return `${Math.round(b.width)}x${Math.round(b.height)} ${c.backgroundColor} ${c.borderRadius}`; })""")
         for c in page.eval_on_selector_all("#squadrats th[data-c]", "ts => ts.map(t => t.dataset.c)"):
             page.click(f'#squadrats th[data-c="{c}"]')
             r[f"metrica {c}"] = resumo(page.inner_html("#tab-squadrats"))
