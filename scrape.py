@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
-"""scrape.py — extrai KOMs/Top10s do Strava e escreve data.json.
+"""Lê os KOMs/Top10s dos membros do clube e escreve data.json.
 
-Corre no GitHub Actions (cron diário) ou localmente:
     STRAVA_SESSION=<cookie _strava4_session> python scrape.py
 
-A posição vem codificada no ícone (icon-segment-effort-NN.svg, KOM=01).
-Falha com exit != 0 se a sessão expirou — renovar o secret STRAVA_SESSION
-com um cookie fresco copiado do browser.
+A posição vem no ícone (icon-segment-effort-NN.svg, KOM=01).
+Sai com erro se a sessão expirou.
 """
 import json
 import os
@@ -28,7 +26,6 @@ IGNORAR = {
     "30832045",  # bugado
     "38123078",  # bugado
     "8843490",  # bugado
-    # "12345678",  # exemplo — nome do segmento e porquê
 }
 BASE = "https://www.strava.com"
 PAGE_DELAY = 1.5

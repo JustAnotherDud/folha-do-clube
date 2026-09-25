@@ -1,16 +1,5 @@
 # -*- coding: utf-8 -*-
-"""comum.py — utilitários partilhados por scrape.py e scrape_prs.py.
-
-Centraliza o que antes estava duplicado nos scripts:
-- parsing de datas no formato do Strava ("Jul 10, 2025")
-- normalização do campo "tempo" (vinha misto: "25s" / "2:29" / "1:20:16")
-- lookup de cidade/país por segmento, com cache em disco (localizacoes.json)
-
-A localização não precisa de sessão/cookie: a página pública
-/segments/<id> devolve sempre uma wall de login quando não autenticado,
-mas o <title> já inclui "... Segment in Cidade, País" mesmo assim.
-Só dá cidade + país (sem distrito) — Strava não expõe distrito aqui.
-"""
+"""Utilitários de scrape.py e scrape_prs.py: datas, tempos e localização dos segmentos."""
 import json
 import re
 import time
@@ -28,11 +17,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 CACHE_LOCAIS = Path(__file__).parent / "localizacoes.json"
 LOCAL_DELAY  = 1.0  # segundos entre pedidos a /segments/<id> (só para ids novos)
 
-# Distritos PT que a Strava por vezes devolve na posição do país (ver
-# _normalizar_local): para segmentos em Portugal, o título costuma vir
-# "Cidade, Distrito" em vez de "Cidade, Distrito, País" — não há um
-# terceiro campo para apanhar como país. Sem mapa não há forma de
-# distinguir isto de um país real só a partir do texto.
+# Em Portugal o título vem muitas vezes "Cidade, Distrito", sem país.
 DISTRITOS_PT = {
     "lisbon", "lisboa", "porto", "santarém", "santarem", "leiria", "braga",
     "aveiro", "setúbal", "setubal", "faro", "coimbra", "viseu",
@@ -43,9 +28,7 @@ DISTRITOS_PT = {
 
 
 def _normalizar_local(cidade, pais):
-    """Corrige o caso em que a Strava devolve 'Cidade, Distrito' sem país:
-    o rpartition apanha o distrito como se fosse país. Se o valor de
-    'pais' for um distrito PT conhecido, o segmento é em Portugal."""
+    """Se o 'país' for um distrito PT, o país é Portugal."""
     if pais.strip().lower() in DISTRITOS_PT:
         return cidade, "Portugal"
     return cidade, pais
@@ -70,7 +53,7 @@ def parse_tempo(s):
 
 
 def format_tempo(segundos):
-    """segundos totais -> 'M:SS' ou 'H:MM:SS' — formato único, sem 'Ns'."""
+    """segundos totais -> 'M:SS' ou 'H:MM:SS'."""
     h, resto = divmod(int(segundos), 3600)
     m, s = divmod(resto, 60)
     return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
@@ -97,10 +80,9 @@ def _guardar_cache(cache):
 
 
 def localizar_segmentos(seg_ids, sessao=None):
-    """
-    Devolve {seg_id: {"cidade": ..., "pais": ...}} para todos os ids pedidos.
-    Usa cache em disco (localizacoes.json) — só pede à Strava os ids que
-    ainda não tem. Não precisa de cookie de sessão.
+    """{seg_id: {"cidade", "pais"}} para os ids pedidos, com cache em localizacoes.json.
+
+    Não precisa de sessão: o <title> da página pública já traz "Segment in Cidade, País".
     """
     cache = _carregar_cache()
     s = sessao or requests.Session()
@@ -116,8 +98,7 @@ def localizar_segmentos(seg_ids, sessao=None):
             if m:
                 local = m.group(1).strip()
                 cidade, _, pais = local.rpartition(",")
-                # nota: para localizações tipo "Cidade, Estado, País" isto
-                # apanha só o último campo como país — não relevante p/ EU.
+                # "Cidade, Estado, País" fica com cidade "Cidade, Estado"
                 cidade, pais = _normalizar_local((cidade or local).strip(), pais.strip())
                 cache[sid] = {"cidade": cidade, "pais": pais}
             else:

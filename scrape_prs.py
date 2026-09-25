@@ -1,50 +1,20 @@
 # -*- coding: utf-8 -*-
-"""scrape_prs.py — extrai Best Efforts de corrida (Strava) e escreve prs.json.
+"""Lê os Best Efforts de corrida dos membros do clube e escreve prs.json.
 
-Corre no GitHub Actions (cron diário) ou localmente:
     STRAVA_SESSION=<cookie _strava4_session> python scrape_prs.py
 
-Fonte: widget "Best Efforts" da sidebar do perfil. O HTML da página
-/athletes/<id> é uma app React — a tabela é preenchida por JS, por isso o
-HTML servido não a contém. Os dados vêm de um endpoint AJAX à parte:
+A página /athletes/<id> é React e não traz a tabela no HTML. Os dados vêm de
+/athletes/<id>/profile_sidebar_comparison?hl=en-GB, que só responde com o
+header X-Requested-With. O hl=en-GB fixa os labels em inglês.
 
-    /athletes/<id>/profile_sidebar_comparison?hl=en-GB
+O fragmento traz uma tabela por desporto: usamos a que tem "Run" seleccionado.
+No perfil de outra pessoa a Strava junta uma 2.ª coluna com os tempos do dono
+da sessão, por isso lemos sempre a 1.ª (tds[1]).
 
-...que devolve um fragmento HTML já com a tabela, mas SÓ quando pedido com
-o header X-Requested-With: XMLHttpRequest (sem ele devolve corpo vazio).
-O hl=en-GB força labels em inglês ("Half-Marathon", "Best Efforts"),
-independentemente da locale da conta — o parsing depende deles.
+Actividades flagged (GPS bugado) dão tempos impossíveis e são descartadas.
+O estado fica em cache em flagged.json.
 
-NÃO é o "All-Time PRs" (esse é preenchido à mão pelo próprio atleta, via
-botão "Add PR", e diverge do que a Strava calcula) — é a tabela calculada
-automaticamente a partir do histórico de corridas, a mesma que usávamos à
-mão na folha de cálculo do clube.
-
-Quando se vê o perfil de outra pessoa (não o dono da sessão), a Strava
-acrescenta uma 2ª coluna de tempos com a comparação do próprio utilizador
-autenticado — por isso o parsing usa sempre a 1ª coluna de tempo (tds[1]),
-nunca a 2ª (tds[2], que seria o dono da sessão, não o atleta da página).
-No perfil do próprio dono da sessão há só uma coluna, e tds[1] continua a
-ser o tempo dele — logo a mesma regra serve nos dois casos.
-
-O fragmento traz uma tabela Best Efforts por desporto do atleta (Run, Ride,
-...). Para ciclistas o default "selected" é Ride ("Longest Ride", efforts de
-bike) — se apanhássemos a primeira tabela, o corredor ciclista ficava com
-dados de bike ou sem dados. Por isso escolhemos a tabela cujo separador de
-desporto "selected" tem title="Run".
-
-Actividades com o GPS bugado ficam "flagged" no Strava e geram best efforts
-impossíveis (ex.: 1/2 milha mais rápida que o ritmo de 5K). O Strava exclui-as
-das leaderboards mas ainda as mostra nos best efforts do atleta — por isso
-verificamos a página de cada actividade de origem e excluímos os efforts cuja
-actividade esteja flagged. O estado fica em cache em flagged.json (só se busca
-o que ainda não está lá; apagar uma entrada força reconsulta).
-
-Não cobre bike: a Strava não tem um widget agregado de Best Efforts por
-distância para Ride (só a "Power Curve", que é outra coisa) — ver README.
-
-Falha com exit != 0 se a sessão expirou — renovar o secret STRAVA_SESSION
-com um cookie fresco copiado do browser.
+Sai com erro se a sessão expirou.
 """
 import json
 import os
@@ -62,11 +32,10 @@ from scrape import BASE, membros_clube
 
 PAGE_DELAY = 1.5
 
-# fragmento AJAX da sidebar; precisa do header XHR ou devolve corpo vazio
 XHR_HEADERS = {**HEADERS, "X-Requested-With": "XMLHttpRequest",
                "Accept": "text/javascript, text/html, application/xml, text/xml, */*"}
 SIDEBAR = "/athletes/{}/profile_sidebar_comparison?hl=en-GB"
-# tempo válido: "1:03" (M:SS) ou "1:20:16" (H:MM:SS) — filtra linhas não-dados
+# tempo válido: "1:03" ou "1:20:16"; filtra linhas sem dados
 TEMPO_RE = re.compile(r"^\d{1,2}(:\d{2}){1,2}$")
 CACHE_FLAGGED = Path(__file__).parent / "flagged.json"
 
@@ -116,9 +85,7 @@ def _carregar_flagged():
 
 
 def actividades_flagged(s, act_ids):
-    """{act_id: bool} — actividade com GPS bugado ('flagged') no Strava. Usa cache em disco.
-
-    Fail-open: em erro de rede assume não-flagged (não descarta effort legítimo)."""
+    """{act_id: bool}, com cache em flagged.json. Em erro de rede assume não flagged."""
     cache = _carregar_flagged()
     novos = 0
     for act in sorted(a for a in act_ids if a and a not in cache):
