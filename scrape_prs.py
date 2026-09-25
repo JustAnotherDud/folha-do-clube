@@ -16,28 +16,21 @@ O estado fica em cache em flagged.json.
 
 Sai com erro se a sessão expirou.
 """
-import json
-import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
-from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
-from comum import HEADERS, normalizar_tempo
-from scrape import BASE, membros_clube
-
-PAGE_DELAY = 1.5
+from comum import HEADERS, get, gravar_cache, gravar_saida, ler_cache, normalizar_tempo, sessao
+from scrape import BASE, PAGE_DELAY, membros_clube
 
 XHR_HEADERS = {**HEADERS, "X-Requested-With": "XMLHttpRequest",
                "Accept": "text/javascript, text/html, application/xml, text/xml, */*"}
 SIDEBAR = "/athletes/{}/profile_sidebar_comparison?hl=en-GB"
 # tempo válido: "1:03" ou "1:20:16"; filtra linhas sem dados
 TEMPO_RE = re.compile(r"^\d{1,2}(:\d{2}){1,2}$")
-CACHE_FLAGGED = Path(__file__).parent / "flagged.json"
 
 
 def _run_tbody(soup):
@@ -78,15 +71,9 @@ def parse_best_efforts(html):
     return resultado
 
 
-def _carregar_flagged():
-    if CACHE_FLAGGED.exists():
-        return json.loads(CACHE_FLAGGED.read_text(encoding="utf-8"))
-    return {}
-
-
 def actividades_flagged(s, act_ids):
     """{act_id: bool}, com cache em flagged.json. Em erro de rede assume não flagged."""
-    cache = _carregar_flagged()
+    cache = ler_cache("flagged.json")
     novos = 0
     for act in sorted(a for a in act_ids if a and a not in cache):
         try:
@@ -98,8 +85,7 @@ def actividades_flagged(s, act_ids):
         novos += 1
         time.sleep(PAGE_DELAY)
     if novos:
-        CACHE_FLAGGED.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True),
-                                 encoding="utf-8")
+        gravar_cache("flagged.json", cache)
         n_flag = sum(1 for a in act_ids if cache.get(a))
         print(f"  flagged: {novos} actividade(s) nova(s) consultada(s); "
               f"{n_flag} flagged nesta corrida ({len(cache)} no cache total).")
@@ -107,23 +93,14 @@ def actividades_flagged(s, act_ids):
 
 
 def main():
-    cookie = os.environ.get("STRAVA_SESSION", "").strip()
-    if not cookie:
-        sys.exit("STRAVA_SESSION não definido.")
-    s = requests.Session()
-    s.cookies.set("_strava4_session", cookie, domain=".strava.com")
-
+    s = sessao()
     atletas = membros_clube(s)
     print(f"{len(atletas)} membros: " + ", ".join(n for _, n in atletas))
 
     # 1ª passagem: recolher os best efforts (com act_id) de cada atleta
     brutos = {}
     for athlete_id, nome in atletas:
-        r = s.get(BASE + SIDEBAR.format(athlete_id), headers=XHR_HEADERS, timeout=30)
-        r.raise_for_status()
-        if "/login" in r.url:
-            sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
-        efforts = parse_best_efforts(r.text)
+        efforts = parse_best_efforts(get(s, BASE + SIDEBAR.format(athlete_id), XHR_HEADERS).text)
         if efforts:
             brutos[nome] = efforts
             print(f"  {nome}: {len(efforts)} distâncias")
@@ -149,11 +126,7 @@ def main():
     if not prs:
         sys.exit("0 atletas com Best Efforts — estrutura da página mudou ou bloqueio anti-bot.")
 
-    out = {"gerado": datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
-           "atletas": prs}
-    with open(os.path.join(os.path.dirname(__file__) or ".", "prs.json"),
-              "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+    gravar_saida("prs.json", "atletas", prs)
     print(f"{len(prs)} atleta(s) -> prs.json")
 
 

@@ -6,17 +6,13 @@
 A posição vem no ícone (icon-segment-effort-NN.svg, KOM=01).
 Sai com erro se a sessão expirou.
 """
-import json
-import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
 
-import requests
 from bs4 import BeautifulSoup
 
-from comum import HEADERS, extrair_seg_id, iso_date, localizar_segmentos, normalizar_tempo
+from comum import extrair_seg_id, get, gravar_saida, iso_date, localizar_segmentos, normalizar_tempo, sessao
 
 CLUBE = "nozes"
 # alcunhas; quem não estiver aqui usa o primeiro nome do perfil
@@ -41,7 +37,7 @@ def parse_rows(html):
         seg = tr.select_one("a[href^='/segments/']")
         if not seg:
             continue
-        if seg["href"].rsplit("/", 1)[-1] in IGNORAR:
+        if extrair_seg_id(seg["href"]) in IGNORAR:
             continue
         effort = tr.select_one("a[href^='/segment_efforts/']")
         icon = tr.select_one("td.icon img")
@@ -66,11 +62,7 @@ def membros_clube(s):
     """Lista (id, nome) dos membros do clube, com paginação."""
     atletas, n = {}, 1
     while True:
-        r = s.get(f"{BASE}/clubs/{CLUBE}/members?page={n}",
-                  headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        if "/login" in r.url:
-            sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
+        r = get(s, f"{BASE}/clubs/{CLUBE}/members?page={n}")
         soup = BeautifulSoup(r.text, "html.parser")
         antes = len(atletas)
         for a in soup.select("a[href^='/athletes/']"):
@@ -87,12 +79,7 @@ def membros_clube(s):
 
 
 def main():
-    cookie = os.environ.get("STRAVA_SESSION", "").strip()
-    if not cookie:
-        sys.exit("STRAVA_SESSION não definido.")
-    s = requests.Session()
-    s.cookies.set("_strava4_session", cookie, domain=".strava.com")
-
+    s = sessao()
     atletas = membros_clube(s)
     print(f"{len(atletas)} membros: " + ", ".join(n for _, n in atletas))
 
@@ -103,11 +90,7 @@ def main():
             while True:
                 url = (f"{BASE}/athletes/{athlete_id}/segments/leader"
                        f"?page={n}" + ("&top_tens=true" if top_tens else ""))
-                r = s.get(url, headers=HEADERS, timeout=30)
-                r.raise_for_status()
-                if "/login" in r.url:
-                    sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
-                rows = parse_rows(r.text)
+                rows = parse_rows(get(s, url).text)
                 if not rows:
                     break
                 for row in rows:
@@ -128,11 +111,7 @@ def main():
         l["cidade"] = info.get("cidade", "")
         l["pais"] = info.get("pais", "")
 
-    out = {"gerado": datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
-           "linhas": linhas}
-    with open(os.path.join(os.path.dirname(__file__) or ".", "data.json"),
-              "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+    gravar_saida("data.json", "linhas", linhas)
     print(f"{len(linhas)} linhas -> data.json")
 
 

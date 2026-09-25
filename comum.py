@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Utilitários de scrape.py e scrape_prs.py: datas, tempos e localização dos segmentos."""
+"""Utilitários de scrape.py e scrape_prs.py: sessão, JSON, datas, tempos e localização."""
 import json
+import os
 import re
+import sys
 import time
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import requests
@@ -14,7 +16,7 @@ MESES = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
 
-CACHE_LOCAIS = Path(__file__).parent / "localizacoes.json"
+PASTA = Path(__file__).parent
 LOCAL_DELAY  = 1.0  # segundos entre pedidos a /segments/<id> (só para ids novos)
 
 # Em Portugal o título vem muitas vezes "Cidade, Distrito", sem país.
@@ -68,24 +70,49 @@ def extrair_seg_id(url):
     return m.group(1) if m else None
 
 
-def _carregar_cache():
-    if CACHE_LOCAIS.exists():
-        return json.loads(CACHE_LOCAIS.read_text(encoding="utf-8"))
-    return {}
+def sessao():
+    """requests.Session com o cookie STRAVA_SESSION. Sai se não estiver definido."""
+    cookie = os.environ.get("STRAVA_SESSION", "").strip()
+    if not cookie:
+        sys.exit("STRAVA_SESSION não definido.")
+    s = requests.Session()
+    s.cookies.set("_strava4_session", cookie, domain=".strava.com")
+    return s
 
 
-def _guardar_cache(cache):
-    CACHE_LOCAIS.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True),
-                             encoding="utf-8")
+def get(s, url, headers=HEADERS):
+    """GET autenticado. Sai se a Strava mandar para o login."""
+    r = s.get(url, headers=headers, timeout=30)
+    r.raise_for_status()
+    if "/login" in r.url:
+        sys.exit("Sessão expirada — renovar secret STRAVA_SESSION.")
+    return r
 
 
-def localizar_segmentos(seg_ids, sessao=None):
+def ler_cache(nome):
+    p = PASTA / nome
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
+def gravar_cache(nome, cache):
+    (PASTA / nome).write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True),
+                              encoding="utf-8")
+
+
+def gravar_saida(nome, chave, dados):
+    """Escreve {"gerado": <UTC>, chave: dados}, o formato que o site lê."""
+    gerado = datetime.now(timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z")
+    with open(PASTA / nome, "w", encoding="utf-8") as f:
+        json.dump({"gerado": gerado, chave: dados}, f, ensure_ascii=False, indent=1)
+
+
+def localizar_segmentos(seg_ids):
     """{seg_id: {"cidade", "pais"}} para os ids pedidos, com cache em localizacoes.json.
 
     Não precisa de sessão: o <title> da página pública já traz "Segment in Cidade, País".
     """
-    cache = _carregar_cache()
-    s = sessao or requests.Session()
+    cache = ler_cache("localizacoes.json")
+    s = requests.Session()
     novos = 0
     for sid in seg_ids:
         if sid in cache:
@@ -108,7 +135,7 @@ def localizar_segmentos(seg_ids, sessao=None):
         novos += 1
         time.sleep(LOCAL_DELAY)
     if novos:
-        _guardar_cache(cache)
+        gravar_cache("localizacoes.json", cache)
         print(f"  localização: {novos} segmento(s) novo(s) consultados "
               f"({len(cache)} no cache total).")
     return cache
