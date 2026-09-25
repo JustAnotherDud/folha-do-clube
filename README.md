@@ -64,3 +64,25 @@ widget for Ride, only the Power Curve, which is a different thing. `index.html`
 shows the result in a "Best Efforts 🏃" table below the KOM ranking, with the
 best time per distance highlighted; it loads `prs.json` optionally — the KOM
 page keeps working before the script's first run (file doesn't exist yet).
+
+## Tests
+
+`tests/harness.py` checks that the scripts and the site behave as recorded in
+`tests/baseline.json`. It makes no network requests: Strava is faked with
+synthetic HTML and the site runs in Microsoft Edge through Playwright.
+
+Setup, once:
+
+```
+python -m venv .venv
+.venv/Scripts/pip install -r tests/requirements.txt
+```
+
+Run:
+
+```
+.venv/Scripts/python tests/harness.py
+```
+
+`--update` rewrites the baseline after an intended change. Without Edge, run
+`playwright install chromium` and set `HARNESS_BROWSER=` (empty).

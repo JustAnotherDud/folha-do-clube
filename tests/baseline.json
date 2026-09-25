@@ -1,0 +1,1076 @@
+{
+ "python": {
+  "ALCUNHAS": {
+   "100300630": "Zé",
+   "135219743": "Xeira"
+  },
+  "IGNORAR": [
+   "30832045",
+   "38123078",
+   "8843490"
+  ],
+  "_normalizar_local": [
+   [
+    "Sintra",
+    "Portugal"
+   ],
+   [
+    "Faro",
+    "Portugal"
+   ],
+   [
+    "Madrid",
+    "Spain"
+   ],
+   [
+    "",
+    ""
+   ]
+  ],
+  "extrair_seg_id": [
+   "123",
+   "9",
+   null,
+   null
+  ],
+  "ignorar:id": {
+   "cmds": [
+    [
+     "git",
+     "pull",
+     "--rebase"
+    ],
+    [
+     "git",
+     "add",
+     "scrape.py"
+    ],
+    [
+     "git",
+     "commit",
+     "-m",
+     "chore: ignorar segmento 27218238 — bug no Strava"
+    ],
+    [
+     "git",
+     "push"
+    ],
+    [
+     "gh",
+     "workflow",
+     "run",
+     "actualizar dados"
+    ]
+   ],
+   "exit": null,
+   "scrape.py": [
+    "+    \"27218238\",  # bug no Strava"
+   ],
+   "stdout": "adicionado 27218238 (bug no Strava)\npublicado — site actualiza em ~3 min.\n"
+  },
+  "ignorar:repetido": {
+   "cmds": [],
+   "exit": "segmento 30832045 já está na blocklist.",
+   "scrape.py": [],
+   "stdout": ""
+  },
+  "ignorar:sem-args": {
+   "cmds": [],
+   "exit": {
+    "n": 11,
+    "sha": "1bdca93475198b9a"
+   },
+   "scrape.py": [],
+   "stdout": ""
+  },
+  "ignorar:sem-id": {
+   "cmds": [],
+   "exit": "não encontrei id numérico em: abc",
+   "scrape.py": [],
+   "stdout": ""
+  },
+  "ignorar:url": {
+   "cmds": [
+    [
+     "git",
+     "pull",
+     "--rebase"
+    ],
+    [
+     "git",
+     "add",
+     "scrape.py"
+    ],
+    [
+     "git",
+     "commit",
+     "-m",
+     "chore: ignorar segmento 27218238 — distancia errada"
+    ],
+    [
+     "git",
+     "push"
+    ],
+    [
+     "gh",
+     "workflow",
+     "run",
+     "actualizar dados"
+    ]
+   ],
+   "exit": null,
+   "scrape.py": [
+    "+    \"27218238\",  # distancia errada"
+   ],
+   "stdout": "adicionado 27218238 (distancia errada)\npublicado — site actualiza em ~3 min.\n"
+  },
+  "iso_date": [
+   "2025-07-10",
+   "2024-09-05",
+   "2023-12-01",
+   "Yesterday",
+   ""
+  ],
+  "normalizar_tempo": [
+   "0:25",
+   "0:59",
+   "2:29",
+   "0:05",
+   "1:20:16",
+   "1:01:00",
+   "1:00:00"
+  ],
+  "parse_rows:vazio": [],
+  "scrape": {
+   "data.json": {
+    "n": 144,
+    "sha": "25b33281e7ce08cf"
+   },
+   "data.json:gerado_formato": true,
+   "exit": null,
+   "flagged.json": "{\"9003\": false, \"8888\": true}",
+   "localizacoes.json": {
+    "n": 34,
+    "sha": "04ca337b99bfd991"
+   },
+   "pedidos": {
+    "n": 22,
+    "sha": "9cbd171aa1afe344"
+   },
+   "stdout": {
+    "n": 10,
+    "sha": "e50729c1f69b21f7"
+   }
+  },
+  "scrape:expira-leader": "Sessão expirada — renovar secret STRAVA_SESSION.",
+  "scrape:expira-membros": "Sessão expirada — renovar secret STRAVA_SESSION.",
+  "scrape:sem-env": "STRAVA_SESSION não definido.",
+  "scrape:vazio": "0 linhas — estrutura da página mudou ou bloqueio anti-bot.",
+  "scrape_prs": {
+   "exit": null,
+   "flagged.json": "{\n \"8888\": true,\n \"9001\": false,\n \"9002\": true,\n \"9003\": false,\n \"9004\": false,\n \"9005\": true\n}",
+   "localizacoes.json": "{\"1006\": {\"cidade\": \"Cache\", \"pais\": \"Portugal\"}, \"9999\": {\"cidade\": \"X\", \"pais\": \"Y\"}}",
+   "pedidos": {
+    "n": 10,
+    "sha": "66a8d5fec67a699a"
+   },
+   "prs.json": {
+    "n": 24,
+    "sha": "1573477cf5b3a5a6"
+   },
+   "prs.json:gerado_formato": true,
+   "stdout": {
+    "n": 11,
+    "sha": "24a3e7e3f1c54c71"
+   }
+  },
+  "scrape_prs:expira-sidebar": "Sessão expirada — renovar secret STRAVA_SESSION.",
+  "scrape_prs:sem-env": "STRAVA_SESSION não definido.",
+  "scrape_prs:sem-prs": "0 atletas com Best Efforts — estrutura da página mudou ou bloqueio anti-bot."
+ },
+ "site": {
+  "best-efforts #conta": "<span id=\"conta\">322 de 322</span>",
+  "best-efforts #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "best-efforts #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "best-efforts #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "best-efforts #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "best-efforts #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "best-efforts #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "best-efforts #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "best-efforts #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "best-efforts #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "best-efforts #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "best-efforts #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "best-efforts #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "best-efforts #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "best-efforts #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "best-efforts #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "best-efforts #tabela": {
+   "n": 4202,
+   "sha": "e2f2244ea5e6830c"
+  },
+  "best-efforts #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "best-efforts estilos": {
+   "n": 5273,
+   "sha": "3d02b8b04089d489"
+  },
+  "best-efforts hash": "#best-efforts",
+  "best-efforts paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "consola": [],
+  "falha sem-cores #conta": "<span id=\"conta\">322 de 322</span>",
+  "falha sem-cores #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "falha sem-cores #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "falha sem-cores #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "falha sem-cores #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "falha sem-cores #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "falha sem-cores #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "falha sem-cores #ganhos-wrap": {
+   "n": 11,
+   "sha": "8f96167f988e5d6c"
+  },
+  "falha sem-cores #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-cores #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "falha sem-cores #prs": {
+   "n": 40,
+   "sha": "eea9cd01453acfa6"
+  },
+  "falha sem-cores #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-cores #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "falha sem-cores #squadrats": {
+   "n": 256,
+   "sha": "b388b9577647e5a1"
+  },
+  "falha sem-cores #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "falha sem-cores #squadrats-podio": {
+   "n": 19,
+   "sha": "0dcaace0f365ca0f"
+  },
+  "falha sem-cores #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "falha sem-cores #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "falha sem-cores consola": [
+   "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "falha sem-cores estilos": {
+   "n": 5273,
+   "sha": "1f7326fb1646c1ed"
+  },
+  "falha sem-cores hash": "#squadrats",
+  "falha sem-cores paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "falha sem-data #conta": "<span id=\"conta\"></span>",
+  "falha sem-data #f-atleta": "<div id=\"f-atleta\" class=\"pills\"></div>",
+  "falha sem-data #f-cidade": "<select id=\"f-cidade\"><option value=\"\">Todas as cidades</option></select>",
+  "falha sem-data #f-pais": "<select id=\"f-pais\"><option value=\"\">Todos os países</option></select>",
+  "falha sem-data #f-tipo": "<select id=\"f-tipo\"><option value=\"\">Todos os tipos</option></select>",
+  "falha sem-data #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "falha sem-data #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "falha sem-data #ganhos-wrap": {
+   "n": 11,
+   "sha": "8f96167f988e5d6c"
+  },
+  "falha sem-data #gerado": "<span id=\"gerado\">falha ao carregar dados — tenta recarregar a página</span>",
+  "falha sem-data #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "falha sem-data #prs": {
+   "n": 40,
+   "sha": "eea9cd01453acfa6"
+  },
+  "falha sem-data #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-data #ranking": {
+   "n": 6,
+   "sha": "c0241e73185511aa"
+  },
+  "falha sem-data #squadrats": {
+   "n": 256,
+   "sha": "b388b9577647e5a1"
+  },
+  "falha sem-data #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "falha sem-data #squadrats-podio": {
+   "n": 19,
+   "sha": "0dcaace0f365ca0f"
+  },
+  "falha sem-data #tabela": {
+   "n": 16,
+   "sha": "40bf770166987694"
+  },
+  "falha sem-data #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "falha sem-data consola": [
+   "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+   "falha ao carregar data.json: SyntaxError: Unexpected token 'e', \"erro\" is not valid JSON"
+  ],
+  "falha sem-data estilos": {
+   "n": 698,
+   "sha": "045c9ed750ad1c3b"
+  },
+  "falha sem-data hash": "#squadrats",
+  "falha sem-data paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "falha sem-ganhos #conta": "<span id=\"conta\">322 de 322</span>",
+  "falha sem-ganhos #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "falha sem-ganhos #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "falha sem-ganhos #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "falha sem-ganhos #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "falha sem-ganhos #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "falha sem-ganhos #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\"></span>",
+  "falha sem-ganhos #ganhos-wrap": {
+   "n": 11,
+   "sha": "e02d017cddd8346c"
+  },
+  "falha sem-ganhos #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-ganhos #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "falha sem-ganhos #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "falha sem-ganhos #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-ganhos #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "falha sem-ganhos #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "falha sem-ganhos #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "falha sem-ganhos #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "falha sem-ganhos #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "falha sem-ganhos #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "falha sem-ganhos consola": [
+   "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "falha sem-ganhos estilos": {
+   "n": 5147,
+   "sha": "ddfd7309522185bb"
+  },
+  "falha sem-ganhos hash": "#squadrats",
+  "falha sem-ganhos paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "falha sem-prs #conta": "<span id=\"conta\">322 de 322</span>",
+  "falha sem-prs #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "falha sem-prs #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "falha sem-prs #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "falha sem-prs #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "falha sem-prs #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "falha sem-prs #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "falha sem-prs #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "falha sem-prs #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-prs #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "falha sem-prs #prs": "<table id=\"prs\">\n    <thead><tr></tr></thead>\n    <tbody></tbody>\n  </table>",
+  "falha sem-prs #prs-gerado": "<span id=\"prs-gerado\"></span>",
+  "falha sem-prs #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "falha sem-prs #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "falha sem-prs #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "falha sem-prs #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "falha sem-prs #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "falha sem-prs #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "falha sem-prs consola": [
+   "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "falha sem-prs estilos": {
+   "n": 5046,
+   "sha": "7e5b93bdc479c603"
+  },
+  "falha sem-prs hash": "#squadrats",
+  "falha sem-prs paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "falha sem-squadrats #conta": "<span id=\"conta\">322 de 322</span>",
+  "falha sem-squadrats #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "falha sem-squadrats #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "falha sem-squadrats #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "falha sem-squadrats #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "falha sem-squadrats #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "falha sem-squadrats #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "falha sem-squadrats #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "falha sem-squadrats #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-squadrats #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\"></span>",
+  "falha sem-squadrats #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "falha sem-squadrats #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "falha sem-squadrats #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "falha sem-squadrats #squadrats": {
+   "n": 12,
+   "sha": "2ddabd0e15db9c60"
+  },
+  "falha sem-squadrats #squadrats-gerado": "<span id=\"squadrats-gerado\"></span>",
+  "falha sem-squadrats #squadrats-podio": "<div class=\"podio\" id=\"squadrats-podio\"></div>",
+  "falha sem-squadrats #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "falha sem-squadrats #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "falha sem-squadrats consola": [
+   "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "falha sem-squadrats estilos": {
+   "n": 5025,
+   "sha": "86280fb83ffdcb19"
+  },
+  "falha sem-squadrats hash": "#squadrats",
+  "falha sem-squadrats paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "filtro #f-cidade=": {
+   "n": 4187,
+   "sha": "903f9a004f78959c"
+  },
+  "filtro #f-cidade=Alcobaça": {
+   "n": 14,
+   "sha": "af8fad899bedd8d2"
+  },
+  "filtro #f-cidade=Almada": {
+   "n": 14,
+   "sha": "783e2b9f783424cf"
+  },
+  "filtro #f-cidade=Almeirim": {
+   "n": 79,
+   "sha": "36482a0b7b6b7c74"
+  },
+  "filtro #f-cidade=Alpiarça": {
+   "n": 14,
+   "sha": "fcfd66649bbb017e"
+  },
+  "filtro #f-cidade=Caldas da Rainha": {
+   "n": 27,
+   "sha": "103feb82fb88828f"
+  },
+  "filtro #f-cidade=Cartaxo": {
+   "n": 27,
+   "sha": "79582e65bf66d654"
+  },
+  "filtro #f-cidade=Cascais": {
+   "n": 14,
+   "sha": "86da4b6a5b75da9d"
+  },
+  "filtro #f-cidade=Funchal": {
+   "n": 105,
+   "sha": "7ae357f0dfb3bfe3"
+  },
+  "filtro #f-cidade=Guimarães": {
+   "n": 27,
+   "sha": "1052edffb94e888a"
+  },
+  "filtro #f-cidade=Lisbon": {
+   "n": 235,
+   "sha": "d435aa74c22b272d"
+  },
+  "filtro #f-cidade=Maia": {
+   "n": 27,
+   "sha": "f080d137c2f5a47a"
+  },
+  "filtro #f-cidade=Matosinhos": {
+   "n": 14,
+   "sha": "14448c51a41a2c90"
+  },
+  "filtro #f-cidade=Mondim de Basto": {
+   "n": 40,
+   "sha": "62077177a40bf019"
+  },
+  "filtro #f-cidade=Mérida": {
+   "n": 14,
+   "sha": "2b6fc9f15c48f054"
+  },
+  "filtro #f-cidade=Oeiras": {
+   "n": 885,
+   "sha": "4936e6e34bf5707a"
+  },
+  "filtro #f-cidade=Oleiros": {
+   "n": 14,
+   "sha": "adffbc4baa47825e"
+  },
+  "filtro #f-cidade=Rio Maior": {
+   "n": 274,
+   "sha": "57598a565df57862"
+  },
+  "filtro #f-cidade=Santarém": {
+   "n": 1405,
+   "sha": "d7a5d5cf66b088c2"
+  },
+  "filtro #f-cidade=Sintra": {
+   "n": 859,
+   "sha": "acd5ff9b293e3b33"
+  },
+  "filtro #f-cidade=Toledo": {
+   "n": 14,
+   "sha": "063804c923fd40d3"
+  },
+  "filtro #f-cidade=Uccle - Ukkel": {
+   "n": 14,
+   "sha": "15374ce8cc2b709b"
+  },
+  "filtro #f-cidade=Valencia": {
+   "n": 14,
+   "sha": "b8b862dd9e25ce1e"
+  },
+  "filtro #f-cidade=Vila Franca de Xira": {
+   "n": 27,
+   "sha": "7d8d2b955aff23ea"
+  },
+  "filtro #f-cidade=Óbidos": {
+   "n": 53,
+   "sha": "acd3e6f0663a0bd4"
+  },
+  "filtro #f-pais=": {
+   "n": 4187,
+   "sha": "903f9a004f78959c"
+  },
+  "filtro #f-pais=Belgium": {
+   "n": 14,
+   "sha": "15374ce8cc2b709b"
+  },
+  "filtro #f-pais=Portugal": {
+   "n": 4135,
+   "sha": "2e9bb0d00fa7d20e"
+  },
+  "filtro #f-pais=Spain": {
+   "n": 40,
+   "sha": "05b0bcc88ed34e58"
+  },
+  "filtro #f-tipo=": {
+   "n": 4187,
+   "sha": "903f9a004f78959c"
+  },
+  "filtro #f-tipo=Ride": {
+   "n": 131,
+   "sha": "52c137a554dddee0"
+  },
+  "filtro #f-tipo=Run": {
+   "n": 4018,
+   "sha": "547c64894b3d7654"
+  },
+  "filtro #f-tipo=Trail Run": {
+   "n": 27,
+   "sha": "bfa180aa6daf6d98"
+  },
+  "filtro #f-tipo=Walk": {
+   "n": 14,
+   "sha": "27b6b20b28137e9c"
+  },
+  "filtro #f-trofeu=": {
+   "n": 4187,
+   "sha": "903f9a004f78959c"
+  },
+  "filtro #f-trofeu=kom": {
+   "n": 2536,
+   "sha": "f52f78be1d3bf31f"
+  },
+  "filtro #f-trofeu=top": {
+   "n": 1652,
+   "sha": "ac6a910b03741768"
+  },
+  "filtro busca=a": {
+   "n": 3914,
+   "sha": "6a8d2d60492836f3"
+  },
+  "hash invalido": [
+   "tab-koms"
+  ],
+  "inicial #conta": "<span id=\"conta\">322 de 322</span>",
+  "inicial #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "inicial #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "inicial #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "inicial #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "inicial #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "inicial #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "inicial #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "inicial #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "inicial #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "inicial #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "inicial #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "inicial #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "inicial #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "inicial #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "inicial #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "inicial #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "inicial #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "inicial estilos": {
+   "n": 5273,
+   "sha": "6690561220e79c26"
+  },
+  "inicial hash": "",
+  "inicial paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "metrica squadratinhos": {
+   "n": 303,
+   "sha": "7752c26e052eb71e"
+  },
+  "metrica squadrats": {
+   "n": 303,
+   "sha": "c384dd473cf47af0"
+  },
+  "metrica teclado yard": {
+   "n": 303,
+   "sha": "b8a9c2a0f4e8e7bc"
+  },
+  "metrica ubersquadrat": {
+   "n": 303,
+   "sha": "83b46b51f51a0d34"
+  },
+  "metrica ubersquadratinho": {
+   "n": 303,
+   "sha": "e57e912880d012b2"
+  },
+  "metrica yard": {
+   "n": 303,
+   "sha": "fcb4f56756a23e5b"
+  },
+  "metrica yardinho": {
+   "n": 303,
+   "sha": "f30580f1b85e80a0"
+  },
+  "mobile #conta": "<span id=\"conta\">322 de 322</span>",
+  "mobile #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "mobile #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "mobile #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "mobile #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "mobile #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "mobile #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "mobile #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "mobile #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "mobile #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "mobile #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "mobile #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "mobile #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "mobile #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "mobile #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "mobile #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "mobile #tabela": {
+   "n": 4202,
+   "sha": "a33ef8b67eb0b9c1"
+  },
+  "mobile #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "mobile estilos": {
+   "n": 5273,
+   "sha": "08c3edb90fb193f3"
+  },
+  "mobile hash": "",
+  "mobile paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "multi #conta": "<span id=\"conta\">52 de 322</span>",
+  "multi #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "multi #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "multi #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "multi #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "multi #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "multi #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "multi #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "multi #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "multi #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "multi #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "multi #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "multi #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "multi #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "multi #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "multi #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "multi #tabela": {
+   "n": 770,
+   "sha": "322c08588710205a"
+  },
+  "multi #tabs": {
+   "n": 5,
+   "sha": "2a200a048641be7c"
+  },
+  "multi apos-clique #tabela": {
+   "n": 770,
+   "sha": "e24831823160af7a"
+  },
+  "multi estilos": {
+   "n": 1545,
+   "sha": "fac14e49bf535536"
+  },
+  "multi hash": "",
+  "multi paineis": [
+   "tab-koms:true",
+   "tab-best-efforts:false",
+   "tab-squadrats:false"
+  ],
+  "ordem atleta asc #tabela": {
+   "n": 4202,
+   "sha": "4fc645b452062861"
+  },
+  "ordem cidade asc #tabela": {
+   "n": 4202,
+   "sha": "d0715612eabc6ba7"
+  },
+  "ordem data asc #tabela": {
+   "n": 4202,
+   "sha": "e920f43255d103da"
+  },
+  "ordem data desc #tabela": {
+   "n": 4202,
+   "sha": "acd686e4756b7e17"
+  },
+  "ordem dist_km asc #tabela": {
+   "n": 4202,
+   "sha": "f6c47e16d3e6196b"
+  },
+  "ordem pais asc #tabela": {
+   "n": 4202,
+   "sha": "6e9b25c3d983b17b"
+  },
+  "ordem posicao asc #tabela": {
+   "n": 4202,
+   "sha": "5033220d823ee008"
+  },
+  "ordem segmento asc #tabela": {
+   "n": 4202,
+   "sha": "805910ad18f9c253"
+  },
+  "ordem tempo asc #tabela": {
+   "n": 4202,
+   "sha": "dad8e32b59d9f68d"
+  },
+  "ordem tipo asc #tabela": {
+   "n": 4202,
+   "sha": "332834a0bf801d57"
+  },
+  "ordem vel_kmh asc #tabela": {
+   "n": 4202,
+   "sha": "35ed9204d64f908c"
+  },
+  "pill ": {
+   "n": 1,
+   "sha": "d3f9ee9fc3386d3e"
+  },
+  "pill Ana": {
+   "n": 1,
+   "sha": "452ef46897f14be6"
+  },
+  "pill Carolina": {
+   "n": 1,
+   "sha": "edc37ee8d963e583"
+  },
+  "squadrats #conta": "<span id=\"conta\">322 de 322</span>",
+  "squadrats #f-atleta": {
+   "n": 1,
+   "sha": "c4af0d041ad80c99"
+  },
+  "squadrats #f-cidade": {
+   "n": 1,
+   "sha": "99d7a8c771626454"
+  },
+  "squadrats #f-pais": {
+   "n": 1,
+   "sha": "900facfd56cd6a24"
+  },
+  "squadrats #f-tipo": {
+   "n": 1,
+   "sha": "2f477c6dd4e5582b"
+  },
+  "squadrats #f-trofeu": {
+   "n": 5,
+   "sha": "9122b283f87147c0"
+  },
+  "squadrats #ganhos-metrica-nome": "<span class=\"podio-metrica\" id=\"ganhos-metrica-nome\" style=\"font-size:14px;color:var(--suave);\">Squadrats</span>",
+  "squadrats #ganhos-wrap": {
+   "n": 11,
+   "sha": "bdc3252077a01256"
+  },
+  "squadrats #gerado": "<span id=\"gerado\">actualizado 25/09/2026, 11:21</span>",
+  "squadrats #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
+  "squadrats #prs": {
+   "n": 40,
+   "sha": "e654a92e369db475"
+  },
+  "squadrats #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
+  "squadrats #ranking": {
+   "n": 36,
+   "sha": "e39ffc3a76bf1af0"
+  },
+  "squadrats #squadrats": {
+   "n": 256,
+   "sha": "a1ca7efa39b6187e"
+  },
+  "squadrats #squadrats-gerado": "<span id=\"squadrats-gerado\">actualizado 25/09/2026, 07:07</span>",
+  "squadrats #squadrats-podio": {
+   "n": 19,
+   "sha": "860863f6a51f275f"
+  },
+  "squadrats #tabela": {
+   "n": 4202,
+   "sha": "e2f2244ea5e6830c"
+  },
+  "squadrats #tabs": {
+   "n": 5,
+   "sha": "ce549c4bcb241c9c"
+  },
+  "squadrats estilos": {
+   "n": 5273,
+   "sha": "03ddbcaab7ecaced"
+  },
+  "squadrats hash": "#squadrats",
+  "squadrats paineis": [
+   "tab-koms:false",
+   "tab-best-efforts:true",
+   "tab-squadrats:false"
+  ],
+  "tooltip": "\"Nº de squares de 1609 m visitados.\"|26px|220px|rgb(43, 44, 48)"
+ }
+}
