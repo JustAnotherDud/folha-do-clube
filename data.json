@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-25T10:21Z",
+ "gerado": "2026-10-03T10:31Z",
  "linhas": [
   {
    "posicao": 3,
@@ -209,6 +209,20 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Wassim Street",
+   "url": "https://www.strava.com/segments/41851167",
+   "effort_url": "https://www.strava.com/segment_efforts/3541198314975930330",
+   "dist_km": 0.93,
+   "elev_m": 42,
+   "tempo": "2:58",
+   "data": "2026-10-02",
+   "atleta": "Xeira",
+   "cidade": "Oeiras",
    "pais": "Portugal"
   },
   {
@@ -2384,6 +2398,20 @@
   {
    "posicao": 1,
    "tipo": "Run",
+   "segmento": "Rampa dos ciclistas",
+   "url": "https://www.strava.com/segments/9576478",
+   "effort_url": "https://www.strava.com/segment_efforts/3346456817586511508",
+   "dist_km": 0.1,
+   "elev_m": 5,
+   "tempo": "0:19",
+   "data": "2025-04-13",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
    "segmento": "#RainhaLeonorLencastreUP",
    "url": "https://www.strava.com/segments/30846831",
    "effort_url": "https://www.strava.com/segment_efforts/3344410042862947544",
@@ -3252,20 +3280,6 @@
   {
    "posicao": 2,
    "tipo": "Run",
-   "segmento": "Wassim Street",
-   "url": "https://www.strava.com/segments/41851167",
-   "effort_url": "https://www.strava.com/segment_efforts/3515709318639429748",
-   "dist_km": 0.93,
-   "elev_m": 42,
-   "tempo": "3:14",
-   "data": "2026-01-05",
-   "atleta": "Xeira",
-   "cidade": "Oeiras",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 2,
-   "tipo": "Run",
    "segmento": "Descida Escola Prática",
    "url": "https://www.strava.com/segments/18589548",
    "effort_url": "https://www.strava.com/segment_efforts/3437491869956678942",
@@ -3555,20 +3569,6 @@
    "data": "2025-04-25",
    "atleta": "Xeira",
    "cidade": "Maia",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 2,
-   "tipo": "Run",
-   "segmento": "Rampa dos ciclistas",
-   "url": "https://www.strava.com/segments/9576478",
-   "effort_url": "https://www.strava.com/segment_efforts/3346456817586511508",
-   "dist_km": 0.1,
-   "elev_m": 5,
-   "tempo": "0:19",
-   "data": "2025-04-13",
-   "atleta": "Xeira",
-   "cidade": "Santarém",
    "pais": "Portugal"
   },
   {
