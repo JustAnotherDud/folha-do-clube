@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-04T11:12Z",
+ "gerado": "2026-10-11T11:31Z",
  "linhas": [
   {
    "posicao": 3,
@@ -209,6 +209,20 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "N3 Quinta dos Anjos",
+   "url": "https://www.strava.com/segments/8017378",
+   "effort_url": "https://www.strava.com/segment_efforts/3544064615538799622",
+   "dist_km": 0.75,
+   "elev_m": 21,
+   "tempo": "2:46",
+   "data": "2026-10-10",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
    "pais": "Portugal"
   },
   {
@@ -2774,20 +2788,6 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 4,
-   "tipo": "Run",
-   "segmento": "N3 Quinta dos Anjos",
-   "url": "https://www.strava.com/segments/8017378",
-   "effort_url": "https://www.strava.com/segment_efforts/3533921686702158416",
-   "dist_km": 0.75,
-   "elev_m": 21,
-   "tempo": "3:16",
-   "data": "2026-09-12",
-   "atleta": "Xeira",
-   "cidade": "Santarém",
-   "pais": "Portugal"
-  },
-  {
    "posicao": 7,
    "tipo": "Run",
    "segmento": "Portas do Sol",
@@ -4006,7 +4006,7 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 5,
+   "posicao": 7,
    "tipo": "Run",
    "segmento": "Ciclovia | Matias -> Mota-Engil",
    "url": "https://www.strava.com/segments/41521492",
