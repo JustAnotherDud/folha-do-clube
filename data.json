@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-23T10:18Z",
+ "gerado": "2026-11-01T11:57Z",
  "linhas": [
   {
    "posicao": 3,
@@ -209,6 +209,34 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Subida de Alcanhões",
+   "url": "https://www.strava.com/segments/10888433",
+   "effort_url": "https://www.strava.com/segment_efforts/3551936302931167452",
+   "dist_km": 0.31,
+   "elev_m": 19,
+   "tempo": "1:32",
+   "data": "2026-11-01",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Subida N365 Santarém-Alcanhões",
+   "url": "https://www.strava.com/segments/10888426",
+   "effort_url": "https://www.strava.com/segment_efforts/3551936302931248348",
+   "dist_km": 0.52,
+   "elev_m": 16,
+   "tempo": "2:13",
+   "data": "2026-11-01",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
    "pais": "Portugal"
   },
   {
@@ -2783,6 +2811,34 @@
    "elev_m": 41,
    "tempo": "4:00",
    "data": "2024-07-13",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Sub. Saida Alcanhões",
+   "url": "https://www.strava.com/segments/10888439",
+   "effort_url": "https://www.strava.com/segment_efforts/3551936302933425372",
+   "dist_km": 0.57,
+   "elev_m": 12,
+   "tempo": "2:29",
+   "data": "2026-11-01",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Subida de Alcanhões",
+   "url": "https://www.strava.com/segments/10888433",
+   "effort_url": "https://www.strava.com/segment_efforts/3551936302931167452",
+   "dist_km": 0.31,
+   "elev_m": 19,
+   "tempo": "1:32",
+   "data": "2026-11-01",
    "atleta": "Xeira",
    "cidade": "Santarém",
    "pais": "Portugal"
