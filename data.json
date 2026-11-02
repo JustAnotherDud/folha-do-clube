@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-01T11:57Z",
+ "gerado": "2026-11-02T13:43Z",
  "linhas": [
   {
-   "posicao": 3,
+   "posicao": 4,
    "tipo": "Ride",
    "segmento": "Van Zuylen",
    "url": "https://www.strava.com/segments/2413854",
@@ -3359,6 +3359,20 @@
    "data": "2025-12-04",
    "atleta": "Xeira",
    "cidade": "Oeiras",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Calçada da Junqueira curta",
+   "url": "https://www.strava.com/segments/11015499",
+   "effort_url": "https://www.strava.com/segment_efforts/3422280158716870078",
+   "dist_km": 0.18,
+   "elev_m": 2,
+   "tempo": "0:28",
+   "data": "2025-11-08",
+   "atleta": "Xeira",
+   "cidade": "Santarém",
    "pais": "Portugal"
   },
   {
