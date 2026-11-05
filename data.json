@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T13:09Z",
+ "gerado": "2026-11-05T13:23Z",
  "linhas": [
   {
    "posicao": 4,
@@ -2818,6 +2818,20 @@
   {
    "posicao": 2,
    "tipo": "Run",
+   "segmento": "Subida Feira de Santana",
+   "url": "https://www.strava.com/segments/16487944",
+   "effort_url": "https://www.strava.com/segment_efforts/3553128383726147272",
+   "dist_km": 0.99,
+   "elev_m": 45,
+   "tempo": "3:38",
+   "data": "2026-11-04",
+   "atleta": "Xeira",
+   "cidade": "Matosinhos",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
    "segmento": "Sub. Saida Alcanhões",
    "url": "https://www.strava.com/segments/10888439",
    "effort_url": "https://www.strava.com/segment_efforts/3551936302933425372",
@@ -3290,20 +3304,6 @@
    "atleta": "Xeira",
    "cidade": "Toledo",
    "pais": "Spain"
-  },
-  {
-   "posicao": 5,
-   "tipo": "Run",
-   "segmento": "Subida Feira de Santana",
-   "url": "https://www.strava.com/segments/16487944",
-   "effort_url": "https://www.strava.com/segment_efforts/3468024058206153566",
-   "dist_km": 0.99,
-   "elev_m": 45,
-   "tempo": "4:14",
-   "data": "2026-03-14",
-   "atleta": "Xeira",
-   "cidade": "Matosinhos",
-   "pais": "Portugal"
   },
   {
    "posicao": 3,
