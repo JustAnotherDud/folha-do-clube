@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-05T13:23Z",
+ "gerado": "2026-11-06T13:06Z",
  "linhas": [
   {
    "posicao": 4,
@@ -209,6 +209,20 @@
    "data": "2026-03-25",
    "atleta": "Inês",
    "cidade": "Alcobaça",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 1,
+   "tipo": "Run",
+   "segmento": "Subida Feira de Santana",
+   "url": "https://www.strava.com/segments/16487944",
+   "effort_url": "https://www.strava.com/segment_efforts/3553466892787033070",
+   "dist_km": 0.99,
+   "elev_m": 45,
+   "tempo": "3:32",
+   "data": "2026-11-05",
+   "atleta": "Xeira",
+   "cidade": "Matosinhos",
    "pais": "Portugal"
   },
   {
@@ -2813,20 +2827,6 @@
    "data": "2024-07-13",
    "atleta": "Xeira",
    "cidade": "Santarém",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 2,
-   "tipo": "Run",
-   "segmento": "Subida Feira de Santana",
-   "url": "https://www.strava.com/segments/16487944",
-   "effort_url": "https://www.strava.com/segment_efforts/3553128383726147272",
-   "dist_km": 0.99,
-   "elev_m": 45,
-   "tempo": "3:38",
-   "data": "2026-11-04",
-   "atleta": "Xeira",
-   "cidade": "Matosinhos",
    "pais": "Portugal"
   },
   {
