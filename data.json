@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-06T13:06Z",
+ "gerado": "2026-11-08T12:03Z",
  "linhas": [
   {
    "posicao": 4,
@@ -86,7 +86,7 @@
    "pais": "Portugal"
   },
   {
-   "posicao": 9,
+   "posicao": 10,
    "tipo": "Run",
    "segmento": "Três de Santa Clara",
    "url": "https://www.strava.com/segments/40074674",
@@ -2804,20 +2804,6 @@
   {
    "posicao": 1,
    "tipo": "Run",
-   "segmento": "IST- Av Rep",
-   "url": "https://www.strava.com/segments/7500148",
-   "effort_url": "https://www.strava.com/segment_efforts/3270435164579573362",
-   "dist_km": 0.77,
-   "elev_m": 10,
-   "tempo": "2:43",
-   "data": "2024-09-15",
-   "atleta": "Xeira",
-   "cidade": "Lisbon",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 1,
-   "tipo": "Run",
    "segmento": "Subida ao VG Jose Morto",
    "url": "https://www.strava.com/segments/6807898",
    "effort_url": "https://www.strava.com/segment_efforts/3247168153269273672",
@@ -3791,6 +3777,20 @@
    "elev_m": 12,
    "tempo": "0:48",
    "data": "2024-09-20",
+   "atleta": "Xeira",
+   "cidade": "Lisbon",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "IST- Av Rep",
+   "url": "https://www.strava.com/segments/7500148",
+   "effort_url": "https://www.strava.com/segment_efforts/3270435164579573362",
+   "dist_km": 0.77,
+   "elev_m": 10,
+   "tempo": "2:43",
+   "data": "2024-09-15",
    "atleta": "Xeira",
    "cidade": "Lisbon",
    "pais": "Portugal"
