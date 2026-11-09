@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-08T12:03Z",
+ "gerado": "2026-11-09T14:09Z",
  "atletas": {
   "Ana": {
    "400m": {
@@ -317,6 +317,14 @@
    "Half-Marathon": {
     "tempo": "1:44:16",
     "url": "https://www.strava.com/activities/16260496955"
+   },
+   "30K": {
+    "tempo": "3:08:23",
+    "url": "https://www.strava.com/activities/20908224812"
+   },
+   "Marathon": {
+    "tempo": "4:53:50",
+    "url": "https://www.strava.com/activities/20908224812"
    }
   }
  }
