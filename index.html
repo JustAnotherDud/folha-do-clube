@@ -225,24 +225,30 @@
   #squadrats td.r3 .rank-disco { background: var(--bronze); color: var(--bronze-tinta); }
 
   /* --- ganhos diários --- */
-  .squadrats-cols { display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-start; }
-  .squadrats-col-principal { flex: 0 0 auto; }
-  .squadrats-col-ganhos { flex: 1 1 380px; max-width: 560px; min-width: 320px; }
-  .ganhos-grafico { width: 100%; height: 160px; display: block; margin: 4px 0 10px; }
+  .squadrats-cols { display: flex; gap: var(--e5); flex-wrap: wrap; align-items: flex-start; }
+  .squadrats-col-principal { flex: 0 1 auto; max-width: 100%; min-width: 0; }
+  .squadrats-col-ganhos { flex: 1 1 360px; max-width: 600px; min-width: 0; }
+  .ganhos-grafico { width: 100%; display: block; margin: 0 0 var(--e2); overflow: visible; }
   .ganhos-grafico .barra { transition: opacity .12s; }
   .ganhos-grafico .barra:hover { opacity: .75; }
-  .ganhos-grafico text { font-size: 9px; fill: var(--suave); font-family: inherit; }
-  .ganhos-grafico .total-dia { font-size: 9.5px; fill: var(--texto); font-weight: 700; }
-  .tabela-ganhos-wrap { overflow-x: auto; }
-  #ganhos-tabela { width: 100%; }
-  #ganhos-tabela th, #ganhos-tabela td { padding: 4px 8px; font-size: 12.5px; }
-  #ganhos-tabela thead th { background: var(--painel-alto); color: var(--suave); font-weight: 700; }
-  #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; }
+  .ganhos-grafico text { font-size: 11px; fill: var(--suave); font-family: inherit; }
+  .ganhos-grafico .total-dia { font-size: 12px; fill: var(--texto); font-weight: 700; }
+  .ganhos-grafico .grelha { stroke: var(--grelha); stroke-width: 1; stroke-dasharray: 2 4; }
+  .ganhos-grafico .eixo { stroke: var(--grelha); stroke-width: 1; }
+  .legenda { display: flex; flex-wrap: wrap; gap: var(--e1) var(--e3); margin: 0 0 var(--e3); font-size: 12px; color: var(--suave); }
+  .legenda span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--cor); margin-right: 6px; }
+  .ganhos-vazio { color: var(--suave); font-size: 13px; padding: var(--e4) 0; }
+  #ganhos-tabela th, #ganhos-tabela td { font-size: 13px; }
+  #ganhos-tabela thead th { text-align: center; white-space: nowrap; }
+  #ganhos-tabela thead th:first-child { text-align: left; }
+  #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; font-weight: 400; }
   #ganhos-tabela td.num { text-align: center; }
   #ganhos-tabela td.num.zero { color: var(--grelha); }
   #ganhos-tabela td.num.negativo { color: #e08a6a; }
   /* maior ganho do dia */
-  #ganhos-tabela td.num.maior { background: rgba(199,91,18,.16); font-weight: 700; }
+  #ganhos-tabela td.num.maior { background: var(--laranja-tinta); color: var(--laranja); font-weight: 700; }
+  #ganhos-tabela th .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; background: var(--cor); }
   /* navegação por tabs: uma só barra, com scroll horizontal se for preciso */
   .tabs {
     display: flex; gap: var(--e1); flex-wrap: nowrap;
@@ -371,11 +377,12 @@
         <span class="podio-metrica" style="font-size:18px;">Ganhos diários</span>
         <span class="podio-metrica" id="ganhos-metrica-nome" style="font-size:14px;color:var(--suave);"></span>
       </p>
-      <svg id="ganhos-grafico" class="ganhos-grafico"></svg>
+      <svg id="ganhos-grafico" class="ganhos-grafico" height="190"></svg>
+      <div class="legenda" id="ganhos-legenda"></div>
       <div class="tabela-wrap tabela-ganhos-wrap">
         <table id="ganhos-tabela"><thead><tr></tr></thead><tbody></tbody></table>
       </div>
-      <div class="panel-meta" id="ganhos-gerado" style="margin-top:10px;"></div>
+      <div class="panel-meta" style="margin-top:10px;"><span id="ganhos-ocultos"></span> <span id="ganhos-gerado"></span></div>
     </div>
   </div>
 </section>
@@ -383,6 +390,7 @@
 <script>
 "use strict";
 
+let ganhosData = null;   // daily_gains.json, declarado aqui porque activarTab() corre logo
 // separador activo no hash do URL
 const TABS = ["koms", "best-efforts", "squadrats"];
 function activarTab(nome) {
@@ -391,6 +399,7 @@ function activarTab(nome) {
     t.classList.toggle("active", t.dataset.tab === nome));
   document.querySelectorAll(".panel").forEach(p =>
     p.classList.toggle("active", p.id === "tab-" + nome));
+  if (nome === "squadrats" && ganhosData) renderGanhos();
 }
 document.getElementById("tabs").addEventListener("click", e => {
   const tab = e.target.closest(".tab");
@@ -801,7 +810,6 @@ comCores(SQUADRATS_URL).then(renderSquadrats).catch(() => {});
 
 // {dias: [{data, atletas: {nome: {campo: delta}}}]}, só o que mudou em cada dia
 const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/daily_gains.json";
-let ganhosData = null;
 // a métrica é a mesma da tabela (metricaSquadrats)
 
 function dataPtCurta(iso) {
@@ -828,38 +836,53 @@ function janelaComBuracos(dias) {
 
 function renderGanhosGrafico(dias, nomes) {
   const svg = document.getElementById("ganhos-grafico");
-  const W = 560, H = 160, padBottom = 16, padTop = 14;
-  const passo = (W - 20) / Math.max(dias.length, 1);
-  const larguraBarra = Math.min(28, passo - 6);
+  const W = Math.round(svg.getBoundingClientRect().width) || 360;   // px reais: texto sempre legível
+  const H = W < 480 ? 190 : 210, padBottom = 22, padTop = 20, padX = 6;
+  const passo = (W - 2 * padX) / Math.max(dias.length, 1);
+  const larguraBarra = Math.max(8, Math.min(30, passo - 5));
   const totais = dias.map(d => nomes.reduce((s, n) => s + Math.max(0, (d.atletas[n] || {})[metricaSquadrats] || 0), 0));
   const maxTotal = Math.max(1, ...totais);
   const escala = (H - padTop - padBottom) / maxTotal;
+  const yBase = H - padBottom;
+  const cadaN = Math.max(1, Math.ceil(36 / passo));   // uma data a cada N barras, sem sobreposição
 
-  const partes = [];
+  const partes = [`<line class="eixo" x1="0" x2="${W}" y1="${yBase}" y2="${yBase}"/>`];
+  // linha de referência a meio do máximo
+  if (maxTotal >= 4) {
+    const y = yBase - (maxTotal / 2) * escala;
+    partes.push(`<line class="grelha" x1="0" x2="${W}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}"/>`);
+  }
   dias.forEach((dia, i) => {
-    const x = 10 + i * passo + (passo - larguraBarra) / 2;
-    let y = H - padBottom;
+    const x = padX + i * passo + (passo - larguraBarra) / 2;
+    const cx = x + larguraBarra / 2;
+    let y = yBase;
     nomes.forEach(nome => {
       const v = (dia.atletas[nome] || {})[metricaSquadrats] || 0;
       if (v <= 0) return;
-      const altura = v * escala;
+      const altura = Math.max(2, v * escala);
       y -= altura;
-      partes.push(`<rect class="barra" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${larguraBarra}" height="${altura.toFixed(1)}" fill="${corAtleta(nome)}"><title>${escHtml(nome)}: +${v}</title></rect>`);
+      partes.push(`<rect class="barra" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${larguraBarra.toFixed(1)}" height="${altura.toFixed(1)}" rx="2" fill="${corAtleta(nome)}" stroke="var(--fundo)" stroke-width="1"><title>${escHtml(nome)}: +${v}</title></rect>`);
     });
-    const total = totais[i];
-    if (total > 0) {
-      partes.push(`<text class="total-dia" x="${(x + larguraBarra / 2).toFixed(1)}" y="${(H - padBottom - total * escala - 4).toFixed(1)}" text-anchor="middle">${total}</text>`);
+    if (totais[i] > 0) {
+      partes.push(`<text class="total-dia" x="${cx.toFixed(1)}" y="${(y - 5).toFixed(1)}" text-anchor="middle">${totais[i]}</text>`);
     }
-    partes.push(`<text x="${(x + larguraBarra / 2).toFixed(1)}" y="${H - 4}" text-anchor="middle">${dataPtCurta(dia.data)}</text>`);
+    if ((dias.length - 1 - i) % cadaN === 0) {
+      partes.push(`<text x="${cx.toFixed(1)}" y="${H - 6}" text-anchor="middle">${dataPtCurta(dia.data)}</text>`);
+    }
   });
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("height", H);
   svg.innerHTML = partes.join("");
 }
 
 function renderGanhosTabela(dias, nomes) {
   document.querySelector("#ganhos-tabela thead tr").innerHTML =
-    `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
-  document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
+    `<th>Dia</th>` + nomes.map(n =>
+      `<th><span class="dot" style="--cor:${corAtleta(n)}"></span>${escHtml(n)}</th>`).join("");
+  // só dias em que alguém mexeu na métrica
+  const comGanhos = dias.filter(d => nomes.some(n => (d.atletas[n] || {})[metricaSquadrats]));
+  const ocultos = dias.length - comGanhos.length;
+  document.querySelector("#ganhos-tabela tbody").innerHTML = comGanhos.slice().reverse().map(dia => {
     // destaca o maior ganho do dia, se for positivo
     const valoresDia = nomes.map(n => (dia.atletas[n] || {})[metricaSquadrats] || 0);
     const maiorDia = Math.max(0, ...valoresDia);
@@ -870,7 +893,9 @@ function renderGanhosTabela(dias, nomes) {
       return `<td class="num${v < 0 ? " negativo" : ""}${destaque}">${v > 0 ? "+" : ""}${v}</td>`;
     }).join("");
     return `<tr><td class="dia">${dataPtCurta(dia.data)}</td>${cels}</tr>`;
-  }).join("");
+  }).join("") || `<tr><td class="vazio" colspan="${nomes.length + 1}">Sem ganhos nestes dias.</td></tr>`;
+  document.getElementById("ganhos-ocultos").textContent = ocultos
+    ? `${ocultos} ${ocultos === 1 ? "dia" : "dias"} sem ganhos não ${ocultos === 1 ? "é mostrado" : "são mostrados"}.` : "";
 }
 
 function renderGanhos() {
@@ -878,10 +903,18 @@ function renderGanhos() {
   document.getElementById("ganhos-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
   const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
   const dias = janelaComBuracos(ganhosData.dias);
+  document.getElementById("ganhos-legenda").innerHTML = nomes.map(n =>
+    `<span style="--cor:${corAtleta(n)}">${escHtml(n)}</span>`).join("");
   renderGanhosGrafico(dias, nomes);
   renderGanhosTabela(dias, nomes);
   document.getElementById("ganhos-gerado").textContent = actualizado(ganhosData.gerado);
 }
+// o gráfico usa a largura real: refaz ao mudar o tamanho (e ao mostrar o separador)
+let larguraGanhos = 0;
+new ResizeObserver(() => {
+  const w = Math.round(document.getElementById("ganhos-grafico").getBoundingClientRect().width);
+  if (w && w !== larguraGanhos) { larguraGanhos = w; renderGanhos(); }
+}).observe(document.getElementById("ganhos-wrap"));
 
 comCores(GANHOS_URL).then(d => { ganhosData = d; renderGanhos(); })
   .catch(() => { document.getElementById("ganhos-wrap").style.display = "none"; });
