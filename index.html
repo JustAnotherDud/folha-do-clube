@@ -76,7 +76,6 @@
   #ranking-wrap { display: inline-block; margin-bottom: var(--e5); max-width: 100%; vertical-align: top; }
   #ranking tbody tr.r0 td { background: rgba(217,165,68,.10); }
   #ranking tbody tr.r0 td.atleta { background: #36322b; }
-  #ranking tr.sem-kom td { color: var(--suave); opacity: .55; }
   #ranking td { font-weight: 600; }
 
   .filtros { margin: 0 0 var(--e3); display: flex; gap: var(--e2); flex-wrap: wrap; align-items: center; }
@@ -134,8 +133,9 @@
   /* Best Efforts: melhor tempo de cada distância */
   #prs th { white-space: nowrap; }
   #prs th[title] { cursor: help; }
-  #prs td.melhor { background: var(--laranja-tinta); color: var(--laranja); font-weight: 700; }
+  #prs td.melhor { color: var(--laranja); font-weight: 700; }
   #prs td.melhor a { color: inherit; }
+  #prs.dominante td.melhor { color: var(--texto); }   /* um membro com quase tudo: só negrito */
 
   /* --- pódio Squadrats: terraços, altura = posição --- */
   .podio-titulo { margin: 0 0 14px; }
@@ -409,7 +409,6 @@ window.addEventListener("hashchange", () => activarTab(location.hash.slice(1)));
 activarTab(location.hash.slice(1));
 
 let linhas = [];
-let membrosPrs = [];   // membros vistos nos Best Efforts, para o resumo mostrar quem tem 0 KOMs
 let ordem = { k: "data", asc: false };
 const atletasSelecionados = new Set();
 
@@ -484,10 +483,12 @@ const actualizado = iso => "actualizado " + new Date(iso).toLocaleString("pt-PT"
 
 function renderPRs(prsData) {
   const atletasData = prsData.atletas;
-  const nomes = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
-  const distancias = [...new Set(nomes.flatMap(n => Object.keys(atletasData[n])))]
+  const todos = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
+  const distancias = [...new Set(todos.flatMap(n => Object.keys(atletasData[n])))]
     .filter(d => d in DIST_METROS)
     .sort((a, b) => DIST_METROS[a] - DIST_METROS[b]);
+  // quem não tem nenhum tempo nestas distâncias não ganha linha só de traços
+  const nomes = todos.filter(n => distancias.some(d => atletasData[n][d]));
   if (!nomes.length || !distancias.length) return;
 
   const melhores = {};
@@ -501,6 +502,13 @@ function renderPRs(prsData) {
     }
     melhores[d] = melhorNome;
   }
+
+  // Se um membro domina (≥60% das distâncias), o laranja pintaria uma linha inteira:
+  // nesse caso o destaque fica só em negrito, sem cor.
+  const vitorias = {};
+  for (const d of distancias) if (melhores[d]) vitorias[melhores[d]] = (vitorias[melhores[d]] || 0) + 1;
+  const dominante = distancias.length >= 3 && Math.max(0, ...Object.values(vitorias)) / distancias.length >= 0.6;
+  document.getElementById("prs").classList.toggle("dominante", dominante);
 
   document.querySelector("#prs thead").innerHTML =
     "<tr><th>Nome</th>" + distancias.map(d =>
@@ -520,8 +528,6 @@ function renderPRs(prsData) {
     </tr>`).join("");
 
   document.getElementById("prs-gerado").textContent = actualizado(prsData.gerado);
-  membrosPrs = nomes;
-  if (linhas.length) ranking();
 }
 
 // "2,01": vírgula decimal pt-PT, 2 casas
@@ -529,7 +535,6 @@ const fmtMedia = x => x.toLocaleString("pt-PT", { minimumFractionDigits: 2, maxi
 
 function ranking() {
   const por = {};
-  for (const n of membrosPrs) por[n] = { nome: n, koms: 0, meds: 0, pontos: 0, soma: 0, n: 0 };
   for (const l of linhas) {
     const r = por[l.atleta] ??= { nome: l.atleta, koms: 0, meds: 0, pontos: 0, soma: 0, n: 0 };
     if (l.posicao === 1) r.koms++; else r.meds++;
@@ -538,11 +543,11 @@ function ranking() {
   }
   const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos || a.nome.localeCompare(b.nome, "pt"));
   document.querySelector("#ranking tbody").innerHTML = ord.map((r, i) => `
-    <tr class="${r.n ? "r" + i : "sem-kom"}">
+    <tr class="r${i}">
       <td class="atleta" style="--cor:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
       <td class="num">${r.koms}</td><td class="num">${r.meds}</td>
       <td class="num">${r.pontos}</td>
-      <td class="num">${r.n ? fmtMedia(r.soma / r.n) : "—"}</td>
+      <td class="num">${fmtMedia(r.soma / r.n)}</td>
     </tr>`).join("");
 }
 
@@ -761,7 +766,8 @@ function renderSquadratsPodio(atletas, podio) {
 function renderSquadrats(d) {
   squadratsData = d;
   const atletas = d.atletas;
-  const nomes = Object.keys(atletas);
+  // só membros com algum valor; quem só tem zeros/vazios não ganha linha
+  const nomes = Object.keys(atletas).filter(n => CAMPOS_SQUADRATS.some(c => atletas[n][c] > 0));
   const podio = podioPorCampo(atletas, nomes);
 
   renderSquadratsPodio(atletas, podio);
