@@ -935,8 +935,11 @@ function renderGanhosTabela(dias, nomes) {
 function renderGanhos() {
   if (!ganhosData || !ganhosData.dias.length) return;
   document.getElementById("ganhos-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
-  const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
   const dias = janelaComBuracos(ganhosData.dias);
+  // só membros com ganhos nesta métrica e nesta janela: sem colunas nem legenda só de traços
+  const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))]
+    .filter(n => dias.some(d => (d.atletas[n] || {})[metricaSquadrats]))
+    .sort((a, b) => a.localeCompare(b, "pt"));
   document.getElementById("ganhos-legenda").innerHTML = nomes.map(n =>
     `<span style="--cor:${corAtleta(n)}">${escHtml(n)}</span>`).join("");
   renderGanhosGrafico(dias, nomes);
