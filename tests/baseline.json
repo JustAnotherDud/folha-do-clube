@@ -41,6 +41,48 @@
     "n": 5203,
     "sha": "5f1977577182dbcd"
    }
+  },
+  "win32-msedge": {
+   "best-efforts estilos": {
+    "n": 5196,
+    "sha": "82ef63481c7329eb"
+   },
+   "falha sem-cores estilos": {
+    "n": 5203,
+    "sha": "9a73128f1079e4ad"
+   },
+   "falha sem-data estilos": {
+    "n": 628,
+    "sha": "c4d1632251ff7a49"
+   },
+   "falha sem-ganhos estilos": {
+    "n": 5148,
+    "sha": "421cc95111a78e20"
+   },
+   "falha sem-prs estilos": {
+    "n": 4990,
+    "sha": "af2e84781f2d3411"
+   },
+   "falha sem-squadrats estilos": {
+    "n": 4948,
+    "sha": "835103eed0cd5fd2"
+   },
+   "inicial estilos": {
+    "n": 5196,
+    "sha": "92c7b88bfdf75345"
+   },
+   "mobile estilos": {
+    "n": 5196,
+    "sha": "b0d7ba7c2cb41173"
+   },
+   "multi estilos": {
+    "n": 1468,
+    "sha": "6eeb030be3d09336"
+   },
+   "squadrats estilos": {
+    "n": 5203,
+    "sha": "80cabe26db01699f"
+   }
   }
  },
  "python": {
