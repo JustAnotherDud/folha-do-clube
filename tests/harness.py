@@ -281,6 +281,7 @@ SQUADRATS = {"atualizado": "2026-09-25T06:07:24Z", "atletas": {
     "Xeira": {"squadrats": 471, "squadratinhos": 6100, "yard": 116, "yardinho": 145, "ubersquadrat": 9, "ubersquadratinho": 9},
     "Inês S.": {"squadrats": 120, "squadratinhos": 900, "yard": None, "yardinho": 30, "ubersquadrat": 3, "ubersquadratinho": 5},
     "Pedro": {"squadrats": 480, "squadratinhos": 10, "yard": 5, "yardinho": 1, "ubersquadrat": 2},
+    "Zero": {"squadrats": 0, "squadratinhos": 0, "yard": 0, "yardinho": None, "ubersquadrat": 0, "ubersquadratinho": None},
     "Novo": {"squadrats": 1, "squadratinhos": 2, "yard": 0, "yardinho": 0, "ubersquadrat": 1, "ubersquadratinho": 1},
 }}
 GANHOS = {"gerado": "2026-09-25T06:07:26Z", "dias": [
@@ -289,8 +290,10 @@ GANHOS = {"gerado": "2026-09-25T06:07:26Z", "dias": [
     {"data": "2026-09-20", "atletas": {"Pedro": {"squadrats": -1, "yard": 3}, "Inês S.": {"squadratinhos": 7}}},
     {"data": "2026-09-25", "atletas": {"Carolina": {"squadrats": 2, "squadratinhos": 23}}},
 ]}
-CORES = {"cores": {"Zé": "#e03131", "Xeira": "#9c46d8", "Carolina": "#c99a00", "Inês S.": "#e8710a",
-                   "Inês": "#e8710a", "Ana": "#12889c", "Pedro": "#010203"}}
+# espelha membros_cores.json (squadrats-club): a folha já não tem mapeamento próprio
+CORES = {"cores": {"Zé": "#f0476f", "Xeira": "#9c46d8", "Carolina": "#c99a00", "Inês S.": "#b8e04a",
+                   "Inês": "#b8e04a", "Ana": "#12889c", "Pedro": "#010203",
+                   "Daniel": "#8ecae6", "Gonçalo": "#d4a373", "Pipas": "#e0aaff"}}
 
 SNAP_JS = r"""async () => {
   await document.fonts.ready;
@@ -335,9 +338,10 @@ def casos_site():
                 raw + "data/data/squadrats.json": SQUADRATS,
                 raw + "data/data/daily_gains.json": GANHOS}
 
-    def abrir(browser, falhas=(), largura=1280, ordem=ORDEM_JSON):
+    def abrir(browser, falhas=(), largura=1280, ordem=ORDEM_JSON, toque=False):
         ctx = browser.new_context(viewport={"width": largura, "height": 900}, locale="pt-PT",
-                                  timezone_id="Europe/Lisbon", reduced_motion="reduce")
+                                  timezone_id="Europe/Lisbon", reduced_motion="reduce",
+                                  has_touch=toque, is_mobile=toque)
         erros = []
 
         pendentes = {}
@@ -379,14 +383,17 @@ def casos_site():
         return ctx, page, erros
 
     r = {}
+    estilos = {}   # computed styles + caixas: dependem do navegador/SO, ver plataforma()
 
     def snap(page, nome):
         for k, v in page.evaluate(SNAP_JS).items():
-            r[f"{nome} {k}"] = resumo(v)
+            (estilos if k == "estilos" else r)[f"{nome} {k}"] = resumo(v)
 
     with sync_playwright() as p:
         canal = os.environ.get("HARNESS_BROWSER", "msedge")
-        browser = p.chromium.launch(channel=canal or None)
+        # HARNESS_EXECUTABLE: caminho de um Chromium já instalado (ex.: sessões cloud)
+        browser = p.chromium.launch(channel=canal or None,
+                                    executable_path=os.environ.get("HARNESS_EXECUTABLE") or None)
 
         ctx, page, erros = abrir(browser)
         snap(page, "inicial")
@@ -416,8 +423,22 @@ def casos_site():
             r[f"pill {a}"] = resumo(page.inner_html("#f-atleta") + page.inner_text("#conta"))
         separador(page, "best-efforts")
         snap(page, "best-efforts")
+        # melhor tempo de cada coluna: só negrito, sem fundo e sem cor diferente do resto
+        r["best efforts: melhor tempo só a negrito"] = page.evaluate(
+            """() => { const t = document.querySelector('#prs td.melhor'),
+                a = t.querySelector('a'), o = document.querySelector('#prs td.c:not(.melhor):not(.vazio) a');
+              return [getComputedStyle(t).backgroundColor, getComputedStyle(t).fontWeight,
+                      getComputedStyle(a).color === getComputedStyle(o).color]; }""")
+        r["ranking: só membros com pontos"] = page.evaluate(
+            "[...document.querySelectorAll('#ranking tbody tr')].every(tr => +tr.cells[3].textContent > 0)")
+        r["prs: sem linhas só de traços"] = page.evaluate(
+            "[...document.querySelectorAll('#prs tbody tr')].every(tr => [...tr.cells].slice(1).some(c => c.textContent.trim() !== '—'))")
         separador(page, "squadrats")
         snap(page, "squadrats")
+        r["squadrats: sem membros só com zeros/vazios"] = page.eval_on_selector_all(
+            "#squadrats td.atleta", "ts => ts.map(t => t.textContent.trim())")
+        r["ganhos: colunas só com membros com ganhos"] = page.eval_on_selector_all(
+            "#ganhos-tabela thead th", "ts => ts.map(t => t.textContent.trim())")
         r["podio bolinhas"] = page.eval_on_selector_all(".riser .dot", """ds => ds.map(d => {
             const b = d.getBoundingClientRect(), c = getComputedStyle(d);
             return `${Math.round(b.width)}x${Math.round(b.height)} ${c.backgroundColor} ${c.borderRadius}`; })""")
@@ -427,10 +448,18 @@ def casos_site():
         page.focus('#squadrats th[data-c="yard"]')
         page.keyboard.press("Enter")
         r["metrica teclado yard"] = resumo(page.inner_html("#tab-squadrats"))
+        # explicações dos cabeçalhos: hover, clique no i (fixa) e Escape
+        dica = "() => [document.getElementById('dica').hidden, document.getElementById('dica').textContent]"
         page.hover('#squadrats th[data-c="squadrats"]')
-        r["tooltip"] = page.evaluate("""() => { const c = getComputedStyle(
-            document.querySelector('#squadrats th[data-c="squadrats"]'), '::after');
-            return [c.content, c.top, c.width, c.backgroundColor].join('|'); }""")
+        r["dica: hover"] = page.evaluate(dica)
+        page.mouse.move(0, 0)
+        r["dica: hover sai"] = page.evaluate(dica)
+        page.click('#squadrats th[data-c="ubersquadrat"] .info')   # a métrica activa é outra (yard)
+        r["dica: clique no i"] = page.evaluate(dica)
+        r["dica: clique no i não muda a métrica"] = page.evaluate(
+            "document.querySelector('#squadrats th.metrica-activa').dataset.c")
+        page.keyboard.press("Escape")
+        r["dica: Escape"] = page.evaluate(dica)
         page.goto("http://folha.test/#invalido")
         r["hash invalido"] = page.evaluate("[...document.querySelectorAll('.panel.active')].map(p => p.id)")
         r["consola"] = erros
@@ -445,6 +474,32 @@ def casos_site():
         snap(page, "mobile")
         ctx.close()
 
+        # telemóvel (390px): a página nunca tem scroll horizontal, as tabs ficam numa só linha
+        # e o ritmo ("3:34/km") não parte
+        ctx, page, erros = abrir(browser, largura=390, toque=True)
+        for t in ("koms", "best-efforts", "squadrats"):
+            separador(page, t)
+            r[f"390px {t}: sem scroll horizontal da página"] = page.evaluate(
+                "document.documentElement.scrollWidth <= window.innerWidth")
+        r["390px: tabs numa só linha"] = page.evaluate(
+            "new Set([...document.querySelectorAll('.tab')].map(t => t.offsetTop)).size === 1")
+        separador(page, "koms")
+        r["390px: ritmo numa só linha"] = page.evaluate(
+            """[...document.querySelectorAll('#tabela td.ritmo')].every(td => {
+                const r = document.createRange(); r.selectNodeContents(td);
+                return r.getClientRects().length === 1; })""")
+        r["390px: tabela larga com scroll próprio"] = page.evaluate(
+            "[...document.querySelectorAll('.tabela-wrap')].every(w => w.scrollWidth >= w.clientWidth)")
+        separador(page, "squadrats")
+        page.tap('#squadrats th[data-c="ubersquadrat"] .info')
+        r["390px toque: abre a explicação"] = page.evaluate(dica)
+        page.tap('#squadrats th[data-c="ubersquadrat"] .info')
+        r["390px toque: segundo toque fecha"] = page.evaluate(dica)
+        page.tap('#squadrats th[data-c="yard"] .info')
+        page.tap("h1")
+        r["390px toque: toque fora fecha"] = page.evaluate(dica)
+        ctx.close()
+
         for nome, falhas in (("sem-data", ["data.json"]), ("sem-prs", ["prs.json"]),
                              ("sem-cores", ["membros_cores"]), ("sem-squadrats", ["squadrats.json"]),
                              ("sem-ganhos", ["daily_gains"])):
@@ -454,20 +509,36 @@ def casos_site():
             r[f"falha {nome} consola"] = erros
             ctx.close()
         browser.close()
-    return r
+    return r, estilos
+
+
+def plataforma():
+    """Chave do navegador/SO: as caixas e estilos calculados mudam com as fontes e o motor."""
+    return f"{sys.platform}-{os.environ.get('HARNESS_BROWSER', 'msedge') or 'chromium'}"
 
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     gravar = "--update" in sys.argv
-    atual = {"python": casos_python(), "site": casos_site()}
+    site, estilos = casos_site()
+    atual = {"python": casos_python(), "site": site}
+    plat = plataforma()
     if gravar:
+        antigo = json.loads(BASELINE.read_text(encoding="utf-8")) if BASELINE.exists() else {}
+        atual["estilos"] = {**antigo.get("estilos", {}), plat: estilos}   # mantém as outras plataformas
         BASELINE.write_text(json.dumps(atual, ensure_ascii=False, indent=1, sort_keys=True) + "\n",
                             encoding="utf-8")
-        print(f"baseline gravada: {sum(len(v) for v in atual.values())} casos")
+        print(f"baseline gravada: {sum(len(v) for v in atual['python'].values()) + len(site)} casos "
+              f"+ {len(estilos)} de estilos ({plat})")
         return
     base = json.loads(BASELINE.read_text(encoding="utf-8"))
     atual = json.loads(json.dumps(atual, ensure_ascii=False))
+    # estilos só se comparam na plataforma em que a baseline foi gravada
+    if plat in base.get("estilos", {}):
+        base["estilos"], atual["estilos"] = base["estilos"][plat], json.loads(json.dumps(estilos))
+    else:
+        print(f"aviso: sem baseline de estilos para {plat}; corre --update uma vez neste ambiente")
+        base.pop("estilos", None)
     difs = [f"{g} / {k}:\n  antes: {base[g].get(k)}\n  agora: {atual[g].get(k)}"
             for g in base for k in sorted(set(base[g]) | set(atual[g])) if base[g].get(k) != atual[g].get(k)]
     total = sum(len(v) for v in base.values())

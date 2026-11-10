@@ -7,17 +7,18 @@
 <title>Folha do Clube</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
 <style>
-  @font-face { font-family: 'Plex Cond'; font-weight: 700; font-display: swap;
-    src: url("fonts/plexcond-700.woff2") format('woff2'); }
-  @font-face { font-family: 'Plex Mono'; font-weight: 500; font-display: swap;
-    src: url("fonts/plexmono-500.woff2") format('woff2'); }
-  @font-face { font-family: 'Plex Mono'; font-weight: 700; font-display: swap;
-    src: url("fonts/plexmono-700.woff2") format('woff2'); }
   @font-face { font-family: 'Plex Sans'; font-weight: 400; font-display: swap;
     src: url("fonts/plexsans-400.woff2") format('woff2'); }
 
   :root {
-    --laranja: #c75b12;
+    --cabecalho: #18191b;
+    --laranja: #fc4c02;                       /* laranja de marca (estilo Strava), só em realces */
+    --laranja-tinta: rgba(252,76,2,.16);
+    --laranja-linha: rgba(252,76,2,.45);
+    /* espaçamento, raios, alturas: usados nas três tabs */
+    --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px;
+    --raio: 8px; --raio-s: 4px;
+    --cel-v: 8px; --cel-h: 12px; --linha-h: 20px;
     --grelha: #3c4043;
     --fundo: #1b1b1d;
     --painel: #242528;
@@ -29,81 +30,115 @@
     --prata: #aeb4bb;     --prata-brilho: #e7eaed;  --prata-tinta: #1b1d1f;
     --bronze: #a5673a;    --bronze-brilho: #dba173; --bronze-tinta: #241408;
   }
-  .num { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   body {
     font-family: 'Plex Sans', Roboto, "Segoe UI", Arial, sans-serif;
     margin: 0; padding: 16px;
     background: var(--fundo); color: var(--texto);
-    font-size: 14px;
+    font-size: 14px; line-height: 1.4;
+    font-variant-numeric: tabular-nums;   /* números alinhados em toda a página */
     color-scheme: dark;
   }
   h1 { font-size: 20px; margin: 0 0 12px; }
 
-  table { border-collapse: collapse; background: var(--painel); }
-  th, td { border: 1px solid var(--grelha); padding: 4px 10px; text-align: center; }
-  thead th { background: var(--laranja); color: #fff; font-weight: 700; }
+  /* --- tabelas: contentor com scroll próprio, coluna do nome fixa --- */
+  .tabela-wrap {
+    overflow-x: auto; max-width: 100%;
+    border: 1px solid var(--grelha); border-radius: var(--raio); background: var(--painel);
+  }
+  table { border-collapse: separate; border-spacing: 0; background: var(--painel); }
+  .tabela-wrap > table { width: 100%; }
+  th, td {
+    padding: var(--cel-v) var(--cel-h); text-align: left; line-height: var(--linha-h);
+    border-bottom: 1px solid var(--grelha);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  thead th {
+    background: var(--cabecalho); color: var(--suave); font-weight: 700; font-size: 12px;
+    letter-spacing: .02em; border-bottom: 1px solid var(--grelha);
+  }
+  th.c, td.c { text-align: center; }
+  th.num, td.num { text-align: right; white-space: nowrap; }
+  /* coluna do nome: fixa à esquerda, com a cor do membro em barra */
+  th:first-child, td.atleta {
+    position: sticky; left: 0; z-index: 3;
+    background: var(--painel); font-weight: 700; white-space: nowrap;
+    box-shadow: inset 3px 0 0 var(--cor, transparent);
+    padding-left: calc(var(--cel-h) + 3px);
+  }
+  thead th:first-child { background: var(--cabecalho); box-shadow: none; }
+  td.atleta a { color: inherit; text-decoration: underline dotted var(--suave); text-underline-offset: 3px; }
+  td.atleta a:hover { color: var(--laranja); }
+  td a { color: var(--texto); text-decoration: underline dotted var(--suave); text-underline-offset: 3px; }
+  td a:hover { color: var(--laranja); text-decoration-color: var(--laranja); }
+  td.vazio, td.zero { color: var(--grelha); }
 
-  td.atleta { color: #fff; font-weight: 700; }
-  td.atleta a { color: inherit; text-decoration: underline; }
-
-  #ranking { margin-bottom: 20px; }
-  #ranking td.num { text-align: center; }
-  #ranking tr.r0 td:not(:first-child) { background: #4a3a12; }
+  #ranking-wrap { display: inline-block; margin-bottom: var(--e5); max-width: 100%; vertical-align: top; }
+  #ranking tbody tr.r0 td { background: rgba(217,165,68,.10); }
+  #ranking tbody tr.r0 td.atleta { background: #36322b; }
   #ranking td { font-weight: 600; }
 
-  .filtros { margin: 0 0 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .filtros { margin: 0 0 var(--e3); display: flex; gap: var(--e2); flex-wrap: wrap; align-items: center; }
   .filtros select, .filtros input {
-    padding: 5px 8px; border: 1px solid var(--grelha); border-radius: 4px;
-    font-size: 13px; background: var(--painel); color: var(--texto);
+    height: 34px; padding: 0 var(--e2); border: 1px solid var(--grelha); border-radius: var(--raio-s);
+    font: inherit; font-size: 13px; background: var(--painel); color: var(--texto);
   }
+  .filtros select:focus-visible, .filtros input:focus-visible { outline: 2px solid var(--laranja); outline-offset: 1px; }
   .filtros input { width: 220px; }
-  #conta { color: var(--suave); font-size: 12px; }
+  #f-atleta { flex: 1 1 100%; }
+  #conta { color: var(--suave); font-size: 12px; margin-left: auto; }
 
   .toggle {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 5px 12px; border: 1px solid var(--grelha); border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px; height: 34px;
+    padding: 0 var(--e3); border: 1px solid var(--grelha); border-radius: 999px;
     background: var(--painel); color: var(--texto);
     font-size: 13px; cursor: pointer; user-select: none;
     transition: background .15s, border-color .15s, color .15s;
   }
-  .toggle:hover { border-color: var(--laranja); }
-  .toggle input { width: 14px; height: 14px; accent-color: var(--laranja); cursor: pointer; }
-  .toggle:has(input:checked) {
-    background: var(--laranja); border-color: var(--laranja); color: #fff; font-weight: 700;
-  }
+  .toggle:hover { border-color: var(--laranja-linha); }
+  .toggle input { width: 14px; height: 14px; margin: 0; accent-color: var(--laranja); cursor: pointer; }
+  .toggle:has(input:checked) { background: var(--laranja-tinta); border-color: var(--laranja); color: var(--laranja); font-weight: 700; }
 
   .pills { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
   .pill {
-    padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;
-    color: #fff; cursor: pointer; opacity: .4;
-    transition: opacity .15s, box-shadow .15s;
+    display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 var(--e3);
+    border: 1px solid var(--grelha); border-radius: 999px;
+    font-size: 12px; font-weight: 700; color: var(--suave); cursor: pointer; user-select: none;
+    transition: background .15s, border-color .15s, color .15s;
   }
-  .pill:hover { opacity: .7; }
-  .pill.active { opacity: 1; box-shadow: 0 0 0 2px rgba(255,255,255,.35) inset; }
-  .pill-todos { background: var(--grelha) !important; }
+  .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cor, var(--suave)); flex: none; }
+  .pill-todos::before { display: none; }
+  .pill:hover { border-color: var(--cor, var(--suave)); color: var(--texto); }
+  .pill.active { color: var(--texto); border-color: var(--cor, var(--texto));
+    background: color-mix(in srgb, var(--cor, #fff) 18%, transparent); }
 
-  #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela th[data-k] { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela th[data-k]:hover { color: var(--texto); }
   #tabela.agrupada th { cursor: default; }
-  #tabela th .seta { font-size: 10px; }
-  #tabela td.seg { text-align: left; }
+  #tabela th .seta { font-size: 10px; color: var(--laranja); }
+  #tabela td.seg { min-width: 220px; }
+  #tabela td.ritmo, #tabela td.data, #tabela td.tempo { white-space: nowrap; }
+  #tabela td.cidade { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #tabela tbody tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+  #tabela tbody tr:nth-child(even) td.atleta { background: #27282b; }
   a { color: var(--link); }
-  #tabela tbody tr:nth-child(even) { background: #2a2622; }
-  td.num, th.num { text-align: right; }
   .trofeu { font-size: 15px; }
   tr.grupo-cabecalho td {
-    text-align: left; background: #33291c; color: var(--suave);
-    font-weight: 700; font-size: 12px; border-top: 3px solid var(--laranja);
+    text-align: left; background: var(--cabecalho) !important; color: var(--suave);
+    font-weight: 700; font-size: 12px; border-top: 2px solid var(--laranja-linha);
+    position: static; box-shadow: none;
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
-  #prs td.melhor { background: #4a3a12; font-weight: 700; }
-  #prs td.vazio { color: var(--grelha); }
+  /* Best Efforts: melhor tempo de cada distância */
+  #prs th { white-space: nowrap; }
+  #prs th[title] { cursor: help; }
+  #prs td.melhor { font-weight: 700; }   /* só negrito, sem cor: não pesa mesmo que um membro leve a linha toda */
 
   /* --- pódio Squadrats: terraços, altura = posição --- */
   .podio-titulo { margin: 0 0 14px; }
   .podio-titulo .podio-metrica {
-    font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 24px;
+    font-weight: 700; font-size: 24px;
     color: var(--laranja); letter-spacing: .01em;
   }
   .podio { display: grid; grid-template-columns: repeat(3, minmax(0,150px)); gap: 3px;
@@ -129,42 +164,42 @@
   .riser .disco {
     width: 34px; height: 34px; border-radius: 50%; flex: none;
     display: flex; align-items: center; justify-content: center;
-    font: 700 14px 'Plex Mono', monospace; color: var(--medalha-tinta);
+    font-weight: 700; font-size: 14px; color: var(--medalha-tinta);
     background: radial-gradient(circle at 32% 28%, var(--medalha-brilho), var(--medalha) 65%);
     box-shadow: inset 0 -2px 3px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,.5), 0 2px 5px rgba(0,0,0,.4);
   }
   .riser .chip { display: inline-flex; align-items: center; gap: 6px; }
   .riser .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
-  .riser .nome { font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 13px; }
+  .riser .nome { font-weight: 700; font-size: 13px; }
   .riser .valor { font-size: 21px; font-weight: 700; line-height: 1; margin-top: 1px; }
   .riser.p1 .valor { font-size: 27px; color: var(--ouro-brilho); text-shadow: 0 0 18px rgba(217,165,68,.35); }
 
   /* --- tabela Squadrats: régua de medição em vez de fundo tingido --- */
   #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap;
-    transition: color .15s; position: relative; }
-  #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: #fff; }
-  #squadrats th[data-tip] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
-  /* tooltip próprio, sempre por baixo do cabeçalho */
-  #squadrats th[data-tip]:hover::after, #squadrats th[data-tip]:focus-visible::after {
-    content: attr(data-tip);
-    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-    margin-top: 9px; width: 220px; white-space: normal; text-align: left;
-    background: var(--painel-alto); color: var(--texto); font-weight: 400;
-    font-size: 11.5px; line-height: 1.5; letter-spacing: 0; text-transform: none;
-    padding: 8px 10px; border-radius: 5px; border: 1px solid var(--grelha);
-    box-shadow: 0 6px 16px rgba(0,0,0,.4); z-index: 20; pointer-events: none;
+    transition: color .15s; position: relative; text-align: center; }
+  #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: var(--texto); }
+  #squadrats th[data-c]:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; }
+  /* explicação de cada coluna: botão ⓘ (toque, teclado) e hover (rato) */
+  #squadrats th .info {
+    position: relative; margin-left: 6px; width: 18px; height: 18px; padding: 0; vertical-align: -3px;
+    border: 1px solid var(--suave); border-radius: 50%; background: none; color: var(--suave);
+    font: italic 700 11px/1 'Plex Sans', serif; cursor: pointer;
   }
-  #squadrats th[data-tip]:hover::before, #squadrats th[data-tip]:focus-visible::before {
-    content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-    margin-top: 3px; border: 5px solid transparent; border-bottom-color: var(--painel-alto);
-    z-index: 21; pointer-events: none;
+  #squadrats th .info::after { content: ""; position: absolute; inset: -9px; }   /* alvo de toque ≥ 36px */
+  #squadrats th .info:hover, #squadrats th .info[aria-expanded="true"] { color: var(--laranja); border-color: var(--laranja); }
+  #squadrats th .info:focus-visible { outline: 2px solid var(--laranja); outline-offset: 2px; }
+  #dica {
+    position: fixed; z-index: 50; padding: 8px 10px; border-radius: 6px;
+    background: var(--painel-alto); color: var(--texto); border: 1px solid var(--grelha);
+    box-shadow: 0 6px 16px rgba(0,0,0,.45); font-size: 12px; line-height: 1.5; pointer-events: none;
   }
-  /* cabeçalho activo: invertido, porque todos os th já são laranja */
+  #dica[hidden] { display: none; }
+  /* cabeçalho activo: texto e filete em laranja */
   #squadrats th.metrica-activa,
   #squadrats th.metrica-activa:hover,
-  #squadrats th.metrica-activa:focus-visible { background: #fff; color: var(--laranja); }
+  #squadrats th.metrica-activa:focus-visible { color: var(--laranja); box-shadow: inset 0 -3px 0 var(--laranja); }
   /* sem .barcell, esta célula herdava o text-align:right de td.num */
-  #squadrats td.num.vazio { text-align: center; color: var(--grelha); }
+  #squadrats td.num { text-align: center; }
   #squadrats .barcell { display: flex; flex-direction: column; align-items: center; gap: 5px; }
   #squadrats .valorlinha { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
   #squadrats .regua { width: 84px; height: 8px; position: relative;
@@ -176,7 +211,7 @@
   #squadrats td.r2 .cheio, #squadrats td.r2 .ponta { background: var(--prata); }
   #squadrats td.r3 .cheio, #squadrats td.r3 .ponta { background: var(--bronze); }
   #squadrats .rank-disco {
-    width: 15px; height: 15px; border-radius: 50%; font: 700 8.5px 'Plex Mono', monospace;
+    width: 15px; height: 15px; border-radius: 50%; font-weight: 700; font-size: 9px;
     display: flex; align-items: center; justify-content: center; flex: none;
   }
   #squadrats td.r1 .rank-disco { background: var(--ouro); color: var(--ouro-tinta); }
@@ -184,49 +219,54 @@
   #squadrats td.r3 .rank-disco { background: var(--bronze); color: var(--bronze-tinta); }
 
   /* --- ganhos diários --- */
-  .squadrats-cols { display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-start; }
-  .squadrats-col-principal { flex: 0 0 auto; }
-  .squadrats-col-ganhos { flex: 1 1 380px; max-width: 560px; min-width: 320px; }
-  .ganhos-grafico { width: 100%; height: 160px; display: block; margin: 4px 0 10px; }
+  .squadrats-cols { display: flex; gap: var(--e5); flex-wrap: wrap; align-items: flex-start; }
+  .squadrats-col-principal { flex: 0 1 auto; max-width: 100%; min-width: 0; }
+  .squadrats-col-ganhos { flex: 1 1 360px; max-width: 600px; min-width: 0; }
+  .ganhos-grafico { width: 100%; display: block; margin: 0 0 var(--e2); overflow: visible; }
   .ganhos-grafico .barra { transition: opacity .12s; }
   .ganhos-grafico .barra:hover { opacity: .75; }
-  .ganhos-grafico text { font-size: 9px; fill: var(--suave); font-family: inherit; }
-  .ganhos-grafico .total-dia { font-size: 9.5px; fill: var(--texto); font-weight: 700; }
-  .tabela-ganhos-wrap { overflow-x: auto; }
-  #ganhos-tabela { width: 100%; }
-  #ganhos-tabela th, #ganhos-tabela td { padding: 4px 8px; font-size: 12.5px; }
-  #ganhos-tabela thead th { background: var(--painel-alto); color: var(--suave); font-weight: 700; }
-  #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; }
+  .ganhos-grafico text { font-size: 11px; fill: var(--suave); font-family: inherit; }
+  .ganhos-grafico .total-dia { font-size: 12px; fill: var(--texto); font-weight: 700; }
+  .ganhos-grafico .grelha { stroke: var(--grelha); stroke-width: 1; stroke-dasharray: 2 4; }
+  .ganhos-grafico .eixo { stroke: var(--grelha); stroke-width: 1; }
+  .legenda { display: flex; flex-wrap: wrap; gap: var(--e1) var(--e3); margin: 0 0 var(--e3); font-size: 12px; color: var(--suave); }
+  .legenda span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--cor); margin-right: 6px; }
+  .ganhos-vazio { color: var(--suave); font-size: 13px; padding: var(--e4) 0; }
+  #ganhos-tabela th, #ganhos-tabela td { font-size: 13px; }
+  #ganhos-tabela thead th { text-align: center; white-space: nowrap; }
+  #ganhos-tabela thead th:first-child { text-align: left; }
+  #ganhos-tabela td.dia { text-align: left; color: var(--suave); white-space: nowrap; font-weight: 400; }
   #ganhos-tabela td.num { text-align: center; }
   #ganhos-tabela td.num.zero { color: var(--grelha); }
   #ganhos-tabela td.num.negativo { color: #e08a6a; }
   /* maior ganho do dia */
-  #ganhos-tabela td.num.maior { background: rgba(199,91,18,.16); font-weight: 700; }
-  #prs thead tr.metros th {
-    background: #8f4a1a; color: #f0d9c8;
-    font-weight: 400; font-size: 11px;
-  }
-
-  /* navegação por tabs */
+  #ganhos-tabela td.num.maior { background: var(--laranja-tinta); color: var(--laranja); font-weight: 700; }
+  #ganhos-tabela th .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; background: var(--cor); }
+  /* navegação por tabs: uma só barra, com scroll horizontal se for preciso */
   .tabs {
-    display: flex; gap: 4px; flex-wrap: wrap;
-    border-bottom: 2px solid var(--grelha); margin: 0 0 16px;
+    display: flex; gap: var(--e1); flex-wrap: nowrap;
+    overflow-x: auto; scrollbar-width: none;
+    border-bottom: 1px solid var(--grelha); margin: 0 0 var(--e4);
   }
+  .tabs::-webkit-scrollbar { display: none; }
   .tab {
-    padding: 8px 16px; margin-bottom: -2px;
-    border: none; border-bottom: 2px solid transparent;
+    flex: none; white-space: nowrap;
+    padding: 10px var(--e4); margin-bottom: -1px;
+    border: none; border-bottom: 3px solid transparent;
     background: none; color: var(--suave);
     font-family: inherit; font-weight: 600; font-size: 14px; cursor: pointer;
   }
   .tab:hover { color: var(--texto); }
-  .tab.active { color: #fff; border-bottom-color: var(--laranja); }
+  .tab:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; border-radius: var(--raio-s); }
+  .tab.active { color: var(--laranja); border-bottom-color: var(--laranja); }
   .panel { display: none; }
   .panel.active { display: block; }
   .panel-meta { color: var(--suave); font-size: 12px; margin: 0 0 12px; }
 </style>
 </head>
 <body>
-<h1>Folha do Clube</h1>
+<h1>🍁 Folha do Clube</h1>
 
 <nav class="tabs" id="tabs">
   <button class="tab active" data-tab="koms">KOMs &amp; Top10s</button>
@@ -237,12 +277,15 @@
 <section class="panel active" id="tab-koms">
   <div class="panel-meta"><span id="gerado"></span></div>
 
+  <div class="tabela-wrap" id="ranking-wrap">
   <table id="ranking">
     <thead><tr>
-      <th>Nome</th><th>👑</th><th>🏆</th><th>Pontos</th><th>Posição Média</th>
+      <th>Nome</th><th class="num" title="KOMs (1.º lugar)">👑</th><th class="num" title="Top 10 (2.º a 10.º)">🏆</th>
+      <th class="num">Pontos</th><th class="num">Posição média</th>
     </tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 
   <div class="filtros">
     <div id="f-atleta" class="pills"></div>
@@ -261,32 +304,36 @@
     <span id="conta"></span>
   </div>
 
+  <div class="tabela-wrap">
   <table id="tabela">
     <thead><tr>
       <th data-k="atleta">Nome <span class="seta"></span></th>
-      <th data-k="posicao">Posição <span class="seta"></span></th>
-      <th>Troféu</th>
-      <th data-k="tipo">Tipo <span class="seta"></span></th>
+      <th data-k="posicao" class="c">Posição <span class="seta"></span></th>
+      <th class="c">Troféu</th>
+      <th data-k="tipo" class="c">Tipo <span class="seta"></span></th>
       <th data-k="segmento">Segmento <span class="seta"></span></th>
       <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
       <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
-      <th data-k="tempo">Tempo <span class="seta"></span></th>
+      <th data-k="tempo" class="num">Tempo <span class="seta"></span></th>
       <th data-k="cidade">Cidade <span class="seta"></span></th>
       <th data-k="pais">País <span class="seta"></span></th>
       <th data-k="data">Data <span class="seta"></span></th>
     </tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 </section>
 
 <section class="panel" id="tab-best-efforts">
   <div class="panel-meta">
     Melhores tempos de corrida por distância, calculados pela Strava. <span id="prs-gerado"></span>
   </div>
+  <div class="tabela-wrap">
   <table id="prs">
     <thead><tr></tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 </section>
 
 <section class="panel" id="tab-squadrats">
@@ -297,6 +344,7 @@
       </p>
       <div class="podio" id="squadrats-podio"></div>
 
+      <div class="tabela-wrap">
       <table id="squadrats">
         <thead><tr>
           <th>Nome</th>
@@ -309,10 +357,11 @@
         </tr></thead>
         <tbody></tbody>
       </table>
+      </div>
 
       <div class="panel-meta" style="margin-top:14px;">
         Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
-        Passa o rato sobre os cabeçalhos para ver o que cada coluna conta.
+        Toca no <i>i</i> de cada coluna (ou passa o rato) para ver o que conta; toca no nome para ordenar.
         <span id="squadrats-gerado"></span>
       </div>
     </div>
@@ -322,18 +371,22 @@
         <span class="podio-metrica" style="font-size:18px;">Ganhos diários</span>
         <span class="podio-metrica" id="ganhos-metrica-nome" style="font-size:14px;color:var(--suave);"></span>
       </p>
-      <svg id="ganhos-grafico" class="ganhos-grafico"></svg>
-      <div class="tabela-ganhos-wrap">
+      <svg id="ganhos-grafico" class="ganhos-grafico" height="190"></svg>
+      <div class="legenda" id="ganhos-legenda"></div>
+      <div class="tabela-wrap tabela-ganhos-wrap">
         <table id="ganhos-tabela"><thead><tr></tr></thead><tbody></tbody></table>
       </div>
-      <div class="panel-meta" id="ganhos-gerado" style="margin-top:10px;"></div>
+      <div class="panel-meta" style="margin-top:10px;"><span id="ganhos-ocultos"></span> <span id="ganhos-gerado"></span></div>
     </div>
   </div>
 </section>
 
+<div id="dica" role="tooltip" hidden></div>
+
 <script>
 "use strict";
 
+let ganhosData = null;   // daily_gains.json, declarado aqui porque activarTab() corre logo
 // separador activo no hash do URL
 const TABS = ["koms", "best-efforts", "squadrats"];
 function activarTab(nome) {
@@ -342,6 +395,7 @@ function activarTab(nome) {
     t.classList.toggle("active", t.dataset.tab === nome));
   document.querySelectorAll(".panel").forEach(p =>
     p.classList.toggle("active", p.id === "tab-" + nome));
+  if (nome === "squadrats" && ganhosData) renderGanhos();
 }
 document.getElementById("tabs").addEventListener("click", e => {
   const tab = e.target.closest(".tab");
@@ -358,18 +412,19 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g,
     c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
-// Fallback de CORES_URL (squadrats-club). Quem não está aqui tem cor por hash.
-let CORES_FIXAS = { "Zé": "#e03131", "Xeira": "#9c46d8",
-                    "Carolina": "#c99a00", "Inês S.": "#e8710a",
-                    "Inês": "#e8710a", "Ana": "#12889c", "Pedro": "#2f5fd0" };
-const PALETA = ["#2e7d32", "#1565c0", "#e65100", "#5d4037",
-                "#37474f", "#6a1b9a", "#00695c", "#9e9d24"];
+// Cores dos membros: fonte única = membros_cores.json (squadrats-club, branch main),
+// carregado por CORES_URL. Sem mapeamento próprio aqui. "Inês" (KOMs, Best Efforts) e
+// "Inês S." (Squadrats) são a mesma pessoa (_aliases do ficheiro): o ficheiro tem as duas.
+let CORES_MEMBROS = {};
+// só para quem não está no ficheiro (ou se o fetch falhar): sem laranjas, para não colidir com a marca
+const PALETA = ["#7cc4ff", "#c2a1ff", "#a3b18a", "#d9b38c", "#6fe0c8", "#b8b8c8"];
 function corAtleta(n) {
-  if (CORES_FIXAS[n]) return CORES_FIXAS[n];
+  if (CORES_MEMBROS[n]) return CORES_MEMBROS[n];
   let h = 0;
   for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
   return PALETA[h % PALETA.length];
 }
+const fmtKm = x => x.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 function trofeu(p) { return p === 1 ? "👑" : "🏆"; }
 const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️", "Trail Run": "🏔️" };
 function emojiTipo(t) { return TIPOS[t] ?? t; }
@@ -394,9 +449,9 @@ function velKmh(l) {
 function formatarRitmo(l) {
   if (!l.vel_kmh) return "—";
   if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
-  const segKm = 3600 / l.vel_kmh;
-  const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
-  return `${m}:${String(s).padStart(2, "0")} /km`;
+  const segKm = Math.round(3600 / l.vel_kmh);   // arredonda antes de partir, evita "3:60"
+  const m = Math.floor(segKm / 60), s = segKm % 60;
+  return `${m}:${String(s).padStart(2, "0")}/km`;
 }
 
 // distância -> metros: ordena as colunas e dá a linha de metros
@@ -414,10 +469,12 @@ const actualizado = iso => "actualizado " + new Date(iso).toLocaleString("pt-PT"
 
 function renderPRs(prsData) {
   const atletasData = prsData.atletas;
-  const nomes = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
-  const distancias = [...new Set(nomes.flatMap(n => Object.keys(atletasData[n])))]
+  const todos = Object.keys(atletasData).sort((a, b) => a.localeCompare(b, "pt"));
+  const distancias = [...new Set(todos.flatMap(n => Object.keys(atletasData[n])))]
     .filter(d => d in DIST_METROS)
     .sort((a, b) => DIST_METROS[a] - DIST_METROS[b]);
+  // quem não tem nenhum tempo nestas distâncias não ganha linha só de traços
+  const nomes = todos.filter(n => distancias.some(d => atletasData[n][d]));
   if (!nomes.length || !distancias.length) return;
 
   const melhores = {};
@@ -433,25 +490,27 @@ function renderPRs(prsData) {
   }
 
   document.querySelector("#prs thead").innerHTML =
-    "<tr><th>Nome</th>" + distancias.map(d => `<th>${escHtml(d)}</th>`).join("") + "</tr>" +
-    `<tr class="metros"><th></th>` +
-      distancias.map(d => `<th>${fmtMetros(DIST_METROS[d])}</th>`).join("") + "</tr>";
+    "<tr><th>Nome</th>" + distancias.map(d =>
+      `<th class="c" title="${fmtMetros(DIST_METROS[d])}">${escHtml(d)}</th>`).join("") + "</tr>";
 
   document.querySelector("#prs tbody").innerHTML = nomes.map(n => `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
+      <td class="atleta" style="--cor:${corAtleta(n)}">${escHtml(n)}</td>
       ${distancias.map(d => {
         const c = atletasData[n][d];
-        if (!c) return `<td class="vazio">—</td>`;
+        if (!c) return `<td class="c vazio">—</td>`;
         const inner = c.url
           ? `<a href="${escHtml(c.url)}" target="_blank" rel="noopener">${escHtml(c.tempo)}</a>`
           : escHtml(c.tempo);
-        return `<td class="${n === melhores[d] ? "melhor" : ""}">${inner}</td>`;
+        return `<td class="c${n === melhores[d] ? " melhor" : ""}">${inner}</td>`;
       }).join("")}
     </tr>`).join("");
 
   document.getElementById("prs-gerado").textContent = actualizado(prsData.gerado);
 }
+
+// "2,01": vírgula decimal pt-PT, 2 casas
+const fmtMedia = x => x.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 function ranking() {
   const por = {};
@@ -461,13 +520,13 @@ function ranking() {
     r.pontos += 11 - l.posicao;       // 👑=10 … 10º=1
     r.soma += l.posicao; r.n++;
   }
-  const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos);
+  const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos || a.nome.localeCompare(b.nome, "pt"));
   document.querySelector("#ranking tbody").innerHTML = ord.map((r, i) => `
     <tr class="r${i}">
-      <td class="atleta" style="background:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
+      <td class="atleta" style="--cor:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
       <td class="num">${r.koms}</td><td class="num">${r.meds}</td>
       <td class="num">${r.pontos}</td>
-      <td class="num">${(r.soma / r.n).toFixed(3)}</td>
+      <td class="num">${fmtMedia(r.soma / r.n)}</td>
     </tr>`).join("");
 }
 
@@ -492,28 +551,29 @@ function filtradas() {
 }
 
 function linhaHtml(l) {
+  const cidade = l.cidade || "—";
   return `
     <tr>
-      <td class="atleta" style="background:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
-      <td>${l.posicao}</td>
-      <td class="trofeu">${trofeu(l.posicao)}</td>
-      <td>${emojiTipo(l.tipo)}</td>
+      <td class="atleta" style="--cor:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
+      <td class="c">${l.posicao}</td>
+      <td class="c trofeu">${trofeu(l.posicao)}</td>
+      <td class="c">${emojiTipo(l.tipo)}</td>
       <td class="seg"><a href="${escHtml(l.url)}" target="_blank" rel="noopener">${escHtml(l.segmento)}</a></td>
-      <td class="num">${l.dist_km.toFixed(2)} km</td>
-      <td class="num">${formatarRitmo(l)}</td>
-      <td>${l.effort_url
+      <td class="num">${fmtKm(l.dist_km)} km</td>
+      <td class="num ritmo">${formatarRitmo(l)}</td>
+      <td class="num tempo">${l.effort_url
         ? `<a href="${escHtml(l.effort_url)}" target="_blank" rel="noopener">${escHtml(l.tempo)}</a>`
         : escHtml(l.tempo)}</td>
-      <td>${escHtml(l.cidade || "—")}</td>
+      <td class="cidade" title="${escHtml(cidade)}">${escHtml(cidade)}</td>
       <td>${escHtml(l.pais || "—")}</td>
-      <td>${dataPt(l.data)}</td>
+      <td class="data">${dataPt(l.data)}</td>
     </tr>`;
 }
 
 function grupoCabecalhoHtml(grupo) {
   const l0 = grupo[0];
   return `<tr class="grupo-cabecalho"><td colspan="11">
-    ${emojiTipo(l0.tipo)} ${escHtml(l0.segmento)} — ${l0.dist_km.toFixed(2)} km ·
+    ${emojiTipo(l0.tipo)} ${escHtml(l0.segmento)} — ${fmtKm(l0.dist_km)} km ·
     ${escHtml(l0.cidade || "—")}, ${escHtml(l0.pais || "—")}
   </td></tr>`;
 }
@@ -565,7 +625,7 @@ function popularFiltros() {
   document.getElementById("f-atleta").innerHTML =
     `<span class="pill pill-todos" data-atleta="">Todos</span>` +
     atletas.map(a => `<span class="pill" data-atleta="${escHtml(a)}"
-      style="background:${corAtleta(a)}">${escHtml(a)}</span>`).join("");
+      style="--cor:${corAtleta(a)}">${escHtml(a)}</span>`).join("");
   atualizarPillsAtletas();
 }
 
@@ -600,7 +660,7 @@ document.querySelectorAll(".filtros select, .filtros input").forEach(el =>
 
 const CORES_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/main/data/membros_cores.json";
 const cores = fetch(CORES_URL, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null)
-  .then(c => { if (c && c.cores) CORES_FIXAS = { ...CORES_FIXAS, ...c.cores }; });
+  .then(c => { if (c && c.cores) CORES_MEMBROS = c.cores; });
 // JSON de url, entregue só depois de as cores chegarem (ou falharem)
 const comCores = url => Promise.all([fetch(url).then(r => r.json()), cores]).then(([d]) => d);
 
@@ -685,7 +745,8 @@ function renderSquadratsPodio(atletas, podio) {
 function renderSquadrats(d) {
   squadratsData = d;
   const atletas = d.atletas;
-  const nomes = Object.keys(atletas);
+  // só membros com algum valor; quem só tem zeros/vazios não ganha linha
+  const nomes = Object.keys(atletas).filter(n => CAMPOS_SQUADRATS.some(c => atletas[n][c] > 0));
   const podio = podioPorCampo(atletas, nomes);
 
   renderSquadratsPodio(atletas, podio);
@@ -695,7 +756,7 @@ function renderSquadrats(d) {
 
   document.querySelector("#squadrats tbody").innerHTML = ordenados.map(n => `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${nomeLigado(n)}</td>
+      <td class="atleta" style="--cor:${corAtleta(n)}">${nomeLigado(n)}</td>
       ${CAMPOS_SQUADRATS.map(c => {
         const v = atletas[n][c];
         if (v == null) return `<td class="num vazio">—</td>`;
@@ -720,24 +781,60 @@ function renderSquadrats(d) {
 
   document.getElementById("squadrats-gerado").textContent = actualizado(d.atualizado);
 }
+// --- explicações dos cabeçalhos: rato (hover) ou toque/teclado no ⓘ ---
+const dica = document.getElementById("dica");
+let dicaTh = null, dicaFixa = false;
+function mostrarDica(th, fixa) {
+  esconderDica();
+  dicaTh = th; dicaFixa = fixa;
+  dica.textContent = th.dataset.tip;
+  const w = Math.min(260, innerWidth - 24);
+  dica.style.width = w + "px";
+  dica.hidden = false;
+  const r = th.getBoundingClientRect();
+  dica.style.left = Math.max(12, Math.min(r.left + r.width / 2 - w / 2, innerWidth - w - 12)) + "px";
+  dica.style.top = (r.bottom + 8) + "px";
+  th.querySelector(".info").setAttribute("aria-expanded", "true");
+}
+function esconderDica() {
+  if (dicaTh) dicaTh.querySelector(".info").setAttribute("aria-expanded", "false");
+  dicaTh = null; dicaFixa = false; dica.hidden = true;
+}
+const temRato = matchMedia("(hover: hover)");
+document.addEventListener("click", e => { if (!e.target.closest("#squadrats .info")) esconderDica(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") esconderDica(); });
+addEventListener("scroll", esconderDica, true);
+addEventListener("resize", esconderDica);
+
 document.querySelectorAll("#squadrats th[data-c]").forEach(th => {
   th.tabIndex = 0;
-  th.setAttribute("role", "button");
+  const nome = th.textContent;
+  th.insertAdjacentHTML("beforeend",
+    `<button type="button" class="info" aria-expanded="false" aria-label="O que conta ${escHtml(nome)}">i</button>`);
   const escolher = () => {
     metricaSquadrats = th.dataset.c;
     if (squadratsData) renderSquadrats(squadratsData);
     if (ganhosData) renderGanhos();
   };
-  th.addEventListener("click", escolher);
+  th.addEventListener("click", e => {
+    if (e.target.closest(".info")) {
+      // toque: abre/fecha; rato: fixa a explicação que o hover já abriu
+      if (dicaTh === th && (dicaFixa || !temRato.matches)) esconderDica();
+      else mostrarDica(th, true);
+      return;
+    }
+    escolher();
+  });
+  th.addEventListener("mouseenter", () => { if (temRato.matches && !dicaFixa) mostrarDica(th, false); });
+  th.addEventListener("mouseleave", () => { if (temRato.matches && dicaTh === th && !dicaFixa) esconderDica(); });
   th.addEventListener("keydown", e => {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(); }
+    if (e.target === th && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); escolher(); }
   });
 });
 comCores(SQUADRATS_URL).then(renderSquadrats).catch(() => {});
 
 // {dias: [{data, atletas: {nome: {campo: delta}}}]}, só o que mudou em cada dia
 const GANHOS_URL = "https://raw.githubusercontent.com/JustAnotherDud/squadrats-club/data/data/daily_gains.json";
-let ganhosData = null;
 // a métrica é a mesma da tabela (metricaSquadrats)
 
 function dataPtCurta(iso) {
@@ -764,38 +861,53 @@ function janelaComBuracos(dias) {
 
 function renderGanhosGrafico(dias, nomes) {
   const svg = document.getElementById("ganhos-grafico");
-  const W = 560, H = 160, padBottom = 16, padTop = 14;
-  const passo = (W - 20) / Math.max(dias.length, 1);
-  const larguraBarra = Math.min(28, passo - 6);
+  const W = Math.round(svg.getBoundingClientRect().width) || 360;   // px reais: texto sempre legível
+  const H = W < 480 ? 190 : 210, padBottom = 22, padTop = 20, padX = 6;
+  const passo = (W - 2 * padX) / Math.max(dias.length, 1);
+  const larguraBarra = Math.max(8, Math.min(30, passo - 5));
   const totais = dias.map(d => nomes.reduce((s, n) => s + Math.max(0, (d.atletas[n] || {})[metricaSquadrats] || 0), 0));
   const maxTotal = Math.max(1, ...totais);
   const escala = (H - padTop - padBottom) / maxTotal;
+  const yBase = H - padBottom;
+  const cadaN = Math.max(1, Math.ceil(36 / passo));   // uma data a cada N barras, sem sobreposição
 
-  const partes = [];
+  const partes = [`<line class="eixo" x1="0" x2="${W}" y1="${yBase}" y2="${yBase}"/>`];
+  // linha de referência a meio do máximo
+  if (maxTotal >= 4) {
+    const y = yBase - (maxTotal / 2) * escala;
+    partes.push(`<line class="grelha" x1="0" x2="${W}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}"/>`);
+  }
   dias.forEach((dia, i) => {
-    const x = 10 + i * passo + (passo - larguraBarra) / 2;
-    let y = H - padBottom;
+    const x = padX + i * passo + (passo - larguraBarra) / 2;
+    const cx = x + larguraBarra / 2;
+    let y = yBase;
     nomes.forEach(nome => {
       const v = (dia.atletas[nome] || {})[metricaSquadrats] || 0;
       if (v <= 0) return;
-      const altura = v * escala;
+      const altura = Math.max(2, v * escala);
       y -= altura;
-      partes.push(`<rect class="barra" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${larguraBarra}" height="${altura.toFixed(1)}" fill="${corAtleta(nome)}"><title>${escHtml(nome)}: +${v}</title></rect>`);
+      partes.push(`<rect class="barra" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${larguraBarra.toFixed(1)}" height="${altura.toFixed(1)}" rx="2" fill="${corAtleta(nome)}" stroke="var(--fundo)" stroke-width="1"><title>${escHtml(nome)}: +${v}</title></rect>`);
     });
-    const total = totais[i];
-    if (total > 0) {
-      partes.push(`<text class="total-dia" x="${(x + larguraBarra / 2).toFixed(1)}" y="${(H - padBottom - total * escala - 4).toFixed(1)}" text-anchor="middle">${total}</text>`);
+    if (totais[i] > 0) {
+      partes.push(`<text class="total-dia" x="${cx.toFixed(1)}" y="${(y - 5).toFixed(1)}" text-anchor="middle">${totais[i]}</text>`);
     }
-    partes.push(`<text x="${(x + larguraBarra / 2).toFixed(1)}" y="${H - 4}" text-anchor="middle">${dataPtCurta(dia.data)}</text>`);
+    if ((dias.length - 1 - i) % cadaN === 0) {
+      partes.push(`<text x="${cx.toFixed(1)}" y="${H - 6}" text-anchor="middle">${dataPtCurta(dia.data)}</text>`);
+    }
   });
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("height", H);
   svg.innerHTML = partes.join("");
 }
 
 function renderGanhosTabela(dias, nomes) {
   document.querySelector("#ganhos-tabela thead tr").innerHTML =
-    `<th>Dia</th>` + nomes.map(n => `<th style="color:${corAtleta(n)}">${escHtml(n)}</th>`).join("");
-  document.querySelector("#ganhos-tabela tbody").innerHTML = dias.slice().reverse().map(dia => {
+    `<th>Dia</th>` + nomes.map(n =>
+      `<th><span class="dot" style="--cor:${corAtleta(n)}"></span>${escHtml(n)}</th>`).join("");
+  // só dias em que alguém mexeu na métrica
+  const comGanhos = dias.filter(d => nomes.some(n => (d.atletas[n] || {})[metricaSquadrats]));
+  const ocultos = dias.length - comGanhos.length;
+  document.querySelector("#ganhos-tabela tbody").innerHTML = comGanhos.slice().reverse().map(dia => {
     // destaca o maior ganho do dia, se for positivo
     const valoresDia = nomes.map(n => (dia.atletas[n] || {})[metricaSquadrats] || 0);
     const maiorDia = Math.max(0, ...valoresDia);
@@ -806,18 +918,31 @@ function renderGanhosTabela(dias, nomes) {
       return `<td class="num${v < 0 ? " negativo" : ""}${destaque}">${v > 0 ? "+" : ""}${v}</td>`;
     }).join("");
     return `<tr><td class="dia">${dataPtCurta(dia.data)}</td>${cels}</tr>`;
-  }).join("");
+  }).join("") || `<tr><td class="vazio" colspan="${nomes.length + 1}">Sem ganhos nestes dias.</td></tr>`;
+  document.getElementById("ganhos-ocultos").textContent = ocultos
+    ? `${ocultos} ${ocultos === 1 ? "dia" : "dias"} sem ganhos não ${ocultos === 1 ? "é mostrado" : "são mostrados"}.` : "";
 }
 
 function renderGanhos() {
   if (!ganhosData || !ganhosData.dias.length) return;
   document.getElementById("ganhos-metrica-nome").textContent = LABEL_SQUADRATS[metricaSquadrats];
-  const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))].sort((a, b) => a.localeCompare(b, "pt"));
   const dias = janelaComBuracos(ganhosData.dias);
+  // só membros com ganhos nesta métrica e nesta janela: sem colunas nem legenda só de traços
+  const nomes = [...new Set(ganhosData.dias.flatMap(d => Object.keys(d.atletas)))]
+    .filter(n => dias.some(d => (d.atletas[n] || {})[metricaSquadrats]))
+    .sort((a, b) => a.localeCompare(b, "pt"));
+  document.getElementById("ganhos-legenda").innerHTML = nomes.map(n =>
+    `<span style="--cor:${corAtleta(n)}">${escHtml(n)}</span>`).join("");
   renderGanhosGrafico(dias, nomes);
   renderGanhosTabela(dias, nomes);
   document.getElementById("ganhos-gerado").textContent = actualizado(ganhosData.gerado);
 }
+// o gráfico usa a largura real: refaz ao mudar o tamanho (e ao mostrar o separador)
+let larguraGanhos = 0;
+new ResizeObserver(() => {
+  const w = Math.round(document.getElementById("ganhos-grafico").getBoundingClientRect().width);
+  if (w && w !== larguraGanhos) { larguraGanhos = w; renderGanhos(); }
+}).observe(document.getElementById("ganhos-wrap"));
 
 comCores(GANHOS_URL).then(d => { ganhosData = d; renderGanhos(); })
   .catch(() => { document.getElementById("ganhos-wrap").style.display = "none"; });
