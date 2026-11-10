@@ -386,7 +386,9 @@ def casos_site():
 
     with sync_playwright() as p:
         canal = os.environ.get("HARNESS_BROWSER", "msedge")
-        browser = p.chromium.launch(channel=canal or None)
+        # HARNESS_EXECUTABLE: caminho de um Chromium já instalado (ex.: sessões cloud)
+        browser = p.chromium.launch(channel=canal or None,
+                                    executable_path=os.environ.get("HARNESS_EXECUTABLE") or None)
 
         ctx, page, erros = abrir(browser)
         snap(page, "inicial")

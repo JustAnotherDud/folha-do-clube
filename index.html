@@ -17,7 +17,13 @@
     src: url("fonts/plexsans-400.woff2") format('woff2'); }
 
   :root {
-    --laranja: #c75b12;
+    --laranja: #fc4c02;                       /* laranja de marca (estilo Strava), só em realces */
+    --laranja-tinta: rgba(252,76,2,.16);
+    --laranja-linha: rgba(252,76,2,.45);
+    /* espaçamento, raios, alturas: usados nas três tabs */
+    --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px;
+    --raio: 8px; --raio-s: 4px;
+    --cel-v: 8px; --cel-h: 12px; --linha-h: 20px;
     --grelha: #3c4043;
     --fundo: #1b1b1d;
     --painel: #242528;
@@ -207,19 +213,23 @@
     font-weight: 400; font-size: 11px;
   }
 
-  /* navegação por tabs */
+  /* navegação por tabs: uma só barra, com scroll horizontal se for preciso */
   .tabs {
-    display: flex; gap: 4px; flex-wrap: wrap;
-    border-bottom: 2px solid var(--grelha); margin: 0 0 16px;
+    display: flex; gap: var(--e1); flex-wrap: nowrap;
+    overflow-x: auto; scrollbar-width: none;
+    border-bottom: 1px solid var(--grelha); margin: 0 0 var(--e4);
   }
+  .tabs::-webkit-scrollbar { display: none; }
   .tab {
-    padding: 8px 16px; margin-bottom: -2px;
-    border: none; border-bottom: 2px solid transparent;
+    flex: none; white-space: nowrap;
+    padding: 10px var(--e4); margin-bottom: -1px;
+    border: none; border-bottom: 3px solid transparent;
     background: none; color: var(--suave);
     font-family: inherit; font-weight: 600; font-size: 14px; cursor: pointer;
   }
   .tab:hover { color: var(--texto); }
-  .tab.active { color: #fff; border-bottom-color: var(--laranja); }
+  .tab:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; border-radius: var(--raio-s); }
+  .tab.active { color: var(--laranja); border-bottom-color: var(--laranja); }
   .panel { display: none; }
   .panel.active { display: block; }
   .panel-meta { color: var(--suave); font-size: 12px; margin: 0 0 12px; }
