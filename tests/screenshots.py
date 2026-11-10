@@ -68,7 +68,11 @@ def main():
                 page.wait_for_load_state("networkidle")
                 page.evaluate("document.fonts.ready")
                 page.wait_for_timeout(300)
-                page.screenshot(path=str(saida / f"{t}-{w}.png"), full_page=True)
+                if t == "koms":   # a lista tem 300+ linhas: só o topo
+                    page.screenshot(path=str(saida / f"{t}-{w}.png"),
+                                    clip={"x": 0, "y": 0, "width": w, "height": 1500})
+                else:
+                    page.screenshot(path=str(saida / f"{t}-{w}.png"), full_page=True)
             ctx.close()
         browser.close()
     print("screenshots em", saida)

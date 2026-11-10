@@ -17,6 +17,7 @@
     src: url("fonts/plexsans-400.woff2") format('woff2'); }
 
   :root {
+    --cabecalho: #18191b;
     --laranja: #fc4c02;                       /* laranja de marca (estilo Strava), só em realces */
     --laranja-tinta: rgba(252,76,2,.16);
     --laranja-linha: rgba(252,76,2,.45);
@@ -46,65 +47,101 @@
   }
   h1 { font-size: 20px; margin: 0 0 12px; }
 
-  table { border-collapse: collapse; background: var(--painel); }
-  th, td { border: 1px solid var(--grelha); padding: 4px 10px; text-align: center; }
-  thead th { background: var(--laranja); color: #fff; font-weight: 700; }
+  /* --- tabelas: contentor com scroll próprio, coluna do nome fixa --- */
+  .tabela-wrap {
+    overflow-x: auto; max-width: 100%;
+    border: 1px solid var(--grelha); border-radius: var(--raio); background: var(--painel);
+  }
+  table { border-collapse: separate; border-spacing: 0; background: var(--painel); }
+  .tabela-wrap > table { width: 100%; }
+  th, td {
+    padding: var(--cel-v) var(--cel-h); text-align: left; line-height: var(--linha-h);
+    border-bottom: 1px solid var(--grelha);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  thead th {
+    background: var(--cabecalho); color: var(--suave); font-weight: 700; font-size: 12px;
+    letter-spacing: .02em; border-bottom: 1px solid var(--grelha);
+  }
+  th.c, td.c { text-align: center; }
+  th.num, td.num { text-align: right; white-space: nowrap; }
+  /* coluna do nome: fixa à esquerda, com a cor do membro em barra */
+  th:first-child, td.atleta {
+    position: sticky; left: 0; z-index: 3;
+    background: var(--painel); font-weight: 700; white-space: nowrap;
+    box-shadow: inset 3px 0 0 var(--cor, transparent);
+    padding-left: calc(var(--cel-h) + 3px);
+  }
+  thead th:first-child { background: var(--cabecalho); box-shadow: none; }
+  td.atleta a { color: inherit; text-decoration: underline dotted var(--suave); text-underline-offset: 3px; }
+  td.atleta a:hover { color: var(--laranja); }
+  td a { color: var(--texto); text-decoration: underline dotted var(--suave); text-underline-offset: 3px; }
+  td a:hover { color: var(--laranja); text-decoration-color: var(--laranja); }
+  td.vazio, td.zero { color: var(--grelha); }
 
-  td.atleta { color: #fff; font-weight: 700; }
-  td.atleta a { color: inherit; text-decoration: underline; }
-
-  #ranking { margin-bottom: 20px; }
-  #ranking td.num { text-align: center; }
-  #ranking tr.r0 td:not(:first-child) { background: #4a3a12; }
+  #ranking-wrap { display: inline-block; margin-bottom: var(--e5); max-width: 100%; vertical-align: top; }
+  #ranking tbody tr.r0 td { background: rgba(217,165,68,.10); }
+  #ranking tbody tr.r0 td.atleta { background: #36322b; }
+  #ranking tr.sem-kom td { color: var(--suave); opacity: .55; }
   #ranking td { font-weight: 600; }
 
-  .filtros { margin: 0 0 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .filtros { margin: 0 0 var(--e3); display: flex; gap: var(--e2); flex-wrap: wrap; align-items: center; }
   .filtros select, .filtros input {
-    padding: 5px 8px; border: 1px solid var(--grelha); border-radius: 4px;
-    font-size: 13px; background: var(--painel); color: var(--texto);
+    height: 34px; padding: 0 var(--e2); border: 1px solid var(--grelha); border-radius: var(--raio-s);
+    font: inherit; font-size: 13px; background: var(--painel); color: var(--texto);
   }
+  .filtros select:focus-visible, .filtros input:focus-visible { outline: 2px solid var(--laranja); outline-offset: 1px; }
   .filtros input { width: 220px; }
-  #conta { color: var(--suave); font-size: 12px; }
+  #f-atleta { flex: 1 1 100%; }
+  #conta { color: var(--suave); font-size: 12px; margin-left: auto; }
 
   .toggle {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 5px 12px; border: 1px solid var(--grelha); border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px; height: 34px;
+    padding: 0 var(--e3); border: 1px solid var(--grelha); border-radius: 999px;
     background: var(--painel); color: var(--texto);
     font-size: 13px; cursor: pointer; user-select: none;
     transition: background .15s, border-color .15s, color .15s;
   }
-  .toggle:hover { border-color: var(--laranja); }
-  .toggle input { width: 14px; height: 14px; accent-color: var(--laranja); cursor: pointer; }
-  .toggle:has(input:checked) {
-    background: var(--laranja); border-color: var(--laranja); color: #fff; font-weight: 700;
-  }
+  .toggle:hover { border-color: var(--laranja-linha); }
+  .toggle input { width: 14px; height: 14px; margin: 0; accent-color: var(--laranja); cursor: pointer; }
+  .toggle:has(input:checked) { background: var(--laranja-tinta); border-color: var(--laranja); color: var(--laranja); font-weight: 700; }
 
   .pills { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
   .pill {
-    padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;
-    color: #fff; cursor: pointer; opacity: .4;
-    transition: opacity .15s, box-shadow .15s;
+    display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 var(--e3);
+    border: 1px solid var(--grelha); border-radius: 999px;
+    font-size: 12px; font-weight: 700; color: var(--suave); cursor: pointer; user-select: none;
+    transition: background .15s, border-color .15s, color .15s;
   }
-  .pill:hover { opacity: .7; }
-  .pill.active { opacity: 1; box-shadow: 0 0 0 2px rgba(255,255,255,.35) inset; }
-  .pill-todos { background: var(--grelha) !important; }
+  .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cor, var(--suave)); flex: none; }
+  .pill-todos::before { display: none; }
+  .pill:hover { border-color: var(--cor, var(--suave)); color: var(--texto); }
+  .pill.active { color: var(--texto); border-color: var(--cor, var(--texto));
+    background: color-mix(in srgb, var(--cor, #fff) 18%, transparent); }
 
-  #tabela th { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela th[data-k] { cursor: pointer; user-select: none; white-space: nowrap; }
+  #tabela th[data-k]:hover { color: var(--texto); }
   #tabela.agrupada th { cursor: default; }
-  #tabela th .seta { font-size: 10px; }
-  #tabela td.seg { text-align: left; }
+  #tabela th .seta { font-size: 10px; color: var(--laranja); }
+  #tabela td.seg { min-width: 220px; }
+  #tabela td.ritmo, #tabela td.data, #tabela td.tempo { white-space: nowrap; }
+  #tabela td.cidade { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #tabela tbody tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+  #tabela tbody tr:nth-child(even) td.atleta { background: #27282b; }
   a { color: var(--link); }
-  #tabela tbody tr:nth-child(even) { background: #2a2622; }
-  td.num, th.num { text-align: right; }
   .trofeu { font-size: 15px; }
   tr.grupo-cabecalho td {
-    text-align: left; background: #33291c; color: var(--suave);
-    font-weight: 700; font-size: 12px; border-top: 3px solid var(--laranja);
+    text-align: left; background: var(--cabecalho) !important; color: var(--suave);
+    font-weight: 700; font-size: 12px; border-top: 2px solid var(--laranja-linha);
+    position: static; box-shadow: none;
   }
   tr.grupo-cabecalho:first-child td { border-top: none; }
 
-  #prs td.melhor { background: #4a3a12; font-weight: 700; }
-  #prs td.vazio { color: var(--grelha); }
+  /* Best Efforts: melhor tempo de cada distância */
+  #prs th { white-space: nowrap; }
+  #prs th[title] { cursor: help; }
+  #prs td.melhor { background: var(--laranja-tinta); color: var(--laranja); font-weight: 700; }
+  #prs td.melhor a { color: inherit; }
 
   /* --- pódio Squadrats: terraços, altura = posição --- */
   .podio-titulo { margin: 0 0 14px; }
@@ -147,9 +184,10 @@
 
   /* --- tabela Squadrats: régua de medição em vez de fundo tingido --- */
   #squadrats th[data-c] { cursor: pointer; user-select: none; white-space: nowrap;
-    transition: color .15s; position: relative; }
-  #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: #fff; }
-  #squadrats th[data-tip] { text-decoration: underline dotted rgba(255,255,255,.45); text-underline-offset: 3px; }
+    transition: color .15s; position: relative; text-align: center; }
+  #squadrats th[data-c]:hover, #squadrats th[data-c]:focus-visible { color: var(--texto); }
+  #squadrats th[data-c]:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; }
+  #squadrats th[data-tip] { text-decoration: underline dotted var(--suave); text-underline-offset: 3px; }
   /* tooltip próprio, sempre por baixo do cabeçalho */
   #squadrats th[data-tip]:hover::after, #squadrats th[data-tip]:focus-visible::after {
     content: attr(data-tip);
@@ -160,17 +198,20 @@
     padding: 8px 10px; border-radius: 5px; border: 1px solid var(--grelha);
     box-shadow: 0 6px 16px rgba(0,0,0,.4); z-index: 20; pointer-events: none;
   }
+  /* nas pontas, o tooltip alinha ao bordo para não ser cortado pelo scroll */
+  #squadrats th[data-tip]:nth-child(-n+3)::after { left: 0; transform: none; }
+  #squadrats th[data-tip]:nth-last-child(-n+2)::after { left: auto; right: 0; transform: none; }
   #squadrats th[data-tip]:hover::before, #squadrats th[data-tip]:focus-visible::before {
     content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
     margin-top: 3px; border: 5px solid transparent; border-bottom-color: var(--painel-alto);
     z-index: 21; pointer-events: none;
   }
-  /* cabeçalho activo: invertido, porque todos os th já são laranja */
+  /* cabeçalho activo: texto e filete em laranja */
   #squadrats th.metrica-activa,
   #squadrats th.metrica-activa:hover,
-  #squadrats th.metrica-activa:focus-visible { background: #fff; color: var(--laranja); }
+  #squadrats th.metrica-activa:focus-visible { color: var(--laranja); box-shadow: inset 0 -3px 0 var(--laranja); }
   /* sem .barcell, esta célula herdava o text-align:right de td.num */
-  #squadrats td.num.vazio { text-align: center; color: var(--grelha); }
+  #squadrats td.num { text-align: center; }
   #squadrats .barcell { display: flex; flex-direction: column; align-items: center; gap: 5px; }
   #squadrats .valorlinha { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
   #squadrats .regua { width: 84px; height: 8px; position: relative;
@@ -208,11 +249,6 @@
   #ganhos-tabela td.num.negativo { color: #e08a6a; }
   /* maior ganho do dia */
   #ganhos-tabela td.num.maior { background: rgba(199,91,18,.16); font-weight: 700; }
-  #prs thead tr.metros th {
-    background: #8f4a1a; color: #f0d9c8;
-    font-weight: 400; font-size: 11px;
-  }
-
   /* navegação por tabs: uma só barra, com scroll horizontal se for preciso */
   .tabs {
     display: flex; gap: var(--e1); flex-wrap: nowrap;
@@ -247,12 +283,15 @@
 <section class="panel active" id="tab-koms">
   <div class="panel-meta"><span id="gerado"></span></div>
 
+  <div class="tabela-wrap" id="ranking-wrap">
   <table id="ranking">
     <thead><tr>
-      <th>Nome</th><th>👑</th><th>🏆</th><th>Pontos</th><th>Posição Média</th>
+      <th>Nome</th><th class="num" title="KOMs (1.º lugar)">👑</th><th class="num" title="Top 10 (2.º a 10.º)">🏆</th>
+      <th class="num">Pontos</th><th class="num">Posição média</th>
     </tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 
   <div class="filtros">
     <div id="f-atleta" class="pills"></div>
@@ -271,32 +310,36 @@
     <span id="conta"></span>
   </div>
 
+  <div class="tabela-wrap">
   <table id="tabela">
     <thead><tr>
       <th data-k="atleta">Nome <span class="seta"></span></th>
-      <th data-k="posicao">Posição <span class="seta"></span></th>
-      <th>Troféu</th>
-      <th data-k="tipo">Tipo <span class="seta"></span></th>
+      <th data-k="posicao" class="c">Posição <span class="seta"></span></th>
+      <th class="c">Troféu</th>
+      <th data-k="tipo" class="c">Tipo <span class="seta"></span></th>
       <th data-k="segmento">Segmento <span class="seta"></span></th>
       <th data-k="dist_km" class="num">Distância <span class="seta"></span></th>
       <th data-k="vel_kmh" class="num">Ritmo <span class="seta"></span></th>
-      <th data-k="tempo">Tempo <span class="seta"></span></th>
+      <th data-k="tempo" class="num">Tempo <span class="seta"></span></th>
       <th data-k="cidade">Cidade <span class="seta"></span></th>
       <th data-k="pais">País <span class="seta"></span></th>
       <th data-k="data">Data <span class="seta"></span></th>
     </tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 </section>
 
 <section class="panel" id="tab-best-efforts">
   <div class="panel-meta">
     Melhores tempos de corrida por distância, calculados pela Strava. <span id="prs-gerado"></span>
   </div>
+  <div class="tabela-wrap">
   <table id="prs">
     <thead><tr></tr></thead>
     <tbody></tbody>
   </table>
+  </div>
 </section>
 
 <section class="panel" id="tab-squadrats">
@@ -307,6 +350,7 @@
       </p>
       <div class="podio" id="squadrats-podio"></div>
 
+      <div class="tabela-wrap">
       <table id="squadrats">
         <thead><tr>
           <th>Nome</th>
@@ -319,6 +363,7 @@
         </tr></thead>
         <tbody></tbody>
       </table>
+      </div>
 
       <div class="panel-meta" style="margin-top:14px;">
         Squares capturados na app <a href="https://squadrats.com" target="_blank" rel="noopener">Squadrats</a>.
@@ -333,7 +378,7 @@
         <span class="podio-metrica" id="ganhos-metrica-nome" style="font-size:14px;color:var(--suave);"></span>
       </p>
       <svg id="ganhos-grafico" class="ganhos-grafico"></svg>
-      <div class="tabela-ganhos-wrap">
+      <div class="tabela-wrap tabela-ganhos-wrap">
         <table id="ganhos-tabela"><thead><tr></tr></thead><tbody></tbody></table>
       </div>
       <div class="panel-meta" id="ganhos-gerado" style="margin-top:10px;"></div>
@@ -361,6 +406,7 @@ window.addEventListener("hashchange", () => activarTab(location.hash.slice(1)));
 activarTab(location.hash.slice(1));
 
 let linhas = [];
+let membrosPrs = [];   // membros vistos nos Best Efforts, para o resumo mostrar quem tem 0 KOMs
 let ordem = { k: "data", asc: false };
 const atletasSelecionados = new Set();
 
@@ -380,6 +426,7 @@ function corAtleta(n) {
   for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
   return PALETA[h % PALETA.length];
 }
+const fmtKm = x => x.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 function trofeu(p) { return p === 1 ? "👑" : "🏆"; }
 const TIPOS = { "Run": "🏃🏻‍♂️", "Ride": "🚲", "Walk": "🚶‍♂️", "Trail Run": "🏔️" };
 function emojiTipo(t) { return TIPOS[t] ?? t; }
@@ -404,9 +451,9 @@ function velKmh(l) {
 function formatarRitmo(l) {
   if (!l.vel_kmh) return "—";
   if (l.tipo === "Ride") return `${l.vel_kmh.toFixed(1)} km/h`;
-  const segKm = 3600 / l.vel_kmh;
-  const m = Math.floor(segKm / 60), s = Math.round(segKm % 60);
-  return `${m}:${String(s).padStart(2, "0")} /km`;
+  const segKm = Math.round(3600 / l.vel_kmh);   // arredonda antes de partir, evita "3:60"
+  const m = Math.floor(segKm / 60), s = segKm % 60;
+  return `${m}:${String(s).padStart(2, "0")}/km`;
 }
 
 // distância -> metros: ordena as colunas e dá a linha de metros
@@ -443,41 +490,46 @@ function renderPRs(prsData) {
   }
 
   document.querySelector("#prs thead").innerHTML =
-    "<tr><th>Nome</th>" + distancias.map(d => `<th>${escHtml(d)}</th>`).join("") + "</tr>" +
-    `<tr class="metros"><th></th>` +
-      distancias.map(d => `<th>${fmtMetros(DIST_METROS[d])}</th>`).join("") + "</tr>";
+    "<tr><th>Nome</th>" + distancias.map(d =>
+      `<th class="c" title="${fmtMetros(DIST_METROS[d])}">${escHtml(d)}</th>`).join("") + "</tr>";
 
   document.querySelector("#prs tbody").innerHTML = nomes.map(n => `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${escHtml(n)}</td>
+      <td class="atleta" style="--cor:${corAtleta(n)}">${escHtml(n)}</td>
       ${distancias.map(d => {
         const c = atletasData[n][d];
-        if (!c) return `<td class="vazio">—</td>`;
+        if (!c) return `<td class="c vazio">—</td>`;
         const inner = c.url
           ? `<a href="${escHtml(c.url)}" target="_blank" rel="noopener">${escHtml(c.tempo)}</a>`
           : escHtml(c.tempo);
-        return `<td class="${n === melhores[d] ? "melhor" : ""}">${inner}</td>`;
+        return `<td class="c${n === melhores[d] ? " melhor" : ""}">${inner}</td>`;
       }).join("")}
     </tr>`).join("");
 
   document.getElementById("prs-gerado").textContent = actualizado(prsData.gerado);
+  membrosPrs = nomes;
+  if (linhas.length) ranking();
 }
+
+// "2,01": vírgula decimal pt-PT, 2 casas
+const fmtMedia = x => x.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 function ranking() {
   const por = {};
+  for (const n of membrosPrs) por[n] = { nome: n, koms: 0, meds: 0, pontos: 0, soma: 0, n: 0 };
   for (const l of linhas) {
     const r = por[l.atleta] ??= { nome: l.atleta, koms: 0, meds: 0, pontos: 0, soma: 0, n: 0 };
     if (l.posicao === 1) r.koms++; else r.meds++;
     r.pontos += 11 - l.posicao;       // 👑=10 … 10º=1
     r.soma += l.posicao; r.n++;
   }
-  const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos);
+  const ord = Object.values(por).sort((a, b) => b.pontos - a.pontos || a.nome.localeCompare(b.nome, "pt"));
   document.querySelector("#ranking tbody").innerHTML = ord.map((r, i) => `
-    <tr class="r${i}">
-      <td class="atleta" style="background:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
+    <tr class="${r.n ? "r" + i : "sem-kom"}">
+      <td class="atleta" style="--cor:${corAtleta(r.nome)}">${escHtml(r.nome)}</td>
       <td class="num">${r.koms}</td><td class="num">${r.meds}</td>
       <td class="num">${r.pontos}</td>
-      <td class="num">${(r.soma / r.n).toFixed(3)}</td>
+      <td class="num">${r.n ? fmtMedia(r.soma / r.n) : "—"}</td>
     </tr>`).join("");
 }
 
@@ -502,28 +554,29 @@ function filtradas() {
 }
 
 function linhaHtml(l) {
+  const cidade = l.cidade || "—";
   return `
     <tr>
-      <td class="atleta" style="background:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
-      <td>${l.posicao}</td>
-      <td class="trofeu">${trofeu(l.posicao)}</td>
-      <td>${emojiTipo(l.tipo)}</td>
+      <td class="atleta" style="--cor:${corAtleta(l.atleta)}">${escHtml(l.atleta)}</td>
+      <td class="c">${l.posicao}</td>
+      <td class="c trofeu">${trofeu(l.posicao)}</td>
+      <td class="c">${emojiTipo(l.tipo)}</td>
       <td class="seg"><a href="${escHtml(l.url)}" target="_blank" rel="noopener">${escHtml(l.segmento)}</a></td>
-      <td class="num">${l.dist_km.toFixed(2)} km</td>
-      <td class="num">${formatarRitmo(l)}</td>
-      <td>${l.effort_url
+      <td class="num">${fmtKm(l.dist_km)} km</td>
+      <td class="num ritmo">${formatarRitmo(l)}</td>
+      <td class="num tempo">${l.effort_url
         ? `<a href="${escHtml(l.effort_url)}" target="_blank" rel="noopener">${escHtml(l.tempo)}</a>`
         : escHtml(l.tempo)}</td>
-      <td>${escHtml(l.cidade || "—")}</td>
+      <td class="cidade" title="${escHtml(cidade)}">${escHtml(cidade)}</td>
       <td>${escHtml(l.pais || "—")}</td>
-      <td>${dataPt(l.data)}</td>
+      <td class="data">${dataPt(l.data)}</td>
     </tr>`;
 }
 
 function grupoCabecalhoHtml(grupo) {
   const l0 = grupo[0];
   return `<tr class="grupo-cabecalho"><td colspan="11">
-    ${emojiTipo(l0.tipo)} ${escHtml(l0.segmento)} — ${l0.dist_km.toFixed(2)} km ·
+    ${emojiTipo(l0.tipo)} ${escHtml(l0.segmento)} — ${fmtKm(l0.dist_km)} km ·
     ${escHtml(l0.cidade || "—")}, ${escHtml(l0.pais || "—")}
   </td></tr>`;
 }
@@ -575,7 +628,7 @@ function popularFiltros() {
   document.getElementById("f-atleta").innerHTML =
     `<span class="pill pill-todos" data-atleta="">Todos</span>` +
     atletas.map(a => `<span class="pill" data-atleta="${escHtml(a)}"
-      style="background:${corAtleta(a)}">${escHtml(a)}</span>`).join("");
+      style="--cor:${corAtleta(a)}">${escHtml(a)}</span>`).join("");
   atualizarPillsAtletas();
 }
 
@@ -705,7 +758,7 @@ function renderSquadrats(d) {
 
   document.querySelector("#squadrats tbody").innerHTML = ordenados.map(n => `
     <tr>
-      <td class="atleta" style="background:${corAtleta(n)}">${nomeLigado(n)}</td>
+      <td class="atleta" style="--cor:${corAtleta(n)}">${nomeLigado(n)}</td>
       ${CAMPOS_SQUADRATS.map(c => {
         const v = atletas[n][c];
         if (v == null) return `<td class="num vazio">—</td>`;
