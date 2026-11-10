@@ -7,12 +7,6 @@
 <title>Folha do Clube</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
 <style>
-  @font-face { font-family: 'Plex Cond'; font-weight: 700; font-display: swap;
-    src: url("fonts/plexcond-700.woff2") format('woff2'); }
-  @font-face { font-family: 'Plex Mono'; font-weight: 500; font-display: swap;
-    src: url("fonts/plexmono-500.woff2") format('woff2'); }
-  @font-face { font-family: 'Plex Mono'; font-weight: 700; font-display: swap;
-    src: url("fonts/plexmono-700.woff2") format('woff2'); }
   @font-face { font-family: 'Plex Sans'; font-weight: 400; font-display: swap;
     src: url("fonts/plexsans-400.woff2") format('woff2'); }
 
@@ -36,13 +30,13 @@
     --prata: #aeb4bb;     --prata-brilho: #e7eaed;  --prata-tinta: #1b1d1f;
     --bronze: #a5673a;    --bronze-brilho: #dba173; --bronze-tinta: #241408;
   }
-  .num { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   body {
     font-family: 'Plex Sans', Roboto, "Segoe UI", Arial, sans-serif;
     margin: 0; padding: 16px;
     background: var(--fundo); color: var(--texto);
-    font-size: 14px;
+    font-size: 14px; line-height: 1.4;
+    font-variant-numeric: tabular-nums;   /* números alinhados em toda a página */
     color-scheme: dark;
   }
   h1 { font-size: 20px; margin: 0 0 12px; }
@@ -146,7 +140,7 @@
   /* --- pódio Squadrats: terraços, altura = posição --- */
   .podio-titulo { margin: 0 0 14px; }
   .podio-titulo .podio-metrica {
-    font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 24px;
+    font-weight: 700; font-size: 24px;
     color: var(--laranja); letter-spacing: .01em;
   }
   .podio { display: grid; grid-template-columns: repeat(3, minmax(0,150px)); gap: 3px;
@@ -172,13 +166,13 @@
   .riser .disco {
     width: 34px; height: 34px; border-radius: 50%; flex: none;
     display: flex; align-items: center; justify-content: center;
-    font: 700 14px 'Plex Mono', monospace; color: var(--medalha-tinta);
+    font-weight: 700; font-size: 14px; color: var(--medalha-tinta);
     background: radial-gradient(circle at 32% 28%, var(--medalha-brilho), var(--medalha) 65%);
     box-shadow: inset 0 -2px 3px rgba(0,0,0,.35), inset 0 1px 1px rgba(255,255,255,.5), 0 2px 5px rgba(0,0,0,.4);
   }
   .riser .chip { display: inline-flex; align-items: center; gap: 6px; }
   .riser .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
-  .riser .nome { font-family: 'Plex Cond', sans-serif; font-weight: 700; font-size: 13px; }
+  .riser .nome { font-weight: 700; font-size: 13px; }
   .riser .valor { font-size: 21px; font-weight: 700; line-height: 1; margin-top: 1px; }
   .riser.p1 .valor { font-size: 27px; color: var(--ouro-brilho); text-shadow: 0 0 18px rgba(217,165,68,.35); }
 
@@ -223,7 +217,7 @@
   #squadrats td.r2 .cheio, #squadrats td.r2 .ponta { background: var(--prata); }
   #squadrats td.r3 .cheio, #squadrats td.r3 .ponta { background: var(--bronze); }
   #squadrats .rank-disco {
-    width: 15px; height: 15px; border-radius: 50%; font: 700 8.5px 'Plex Mono', monospace;
+    width: 15px; height: 15px; border-radius: 50%; font-weight: 700; font-size: 9px;
     display: flex; align-items: center; justify-content: center; flex: none;
   }
   #squadrats td.r1 .rank-disco { background: var(--ouro); color: var(--ouro-tinta); }
@@ -272,7 +266,7 @@
 </style>
 </head>
 <body>
-<h1>Folha do Clube</h1>
+<h1>🍁 Folha do Clube</h1>
 
 <nav class="tabs" id="tabs">
   <button class="tab active" data-tab="koms">KOMs &amp; Top10s</button>
