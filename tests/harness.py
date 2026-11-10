@@ -423,10 +423,12 @@ def casos_site():
             r[f"pill {a}"] = resumo(page.inner_html("#f-atleta") + page.inner_text("#conta"))
         separador(page, "best-efforts")
         snap(page, "best-efforts")
-        r["best efforts: melhor tempo sem fundo, destaque leve se um membro domina"] = page.evaluate(
-            """() => { const t = document.querySelector('#prs td.melhor');
-              return [document.getElementById('prs').classList.contains('dominante'),
-                      getComputedStyle(t).backgroundColor, getComputedStyle(t).fontWeight]; }""")
+        # melhor tempo de cada coluna: só negrito, sem fundo e sem cor diferente do resto
+        r["best efforts: melhor tempo só a negrito"] = page.evaluate(
+            """() => { const t = document.querySelector('#prs td.melhor'),
+                a = t.querySelector('a'), o = document.querySelector('#prs td.c:not(.melhor):not(.vazio) a');
+              return [getComputedStyle(t).backgroundColor, getComputedStyle(t).fontWeight,
+                      getComputedStyle(a).color === getComputedStyle(o).color]; }""")
         r["ranking: só membros com pontos"] = page.evaluate(
             "[...document.querySelectorAll('#ranking tbody tr')].every(tr => +tr.cells[3].textContent > 0)")
         r["prs: sem linhas só de traços"] = page.evaluate(

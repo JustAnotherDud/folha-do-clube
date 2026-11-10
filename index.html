@@ -133,9 +133,7 @@
   /* Best Efforts: melhor tempo de cada distância */
   #prs th { white-space: nowrap; }
   #prs th[title] { cursor: help; }
-  #prs td.melhor { color: var(--laranja); font-weight: 700; }
-  #prs td.melhor a { color: inherit; }
-  #prs.dominante td.melhor { color: var(--texto); }   /* um membro com quase tudo: só negrito */
+  #prs td.melhor { font-weight: 700; }   /* só negrito, sem cor: não pesa mesmo que um membro leve a linha toda */
 
   /* --- pódio Squadrats: terraços, altura = posição --- */
   .podio-titulo { margin: 0 0 14px; }
@@ -490,13 +488,6 @@ function renderPRs(prsData) {
     }
     melhores[d] = melhorNome;
   }
-
-  // Se um membro domina (≥60% das distâncias), o laranja pintaria uma linha inteira:
-  // nesse caso o destaque fica só em negrito, sem cor.
-  const vitorias = {};
-  for (const d of distancias) if (melhores[d]) vitorias[melhores[d]] = (vitorias[melhores[d]] || 0) + 1;
-  const dominante = distancias.length >= 3 && Math.max(0, ...Object.values(vitorias)) / distancias.length >= 0.6;
-  document.getElementById("prs").classList.toggle("dominante", dominante);
 
   document.querySelector("#prs thead").innerHTML =
     "<tr><th>Nome</th>" + distancias.map(d =>

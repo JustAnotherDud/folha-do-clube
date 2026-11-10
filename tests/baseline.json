@@ -257,10 +257,10 @@
   "390px: ritmo numa só linha": true,
   "390px: tabela larga com scroll próprio": true,
   "390px: tabs numa só linha": true,
-  "best efforts: melhor tempo sem fundo, destaque leve se um membro domina": [
-   true,
+  "best efforts: melhor tempo só a negrito": [
    "rgba(0, 0, 0, 0)",
-   "700"
+   "700",
+   true
   ],
   "best-efforts #conta": "<span id=\"conta\">322 de 322</span>",
   "best-efforts #f-atleta": {
@@ -292,7 +292,7 @@
   "best-efforts #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "best-efforts #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "best-efforts #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "best-efforts #ranking": {
@@ -378,7 +378,7 @@
   "falha sem-cores #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "falha sem-cores #prs": {
    "n": 40,
-   "sha": "10accceb642c720f"
+   "sha": "485832f2e7c385b1"
   },
   "falha sem-cores #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "falha sem-cores #ranking": {
@@ -429,7 +429,7 @@
   "falha sem-data #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "falha sem-data #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "falha sem-data #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "falha sem-data #ranking": {
@@ -493,7 +493,7 @@
   "falha sem-ganhos #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "falha sem-ganhos #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "falha sem-ganhos #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "falha sem-ganhos #ranking": {
@@ -616,7 +616,7 @@
   "falha sem-squadrats #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\"></span>",
   "falha sem-squadrats #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "falha sem-squadrats #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "falha sem-squadrats #ranking": {
@@ -838,7 +838,7 @@
   "inicial #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "inicial #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "inicial #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "inicial #ranking": {
@@ -926,7 +926,7 @@
   "mobile #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "mobile #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "mobile #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "mobile #ranking": {
@@ -986,7 +986,7 @@
   "multi #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "multi #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "multi #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "multi #ranking": {
@@ -1113,7 +1113,7 @@
   "squadrats #podio-metrica-nome": "<span class=\"podio-metrica\" id=\"podio-metrica-nome\">Squadrats</span>",
   "squadrats #prs": {
    "n": 40,
-   "sha": "ac97b8b1e786540d"
+   "sha": "db8d9376775f29e5"
   },
   "squadrats #prs-gerado": "<span id=\"prs-gerado\">actualizado 25/09/2026, 11:21</span>",
   "squadrats #ranking": {
