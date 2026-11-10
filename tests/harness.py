@@ -379,10 +379,11 @@ def casos_site():
         return ctx, page, erros
 
     r = {}
+    estilos = {}   # computed styles + caixas: dependem do navegador/SO, ver plataforma()
 
     def snap(page, nome):
         for k, v in page.evaluate(SNAP_JS).items():
-            r[f"{nome} {k}"] = resumo(v)
+            (estilos if k == "estilos" else r)[f"{nome} {k}"] = resumo(v)
 
     with sync_playwright() as p:
         canal = os.environ.get("HARNESS_BROWSER", "msedge")
@@ -447,6 +448,24 @@ def casos_site():
         snap(page, "mobile")
         ctx.close()
 
+        # telemóvel (390px): a página nunca tem scroll horizontal, as tabs ficam numa só linha
+        # e o ritmo ("3:34/km") não parte
+        ctx, page, erros = abrir(browser, largura=390)
+        for t in ("koms", "best-efforts", "squadrats"):
+            separador(page, t)
+            r[f"390px {t}: sem scroll horizontal da página"] = page.evaluate(
+                "document.documentElement.scrollWidth <= window.innerWidth")
+        r["390px: tabs numa só linha"] = page.evaluate(
+            "new Set([...document.querySelectorAll('.tab')].map(t => t.offsetTop)).size === 1")
+        separador(page, "koms")
+        r["390px: ritmo numa só linha"] = page.evaluate(
+            """[...document.querySelectorAll('#tabela td.ritmo')].every(td => {
+                const r = document.createRange(); r.selectNodeContents(td);
+                return r.getClientRects().length === 1; })""")
+        r["390px: tabela larga com scroll próprio"] = page.evaluate(
+            "[...document.querySelectorAll('.tabela-wrap')].every(w => w.scrollWidth >= w.clientWidth)")
+        ctx.close()
+
         for nome, falhas in (("sem-data", ["data.json"]), ("sem-prs", ["prs.json"]),
                              ("sem-cores", ["membros_cores"]), ("sem-squadrats", ["squadrats.json"]),
                              ("sem-ganhos", ["daily_gains"])):
@@ -456,20 +475,36 @@ def casos_site():
             r[f"falha {nome} consola"] = erros
             ctx.close()
         browser.close()
-    return r
+    return r, estilos
+
+
+def plataforma():
+    """Chave do navegador/SO: as caixas e estilos calculados mudam com as fontes e o motor."""
+    return f"{sys.platform}-{os.environ.get('HARNESS_BROWSER', 'msedge') or 'chromium'}"
 
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     gravar = "--update" in sys.argv
-    atual = {"python": casos_python(), "site": casos_site()}
+    site, estilos = casos_site()
+    atual = {"python": casos_python(), "site": site}
+    plat = plataforma()
     if gravar:
+        antigo = json.loads(BASELINE.read_text(encoding="utf-8")) if BASELINE.exists() else {}
+        atual["estilos"] = {**antigo.get("estilos", {}), plat: estilos}   # mantém as outras plataformas
         BASELINE.write_text(json.dumps(atual, ensure_ascii=False, indent=1, sort_keys=True) + "\n",
                             encoding="utf-8")
-        print(f"baseline gravada: {sum(len(v) for v in atual.values())} casos")
+        print(f"baseline gravada: {sum(len(v) for v in atual['python'].values()) + len(site)} casos "
+              f"+ {len(estilos)} de estilos ({plat})")
         return
     base = json.loads(BASELINE.read_text(encoding="utf-8"))
     atual = json.loads(json.dumps(atual, ensure_ascii=False))
+    # estilos só se comparam na plataforma em que a baseline foi gravada
+    if plat in base.get("estilos", {}):
+        base["estilos"], atual["estilos"] = base["estilos"][plat], json.loads(json.dumps(estilos))
+    else:
+        print(f"aviso: sem baseline de estilos para {plat}; corre --update uma vez neste ambiente")
+        base.pop("estilos", None)
     difs = [f"{g} / {k}:\n  antes: {base[g].get(k)}\n  agora: {atual[g].get(k)}"
             for g in base for k in sorted(set(base[g]) | set(atual[g])) if base[g].get(k) != atual[g].get(k)]
     total = sum(len(v) for v in base.values())

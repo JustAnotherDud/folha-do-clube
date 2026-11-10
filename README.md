@@ -75,4 +75,8 @@ Run:
 ```
 
 `--update` rewrites the baseline after an intended change. Without Edge, run
-`playwright install chromium` and set `HARNESS_BROWSER=` (empty).
+`playwright install chromium` and set `HARNESS_BROWSER=` (empty); to use an
+already installed Chromium, also set `HARNESS_EXECUTABLE=<path to chrome>`.
+The computed-style snapshots (`estilos`) depend on browser and OS, so the baseline
+keeps one set per platform: run `--update` once on a new one.
+`tests/screenshots.py <dir>` takes screenshots of the three tabs at 390px and 1280px.

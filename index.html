@@ -426,7 +426,10 @@ let CORES_FIXAS = { "Zé": "#e03131", "Xeira": "#9c46d8",
 // Só apresentação: o membros_cores.json não muda. A cor da Inês era igual ao laranja
 // de marca (#fc4c02) e a do Zé (vermelho) ficava demasiado perto dele; aplicado depois
 // de as cores chegarem, por isso prevalece sobre o ficheiro.
-const AJUSTES_COR = { "Zé": "#f0476f", "Inês": "#51cf66", "Inês S.": "#51cf66" };
+const AJUSTES_COR = { "Zé": "#f0476f", "Inês": "#51cf66", "Inês S.": "#51cf66",
+  // sem entrada em membros_cores.json (só aparecem em Best Efforts): cores fixas, não por hash,
+  // para nunca ficarem iguais entre si nem parecidas com as dos outros
+  "Daniel": "#8ecae6", "Gonçalo": "#d4a373", "Pipas": "#e0aaff" };
 // cores para quem não está no ficheiro: longe do laranja, do vermelho/rosa e das fixas
 const PALETA = ["#7cc4ff", "#c2a1ff", "#a3b18a", "#d9b38c", "#6fe0c8", "#b8b8c8"];
 function corAtleta(n) {
