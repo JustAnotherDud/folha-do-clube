@@ -281,6 +281,7 @@ SQUADRATS = {"atualizado": "2026-09-25T06:07:24Z", "atletas": {
     "Xeira": {"squadrats": 471, "squadratinhos": 6100, "yard": 116, "yardinho": 145, "ubersquadrat": 9, "ubersquadratinho": 9},
     "Inês S.": {"squadrats": 120, "squadratinhos": 900, "yard": None, "yardinho": 30, "ubersquadrat": 3, "ubersquadratinho": 5},
     "Pedro": {"squadrats": 480, "squadratinhos": 10, "yard": 5, "yardinho": 1, "ubersquadrat": 2},
+    "Zero": {"squadrats": 0, "squadratinhos": 0, "yard": 0, "yardinho": None, "ubersquadrat": 0, "ubersquadratinho": None},
     "Novo": {"squadrats": 1, "squadratinhos": 2, "yard": 0, "yardinho": 0, "ubersquadrat": 1, "ubersquadratinho": 1},
 }}
 GANHOS = {"gerado": "2026-09-25T06:07:26Z", "dias": [
@@ -289,8 +290,10 @@ GANHOS = {"gerado": "2026-09-25T06:07:26Z", "dias": [
     {"data": "2026-09-20", "atletas": {"Pedro": {"squadrats": -1, "yard": 3}, "Inês S.": {"squadratinhos": 7}}},
     {"data": "2026-09-25", "atletas": {"Carolina": {"squadrats": 2, "squadratinhos": 23}}},
 ]}
-CORES = {"cores": {"Zé": "#e03131", "Xeira": "#9c46d8", "Carolina": "#c99a00", "Inês S.": "#e8710a",
-                   "Inês": "#e8710a", "Ana": "#12889c", "Pedro": "#010203"}}
+# espelha membros_cores.json (squadrats-club): a folha já não tem mapeamento próprio
+CORES = {"cores": {"Zé": "#f0476f", "Xeira": "#9c46d8", "Carolina": "#c99a00", "Inês S.": "#b8e04a",
+                   "Inês": "#b8e04a", "Ana": "#12889c", "Pedro": "#010203",
+                   "Daniel": "#8ecae6", "Gonçalo": "#d4a373", "Pipas": "#e0aaff"}}
 
 SNAP_JS = r"""async () => {
   await document.fonts.ready;
@@ -335,9 +338,10 @@ def casos_site():
                 raw + "data/data/squadrats.json": SQUADRATS,
                 raw + "data/data/daily_gains.json": GANHOS}
 
-    def abrir(browser, falhas=(), largura=1280, ordem=ORDEM_JSON):
+    def abrir(browser, falhas=(), largura=1280, ordem=ORDEM_JSON, toque=False):
         ctx = browser.new_context(viewport={"width": largura, "height": 900}, locale="pt-PT",
-                                  timezone_id="Europe/Lisbon", reduced_motion="reduce")
+                                  timezone_id="Europe/Lisbon", reduced_motion="reduce",
+                                  has_touch=toque, is_mobile=toque)
         erros = []
 
         pendentes = {}
@@ -419,8 +423,20 @@ def casos_site():
             r[f"pill {a}"] = resumo(page.inner_html("#f-atleta") + page.inner_text("#conta"))
         separador(page, "best-efforts")
         snap(page, "best-efforts")
+        r["best efforts: melhor tempo sem fundo, destaque leve se um membro domina"] = page.evaluate(
+            """() => { const t = document.querySelector('#prs td.melhor');
+              return [document.getElementById('prs').classList.contains('dominante'),
+                      getComputedStyle(t).backgroundColor, getComputedStyle(t).fontWeight]; }""")
+        r["ranking: só membros com pontos"] = page.evaluate(
+            "[...document.querySelectorAll('#ranking tbody tr')].every(tr => +tr.cells[3].textContent > 0)")
+        r["prs: sem linhas só de traços"] = page.evaluate(
+            "[...document.querySelectorAll('#prs tbody tr')].every(tr => [...tr.cells].slice(1).some(c => c.textContent.trim() !== '—'))")
         separador(page, "squadrats")
         snap(page, "squadrats")
+        r["squadrats: sem membros só com zeros/vazios"] = page.eval_on_selector_all(
+            "#squadrats td.atleta", "ts => ts.map(t => t.textContent.trim())")
+        r["ganhos: colunas só com membros com ganhos"] = page.eval_on_selector_all(
+            "#ganhos-tabela thead th", "ts => ts.map(t => t.textContent.trim())")
         r["podio bolinhas"] = page.eval_on_selector_all(".riser .dot", """ds => ds.map(d => {
             const b = d.getBoundingClientRect(), c = getComputedStyle(d);
             return `${Math.round(b.width)}x${Math.round(b.height)} ${c.backgroundColor} ${c.borderRadius}`; })""")
@@ -430,10 +446,18 @@ def casos_site():
         page.focus('#squadrats th[data-c="yard"]')
         page.keyboard.press("Enter")
         r["metrica teclado yard"] = resumo(page.inner_html("#tab-squadrats"))
+        # explicações dos cabeçalhos: hover, clique no i (fixa) e Escape
+        dica = "() => [document.getElementById('dica').hidden, document.getElementById('dica').textContent]"
         page.hover('#squadrats th[data-c="squadrats"]')
-        r["tooltip"] = page.evaluate("""() => { const c = getComputedStyle(
-            document.querySelector('#squadrats th[data-c="squadrats"]'), '::after');
-            return [c.content, c.top, c.width, c.backgroundColor].join('|'); }""")
+        r["dica: hover"] = page.evaluate(dica)
+        page.mouse.move(0, 0)
+        r["dica: hover sai"] = page.evaluate(dica)
+        page.click('#squadrats th[data-c="ubersquadrat"] .info')   # a métrica activa é outra (yard)
+        r["dica: clique no i"] = page.evaluate(dica)
+        r["dica: clique no i não muda a métrica"] = page.evaluate(
+            "document.querySelector('#squadrats th.metrica-activa').dataset.c")
+        page.keyboard.press("Escape")
+        r["dica: Escape"] = page.evaluate(dica)
         page.goto("http://folha.test/#invalido")
         r["hash invalido"] = page.evaluate("[...document.querySelectorAll('.panel.active')].map(p => p.id)")
         r["consola"] = erros
@@ -450,7 +474,7 @@ def casos_site():
 
         # telemóvel (390px): a página nunca tem scroll horizontal, as tabs ficam numa só linha
         # e o ritmo ("3:34/km") não parte
-        ctx, page, erros = abrir(browser, largura=390)
+        ctx, page, erros = abrir(browser, largura=390, toque=True)
         for t in ("koms", "best-efforts", "squadrats"):
             separador(page, t)
             r[f"390px {t}: sem scroll horizontal da página"] = page.evaluate(
@@ -464,6 +488,14 @@ def casos_site():
                 return r.getClientRects().length === 1; })""")
         r["390px: tabela larga com scroll próprio"] = page.evaluate(
             "[...document.querySelectorAll('.tabela-wrap')].every(w => w.scrollWidth >= w.clientWidth)")
+        separador(page, "squadrats")
+        page.tap('#squadrats th[data-c="ubersquadrat"] .info')
+        r["390px toque: abre a explicação"] = page.evaluate(dica)
+        page.tap('#squadrats th[data-c="ubersquadrat"] .info')
+        r["390px toque: segundo toque fecha"] = page.evaluate(dica)
+        page.tap('#squadrats th[data-c="yard"] .info')
+        page.tap("h1")
+        r["390px toque: toque fora fecha"] = page.evaluate(dica)
         ctx.close()
 
         for nome, falhas in (("sem-data", ["data.json"]), ("sem-prs", ["prs.json"]),

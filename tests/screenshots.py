@@ -42,6 +42,11 @@ def main():
     saida.mkdir(parents=True, exist_ok=True)
     cache = Path(os.environ.get("SCREENSHOTS_CACHE", RAIZ / ".screenshots-cache"))
     externos = carregar(cache)
+    # SCREENSHOTS_CORES: membros_cores.json alternativo (ex.: o do PR do squadrats-club
+    # ainda por fazer merge); por omissão, o do main
+    if os.environ.get("SCREENSHOTS_CORES"):
+        externos[RAW + "main/data/membros_cores.json"] = json.loads(
+            Path(os.environ["SCREENSHOTS_CORES"]).read_text(encoding="utf-8"))
     with sync_playwright() as p:
         browser = p.chromium.launch(channel=os.environ.get("HARNESS_BROWSER", "msedge") or None,
                                     executable_path=os.environ.get("HARNESS_EXECUTABLE") or None)
@@ -73,6 +78,11 @@ def main():
                                     clip={"x": 0, "y": 0, "width": w, "height": 1500})
                 else:
                     page.screenshot(path=str(saida / f"{t}-{w}.png"), full_page=True)
+                # explicação de uma coluna aberta (só nas versões com o botão i)
+                if t == "squadrats" and w == 390 and page.query_selector("#squadrats th .info"):
+                    page.click('#squadrats th[data-c="yard"] .info')
+                    page.wait_for_timeout(200)
+                    page.screenshot(path=str(saida / "squadrats-dica-390.png"))
             ctx.close()
         browser.close()
     print("screenshots em", saida)
