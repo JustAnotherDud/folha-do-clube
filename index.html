@@ -415,12 +415,19 @@ function escHtml(s) {
     c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 // Fallback de CORES_URL (squadrats-club). Quem não está aqui tem cor por hash.
+// "Inês" (KOMs, Best Efforts) e "Inês S." (Squadrats) são a mesma pessoa
+// (ver _aliases em membros_cores.json): mesma cor nas duas grafias.
 let CORES_FIXAS = { "Zé": "#e03131", "Xeira": "#9c46d8",
                     "Carolina": "#c99a00", "Inês S.": "#e8710a",
                     "Inês": "#e8710a", "Ana": "#12889c", "Pedro": "#2f5fd0" };
-const PALETA = ["#2e7d32", "#1565c0", "#e65100", "#5d4037",
-                "#37474f", "#6a1b9a", "#00695c", "#9e9d24"];
+// Só apresentação: o membros_cores.json não muda. A cor da Inês era igual ao laranja
+// de marca (#fc4c02) e a do Zé (vermelho) ficava demasiado perto dele; aplicado depois
+// de as cores chegarem, por isso prevalece sobre o ficheiro.
+const AJUSTES_COR = { "Zé": "#f0476f", "Inês": "#51cf66", "Inês S.": "#51cf66" };
+// cores para quem não está no ficheiro: longe do laranja, do vermelho/rosa e das fixas
+const PALETA = ["#7cc4ff", "#c2a1ff", "#a3b18a", "#d9b38c", "#6fe0c8", "#b8b8c8"];
 function corAtleta(n) {
+  if (AJUSTES_COR[n]) return AJUSTES_COR[n];
   if (CORES_FIXAS[n]) return CORES_FIXAS[n];
   let h = 0;
   for (const c of n) h = (h * 31 + c.codePointAt(0)) >>> 0;
