@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T14:24Z",
+ "gerado": "2026-11-19T14:35Z",
  "linhas": [
   {
    "posicao": 5,
@@ -3275,20 +3275,6 @@
    "data": "2026-04-11",
    "atleta": "Xeira",
    "cidade": "Mérida",
-   "pais": "Spain"
-  },
-  {
-   "posicao": 10,
-   "tipo": "Run",
-   "segmento": "Final río - Puente Campanar",
-   "url": "https://www.strava.com/segments/26614853",
-   "effort_url": "https://www.strava.com/segment_efforts/3477052768387250302",
-   "dist_km": 6.45,
-   "elev_m": 13,
-   "tempo": "25:23",
-   "data": "2026-04-08",
-   "atleta": "Xeira",
-   "cidade": "Valencia",
    "pais": "Spain"
   },
   {
