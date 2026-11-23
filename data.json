@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-19T14:35Z",
+ "gerado": "2026-11-23T16:17Z",
  "linhas": [
   {
    "posicao": 5,
@@ -1936,20 +1936,6 @@
   {
    "posicao": 1,
    "tipo": "Run",
-   "segmento": "Segmento duvidoso",
-   "url": "https://www.strava.com/segments/17018271",
-   "effort_url": "https://www.strava.com/segment_efforts/3383554897097239064",
-   "dist_km": 0.15,
-   "elev_m": 5,
-   "tempo": "0:21",
-   "data": "2025-07-24",
-   "atleta": "Xeira",
-   "cidade": "Sintra",
-   "pais": "Portugal"
-  },
-  {
-   "posicao": 1,
-   "tipo": "Run",
    "segmento": "Série 400mts Universidade Católica",
    "url": "https://www.strava.com/segments/31468757",
    "effort_url": "https://www.strava.com/segment_efforts/3383200670900537880",
@@ -2832,6 +2818,20 @@
   {
    "posicao": 2,
    "tipo": "Run",
+   "segmento": "Circuito Arruda dos Pisões",
+   "url": "https://www.strava.com/segments/42560916",
+   "effort_url": "https://www.strava.com/segment_efforts/3559676508965528438",
+   "dist_km": 1.71,
+   "elev_m": 17,
+   "tempo": "5:47",
+   "data": "2026-11-22",
+   "atleta": "Xeira",
+   "cidade": "Rio Maior",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
    "segmento": "Sub. Saida Alcanhões",
    "url": "https://www.strava.com/segments/10888439",
    "effort_url": "https://www.strava.com/segment_efforts/3551936302933425372",
@@ -3471,6 +3471,20 @@
    "data": "2025-09-20",
    "atleta": "Xeira",
    "cidade": "Santarém",
+   "pais": "Portugal"
+  },
+  {
+   "posicao": 2,
+   "tipo": "Run",
+   "segmento": "Segmento duvidoso",
+   "url": "https://www.strava.com/segments/17018271",
+   "effort_url": "https://www.strava.com/segment_efforts/3383554897097239064",
+   "dist_km": 0.15,
+   "elev_m": 5,
+   "tempo": "0:21",
+   "data": "2025-07-24",
+   "atleta": "Xeira",
+   "cidade": "Sintra",
    "pais": "Portugal"
   },
   {
